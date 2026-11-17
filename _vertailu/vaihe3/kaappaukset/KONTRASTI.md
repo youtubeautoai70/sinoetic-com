@@ -1,0 +1,61 @@
+| Kuva | Koko | Heikoin teksti | Kontrasti | Raja | AA |
+|---|---|---|---|---|---|
+| koodi-b-0 | 853x400@1.5 | valikkolinkki | 5.12:1 | 4.5:1 | kyllä |
+| koodi-b-0 | 1440x800 | valikkolinkki | 8.69:1 | 4.5:1 | kyllä |
+| koodi-b-0 | 390x844 | ingressi | 11.24:1 | 4.5:1 | kyllä |
+| koodi-b-4000 | 853x400@1.5 | valikkolinkki | 7.15:1 | 4.5:1 | kyllä |
+| koodi-b-4000 | 1440x800 | valikkolinkki | 8.06:1 | 4.5:1 | kyllä |
+| koodi-b-4000 | 390x844 | ingressi | 11.24:1 | 4.5:1 | kyllä |
+| koodi-b-5600 | 853x400@1.5 | valikkolinkki | 9.68:1 | 4.5:1 | kyllä |
+| koodi-b-5600 | 1440x800 | valikkolinkki | 10.28:1 | 4.5:1 | kyllä |
+| koodi-b-5600 | 390x844 | ingressi | 11.24:1 | 4.5:1 | kyllä |
+| koodi-b-7400 | 853x400@1.5 | valikkolinkki | 6.24:1 | 4.5:1 | kyllä |
+| koodi-b-7400 | 1440x800 | valikkolinkki | 8.43:1 | 4.5:1 | kyllä |
+| koodi-b-7400 | 390x844 | ingressi | 11.24:1 | 4.5:1 | kyllä |
+| koodi-b-8400 | 853x400@1.5 | ingressi | 10.52:1 | 4.5:1 | kyllä |
+| koodi-b-8400 | 1440x800 | ingressi | 10.36:1 | 4.5:1 | kyllä |
+| koodi-b-8400 | 390x844 | ingressi | 11.18:1 | 4.5:1 | kyllä |
+| koodi-b-13000 | 853x400@1.5 | ingressi | 10.52:1 | 4.5:1 | kyllä |
+| koodi-b-13000 | 1440x800 | ingressi | 10.36:1 | 4.5:1 | kyllä |
+| koodi-b-13000 | 390x844 | ingressi | 11.18:1 | 4.5:1 | kyllä |
+| koodi-a-0 | 853x400@1.5 | ingressi | 5.74:1 | 4.5:1 | kyllä |
+| koodi-a-0 | 1440x800 | otsikko, rivi 1 | 3.42:1 | 3.0:1 | kyllä |
+| koodi-a-0 | 390x844 | ingressi | 11.24:1 | 4.5:1 | kyllä |
+| koodi-a-4000 | 853x400@1.5 | ingressi | 8.40:1 | 4.5:1 | kyllä |
+| koodi-a-4000 | 1440x800 | valikkolinkki | 10.55:1 | 4.5:1 | kyllä |
+| koodi-a-4000 | 390x844 | ingressi | 11.24:1 | 4.5:1 | kyllä |
+| koodi-a-5600 | 853x400@1.5 | ingressi | 6.36:1 | 4.5:1 | kyllä |
+| koodi-a-5600 | 1440x800 | ingressi | 6.21:1 | 4.5:1 | kyllä |
+| koodi-a-5600 | 390x844 | ingressi | 11.24:1 | 4.5:1 | kyllä |
+| koodi-a-7400 | 853x400@1.5 | ingressi | 5.67:1 | 4.5:1 | kyllä |
+| koodi-a-7400 | 1440x800 | ingressi | 5.89:1 | 4.5:1 | kyllä |
+| koodi-a-7400 | 390x844 | ingressi | 11.24:1 | 4.5:1 | kyllä |
+| koodi-a-8400 | 853x400@1.5 | ingressi | 10.61:1 | 4.5:1 | kyllä |
+| koodi-a-8400 | 1440x800 | ingressi | 10.91:1 | 4.5:1 | kyllä |
+| koodi-a-8400 | 390x844 | ingressi | 11.18:1 | 4.5:1 | kyllä |
+| koodi-a-13000 | 853x400@1.5 | ingressi | 10.61:1 | 4.5:1 | kyllä |
+| koodi-a-13000 | 1440x800 | ingressi | 10.91:1 | 4.5:1 | kyllä |
+| koodi-a-13000 | 390x844 | ingressi | 11.18:1 | 4.5:1 | kyllä |
+| a-b-0 | 853x400@1.5 | valikkolinkki | 10.95:1 | 4.5:1 | kyllä |
+| a-b-0 | 1440x800 | valikkolinkki | 10.59:1 | 4.5:1 | kyllä |
+| a-b-0 | 390x844 | ingressi | 11.24:1 | 4.5:1 | kyllä |
+| a-b-5000 | 853x400@1.5 | valikkolinkki | 10.25:1 | 4.5:1 | kyllä |
+| a-b-5000 | 1440x800 | valikkolinkki | 10.93:1 | 4.5:1 | kyllä |
+| a-b-5000 | 390x844 | ingressi | 11.24:1 | 4.5:1 | kyllä |
+| a-b-7800 | 853x400@1.5 | valikkolinkki | 8.62:1 | 4.5:1 | kyllä |
+| a-b-7800 | 1440x800 | valikkolinkki | 9.85:1 | 4.5:1 | kyllä |
+| a-b-7800 | 390x844 | ingressi | 11.12:1 | 4.5:1 | kyllä |
+| a-b-13000 | 853x400@1.5 | ingressi | 10.52:1 | 4.5:1 | kyllä |
+| a-b-13000 | 1440x800 | ingressi | 10.36:1 | 4.5:1 | kyllä |
+| a-b-13000 | 390x844 | ingressi | 11.18:1 | 4.5:1 | kyllä |
+| a-a-0 | 853x400@1.5 | ingressi | 5.38:1 | 4.5:1 | kyllä |
+| a-a-0 | 1440x800 | ingressi | 6.54:1 | 4.5:1 | kyllä |
+| a-a-0 | 390x844 | ingressi | 11.24:1 | 4.5:1 | kyllä |
+| a-a-5000 | 853x400@1.5 | ingressi | 6.47:1 | 4.5:1 | kyllä |
+| a-a-5000 | 1440x800 | ingressi | 6.61:1 | 4.5:1 | kyllä |
+| a-a-5000 | 390x844 | ingressi | 11.24:1 | 4.5:1 | kyllä |
+| a-a-7800 | 853x400@1.5 | ingressi | 6.56:1 | 4.5:1 | kyllä |
+| a-a-7800 | 1440x800 | ingressi | 6.87:1 | 4.5:1 | kyllä |
+| a-a-7800 | 390x844 | ingressi | 11.12:1 | 4.5:1 | kyllä |
+
+Alle rajan: ei yhtään
