@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Leikkuulautakurssi – varaa paikka · Saarniverstas</title>
+<!-- Sinoetic Booking, uusi ilme (konsepti 17.11.2026): asiakkaan varaus ja maksu. Keksitty yritys, keksityt hinnat ja ajat.
+     Fontti: Schibsted Grotesk (SIL OFL 1.1). Kuva: Higgsfield Nano Banana Pro. -->
+<style>
+@font-face{font-family:"Schibsted Grotesk";src:url("../assets/fonts/schibsted-grotesk-variable.woff2") format("woff2");font-weight:400 900;font-display:block}
+:root{
+  /* Bookingin uudet perusmuuttujat (yhteiset kaikille yrityksille) */
+  --b-pohja:#F6F3EE; --b-pinta:#FFFFFF; --b-muste:#14110E; --b-muste-2:#4A433C; --b-muste-3:#7A7067; --b-viiva:#E7E1D8;
+  --b-ok:#0F7A5F; --b-ok-pohja:#E3F3EC; --b-vahan:#A0611C; --b-vahan-pohja:#FBEEDD;
+  /* yrityskohtainen aksentti (Saarniverstas) */
+  --b-aksentti:#2A1F16; --b-aksentti-2:#B97A3D;
+  --b-sade:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%;background:var(--b-pohja)}
+body{color:var(--b-muste);font-family:"Schibsted Grotesk",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--b-aksentti-2);outline-offset:2px}
+.ruutu{position:relative;width:100%;max-width:430px;min-height:100vh;margin:0 auto;overflow:hidden;background:var(--b-pohja)}
+
+/* ---------- Kuva ja otsikko ---------- */
+.kansi{position:relative;height:318px;background:url("kuvat/1a/kurssi.webp") 40% 46%/cover;color:#fff}
+.kansi::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,8,6,.45) 0%,rgba(10,8,6,0) 26%,rgba(10,8,6,.05) 48%,rgba(10,8,6,.78) 100%)}
+.tila{position:relative;z-index:2;height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 24px 0 28px;font-size:15px;font-weight:600}
+.tila .ik{display:flex;gap:6px;align-items:center}
+.yla{position:relative;z-index:2;display:flex;justify-content:space-between;padding:6px 16px}
+.lasi{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgba(20,17,14,.32);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.22)}
+.lasi svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.otsikko{position:absolute;z-index:2;left:20px;right:20px;bottom:44px}
+.merkit{display:flex;gap:6px}
+.merkit span{height:24px;padding:0 10px;border-radius:999px;display:inline-flex;align-items:center;background:rgba(255,255,255,.18);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.25);font-size:12px;font-weight:600;letter-spacing:.01em}
+.otsikko h1{margin-top:10px;font-size:32px;line-height:1.02;font-weight:750;letter-spacing:-.03em}
+.otsikko p{margin-top:6px;font-size:14px;color:rgba(255,255,255,.85)}
+
+/* ---------- Varauslevy ---------- */
+.levy{position:relative;z-index:3;margin-top:-26px;border-radius:26px 26px 0 0;background:var(--b-pohja);padding:22px 20px 132px}
+.osio + .osio{margin-top:20px}
+.osio-otsake{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;font-weight:650;letter-spacing:.02em;color:var(--b-muste-2)}
+.osio-otsake span{font-weight:500;color:var(--b-muste-3)}
+.paivat{margin:10px -20px 0;padding:2px 20px 4px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.paiva{flex:none;width:60px;height:82px;border-radius:18px;background:var(--b-pinta);border:1px solid var(--b-viiva);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;transition:background-color .25s,color .25s,border-color .25s,transform .2s}
+.paiva small{font-size:10.5px;font-weight:650;letter-spacing:.08em;color:var(--b-muste-3)}
+.paiva b{font-size:23px;font-weight:700;letter-spacing:-.02em;line-height:1}
+.paiva em{font-style:normal;font-size:10.5px;font-weight:550;color:var(--b-muste-3)}
+.paiva[aria-pressed="true"] em{color:rgba(255,255,255,.7)}
+.paiva i{width:5px;height:5px;border-radius:50%;background:var(--b-ok);margin-top:3px}
+.paiva i.vahan{background:var(--b-vahan)}
+.paiva[aria-pressed="true"]{background:var(--b-aksentti);border-color:var(--b-aksentti);color:#fff;transform:translateY(-1px)}
+.paiva[aria-pressed="true"] small{color:rgba(255,255,255,.7)}
+.ajat{margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.aika{position:relative;text-align:left;padding:13px 14px;border-radius:18px;background:var(--b-pinta);border:1px solid var(--b-viiva);transition:border-color .25s,box-shadow .25s}
+.aika b{display:block;font-size:17px;font-weight:700;letter-spacing:-.01em}
+.aika span{display:flex;align-items:center;gap:6px;margin-top:5px;font-size:12.5px;font-weight:550;color:var(--b-muste-3)}
+.aika .pisteet{display:flex;gap:2px}
+.aika .pisteet i{width:6px;height:6px;border-radius:2px;background:#D9D2C7}
+.aika .pisteet i.vapaa{background:var(--b-ok)}
+.aika[aria-pressed="true"]{border-color:var(--b-aksentti);box-shadow:0 0 0 1px var(--b-aksentti),0 10px 24px -14px rgba(42,31,22,.45)}
+.aika[aria-pressed="true"]::after{content:"";position:absolute;top:12px;right:12px;width:18px;height:18px;border-radius:50%;background:var(--b-aksentti) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.2l2.6 2.6L13 6.4' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat}
+.kortti{margin-top:10px;display:flex;align-items:center;justify-content:space-between;padding:12px 12px 12px 16px;border-radius:18px;background:var(--b-pinta);border:1px solid var(--b-viiva)}
+.kortti .nimi b{display:block;font-size:15.5px;font-weight:650}
+.kortti .nimi span{font-size:12.5px;color:var(--b-muste-3)}
+.askel{display:flex;align-items:center;gap:4px;padding:4px;border-radius:999px;background:var(--b-pohja)}
+.askel button{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--b-pinta);border:1px solid var(--b-viiva);font-size:19px;font-weight:500;line-height:1}
+.askel button:disabled{opacity:.35;cursor:not-allowed}
+.askel output{min-width:28px;text-align:center;font-size:17px;font-weight:700}
+.maksut{margin-top:10px;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:4px;border-radius:18px;background:#ECE6DD}
+.maksu{height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;gap:7px;font-size:13px;font-weight:600;color:var(--b-muste-2);transition:background-color .25s,box-shadow .25s,color .25s}
+.maksu svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.maksu[aria-pressed="true"]{background:var(--b-pinta);color:var(--b-muste);box-shadow:0 2px 8px -3px rgba(20,17,14,.25)}
+
+/* ---------- Kiinteä alapalkki ---------- */
+.ala{position:fixed;z-index:6;left:50%;transform:translateX(-50%);bottom:0;width:100%;max-width:430px;padding:12px 16px 14px;background:rgba(246,243,238,.86);-webkit-backdrop-filter:blur(16px) saturate(1.3);backdrop-filter:blur(16px) saturate(1.3);border-top:1px solid rgba(231,225,216,.9)}
+.ala-rivi{display:flex;align-items:center;gap:12px}
+.summa small{display:block;font-size:12px;font-weight:550;color:var(--b-muste-3)}
+.summa b{display:block;font-size:26px;font-weight:750;letter-spacing:-.03em;line-height:1.1}
+.maksa{flex:1;height:54px;border-radius:18px;background:var(--b-aksentti);color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;font-size:16px;font-weight:650;box-shadow:0 12px 26px -14px rgba(42,31,22,.7)}
+.maksa i{font-style:normal;transition:transform .25s}
+.maksa:hover i{transform:translateX(3px)}
+.luotto{margin-top:9px;display:flex;justify-content:space-between;font-size:11.5px;color:var(--b-muste-3)}
+.luotto b{color:var(--b-muste-2);font-weight:650}
+.luotto .pow i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#087F69;margin-right:5px;vertical-align:1px}
+</style>
+</head>
+<body>
+<div class="ruutu">
+  <div class="kansi">
+    <div class="tila" aria-hidden="true"><span>21.47</span><span class="ik">
+      <svg width="18" height="12" viewBox="0 0 18 12" fill="#fff"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+      <svg width="26" height="13" viewBox="0 0 26 13"><rect x=".5" y=".5" width="22" height="12" rx="3.5" fill="none" stroke="#fff" opacity=".5"/><rect x="2.5" y="2.5" width="13" height="8" rx="2" fill="#fff"/><rect x="23.5" y="4.5" width="2" height="4" rx="1" fill="#fff" opacity=".5"/></svg></span></div>
+    <div class="yla">
+      <button class="lasi" type="button" aria-label="Takaisin"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button class="lasi" type="button" aria-label="Jaa"><svg viewBox="0 0 24 24"><path d="M12 15V3M7.5 7.5L12 3l4.5 4.5M5 13v6a2 2 0 002 2h10a2 2 0 002-2v-6"/></svg></button>
+    </div>
+    <div class="otsikko">
+      <div class="merkit"><span>Kurssi · 4 h</span><span>Saarniverstas</span></div>
+      <h1>Leikkuulautakurssi</h1>
+      <p>Teet oman päätypuulaudan tammesta ja pähkinästä. Puut ja työkalut sisältyvät.</p>
+    </div>
+  </div>
+
+  <main class="levy">
+    <section class="osio">
+      <div class="osio-otsake">Päivä <span>marras–joulukuu</span></div>
+      <div class="paivat" id="paivat"></div>
+    </section>
+    <section class="osio">
+      <div class="osio-otsake">Aika <span id="paikat-teksti"></span></div>
+      <div class="ajat" id="ajat"></div>
+    </section>
+    <section class="osio">
+      <div class="kortti">
+        <div class="nimi"><b>Osallistujat</b><span>95 € / hlö</span></div>
+        <div class="askel">
+          <button type="button" id="miinus" aria-label="Vähemmän osallistujia">−</button>
+          <output id="maara" aria-live="polite">2</output>
+          <button type="button" id="plus" aria-label="Enemmän osallistujia">+</button>
+        </div>
+      </div>
+    </section>
+    <section class="osio">
+      <div class="osio-otsake">Maksutapa</div>
+      <div class="maksut" id="maksut">
+        <button type="button" class="maksu" aria-pressed="false" data-m="kortti"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10.5h18"/></svg>Kortti</button>
+        <button type="button" class="maksu" aria-pressed="true" data-m="mobiili"><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2.5"/><path d="M11 17.5h2"/></svg>Mobiili</button>
+        <button type="button" class="maksu" aria-pressed="false" data-m="pankki"><svg viewBox="0 0 24 24"><path d="M4 10h16M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18M12 3l9 5H3z"/></svg>Pankki</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="ala">
+    <div class="ala-rivi">
+      <div class="summa"><small>Yhteensä</small><b id="summa">190 €</b></div>
+      <button class="maksa" type="button" id="maksa"><span id="maksa-teksti">Maksa ja varaa</span><i aria-hidden="true">→</i></button>
+    </div>
+    <div class="luotto"><span>Peruutus maksutta <b>48 h</b> ennen</span><span class="pow"><i aria-hidden="true"></i>Powered by <b>Sinoetic</b></span></div>
+  </div>
+</div>
+<script>
+(function () {
+  "use strict";
+  var HINTA = 95;
+  var KK = { "11": "marras", "12": "joulu" };
+  var PAIVAT = [
+    { vk: "LA", pv: "21.11.", ajat: [{ klo: "10.00–14.00", vapaa: 3, max: 8 }, { klo: "15.00–19.00", vapaa: 6, max: 8 }] },
+    { vk: "SU", pv: "22.11.", ajat: [{ klo: "10.00–14.00", vapaa: 1, max: 8 }, { klo: "15.00–19.00", vapaa: 5, max: 8 }] },
+    { vk: "LA", pv: "28.11.", ajat: [{ klo: "10.00–14.00", vapaa: 7, max: 8 }, { klo: "15.00–19.00", vapaa: 8, max: 8 }] },
+    { vk: "SU", pv: "29.11.", ajat: [{ klo: "10.00–14.00", vapaa: 4, max: 8 }, { klo: "15.00–19.00", vapaa: 8, max: 8 }] },
+    { vk: "LA", pv: "5.12.", ajat: [{ klo: "10.00–14.00", vapaa: 8, max: 8 }, { klo: "15.00–19.00", vapaa: 8, max: 8 }] },
+    { vk: "SU", pv: "6.12.", ajat: [{ klo: "10.00–14.00", vapaa: 2, max: 8 }, { klo: "15.00–19.00", vapaa: 8, max: 8 }] }
+  ];
+  var tila = { p: 0, a: 0, n: 2 }, naytetty = 190;
+  var $ = function (id) { return document.getElementById(id); };
+  var eur = function (n) { return n.toLocaleString("fi-FI").replace(/\s/g, " ") + " €"; };
+
+  PAIVAT.forEach(function (d, i) {
+    var b = document.createElement("button"); b.type = "button"; b.className = "paiva";
+    var vahiten = Math.min.apply(null, d.ajat.map(function (a) { return a.vapaa; }));
+    var osat = d.pv.split(".");
+    b.innerHTML = "<small>" + d.vk + "</small><b>" + osat[0] + "</b><em>" + KK[osat[1]] + "</em><i class='" + (vahiten <= 2 ? "vahan" : "") + "'></i>";
+    b.setAttribute("aria-label", d.vk + " " + d.pv);
+    b.addEventListener("click", function () { tila.p = i; tila.a = 0; paivita(); });
+    $("paivat").appendChild(b);
+  });
+  [].forEach.call(document.querySelectorAll(".maksu"), function (b) {
+    b.addEventListener("click", function () { [].forEach.call(document.querySelectorAll(".maksu"), function (x) { x.setAttribute("aria-pressed", String(x === b)); }); });
+  });
+  $("miinus").addEventListener("click", function () { tila.n = Math.max(1, tila.n - 1); paivita(); });
+  $("plus").addEventListener("click", function () { tila.n += 1; paivita(); });
+
+  function laskuri(kohde) {                    // summa liukuu uuteen arvoon
+    var alku = naytetty, t0 = performance.now();
+    (function askel(t) {
+      var e = Math.min(1, (t - t0) / 420), v = Math.round(alku + (kohde - alku) * (1 - Math.pow(1 - e, 3)));
+      $("summa").textContent = eur(v);
+      if (e < 1) requestAnimationFrame(askel); else naytetty = kohde;
+    })(t0);
+  }
+
+  function paivita() {
+    var d = PAIVAT[tila.p];
+    [].forEach.call($("paivat").children, function (b, i) { b.setAttribute("aria-pressed", String(i === tila.p)); });
+    $("ajat").innerHTML = "";
+    d.ajat.forEach(function (a, i) {
+      var b = document.createElement("button"); b.type = "button"; b.className = "aika";
+      var pisteet = ""; for (var k = 0; k < a.max; k++) pisteet += "<i class='" + (k < a.vapaa ? "vapaa" : "") + "'></i>";
+      b.innerHTML = "<b>" + a.klo + "</b><span><span class='pisteet'>" + pisteet + "</span>" + a.vapaa + (a.vapaa === 1 ? " paikka" : " paikkaa") + "</span>";
+      b.setAttribute("aria-pressed", String(i === tila.a));
+      b.addEventListener("click", function () { tila.a = i; paivita(); });
+      $("ajat").appendChild(b);
+    });
+    var vapaa = d.ajat[tila.a].vapaa;
+    if (tila.n > vapaa) tila.n = vapaa;
+    $("maara").textContent = tila.n;
+    $("miinus").disabled = tila.n <= 1; $("plus").disabled = tila.n >= vapaa;
+    $("paikat-teksti").textContent = d.vk.toLowerCase() + " " + d.pv;
+    var summa = tila.n * HINTA;
+    laskuri(summa);
+    $("maksa-teksti").textContent = "Maksa " + eur(summa) + " ja varaa";
+  }
+  paivita();
+})();
+</script>
+</body>
+</html>

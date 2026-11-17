@@ -6,3 +6,7 @@ _vertailu/**/_kontrasti.json
 # Vaihe 3: kontrastimittauksen taustat ja testikaappaukset
 _vertailu/vaihe3/_kontrasti/
 _vertailu/vaihe3/_testi/
+
+# Paikallinen esikatselu (Claude Code)
+.claude/
+_vertailu/vaihe1a/_testi/

@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Saarniverstas – Valitse puu. Me teemme loput.</title>
+<!-- Sinoeticin konseptityö: keksitty puusepänverstas. Suunta A "Syy". Kuvat: Higgsfield Nano Banana Pro 17.11.2026.
+     Fontit: Cormorant Garamond ja Instrument Sans (SIL OFL 1.1, lisenssit assets/fonts/). -->
+<style>
+@font-face{font-family:"Cormorant Garamond";src:url("../assets/fonts/cormorant-garamond-latin-600-normal.woff2") format("woff2");font-weight:600;font-display:block}
+@font-face{font-family:"Cormorant Garamond";src:url("../assets/fonts/cormorant-garamond-latin-500-normal.woff2") format("woff2");font-weight:500;font-display:block}
+@font-face{font-family:"Cormorant Garamond";src:url("../assets/fonts/cormorant-garamond-latin-500-italic.woff2") format("woff2");font-weight:500;font-style:italic;font-display:block}
+@font-face{font-family:"Instrument Sans";src:url("../assets/fonts/instrument-sans.woff2") format("woff2");font-weight:400 700;font-stretch:75% 100%;font-display:block}
+
+:root{
+  --paperi:#F2EDE5; --muste:#1D1915; --muste-2:#4B4239; --muste-3:#6A6056; --savy:#9C7A4C; --viiva:rgba(29,25,21,.14);
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Instrument Sans",system-ui,sans-serif;
+  --pad:clamp(20px,5vw,72px);
+  --siirto:cubic-bezier(.65,0,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:var(--paperi);color:var(--muste);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow:hidden;transition:background-color 1.1s var(--siirto)}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--savy);outline-offset:3px;border-radius:4px}
+
+.sivu{position:relative;height:100vh;height:100svh;min-height:380px;display:grid;grid-template-columns:minmax(0,58fr) minmax(0,42fr);overflow:hidden}
+
+/* ---------- Yläpalkki ---------- */
+header{position:absolute;z-index:5;left:0;right:0;top:0;height:clamp(56px,10vh,92px);display:flex;align-items:center;padding:0 var(--pad);gap:clamp(20px,3vw,48px)}
+.nimi{font-family:var(--serif);font-weight:600;font-size:clamp(22px,2.1vw,31px);letter-spacing:.005em;line-height:1}
+.nimi span{color:var(--savy);transition:color 1.1s var(--siirto)}
+nav{margin-left:auto;display:flex;gap:clamp(18px,2.4vw,40px);font-size:clamp(13px,1.05vw,15.5px);font-weight:500;color:var(--muste-2)}
+.tarjous-yla{height:clamp(34px,5vh,44px);padding:0 clamp(14px,1.4vw,22px);border-radius:999px;border:1px solid rgba(29,25,21,.32);font-size:clamp(13px,1.05vw,15px);font-weight:600;display:inline-flex;align-items:center;background:rgba(242,237,229,.55);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+
+/* ---------- Teksti ---------- */
+.teksti{position:relative;z-index:2;min-height:0;display:flex;flex-direction:column;justify-content:center;padding:clamp(60px,12vh,112px) clamp(16px,3vw,48px) clamp(54px,10vh,100px) var(--pad)}
+.kicker{display:flex;align-items:center;gap:12px;font-size:clamp(11px,.9vw,13px);font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muste-3)}
+.kicker::before{content:"";width:28px;height:1px;background:currentColor}
+h1{margin-top:clamp(8px,2.4vh,24px);font-family:var(--serif);font-weight:600;font-size:clamp(40px,min(7.2vw,12.4vh),116px);line-height:.92;letter-spacing:-.025em}
+h1 span{display:block;white-space:nowrap}
+h1 em{font-weight:500;font-style:italic;color:var(--savy);transition:color 1.1s var(--siirto)}
+.ingressi{margin-top:clamp(10px,2.6vh,26px);max-width:31em;font-size:clamp(13.5px,min(1.3vw,2.2vh),19px);line-height:1.5;color:var(--muste-2)}
+
+.valitsin{margin-top:clamp(12px,3.4vh,34px)}
+.valitsin-otsake{display:flex;align-items:baseline;justify-content:space-between;max-width:430px;font-size:clamp(11px,.85vw,12.5px);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muste-3)}
+.lajit{margin-top:clamp(8px,1.6vh,14px);display:flex;gap:clamp(8px,1vw,14px)}
+.laji{display:flex;flex-direction:column;align-items:center;gap:8px;width:clamp(62px,6.6vw,96px)}
+.laji .nayte{position:relative;width:clamp(42px,min(4.4vw,8vh),66px);aspect-ratio:1;border-radius:50%;background-size:cover;background-position:center;box-shadow:0 0 0 1px rgba(29,25,21,.12), 0 6px 14px -8px rgba(40,25,10,.5);transition:transform .5s var(--siirto)}
+.laji .nayte::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:1.5px solid transparent;transition:border-color .4s}
+.laji .rengas{position:absolute;inset:-5px;border-radius:50%;opacity:0;background:conic-gradient(var(--savy) calc(var(--edistys,0) * 1turn), transparent 0);-webkit-mask:radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1.5px));mask:radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1.5px))}
+.laji .lajinimi{font-size:clamp(12px,1vw,14.5px);font-weight:500;color:var(--muste-3);transition:color .4s}
+.laji[aria-checked="true"] .nayte{transform:scale(1.06)}
+.laji[aria-checked="true"] .nayte::after{border-color:rgba(29,25,21,.18)}
+.laji[aria-checked="true"] .rengas{opacity:1}
+.laji[aria-checked="true"] .lajinimi{color:var(--muste);font-weight:650}
+.laji:hover .nayte{transform:scale(1.06)}
+.kuvaus{margin-top:clamp(8px,1.8vh,16px);min-height:2.9em;max-width:28em;font-size:clamp(13px,1.1vw,15.5px);line-height:1.45;color:var(--muste-2)}
+.kuvaus b{color:var(--muste);font-weight:650}
+.kuvaus .hinta{display:block;margin-top:4px;color:var(--muste-3)}
+.kuvaus .hinta b{color:var(--savy);transition:color 1.1s var(--siirto)}
+
+.napit{margin-top:clamp(12px,3vh,30px);display:flex;align-items:center;gap:clamp(14px,1.8vw,26px)}
+.nappi{height:clamp(40px,6.4vh,58px);padding:0 clamp(18px,1.9vw,30px);border-radius:999px;display:inline-flex;align-items:center;gap:12px;background:var(--muste);color:var(--paperi);font-size:clamp(13.5px,1.15vw,16.5px);font-weight:600;transition:background-color .3s}
+.nappi:hover{background:#000}
+.nappi i{font-style:normal;transition:transform .3s}
+.nappi:hover i{transform:translateX(3px)}
+.linkki{font-size:clamp(13.5px,1.15vw,16.5px);font-weight:600;padding:4px 0;background:linear-gradient(currentColor,currentColor) 0 100%/100% 1px no-repeat}
+
+.powered{position:absolute;z-index:3;left:var(--pad);bottom:clamp(14px,3.2vh,30px);display:inline-flex;align-items:center;gap:9px;font-size:clamp(11.5px,.9vw,13px);font-weight:500;letter-spacing:.04em;color:var(--muste-3)}
+.powered i{width:7px;height:7px;border-radius:50%;background:#087F69}
+.powered b{font-weight:700;color:var(--muste)}
+
+/* ---------- Kuva ---------- */
+.kuva{position:relative;overflow:hidden;background:#d9cfc2}
+.kuva .kerros{position:absolute;inset:0;background-size:cover;background-position:50% 50%;transform-origin:62% 58%}
+.kuva .kerros.tulee{clip-path:inset(0 100% 0 0);transition:clip-path 1.25s var(--siirto)}
+.kuva .kerros.tulee.auki{clip-path:inset(0 0 0 0)}
+.kuva .kerros.elaa{animation:hidas 9s linear both}
+@keyframes hidas{from{transform:scale(1.07)} to{transform:scale(1)}}
+.kuva .hoyla{position:absolute;top:0;bottom:0;left:0;width:3px;opacity:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,250,240,0),rgba(255,250,240,.9) 30%,rgba(255,250,240,.9) 70%,rgba(255,250,240,0));
+  box-shadow:0 0 24px 6px rgba(255,244,225,.55);transform:translateX(0)}
+.kuva .hoyla.kulkee{animation:hoyla 1.25s var(--siirto) both}
+@keyframes hoyla{0%{opacity:0;transform:translateX(0)} 8%{opacity:1} 92%{opacity:1} 100%{opacity:0;transform:translateX(var(--leveys))}}
+.kuvateksti{position:absolute;z-index:2;left:clamp(14px,2vw,28px);bottom:clamp(14px,3.2vh,30px);display:flex;align-items:center;gap:12px;padding:10px 16px 10px 12px;border-radius:999px;
+  background:rgba(250,246,240,.82);-webkit-backdrop-filter:blur(10px) saturate(1.2);backdrop-filter:blur(10px) saturate(1.2);box-shadow:0 10px 26px -16px rgba(40,25,10,.6);
+  font-size:clamp(11.5px,.95vw,14px);color:var(--muste-2)}
+.kuvateksti b{font-family:var(--serif);font-size:1.32em;font-weight:600;color:var(--muste);letter-spacing:.005em}
+.kuvateksti .viiva{width:1px;height:16px;background:var(--viiva)}
+.laskuri{position:absolute;z-index:2;right:clamp(14px,2vw,28px);bottom:clamp(14px,3.2vh,30px);font-family:var(--serif);font-size:clamp(15px,1.3vw,19px);font-weight:500;color:rgba(29,25,21,.62);font-variant-numeric:lining-nums}
+.laskuri b{color:var(--muste);font-weight:600}
+
+/* ---------- Matala ruutu (esim. 853×400) ---------- */
+@media (max-height:520px) and (min-width:761px){
+  .teksti{padding-top:54px;padding-bottom:44px}
+  .kicker{font-size:10.5px}
+  .valitsin-otsake{display:none}
+  .napit{margin-top:12px}
+  .ingressi{max-width:27em}
+  .kuvaus{display:none}
+  .lajit{gap:6px}
+  .laji{flex-direction:row;width:auto;gap:7px;padding:4px 10px 4px 4px;border-radius:999px;border:1px solid transparent}
+  .laji[aria-checked="true"]{border-color:rgba(29,25,21,.2);background:rgba(255,255,255,.4)}
+  .laji .nayte{width:26px}
+  .laji .rengas{inset:-3px}
+  .laji .lajinimi{font-size:12.5px}
+}
+/* ---------- Kapea ruutu ---------- */
+@media (max-width:760px){
+  body{overflow:auto}
+  .sivu{grid-template-columns:1fr;grid-template-rows:44vh auto;height:auto;min-height:100svh}
+  .kuva{grid-row:1}
+  .teksti{grid-row:2;padding:22px var(--pad) 70px}
+  header nav{display:none}
+  .tarjous-yla{display:none}
+  h1{font-size:clamp(44px,13vw,64px)}
+  .laskuri{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important}
+}
+</style>
+</head>
+<body>
+<div class="sivu" id="sivu">
+  <header>
+    <a class="nimi" href="#">Saarni<span>verstas</span></a>
+    <nav aria-label="Päävalikko"><a href="#">Kalusteet</a><a href="#">Keittiöt</a><a href="#">Työt</a><a href="#">Verstas</a><a href="#">Yhteys</a></nav>
+    <a class="tarjous-yla" href="#">Pyydä tarjous</a>
+  </header>
+
+  <section class="teksti">
+    <p class="kicker">Puusepänverstas · Mittatilaustyöt</p>
+    <h1><span>Valitse puu.</span><span>Me teemme <em>loput.</em></span></h1>
+    <p class="ingressi">Keittiöt, kaapistot ja kalusteet massiivipuusta – kotisi mittoihin, omalla verstaallamme.</p>
+
+    <div class="valitsin">
+      <div class="valitsin-otsake"><span id="valitsin-otsikko">Puulaji</span></div>
+      <div class="lajit" role="radiogroup" aria-labelledby="valitsin-otsikko" id="lajit"></div>
+      <p class="kuvaus" id="kuvaus" aria-live="polite"></p>
+    </div>
+
+    <div class="napit">
+      <a class="nappi" href="#" id="cta"><span id="cta-teksti">Pyydä tarjous saarnesta</span><i aria-hidden="true">→</i></a>
+      <a class="linkki" href="#">Varaa aika</a>
+    </div>
+  </section>
+
+  <figure class="kuva" id="kuva" aria-label="Kalusteen kulma valitusta puulajista">
+    <div class="kerros elaa" id="k0"></div>
+    <div class="hoyla" id="hoyla" aria-hidden="true"></div>
+    <figcaption class="kuvateksti"><b id="kt-laji">Saarni</b><span class="viiva" aria-hidden="true"></span><span>Lohenpyrstöliitos, käsin sahattu</span></figcaption>
+  </figure>
+
+  <a class="powered" href="#">
+    <i aria-hidden="true"></i>Powered by <b>Sinoetic</b>
+  </a>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var LAJIT = [
+    { id: "saarni", nimi: "Saarni", ela: "saarnesta", tausta: "#F2EDE5", savy: "#93714A",
+      kuvaus: "<b>Kova ja sitkeä.</b> Vaalea pinta ja voimakas, suora syy.", hinta: "3 400 €" },
+    { id: "tammi", nimi: "Tammi", ela: "tammesta", tausta: "#F1E7D8", savy: "#94612A",
+      kuvaus: "<b>Lämmin ja kestävä.</b> Hunajan sävy ja kauniit peilit.", hinta: "3 900 €" },
+    { id: "koivu", nimi: "Koivu", ela: "koivusta", tausta: "#F4F0E8", savy: "#9A7C53",
+      kuvaus: "<b>Vaalea ja tasainen.</b> Pohjoinen puu, joka tekee tilasta valoisan.", hinta: "3 100 €" },
+    { id: "pahkina", nimi: "Pähkinä", ela: "pähkinästä", tausta: "#EDE4DA", savy: "#5E3D2B",
+      kuvaus: "<b>Syvä ja arvokas.</b> Suklaanruskea, elävä syy.", hinta: "4 800 €" }
+  ];
+  var VALI = 6200;                      // automaattinen vaihto, kunnes käyttäjä valitsee itse
+  var vahennetty = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var juuri = document.documentElement, kuva = document.getElementById("kuva"), hoyla = document.getElementById("hoyla");
+  var lajit = document.getElementById("lajit"), nyt = 0, automaatti = !vahennetty, alku = performance.now(), tauko = false;
+
+  // esilataus
+  LAJIT.forEach(function (l) { var i = new Image(); i.src = "kuvat/1a/" + l.id + ".webp"; });
+
+  LAJIT.forEach(function (l, i) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "laji"; b.setAttribute("role", "radio"); b.dataset.i = i;
+    b.innerHTML = '<span class="nayte" style="background-image:url(kuvat/1a/' + l.id + '-nayte.webp)"><span class="rengas"></span></span><span class="lajinimi">' + l.nimi + "</span>";
+    b.addEventListener("click", function () { automaatti = false; valitse(i); });
+    lajit.appendChild(b);
+  });
+  lajit.addEventListener("keydown", function (e) {
+    var d = e.key === "ArrowRight" || e.key === "ArrowDown" ? 1 : e.key === "ArrowLeft" || e.key === "ArrowUp" ? -1 : 0;
+    if (!d) return;
+    e.preventDefault(); automaatti = false;
+    valitse((nyt + d + LAJIT.length) % LAJIT.length);
+    lajit.children[nyt].focus();
+  });
+  [lajit, kuva].forEach(function (el) {
+    el.addEventListener("pointerenter", function () { tauko = true; });
+    el.addEventListener("pointerleave", function () { tauko = false; alku = performance.now(); });
+  });
+
+  function paivitaTeksti(i) {
+    var l = LAJIT[i];
+    [].forEach.call(lajit.children, function (b, j) { b.setAttribute("aria-checked", String(j === i)); b.tabIndex = j === i ? 0 : -1; b.style.setProperty("--edistys", 0); });
+    document.getElementById("kuvaus").innerHTML = l.kuvaus + '<span class="hinta">Senkki 180 cm ' + l.ela + " alkaen <b>" + l.hinta.replace(" ", " ") + "</b></span>";
+    document.getElementById("cta-teksti").textContent = "Pyydä tarjous " + l.ela;
+    document.getElementById("kt-laji").textContent = l.nimi;
+    juuri.style.setProperty("--paperi", l.tausta);
+    juuri.style.setProperty("--savy", l.savy);
+  }
+
+  function valitse(i, heti) {
+    if (i === nyt && !heti) return;
+    nyt = i; alku = performance.now();
+    paivitaTeksti(i);
+    var url = "url(kuvat/1a/" + LAJIT[i].id + ".webp)";
+    if (heti || vahennetty) {
+      var kerrokset = kuva.querySelectorAll(".kerros"); kerrokset[kerrokset.length - 1].style.backgroundImage = url;
+      return;
+    }
+    var uusi = document.createElement("div");
+    uusi.className = "kerros tulee elaa";
+    uusi.style.backgroundImage = url;
+    kuva.insertBefore(uusi, hoyla);
+    hoyla.style.setProperty("--leveys", kuva.clientWidth + "px");
+    hoyla.classList.remove("kulkee"); void hoyla.offsetWidth; hoyla.classList.add("kulkee");
+    requestAnimationFrame(function () { requestAnimationFrame(function () { uusi.classList.add("auki"); }); });
+    setTimeout(function () {                     // tätä vanhemmat kerrokset pois (uudempi vaihto voi olla kesken)
+      [].slice.call(kuva.querySelectorAll(".kerros")).forEach(function (k) {
+        if (k !== uusi && (k.compareDocumentPosition(uusi) & Node.DOCUMENT_POSITION_FOLLOWING)) k.remove();
+      });
+      uusi.classList.remove("tulee", "auki");
+    }, 1400);
+  }
+
+  function kello(t) {
+    if (automaatti && !tauko) {
+      var e = (t - alku) / VALI;
+      var r = lajit.children[nyt]; if (r) r.style.setProperty("--edistys", Math.min(1, e).toFixed(3));
+      if (e >= 1) valitse((nyt + 1) % LAJIT.length);
+    }
+    requestAnimationFrame(kello);
+  }
+
+  var q = new URLSearchParams(location.search);
+  var aloitus = Math.max(0, LAJIT.findIndex(function (l) { return l.id === q.get("puu"); }));
+  if (q.has("puu")) automaatti = false;
+  nyt = -1; valitse(aloitus, true);
+  if (!vahennetty) requestAnimationFrame(kello);
+})();
+</script>
+</body>
+</html>

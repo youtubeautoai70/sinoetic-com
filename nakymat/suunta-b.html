@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Saarniverstas – Katso läheltä.</title>
+<!-- Sinoeticin konseptityö: keksitty puusepänverstas. Suunta B "Iltavalo". Kuva: Higgsfield Nano Banana Pro 17.11.2026.
+     Fontit: Bricolage Grotesque ja Inter Tight (SIL OFL 1.1, lisenssit assets/fonts/). -->
+<style>
+@font-face{font-family:"Bricolage Grotesque";src:url("../assets/fonts/bricolage-grotesque.woff2") format("woff2");font-weight:200 800;font-stretch:75% 100%;font-display:block}
+@font-face{font-family:"Inter Tight";src:url("../assets/fonts/inter-tight-variable.woff2") format("woff2");font-weight:100 900;font-display:block}
+:root{
+  --yo:#06090D; --kerma:#F3EADF; --kerma-2:rgba(243,234,223,.80); --kerma-3:rgba(243,234,223,.64); --meripihka:#E7A95E; --meripihka-2:#F6C98E;
+  --otsikko:"Bricolage Grotesque",system-ui,sans-serif; --teksti:"Inter Tight",system-ui,sans-serif;
+  --pad:clamp(20px,5vw,72px);
+  --lx:69%; --ly:62%; --r:360px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--yo)}
+body{color:var(--kerma);font-family:var(--teksti);-webkit-font-smoothing:antialiased;overflow:hidden}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--meripihka);outline-offset:3px;border-radius:4px}
+
+.sivu{position:relative;height:100vh;height:100svh;min-height:380px;overflow:hidden;isolation:isolate;cursor:default}
+.kuva{position:absolute;inset:0;background:url("kuvat/1a/iltavalo.webp") 64% 50%/cover no-repeat}
+.kuva.tumma{filter:brightness(.36) saturate(.7) contrast(1.05)}
+.kuva.valo{filter:brightness(1.12) saturate(1.08) contrast(1.03);
+  -webkit-mask-image:radial-gradient(circle var(--r) at var(--lx) var(--ly),#000 0%,rgba(0,0,0,.92) 28%,rgba(0,0,0,.45) 60%,transparent 100%),
+                     radial-gradient(circle calc(var(--r) * .32) at var(--bx,70%) var(--by,18%),#000 0%,transparent 100%);
+          mask-image:radial-gradient(circle var(--r) at var(--lx) var(--ly),#000 0%,rgba(0,0,0,.92) 28%,rgba(0,0,0,.45) 60%,transparent 100%),
+                     radial-gradient(circle calc(var(--r) * .32) at var(--bx,70%) var(--by,18%),#000 0%,transparent 100%)}
+.hehku{position:absolute;inset:0;pointer-events:none;mix-blend-mode:screen;background:radial-gradient(circle calc(var(--r) * 1.1) at var(--lx) var(--ly),rgba(255,184,110,.13),rgba(255,184,110,0) 70%)}
+.varjo{position:absolute;inset:0;pointer-events:none;background:
+  linear-gradient(90deg,rgba(6,9,13,.9) 0%,rgba(6,9,13,.72) 30%,rgba(6,9,13,.25) 52%,rgba(6,9,13,0) 64%),
+  linear-gradient(180deg,rgba(6,9,13,.7) 0%,rgba(6,9,13,0) 16%,rgba(6,9,13,0) 78%,rgba(6,9,13,.75) 100%)}
+.rae{position:absolute;inset:0;pointer-events:none;opacity:.07;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ---------- Yksityiskohdat, jotka valo paljastaa ---------- */
+.kohta{position:absolute;z-index:3;left:0;top:0;display:flex;align-items:center;gap:10px;opacity:0;pointer-events:none;transition:opacity .35s;will-change:transform,opacity}
+.kohta i{position:relative;width:9px;height:9px;border-radius:50%;background:var(--meripihka-2);box-shadow:0 0 0 4px rgba(246,201,142,.18),0 0 18px 2px rgba(246,201,142,.55);flex:none}
+.kohta span{white-space:nowrap;padding:6px 11px;border-radius:999px;background:rgba(6,9,13,.62);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(243,234,223,.16);
+  font-size:clamp(11.5px,.95vw,13.5px);font-weight:500;letter-spacing:.01em;color:var(--kerma)}
+.kohta.vasen{flex-direction:row-reverse}
+
+/* ---------- Yläpalkki ---------- */
+header{position:absolute;z-index:5;left:0;right:0;top:0;height:clamp(56px,10vh,92px);display:flex;align-items:center;gap:clamp(20px,3vw,48px);padding:0 var(--pad)}
+.nimi{font-family:var(--otsikko);font-weight:650;font-size:clamp(19px,1.6vw,24px);letter-spacing:-.02em;font-variation-settings:"opsz" 32}
+nav{margin-left:auto;display:flex;gap:clamp(18px,2.4vw,40px);font-size:clamp(13px,1.05vw,15px);font-weight:500;color:var(--kerma-2)}
+.tarjous-yla{height:clamp(34px,5vh,44px);padding:0 clamp(14px,1.4vw,22px);border-radius:999px;border:1px solid rgba(243,234,223,.3);font-size:clamp(13px,1.05vw,15px);font-weight:600;display:inline-flex;align-items:center;background:rgba(6,9,13,.35);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+
+/* ---------- Teksti ---------- */
+.teksti{position:relative;z-index:4;height:100%;display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,11vh,100px) var(--pad) clamp(52px,10vh,96px);max-width:min(56vw,780px)}
+.tila{display:inline-flex;align-items:center;gap:10px;font-size:clamp(11.5px,.95vw,14px);font-weight:500;color:var(--kerma-2);letter-spacing:.01em}
+.tila i{position:relative;width:8px;height:8px;border-radius:50%;background:var(--meripihka)}
+.tila i::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:1px solid var(--meripihka);opacity:0;animation:syke 2.4s ease-out infinite}
+@keyframes syke{0%{opacity:.8;transform:scale(.5)}100%{opacity:0;transform:scale(1.6)}}
+.tila b{font-weight:650;color:var(--kerma);font-variant-numeric:tabular-nums}
+h1{margin-top:clamp(10px,2.6vh,26px);font-family:var(--otsikko);font-weight:700;font-variation-settings:"opsz" 96;font-size:clamp(54px,min(10.4vw,17vh),168px);line-height:.86;letter-spacing:-.045em;
+  background:radial-gradient(circle calc(var(--r) * 1.15) at var(--lx) var(--ly),#FFE2BC 0%,#F6D3A6 22%,var(--kerma) 58%) fixed;-webkit-background-clip:text;background-clip:text;color:transparent}
+h1 span{display:block}
+.ingressi{margin-top:clamp(12px,3vh,30px);max-width:29em;font-size:clamp(13.5px,min(1.28vw,2.2vh),19px);line-height:1.5;color:var(--kerma-2)}
+.napit{margin-top:clamp(14px,3.6vh,36px);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.nappi{height:clamp(40px,6.4vh,56px);padding:0 clamp(18px,1.9vw,28px);border-radius:999px;display:inline-flex;align-items:center;gap:10px;font-size:clamp(13.5px,1.12vw,16px);font-weight:600;transition:background-color .25s,border-color .25s,transform .25s}
+.nappi.paa{background:var(--meripihka);color:#1A1006;box-shadow:0 10px 30px -10px rgba(231,169,94,.55)}
+.nappi.paa:hover{background:var(--meripihka-2);transform:translateY(-1px)}
+.nappi.toissa{border:1px solid rgba(243,234,223,.32);background:rgba(6,9,13,.3)}
+.nappi.toissa:hover{border-color:rgba(243,234,223,.6)}
+.vihje{margin-top:clamp(12px,3vh,28px);display:inline-flex;align-items:center;gap:10px;font-size:clamp(11.5px,.9vw,13px);color:var(--kerma-3)}
+.vihje svg{width:16px;height:16px;flex:none}
+
+.powered{position:absolute;z-index:5;left:var(--pad);bottom:clamp(14px,3.2vh,30px);display:inline-flex;align-items:center;gap:9px;font-size:clamp(11.5px,.9vw,13px);font-weight:500;letter-spacing:.04em;color:var(--kerma-3)}
+.powered i{width:7px;height:7px;border-radius:50%;background:#55CBB2}
+.powered b{font-weight:700;color:var(--kerma)}
+.teos{position:absolute;z-index:5;right:var(--pad);bottom:clamp(14px,3.2vh,30px);text-align:right;font-size:clamp(11.5px,.9vw,13px);color:var(--kerma-3);letter-spacing:.02em}
+.teos b{display:block;font-family:var(--otsikko);font-size:clamp(15px,1.3vw,19px);font-weight:600;color:var(--kerma);letter-spacing:-.01em;font-variation-settings:"opsz" 24}
+
+@media (max-height:520px) and (min-width:761px){
+  .teksti{padding-top:50px;padding-bottom:40px}
+  .vihje{display:none}
+  .teos{display:none}
+}
+@media (max-width:760px){
+  .kuva{background-position:70% 50%}
+  header nav,.tarjous-yla{display:none}
+  .teksti{justify-content:flex-start;padding-top:96px;max-width:none}
+  h1{font-size:clamp(56px,17vw,84px)}
+  .varjo{background:linear-gradient(180deg,rgba(6,9,13,.88) 0%,rgba(6,9,13,.7) 38%,rgba(6,9,13,.1) 60%,rgba(6,9,13,.6) 100%)}
+  .teos{display:none}
+}
+@media (prefers-reduced-motion:reduce){ .tila i::after{animation:none} .kohta{transition:none} }
+</style>
+</head>
+<body>
+<div class="sivu" id="sivu">
+  <div class="kuva tumma" aria-hidden="true"></div>
+  <div class="kuva valo" aria-hidden="true"></div>
+  <div class="hehku" aria-hidden="true"></div>
+  <div class="varjo" aria-hidden="true"></div>
+  <div class="rae" aria-hidden="true"></div>
+
+  <div class="kohta" data-x=".749" data-y=".66" aria-hidden="true"><i></i><span>Käsin sahatut lohenpyrstöt</span></div>
+  <div class="kohta" data-x=".694" data-y=".548" aria-hidden="true"><i></i><span>Upotetut vetimet, ei heloja</span></div>
+  <div class="kohta" data-x=".60" data-y=".70" aria-hidden="true"><i></i><span>Pähkinä, öljyvahattu käsin</span></div>
+  <div class="kohta" data-x=".826" data-y=".83" aria-hidden="true"><i></i><span>Kartiomaiset tammijalat</span></div>
+
+  <header>
+    <a class="nimi" href="#">Saarniverstas</a>
+    <nav aria-label="Päävalikko"><a href="#">Kalusteet</a><a href="#">Keittiöt</a><a href="#">Työt</a><a href="#">Verstas</a><a href="#">Yhteys</a></nav>
+    <a class="tarjous-yla" href="#">Pyydä tarjous</a>
+  </header>
+
+  <section class="teksti">
+    <p class="tila" id="tila"><i aria-hidden="true"></i><span>Verstas lepää. Ajanvaraus on auki aina.</span></p>
+    <h1><span>Katso</span><span>läheltä.</span></h1>
+    <p class="ingressi">Massiivipuiset kalusteet ja keittiöt, tehtynä käsin liitos kerrallaan. Ne kestävät lähemmänkin tarkastelun.</p>
+    <div class="napit">
+      <a class="nappi paa" href="#">Pyydä tarjous</a>
+      <a class="nappi toissa" href="#">Varaa aika verstaalle</a>
+    </div>
+    <p class="vihje" id="vihje"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="8" cy="8" r="2.2"/><path d="M8 1.5v2.2M8 12.3v2.2M1.5 8h2.2M12.3 8h2.2"/></svg><span>Liikuta valoa – se paljastaa yksityiskohdat.</span></p>
+  </section>
+
+  <a class="powered" href="#"><i aria-hidden="true"></i>Powered by <b>Sinoetic</b></a>
+  <p class="teos"><b>Senkki n:o 4</b>Pähkinä ja tammi · 180 × 46 × 76 cm</p>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var sivu = document.getElementById("sivu"), juuri = document.documentElement;
+  var W = 2752, H = 1536, PX = .64, PY = .5;          // kuvan koko ja background-position
+  var kohdat = [].slice.call(document.querySelectorAll(".kohta"));
+  var vahennetty = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var kosketus = matchMedia("(hover: none)").matches;
+  var vw, vh, s, ox, oy, r;
+  var nyt = null, kohde = null, viimeHiiri = -1e9, alku = performance.now();
+  var q = new URLSearchParams(location.search), jaadytetty = q.has("t") ? parseFloat(q.get("t")) : null;
+
+  if (kosketus) document.querySelector("#vihje span").textContent = "Vedä sormella – valo paljastaa yksityiskohdat.";
+
+  // verstaan tila kellonajan mukaan (ma–pe 7–16)
+  (function tila() {
+    var d = new Date(), h = d.getHours(), m = d.getMinutes(), pv = d.getDay();
+    var auki = pv >= 1 && pv <= 5 && h >= 7 && h < 16;
+    var klo = "Klo " + h + "." + String(m).padStart(2, "0");
+    document.querySelector("#tila span").innerHTML = "<b>" + klo + "</b> – " + (auki ? "verstaalla tehdään töitä." : "verstas lepää. Ajanvaraus on auki aina.");
+    setTimeout(tila, (60 - d.getSeconds()) * 1000);
+  })();
+
+  function mittaa() {
+    vw = sivu.clientWidth; vh = sivu.clientHeight;
+    var px = vw < 760 ? .70 : PX;
+    s = Math.max(vw / W, vh / H);
+    ox = (vw - W * s) * px; oy = (vh - H * s) * PY;
+    r = Math.max(220, Math.min(vw, vh) * .55);
+    juuri.style.setProperty("--r", r.toFixed(0) + "px");
+    var lamppu = piste(.703, .182);
+    juuri.style.setProperty("--bx", lamppu[0].toFixed(1) + "px"); juuri.style.setProperty("--by", lamppu[1].toFixed(1) + "px");
+  }
+  function piste(fx, fy) { return [ox + fx * W * s, oy + fy * H * s]; }
+
+  function polku(t) {                     // valo kiertää senkin ympäri, kun hiiri ei liiku
+    var k = piste(.69, .63), ax = W * s * .095, ay = H * s * .1;
+    return [k[0] + ax * Math.sin(t / 2900), k[1] + ay * Math.sin(t / 2100 + 1.2)];
+  }
+
+  function piirra(t) {
+    var tavoite = (performance.now() - viimeHiiri < 2600 && kohde) ? kohde : polku(t);
+    if (!nyt) nyt = tavoite.slice();
+    var k = jaadytetty !== null || vahennetty ? 1 : .085;
+    nyt[0] += (tavoite[0] - nyt[0]) * k; nyt[1] += (tavoite[1] - nyt[1]) * k;
+    juuri.style.setProperty("--lx", nyt[0].toFixed(1) + "px"); juuri.style.setProperty("--ly", nyt[1].toFixed(1) + "px");
+    kohdat.forEach(function (el) {
+      var p = piste(+el.dataset.x, +el.dataset.y), d = Math.hypot(p[0] - nyt[0], p[1] - nyt[1]);
+      var nako = Math.max(0, Math.min(1, (r * .62 - d) / (r * .22)));
+      var leveys = el.offsetWidth, vasen = p[0] + leveys > vw - 12;
+      el.classList.toggle("vasen", vasen);
+      var siirto = vasen ? -leveys + 5 : -5;
+      el.style.transform = "translate(" + (p[0] + siirto).toFixed(1) + "px," + (p[1] - 5).toFixed(1) + "px)";
+      el.style.opacity = nako.toFixed(3);
+    });
+  }
+
+  function silmukka(n) {
+    var t = jaadytetty !== null ? jaadytetty : (vahennetty ? 0 : n - alku);
+    piirra(t);
+    if (jaadytetty === null && !vahennetty) requestAnimationFrame(silmukka);
+  }
+
+  sivu.addEventListener("pointermove", function (e) { kohde = [e.clientX, e.clientY]; viimeHiiri = performance.now(); });
+  sivu.addEventListener("pointerdown", function (e) { kohde = [e.clientX, e.clientY]; viimeHiiri = performance.now(); });
+  addEventListener("resize", function () { mittaa(); if (vahennetty || jaadytetty !== null) piirra(jaadytetty || 0); });
+  mittaa();
+  requestAnimationFrame(silmukka);
+})();
+</script>
+</body>
+</html>

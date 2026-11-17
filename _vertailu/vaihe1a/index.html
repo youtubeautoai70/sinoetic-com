@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Vaihe 1a – ruuduilla näkyvä sisältö</title>
+<style>
+@font-face{font-family:"Schibsted Grotesk";font-weight:400 900;src:url("../../assets/fonts/schibsted-grotesk-variable.woff2") format("woff2")}
+:root{--bg:#080E16;--pinta:#0F1A24;--teksti:#F4F7F8;--himmea:rgba(244,247,248,.7);--viiva:rgba(244,247,248,.12);--minttu:#55CBB2}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--teksti);font:16px/1.5 "Schibsted Grotesk",system-ui,sans-serif;padding:36px 20px 72px}
+main{max-width:1240px;margin:0 auto}
+h1{font-size:30px;letter-spacing:-.025em}
+h2{font-size:21px;margin:44px 0 6px;letter-spacing:-.015em}
+p{color:var(--himmea);max-width:76ch}
+a{color:var(--minttu)}
+.suunnat{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:18px}
+.suunta{display:block;border:1px solid var(--viiva);border-radius:18px;overflow:hidden;background:var(--pinta);color:inherit;text-decoration:none;transition:border-color .2s,transform .2s}
+.suunta:hover{border-color:rgba(85,203,178,.6);transform:translateY(-2px)}
+.suunta img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover}
+.suunta div{padding:14px 16px 16px}
+.suunta b{font-size:18px}
+.suunta span{display:block;margin-top:4px;font-size:14px;color:var(--himmea)}
+.puhelimet{margin-top:18px;display:flex;flex-wrap:wrap;gap:28px}
+.puhelin figcaption{margin-top:10px;font-size:14px;color:var(--himmea);max-width:390px}
+.puhelin figcaption b{color:var(--teksti)}
+.kehys{width:414px;height:868px;padding:12px;border-radius:54px;background:#1b1f24;box-shadow:0 0 0 1px rgba(255,255,255,.1),0 40px 80px -30px rgba(0,0,0,.8)}
+.kehys iframe{display:block;width:390px;height:844px;border:0;border-radius:42px;background:#fff}
+@media (max-width:460px){.kehys{transform:scale(.86);transform-origin:0 0;margin-bottom:-120px}}
+</style>
+</head>
+<body>
+<main>
+  <h1>Vaihe 1a – ruuduilla näkyvä sisältö</h1>
+  <p>Saarniverstaan etusivun kaksi suuntaa (ensimmäinen näkymä, 1440×900) ja Bookingin uusi ilme kahtena näkymänä. Avaa suunnat koko ruudulle: liike ja valinta toimivat oikeasti. Kuvakaappaukset: <a href="kaappaukset/">kaappaukset/</a>, tallenteet: <a href="tallenteet/">tallenteet/</a>.</p>
+
+  <h2>Läppärin verkkosivu</h2>
+  <div class="suunnat">
+    <a class="suunta" href="../../nakymat/suunta-a.html"><img src="kaappaukset/suunta-a-1440x900.png" alt=""><div><b>Suunta A – Syy</b><span>Vaalea, aikakauslehtimäinen. Valitse puulaji: kuva, sävyt, kuvateksti ja tarjousnappi vaihtuvat.</span></div></a>
+    <a class="suunta" href="../../nakymat/suunta-b.html"><img src="kaappaukset/suunta-b-1440x900.png" alt=""><div><b>Suunta B – Iltavalo</b><span>Tumma, elokuvallinen. Hiiri on työvalo, joka paljastaa senkin yksityiskohdat; verstaan tila kellonajan mukaan.</span></div></a>
+  </div>
+
+  <h2>Booking, uusi ilme</h2>
+  <p>Kumpikin näkymä toimii: asiakkaan näkymässä päivä, aika, osallistujat ja maksutapa vaihtuvat ja summa päivittyy.</p>
+  <div class="puhelimet">
+    <figure class="puhelin"><div class="kehys"><iframe src="../../nakymat/booking-asiakas.html" title="Booking: asiakkaan varaus ja maksu"></iframe></div><figcaption><b>(a) Asiakkaan näkymä:</b> varaus ja maksu yhdellä näkymällä.</figcaption></figure>
+    <figure class="puhelin"><div class="kehys"><iframe src="../../nakymat/booking-yrittaja.html" title="Booking: yrittäjän näkymä yöllä"></iframe></div><figcaption><b>(b) Yrittäjän näkymä:</b> yöllä saapunut varaus klo 02.14.</figcaption></figure>
+  </div>
+</main>
+</body>
+</html>

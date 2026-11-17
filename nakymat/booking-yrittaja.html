@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Sinoetic Booking – uusi varaus klo 02.14</title>
+<!-- Sinoetic Booking, uusi ilme (konsepti 17.11.2026): yrittäjän näkymä yöllä. Keksitty yritys, keksityt nimet ja summat.
+     Fontti: Schibsted Grotesk (SIL OFL 1.1). Värit: Sinoeticin Brand Brief (#080E16, #102830, #087F69, #55CBB2, #F4F7F8). -->
+<style>
+@font-face{font-family:"Schibsted Grotesk";src:url("../assets/fonts/schibsted-grotesk-variable.woff2") format("woff2");font-weight:400 900;font-display:block}
+:root{
+  --y-pohja:#070B10; --y-pinta:rgba(244,247,248,.055); --y-pinta-2:rgba(244,247,248,.09); --y-viiva:rgba(244,247,248,.11);
+  --y-teksti:#F4F7F8; --y-teksti-2:rgba(244,247,248,.74); --y-teksti-3:rgba(244,247,248,.56);
+  --y-minttu:#55CBB2; --y-smaragdi:#087F69; --y-tavi:#102830; --y-aksentti:#E3A762;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%;background:var(--y-pohja)}
+body{color:var(--y-teksti);font-family:"Schibsted Grotesk",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.ruutu{position:relative;width:100%;max-width:430px;min-height:100vh;margin:0 auto;overflow:hidden;padding-bottom:96px;
+  background:radial-gradient(120% 60% at 50% -8%,rgba(8,127,105,.42) 0%,rgba(16,40,48,.55) 38%,rgba(7,11,16,0) 72%),var(--y-pohja)}
+.tila{height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 24px 0 28px;font-size:15px;font-weight:600}
+.tila .ik{display:flex;gap:6px;align-items:center}
+
+header{display:flex;align-items:center;gap:12px;padding:8px 20px 0}
+.logo{width:40px;height:40px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(145deg,#3A2A1C,#1C140D);border:1px solid rgba(227,167,98,.35);font-size:13px;font-weight:750;letter-spacing:.03em;color:#F3D9B5}
+.yritys{flex:1;min-width:0}
+.yritys b{display:block;font-size:16px;font-weight:650;letter-spacing:-.01em}
+.yritys span{font-size:12.5px;color:var(--y-teksti-3)}
+.kello{position:relative;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--y-pinta);border:1px solid var(--y-viiva)}
+.kello svg{width:19px;height:19px;fill:none;stroke:var(--y-teksti);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.kello i{position:absolute;top:8px;right:9px;width:8px;height:8px;border-radius:50%;background:var(--y-minttu);box-shadow:0 0 0 2px var(--y-pohja)}
+
+.otsake{padding:22px 20px 0}
+.otsake small{font-size:12px;font-weight:650;letter-spacing:.14em;text-transform:uppercase;color:var(--y-minttu)}
+.otsake h1{margin-top:6px;font-size:30px;line-height:1.05;font-weight:700;letter-spacing:-.03em}
+
+/* ---------- Uusi varaus ---------- */
+.uusi{position:relative;margin:16px 16px 0;padding:18px 18px 16px;border-radius:26px;overflow:hidden;
+  background:linear-gradient(160deg,rgba(85,203,178,.16),rgba(16,40,48,.55) 46%,rgba(244,247,248,.04));
+  border:1px solid rgba(85,203,178,.38);box-shadow:0 30px 60px -30px rgba(85,203,178,.45),inset 0 1px 0 rgba(255,255,255,.08)}
+.uusi::before{content:"";position:absolute;width:260px;height:260px;right:-90px;top:-130px;border-radius:50%;background:radial-gradient(closest-side,rgba(85,203,178,.35),rgba(85,203,178,0));pointer-events:none}
+.uusi-yla{position:relative;display:flex;align-items:center;justify-content:space-between}
+.lappu{display:inline-flex;align-items:center;gap:8px;height:28px;padding:0 12px;border-radius:999px;background:rgba(85,203,178,.16);border:1px solid rgba(85,203,178,.4);font-size:12.5px;font-weight:650;color:#BDF1E4}
+.lappu i{position:relative;width:7px;height:7px;border-radius:50%;background:var(--y-minttu)}
+.lappu i::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:1px solid var(--y-minttu);animation:syke 2.2s ease-out infinite}
+@keyframes syke{0%{opacity:.9;transform:scale(.4)}100%{opacity:0;transform:scale(1.5)}}
+.uusi-yla span{font-size:12.5px;color:var(--y-teksti-3)}
+.uusi h2{position:relative;margin-top:14px;white-space:nowrap;font-size:28px;line-height:1.04;font-weight:750;letter-spacing:-.035em}
+.uusi h2 em{font-style:normal;color:var(--y-minttu)}
+.uusi p{position:relative;margin-top:8px;font-size:15px;line-height:1.4;color:var(--y-teksti-2)}
+.uusi p b{color:var(--y-teksti);font-weight:650}
+.uusi-ala{position:relative;margin-top:14px;padding-top:14px;border-top:1px solid var(--y-viiva);display:flex;align-items:center;justify-content:space-between}
+.maksettu{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:650;color:#BDF1E4}
+.maksettu svg{width:18px;height:18px;fill:var(--y-smaragdi);stroke:#fff;stroke-width:1.8}
+.uusi-ala b{font-size:24px;font-weight:750;letter-spacing:-.02em}
+
+/* ---------- Lähtö ---------- */
+.lahto{margin:12px 16px 0;padding:14px 16px;border-radius:22px;background:var(--y-pinta);border:1px solid var(--y-viiva);display:flex;align-items:center;gap:14px}
+.rengas{position:relative;width:62px;height:62px;flex:none}
+.rengas svg{width:62px;height:62px;transform:rotate(-90deg)}
+.rengas circle{fill:none;stroke-width:6}
+.rengas .tausta{stroke:rgba(244,247,248,.1)}
+.rengas .taysi{stroke:var(--y-minttu);stroke-linecap:round;stroke-dasharray:164;stroke-dashoffset:164;animation:tayta 1.4s cubic-bezier(.2,.7,.2,1) .3s forwards}
+@keyframes tayta{to{stroke-dashoffset:20.5}}
+.rengas b{position:absolute;inset:0;display:grid;place-items:center;font-size:16px;font-weight:750;letter-spacing:-.02em}
+.lahto-teksti b{display:block;font-size:15.5px;font-weight:650}
+.lahto-teksti span{display:block;margin-top:2px;font-size:13px;color:var(--y-teksti-3)}
+.lahto-teksti .viim{color:var(--y-aksentti);font-weight:600}
+
+/* ---------- Yön aikajana ---------- */
+.yo{margin:12px 16px 0;padding:14px 16px 16px;border-radius:22px;background:var(--y-pinta);border:1px solid var(--y-viiva)}
+.yo-yla{display:flex;justify-content:space-between;align-items:baseline}
+.yo-yla b{font-size:15px;font-weight:650}
+.yo-yla span{font-size:13px;color:var(--y-teksti-3)}
+.yo-yla span strong{color:var(--y-teksti);font-weight:700}
+.jana{position:relative;margin-top:22px;height:30px}
+.jana::before{content:"";position:absolute;left:0;right:0;top:9px;height:2px;border-radius:2px;background:linear-gradient(90deg,rgba(244,247,248,.12),rgba(85,203,178,.35) 60%,rgba(244,247,248,.12))}
+.jana .piste{position:absolute;top:4px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:#1A2A33;border:2px solid rgba(244,247,248,.5)}
+.jana .piste.nyt{background:var(--y-minttu);border-color:#C9F5EA;box-shadow:0 0 0 5px rgba(85,203,178,.18),0 0 18px 4px rgba(85,203,178,.5)}
+.jana .piste em{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);font-style:normal;font-size:11.5px;font-weight:650;white-space:nowrap;color:var(--y-teksti-2)}
+.jana .piste.nyt em{color:#BDF1E4}
+.jana .asteikko{position:absolute;left:0;right:0;top:18px;display:flex;justify-content:space-between;font-size:11px;color:var(--y-teksti-3)}
+
+.toiminnot{margin:14px 16px 0;display:grid;grid-template-columns:1.2fr 1fr;gap:8px}
+.toiminnot button{height:50px;border-radius:16px;font-size:15px;font-weight:650}
+.toiminnot .paa{background:var(--y-teksti);color:var(--y-pohja)}
+.toiminnot .toissa{background:var(--y-pinta-2);border:1px solid var(--y-viiva)}
+
+nav.ala{position:fixed;z-index:5;left:50%;transform:translateX(-50%);bottom:12px;width:calc(100% - 24px);max-width:406px;height:66px;border-radius:24px;
+  background:rgba(16,24,30,.78);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border:1px solid var(--y-viiva);
+  display:grid;grid-template-columns:repeat(4,1fr);padding:6px}
+nav.ala span{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border-radius:18px;font-size:11px;font-weight:600;color:var(--y-teksti-3)}
+nav.ala span.nyt{background:rgba(85,203,178,.14);color:#BDF1E4}
+nav.ala svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+@media (prefers-reduced-motion:reduce){ .lappu i::after{animation:none} .rengas .taysi{animation:none;stroke-dashoffset:20.5} }
+</style>
+</head>
+<body>
+<div class="ruutu">
+  <div class="tila" aria-hidden="true"><span>02.14</span><span class="ik">
+    <svg width="18" height="12" viewBox="0 0 18 12" fill="#F4F7F8"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+    <svg width="26" height="13" viewBox="0 0 26 13"><rect x=".5" y=".5" width="22" height="12" rx="3.5" fill="none" stroke="#F4F7F8" opacity=".5"/><rect x="2.5" y="2.5" width="11" height="8" rx="2" fill="#F4F7F8"/><rect x="23.5" y="4.5" width="2" height="4" rx="1" fill="#F4F7F8" opacity=".5"/></svg></span></div>
+
+  <header>
+    <span class="logo" aria-hidden="true">SV</span>
+    <span class="yritys"><b>Saarniverstas</b><span>Booking · Sinoetic</span></span>
+    <span class="kello" aria-label="Ilmoitukset, 1 uusi"><svg viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 1112 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 004 0"/></svg><i></i></span>
+  </header>
+
+  <div class="otsake"><small>Sillä aikaa kun nukuit</small><h1>Kolme uutta varausta</h1></div>
+
+  <article class="uusi">
+    <div class="uusi-yla"><span class="lappu"><i aria-hidden="true"></i>Uusi varaus</span><span>verkosta · äsken</span></div>
+    <h2>Uusi varaus · <em>klo 02.14</em></h2>
+    <p><b>Laura Niemi</b> varasi 2 paikkaa<br>Leikkuulautakurssi · la 21.11. klo 10.00</p>
+    <div class="uusi-ala"><span class="maksettu"><svg viewBox="0 0 18 18"><circle cx="9" cy="9" r="8.2" stroke="none"/><path d="M5.4 9.3l2.4 2.3 4.8-5" fill="none"/></svg>Maksettu verkossa</span><b>190 €</b></div>
+  </article>
+
+  <section class="lahto">
+    <span class="rengas"><svg viewBox="0 0 62 62"><circle class="tausta" cx="31" cy="31" r="26"/><circle class="taysi" cx="31" cy="31" r="26"/></svg><b>7/8</b></span>
+    <span class="lahto-teksti"><b>La 21.11. · 10.00–14.00</b><span>Leikkuulautakurssi</span><span class="viim">1 paikka jäljellä</span></span>
+  </section>
+
+  <section class="yo">
+    <div class="yo-yla"><b>Tänä yönä</b><span>3 varausta · <strong>475 €</strong></span></div>
+    <div class="jana">
+      <span class="piste" style="left:7.4%"><em>22.38</em></span>
+      <span class="piste" style="left:21.4%"><em>23.51</em></span>
+      <span class="piste nyt" style="left:46.9%"><em>02.14</em></span>
+      <div class="asteikko"><span>22</span><span>01</span><span>04</span><span>07</span></div>
+    </div>
+  </section>
+
+  <div class="toiminnot"><button type="button" class="paa">Avaa varaus</button><button type="button" class="toissa">Viesti Lauralle</button></div>
+
+  <nav class="ala" aria-label="Booking">
+    <span class="nyt"><svg viewBox="0 0 24 24"><path d="M4 11l8-6 8 6v8a1 1 0 01-1 1h-4v-5h-6v5H5a1 1 0 01-1-1z"/></svg>Tänään</span>
+    <span><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Kalenteri</span>
+    <span><svg viewBox="0 0 24 24"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg>Varaukset</span>
+    <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 00.3 1.8l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.6 1.6 0 00-2.7 1.1V21a2 2 0 11-4 0v-.1a1.6 1.6 0 00-2.7-1.1l-.1.1a2 2 0 11-2.8-2.8l.1-.1A1.6 1.6 0 003 15H3a2 2 0 110-4h.1a1.6 1.6 0 001.1-2.7L4.1 8a2 2 0 112.8-2.8l.1.1a1.6 1.6 0 002.7-1.1V4a2 2 0 114 0v.1a1.6 1.6 0 002.7 1.1l.1-.1a2 2 0 112.8 2.8l-.1.1a1.6 1.6 0 001.1 2.7H21a2 2 0 110 4h-.1a1.6 1.6 0 00-1.5 1.1z"/></svg>Asetukset</span>
+  </nav>
+</div>
+</body>
+</html>

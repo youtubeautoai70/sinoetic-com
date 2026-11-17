@@ -176,3 +176,54 @@ Same workshop, same night lighting and colour grade as the reference image. Clos
 ```
 
 A3 (valmiina, ei ajettu): `_vertailu/vaihe3/promptit/a3.txt`, sanatarkasti Code-viestistä.
+
+## Vaihe 1a (uusi järjestys) – ruuduilla näkyvä sisältö (17.11.2026 ilta)
+
+Tehtävänanto: Perämiehen viesti "ensin ruuduilla näkyvä sisältö" (17.11.2026 illalla). Ehdot:
+- vain tekstipromptit
+- ei latauksia, videoita eikä verstaskuvia
+- krediittejä enintään 40 vaiheeseen 1 (1a ja 1b yhteensä)
+
+Kaikki kuvat on tehty Nano Banana Prolla (historiassa `nano_banana_2`), 2K, ilman viitekuvia. Napin hinta oli 2 jokaisessa. Edellisen vaiheen A1-K-viitekuva poistettiin kehotekentästä ennen ensimmäistä generointia.
+
+**Saldo.** Saldo oli tämän vaiheen alussa 980,75. Tämän istunnon ulkopuolella oli käytetty 91,25 krediittiä vaiheen 3 jälkeen (saldo 1072 → 980,75). Ne eivät kuulu tähän työhön.
+
+| Kuva | Käyttö | Aika | Generointi-id | Kuvasuhde | Napin hinta | Saldo ennen → jälkeen |
+|---|---|---|---|---|---|---|
+| Saarni | suunta A | 20.01 | `d5b2b477-42ba-4947-a3f3-5cabb3e956f0` | 1:1 | 2 | 980,75 → 978,75 |
+| Tammi | suunta A | 20.02 | `e54902c2-3d4b-413f-a948-c690921417ad` | 1:1 | 2 | 978,75 → 976,75 |
+| Koivu | suunta A | 20.03 | `4189fcf4-0c34-4aca-ab0c-24405a89f921` | 1:1 | 2 | 976,75 → 974,75 |
+| Pähkinä | suunta A | 20.04 | `c33ed7ed-6e26-48ff-9395-a7e1c5d017c9` | 1:1 | 2 | 974,75 → 972,75 |
+| Iltavalo | suunta B | 20.06 | `9ce31e60-e58e-450c-a7a3-2c856783a466` | 16:9 | 2 | 972,75 → 970,75 |
+| Leikkuulaudat | Booking (a) | 20.07 | `70257f0d-c4b1-4eec-82d7-64bb1d3a3b7b` | 4:3 | 2 | 970,75 → 968,75 |
+
+**Vaihe 1a yhteensä:** 6 kuvaa, 12 / 40 krediittiä. Saldo 968,75.
+
+**Tiedostot:**
+- alkuperäiset: `_vertailu/vaihe1a/kuvat/alkuperaiset/`
+- sivujen käyttämät: `nakymat/kuvat/1a/`
+- promptit: `_vertailu/vaihe1a/promptit/`
+
+### Promptit sanatarkasti
+
+Suunta A, sama runko neljälle puulajille. Sulkeissa oleva kohta vaihtuu:
+
+```text
+Macro product photograph of the front corner of a handmade cabinet top in solid European ash (pale cream wood with bold, straight, open grain), joined with precise hand-cut dovetails. Finely planed surface showing the natural grain clearly. Soft warm raking daylight from the left, long gentle shadow falloff, shallow depth of field, a warm off-white plaster wall softly out of focus in the background. Premium furniture catalogue photography, photorealistic, true-to-life wood colour. No people, no text, no logos, no brand marks.
+```
+
+- tammi: `white oak (warm honey-toned wood with fine ray flecks)`
+- koivu: `Finnish birch (very pale wood with fine, even grain and a soft satin sheen)`
+- pähkinä: `American black walnut (deep chocolate-brown wood with subtle purple tones)`
+
+Suunta B:
+
+```text
+Cinematic night photograph inside a small Nordic woodworking workshop. Right of center, a finished handcrafted solid walnut sideboard with slim tapered oak legs, flawless joinery and a satin oil finish stands on the wooden floor, lit by a single warm work lamp hanging above it. The rest of the workshop falls into deep blue-black shadow; hand tools hang faintly visible on the back wall; a small window on the far right shows snow falling in blue night light. Strong chiaroscuro, rich wood texture, the sideboard is clearly the hero. The left half of the frame is calm, dark negative space. Photorealistic, natural light falloff, subtle film grain. No people, no text, no logos, no brand marks.
+```
+
+Booking (a), kurssikuva:
+
+```text
+Close-up photograph of several handmade end-grain cutting boards in oak, ash and walnut stacked on a workbench in a bright Nordic woodworking workshop, fresh wood shavings and a small hand plane nearby, soft window daylight, shallow depth of field. Warm natural tones, photorealistic, premium editorial look. No people, no text, no letters, no logos, no brand marks.
+```
