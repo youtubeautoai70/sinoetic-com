@@ -2,6 +2,28 @@
 
 Tähän kirjataan vain todennettu tila commit-tunnisteineen.
 
+## 17.11.2026 ilta – vaihe 3 ("Yön työt" v3) mallikierros, PYSÄHDYS 3
+
+- Tehtävänanto: Perämiehen "Yön työt" versio 3 (17.11.2026 illalla). Se korvaa vaiheen 2 suuntavalinnan. Vaiheet 5 ja 6 ennallaan.
+- `db33dfa`:
+  - Saarniverstaan etusivu ja kolme puhelinnäkymää (`nakymat/`).
+  - Yhteiset materiaalit (`_video/materiaali/`, 4 PNG).
+  - Vertailusivu `_vertailu/vaihe3/index.html`: koodiversio ja versio A, asettelut A ja B, verstaskuvat a, b ja c.
+  - Materiaalisivu, työkalut, `KUVAT.md`, `docs/korona-aineisto.md` sekä Geist-fontit (OFL).
+- `fd45abe`:
+  - 68 kaappausta kolmessa koossa (`_vertailu/vaihe3/kaappaukset/`).
+  - Kontrasti AA kaikissa 57 mittauksessa (19 jakson hetkeä × 3 kokoa).
+  - Neljä näyttötallennetta koossa 853×400 (`_vertailu/vaihe3/tallenteet/`).
+  - Kaappausajoissa ei konsolivirheitä, ulkoisia pyyntöjä eikä vaakavieritystä.
+- Higgsfield: koodiversio 7,5 krediittiä, versio A 8 (A1 ×2, A2 ×2). Saldo 1072, käytetty 23 / 270.
+- Versio A:n video (A3) on tekemättä. Higgsfield vaatii videopuolen latauksessa "Media upload agreement" -ehtojen hyväksynnän, eikä niitä hyväksytty. Napin hinta: 480p, 8 s = 24. Sivulla on videon tilalla alku- ja loppukuva ristiinhäivytyksellä.
+- Versio B: Mousen paketti ei ole tullut.
+- Odottaa Kapteenia:
+  - version ja asettelun valinta
+  - läppärin sivun ja kolmen näkymän hyväksyntä
+  - päätös Higgsfieldin latausehdoista (A3)
+  - Mousen paketti
+
 ## 17.11.2026 – vaihe 2 valmis, PYSÄHDYS 2
 
 - Kapteeni hyväksyi pysähdyksessä 1: katto 270, mallit Nano Banana 2 1k → Nano Banana Pro 2k → Seedance 2.5 (luonnos ensin) ja Kling 3.0 -luonnos rinnalle, jos mahtuu varaukseen. Generointi Higgsfieldin verkkosivulla Chromessa Kapteenin kirjautumisella.
