@@ -103,7 +103,7 @@ h1 span{display:block}
   <div class="kohta" data-x=".749" data-y=".66" aria-hidden="true"><i></i><span>Käsin sahatut lohenpyrstöt</span></div>
   <div class="kohta" data-x=".694" data-y=".548" aria-hidden="true"><i></i><span>Upotetut vetimet, ei heloja</span></div>
   <div class="kohta" data-x=".60" data-y=".70" aria-hidden="true"><i></i><span>Pähkinä, öljyvahattu käsin</span></div>
-  <div class="kohta" data-x=".826" data-y=".83" aria-hidden="true"><i></i><span>Kartiomaiset tammijalat</span></div>
+  <div class="kohta" data-x=".558" data-y=".835" aria-hidden="true"><i></i><span>Kartiomaiset tammijalat</span></div>
 
   <header>
     <a class="nimi" href="#">Saarniverstas</a>
@@ -175,7 +175,7 @@ h1 span{display:block}
     kohdat.forEach(function (el) {
       var p = piste(+el.dataset.x, +el.dataset.y), d = Math.hypot(p[0] - nyt[0], p[1] - nyt[1]);
       var nako = Math.max(0, Math.min(1, (r * .62 - d) / (r * .22)));
-      var leveys = el.offsetWidth, vasen = p[0] + leveys > vw - 12;
+      var leveys = el.offsetWidth, vasen = el.dataset.suunta === "vasen" || p[0] + leveys > vw - 12;
       el.classList.toggle("vasen", vasen);
       var siirto = vasen ? -leveys + 5 : -5;
       el.style.transform = "translate(" + (p[0] + siirto).toFixed(1) + "px," + (p[1] - 5).toFixed(1) + "px)";
