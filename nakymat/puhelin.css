@@ -1,0 +1,61 @@
+/* Puhelinnäkymien yhteinen pohja: Sinoeticin ylläpitoilme Bookingin prototyypistä
+   (sinoetic-booking docs/prototyypit/kalenteri-m3b1, hyväksytty 6.11.2026): Geist ja Geist Mono,
+   aksentti #3B3FD8, harmaat pinnat ja lähtöjen sävyt. */
+@font-face{font-family:"Geist";src:url("../assets/fonts/geist-latin-variable.woff2") format("woff2");font-weight:100 900;font-display:block}
+@font-face{font-family:"Geist Mono";src:url("../assets/fonts/geist-mono-latin-variable.woff2") format("woff2");font-weight:100 900;font-display:block}
+:root{
+  --accent:#3B3FD8; --accent-strong:#2A2DB0; --accent-soft:#F6F6FE; --accent-line:#C9CAF5;
+  --bg:#F5F6F8; --surface:#FFFFFF; --ink:#11141A; --ink-2:#3D4350; --ink-3:#4D5462; --ink-4:#5B6270;
+  --line:#E3E6EB; --line-strong:#D5D8DE; --chip:#EEF0F3; --track:#E6E8EC;
+  --open-bg:#E5F4EC; --open-ink:#14613B; --full-bg:#FFF0D2; --full-ink:#744A00; --booked-bg:#EBEBFD; --booked-ink:#2E2FA8;
+  --mono:"Geist Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:390px;height:844px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:"Geist",system-ui,sans-serif;-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+.ruutu{width:390px;height:844px;position:relative;display:flex;flex-direction:column;overflow:hidden}
+
+.tila{height:44px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 26px 0 30px;background:var(--surface);font-size:16px;font-weight:600}
+.tila svg{display:block}
+.tila .oik{display:flex;gap:6px;align-items:center}
+
+header.yla{height:60px;flex-shrink:0;display:flex;align-items:center;gap:12px;padding:0 16px;background:var(--surface);border-bottom:1px solid var(--line)}
+.logo{width:36px;height:36px;flex-shrink:0;border-radius:9px;background:#2A241E;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.02em}
+.yritys{flex:1;min-width:0;display:flex;flex-direction:column}
+.yritys b{font-size:16px;font-weight:600;line-height:1.25}
+.yritys span{font-size:12px;color:var(--ink-4);line-height:1.3}
+
+.uusi{margin:14px 16px 0;padding:16px 16px 16px;border-radius:16px;background:var(--surface);border:1.5px solid var(--accent);box-shadow:0 10px 28px -14px rgba(59,63,216,.45)}
+.uusi .lappu{display:inline-flex;align-items:center;gap:7px;height:24px;padding:0 10px;border-radius:999px;background:var(--accent);color:#fff;font-size:12px;font-weight:600;letter-spacing:.01em}
+.uusi .lappu i{width:6px;height:6px;border-radius:50%;background:#fff;display:block}
+.uusi h1{margin-top:10px;font-size:29px;line-height:1.12;font-weight:650;letter-spacing:-.02em}
+.uusi p{margin-top:6px;font-size:16px;line-height:1.4;color:var(--ink-2)}
+
+.osio{padding:16px 16px 0;display:flex;flex-direction:column;gap:10px}
+.otsake{font-size:12px;font-weight:600;color:var(--ink-4);letter-spacing:.06em;text-transform:uppercase}
+
+.lahto{display:flex;gap:14px;padding:14px;border-radius:14px;border:1px solid var(--line);background:var(--surface)}
+.lahto .aika{width:56px;flex-shrink:0;display:flex;flex-direction:column;gap:2px;font-family:var(--mono)}
+.lahto .aika b{font-size:18px;font-weight:600}
+.lahto .aika span{font-size:12px;color:var(--ink-4)}
+.lahto .sis{flex:1;min-width:0;display:flex;flex-direction:column;gap:8px}
+.rivi{display:flex;align-items:center;gap:8px}
+.tuote{flex:1;min-width:0;font-size:15px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.merkki{flex-shrink:0;height:24px;padding:0 9px;border-radius:999px;display:inline-flex;align-items:center;font-size:12px;font-weight:600}
+.merkki.avoin{background:var(--open-bg);color:var(--open-ink)}
+.merkki.ok{background:var(--open-bg);color:var(--open-ink)}
+.merkki.varattu{background:var(--booked-bg);color:var(--booked-ink)}
+.merkki.uusi-m{background:var(--accent);color:#fff}
+.palkki{flex:1;height:6px;border-radius:999px;background:var(--track);overflow:hidden;display:block}
+.palkki i{display:block;height:6px;border-radius:999px;background:var(--accent)}
+.kaytto{font-family:var(--mono);font-size:13px;font-weight:600;min-width:40px;text-align:right}
+.meta{font-size:13px;color:var(--ink-3)}
+
+.varaus{display:flex;flex-direction:column;gap:5px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.varaus .nimi{flex:1;min-width:0;font-size:15px;font-weight:600}
+.varaus.korostus{border-color:var(--accent-line);background:var(--accent-soft)}
+
+nav.ala{position:absolute;left:0;right:0;bottom:0;height:72px;background:var(--surface);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+nav.ala span{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:11px;color:var(--ink-4)}
+nav.ala span.nyt{color:var(--accent);font-weight:600}
+nav.ala svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=390, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Keittiölaskuri – Saarniverstas</title>
+<!-- Konseptiesimerkki: keksitty yritys, keksityt vaihtoehdot ja hinnat. Kuva: Higgsfield (Nano Banana 2) 17.11.2026.
+     Hinta lasketaan samalla kaavalla kuin Sinoeticin keittiölaskurin hintamoottorissa (erittely, pyöristys 50 €:oon, haarukka ±10 %). -->
+<style>
+@font-face{font-family:"Schibsted Grotesk";src:url("../assets/fonts/schibsted-grotesk-variable.woff2") format("woff2");font-weight:400 900;font-display:block}
+@font-face{font-family:"Geist";src:url("../assets/fonts/geist-latin-variable.woff2") format("woff2");font-weight:100 900;font-display:block}
+:root{--paperi:#F4EEE5;--pinta:#FFFDF9;--muste:#211C17;--muste-2:#4A423A;--muste-3:#6E655B;--viiva:#E2D8CB;--tumma:#2A241E;--saarni:#B8925F}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:390px;height:844px;overflow:hidden}
+body{background:var(--paperi);color:var(--muste);font-family:"Schibsted Grotesk",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.ruutu{width:390px;height:844px;position:relative;display:flex;flex-direction:column}
+.tila{height:44px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 26px 0 30px;font-family:"Geist",system-ui,sans-serif;font-size:16px;font-weight:600}
+header{height:52px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 18px;border-bottom:1px solid var(--viiva)}
+.nimi{font-size:19px;font-weight:700;letter-spacing:-.02em;display:flex;align-items:center;gap:9px}
+.nimi i{width:9px;height:9px;border-radius:2px;background:var(--saarni);display:block;transform:rotate(45deg)}
+header span{font-size:13px;font-weight:600;color:var(--muste-3)}
+.vaiheet{display:flex;gap:6px;padding:12px 18px 0;font-size:12px;font-weight:600;color:var(--muste-3)}
+.vaiheet span{flex:1;height:4px;border-radius:999px;background:var(--tumma)}
+.kuva{position:relative;margin:12px 12px 0;border-radius:18px;overflow:hidden;height:300px}
+.kuva img{width:100%;height:100%;object-fit:cover;object-position:42% 50%;display:block}
+.hinta{position:absolute;left:10px;right:10px;bottom:10px;padding:12px 14px;border-radius:14px;background:rgba(255,253,249,.94);box-shadow:0 12px 26px -16px rgba(40,25,10,.5)}
+.hinta small{display:block;font-size:13px;font-weight:600;color:var(--muste-3);letter-spacing:.02em}
+.hinta b{display:block;font-variant-numeric:tabular-nums;font-size:34px;line-height:1.1;font-weight:700;letter-spacing:-.03em;margin-top:2px}
+.hinta em{font-style:normal;font-size:13px;color:var(--muste-2)}
+.otsikko{padding:16px 18px 0;font-size:20px;font-weight:700;letter-spacing:-.015em}
+.valinnat{display:flex;flex-wrap:wrap;gap:6px;padding:10px 18px 0}
+.valinnat span{height:30px;padding:0 12px;border-radius:999px;background:var(--pinta);border:1px solid var(--viiva);display:inline-flex;align-items:center;font-size:13px;font-weight:600;color:var(--muste-2)}
+.erittely{margin:14px 18px 0;border-top:1px solid var(--viiva)}
+.erittely div{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--viiva);font-size:14px;color:var(--muste-2)}
+.erittely div b{color:var(--muste);font-weight:600}
+.erittely div.summa{font-size:15px;color:var(--muste);font-weight:700;border-bottom:0}
+.cta{position:absolute;left:18px;right:18px;bottom:22px;height:54px;border-radius:999px;background:var(--tumma);color:var(--pinta);display:flex;align-items:center;justify-content:center;gap:10px;font-size:17px;font-weight:600}
+.huom{position:absolute;left:18px;right:18px;bottom:84px;font-size:12px;line-height:1.4;color:var(--muste-3);text-align:center}
+</style>
+</head>
+<body>
+<div class="ruutu">
+  <div class="tila" aria-hidden="true">
+    <span>22.38</span>
+    <span style="display:flex;gap:6px;align-items:center">
+      <svg width="18" height="12" viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1" fill="#211C17"/><rect x="5" y="5.5" width="3" height="6.5" rx="1" fill="#211C17"/><rect x="10" y="3" width="3" height="9" rx="1" fill="#211C17"/><rect x="15" y="0" width="3" height="12" rx="1" fill="#211C17"/></svg>
+      <svg width="26" height="13" viewBox="0 0 26 13"><rect x=".5" y=".5" width="22" height="12" rx="3.5" fill="none" stroke="#211C17" opacity=".45"/><rect x="2.5" y="2.5" width="12" height="8" rx="2" fill="#211C17"/><rect x="23.5" y="4.5" width="2" height="4" rx="1" fill="#211C17" opacity=".45"/></svg>
+    </span>
+  </div>
+  <header><span class="nimi"><i aria-hidden="true"></i>Saarniverstas</span><span>Keittiölaskuri</span></header>
+  <div class="vaiheet" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <figure class="kuva">
+    <img src="kuvat/keittio.webp" alt="Koottu keittiö: tammiviiluovet, kivikomposiittitaso ja upotettu allas">
+    <div class="hinta"><small>Hinta-arvio</small><b id="noin">noin 14 850 €</b><em id="haarukka">13 350–16 350 € · sisältää asennuksen</em></div>
+  </figure>
+  <div class="otsikko">Kokoamasi keittiö</div>
+  <div class="valinnat" id="valinnat"></div>
+  <div class="erittely" id="erittely"></div>
+  <p class="huom">Arvio tarkentuu maksuttomalla mittauskäynnillä.</p>
+  <span class="cta">Pyydä tarjous tästä keittiöstä →</span>
+</div>
+<script>
+// Keksitty, neutraali hinta-aineisto. Kaava sama kuin keittiölaskurin hintamoottorissa:
+//   kalusteosa = (perusta + oven lisähinta + tason lisähinta) × kokokerroin
+//   yhteensä   = kalusteosa + allas + saareke + valaistus + lisävarusteet + kodinkoneet
+//   näytettävä hinta pyöristetään 50 euroon, haarukka ±10 %.
+const D = {
+  perusta: 7900, pyoristys: 50, haarukka: 0.1,
+  ovet: { tammi: { nimi: "Tammiviilu", hinta: 2400 } },
+  taso: { kivi: { nimi: "Kivikomposiitti", hinta: 1850 } },
+  koko: { "4,2": { nimi: "4,2 m", kerroin: 1.15 } },
+  allas: { upotettu: { nimi: "Upotettu allas", hinta: 390 } },
+  saareke: { ei: { nimi: "Ei saareketta", hinta: 0 } },
+  valaistus: { led: { nimi: "LED-valaistus", hinta: 480 } },
+  koneet: { omat: { nimi: "Omat kodinkoneet", hinta: 0 } },
+};
+const V = { ovet: "tammi", taso: "kivi", koko: "4,2", allas: "upotettu", saareke: "ei", valaistus: "led", koneet: "omat", lisa: [] };
+const o = (k) => D[k][V[k]];
+const kalusteosa = Math.round((D.perusta + o("ovet").hinta + o("taso").hinta) * o("koko").kerroin);
+const yhteensa = kalusteosa + o("allas").hinta + o("saareke").hinta + o("valaistus").hinta + o("koneet").hinta;
+const pyorista = (n) => Math.round(n / D.pyoristys) * D.pyoristys;
+const eur = (n) => Math.round(n).toLocaleString("fi-FI").replace(/\s/g, " ") + " €";
+document.getElementById("noin").textContent = "noin " + eur(pyorista(yhteensa));
+document.getElementById("haarukka").textContent =
+  eur(pyorista(yhteensa * (1 - D.haarukka))).replace(" €", "") + "–" + eur(pyorista(yhteensa * (1 + D.haarukka))) + " · sisältää asennuksen";
+document.getElementById("valinnat").innerHTML = ["ovet", "taso", "koko", "allas", "valaistus"].map((k) => `<span>${o(k).nimi}</span>`).join("");
+document.getElementById("erittely").innerHTML =
+  `<div><span>Kalusteet ${o("koko").nimi}</span><b>${eur(kalusteosa)}</b></div>` +
+  `<div><span>${o("allas").nimi}</span><b>${eur(o("allas").hinta)}</b></div>` +
+  `<div><span>${o("valaistus").nimi}</span><b>${eur(o("valaistus").hinta)}</b></div>` +
+  `<div class="summa"><span>Yhteensä</span><span>${eur(yhteensa)}</span></div>`;
+</script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Vaihe 3 – Yön työt, mallikierros</title>
+<style>
+@font-face{font-family:"Schibsted Grotesk";font-style:normal;font-weight:400 900;font-display:swap;src:url("../../assets/fonts/schibsted-grotesk-variable.woff2") format("woff2")}
+html,body{margin:0;background:#080E16}
+
+#v3, #v3 *, #v3 *::before, #v3 *::after{box-sizing:border-box;margin:0;padding:0}
+#v3{
+  --v3-midnight:#080E16; --v3-teal:#102830; --v3-emerald:#087F69; --v3-mint:#55CBB2; --v3-white:#F4F7F8;
+  --v3-line:rgba(244,247,248,.11); --v3-pad:clamp(20px,4vw,56px);
+  position:relative; overflow:hidden; isolation:isolate;
+  height:100vh; height:100svh; min-height:360px;
+  display:flex; flex-direction:column;
+  background:var(--v3-midnight); color:var(--v3-white);
+  font-family:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+#v3 a{color:inherit;text-decoration:none}
+#v3 a:focus-visible{outline:2px solid var(--v3-mint);outline-offset:3px}
+
+/* ---------- Kehys: verstas (koodiversio) tai video (versio A) ---------- */
+#v3 .j-kehys{position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none}
+#v3[data-asettelu="b"] .j-kehys{-webkit-mask-image:linear-gradient(90deg,transparent var(--kehys-x,40%),#000 calc(var(--kehys-x,40%) + 9%)); mask-image:linear-gradient(90deg,transparent var(--kehys-x,40%),#000 calc(var(--kehys-x,40%) + 9%))}
+#v3 .j-koodi{position:absolute; inset:0}
+#v3 .j-kuva{position:absolute; left:0; top:0; transform-origin:0 0; max-width:none; display:block; filter:brightness(.92) saturate(.95)}
+#v3 .j-laptop, #v3 .j-puhelin{position:absolute; left:0; top:0; transform-origin:0 0; overflow:hidden; backface-visibility:hidden}
+#v3 .j-laptop{width:1440px; height:900px; filter:brightness(.93)}
+#v3 .j-puhelin{width:390px; height:844px; opacity:0; border-radius:42px}
+#v3 .j-laptop iframe, #v3 .j-puhelin iframe, #v3 .j-kortti iframe{display:block; border:0; pointer-events:none; background:#fff}
+#v3 .j-laptop iframe{width:1440px; height:900px}
+#v3 .j-puhelin iframe{width:390px; height:844px}
+#v3 .j-lap-hehku, #v3 .j-puh-hehku{position:absolute; left:-110px; top:-110px; width:220px; height:220px; border-radius:50%; transform-origin:50% 50%; mix-blend-mode:screen}
+#v3 .j-lap-hehku{background:radial-gradient(closest-side, rgba(255,232,200,.22), rgba(255,232,200,.08) 55%, rgba(255,232,200,0))}
+#v3 .j-puh-hehku{opacity:0; background:radial-gradient(closest-side, rgba(200,205,255,.55), rgba(140,150,255,.18) 50%, rgba(140,150,255,0))}
+#v3 .j-a{position:absolute; inset:0; display:none}
+#v3[data-versio="a"] .j-a{display:block}
+#v3[data-versio="a"] .j-koodi{display:none}
+#v3 .j-a video, #v3 .j-a img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:30% 50%}
+#v3 .j-a video{opacity:0}
+#v3.video-ok .j-a video{opacity:1}
+#v3.video-ok .j-vara{display:none}
+#v3 .j-vara + .j-vara{opacity:0}
+#v3[data-asettelu="b"] .j-a{left:var(--kehys-x,40%)}
+#v3[data-asettelu="b"] .j-a video, #v3[data-asettelu="b"] .j-a img{object-position:12% 50%}
+
+/* ---------- Valo: puhelimen ruutu täyttää näkymän ---------- */
+#v3 .j-valo{position:absolute; inset:0; z-index:1; pointer-events:none; opacity:0;
+  background:radial-gradient(circle at var(--vx,70%) var(--vy,60%), rgba(196,240,230,.96) 0%, rgba(85,203,178,.82) 16%, rgba(16,60,64,.96) 52%, #080E16 100%)}
+
+/* ---------- Tummennus tekstin alle ---------- */
+#v3 .v3-shade{position:absolute; inset:0; z-index:2; pointer-events:none}
+#v3[data-asettelu="a"] .v3-shade{background:
+  radial-gradient(ellipse 54% 50% at 50% 50%, rgba(8,14,22,.80) 0%, rgba(8,14,22,.66) 55%, rgba(8,14,22,.20) 100%),
+  linear-gradient(180deg, rgba(8,14,22,.86) 0%, rgba(8,14,22,.62) 9%, rgba(8,14,22,.10) 22%, rgba(8,14,22,.10) 80%, rgba(8,14,22,.45) 100%)}
+#v3[data-asettelu="b"] .v3-shade{background:
+  linear-gradient(90deg, rgba(8,14,22,.95) 0%, rgba(8,14,22,.90) 40%, rgba(8,14,22,.45) 54%, rgba(8,14,22,0) 66%),
+  linear-gradient(180deg, rgba(8,14,22,.86) 0%, rgba(8,14,22,.62) 9%, rgba(8,14,22,0) 21%, rgba(8,14,22,0) 82%, rgba(8,14,22,.45) 100%)}
+#v3 .v3-grain{position:absolute; inset:0; z-index:4; pointer-events:none; opacity:.06;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:240px 240px}
+
+/* ---------- Näyttämö: tumma lasi ja kolme oikeaa näkymää ---------- */
+#v3 .j-lava{position:absolute; inset:0; z-index:3; pointer-events:none; visibility:hidden; perspective:1400px; perspective-origin:70% 45%}
+#v3 .j-lava::before{content:""; position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 46% 52% at 72% 52%, rgba(16,40,48,.95) 0%, rgba(16,40,48,.35) 55%, rgba(16,40,48,0) 100%),
+    radial-gradient(ellipse 30% 22% at 74% 88%, rgba(85,203,178,.10), rgba(85,203,178,0)),
+    linear-gradient(180deg, #080E16 0%, #0A141C 60%, #081016 100%)}
+#v3[data-asettelu="a"] .j-lava::before{background:
+    radial-gradient(ellipse 60% 40% at 50% 92%, rgba(16,40,48,.95) 0%, rgba(16,40,48,0) 100%),
+    linear-gradient(180deg, #080E16 0%, #0A141C 70%, #0C1820 100%)}
+#v3 .j-kortti{position:absolute; left:0; top:0; transform-origin:50% 50%; border-radius:20px; overflow:hidden; opacity:0; background:#F5F6F8;
+  box-shadow:0 0 0 1px rgba(244,247,248,.22), 0 1px 0 rgba(255,255,255,.35) inset, 0 34px 70px -24px rgba(0,0,0,.85), 0 0 60px -10px rgba(85,203,178,.18)}
+#v3 .j-kortti iframe{width:390px; height:844px; transform-origin:0 0}
+#v3 .j-kortti::after{content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+  background:linear-gradient(125deg, rgba(255,255,255,.10) 0%, rgba(255,255,255,0) 32%), linear-gradient(180deg, rgba(8,14,22,0) 78%, rgba(8,14,22,.28) 100%)}
+
+/* ---------- Valikko ---------- */
+#v3 .v3-nav{position:relative; z-index:5; display:flex; align-items:center; justify-content:space-between; gap:24px;
+  width:100%; max-width:1240px; margin:0 auto; height:clamp(48px,9vh,76px); padding:0 var(--v3-pad)}
+#v3 .v3-word{font-size:clamp(18px,1.5vw,21px); font-weight:700; letter-spacing:-.03em}
+#v3 .v3-links{display:flex; align-items:center; gap:clamp(20px,2.6vw,38px); list-style:none}
+#v3 .v3-links a{font-size:14.5px; font-weight:500; color:rgba(244,247,248,.84)}
+#v3 .v3-navbtn{display:inline-flex; align-items:center; height:38px; padding:0 18px; border:1px solid rgba(244,247,248,.20); border-radius:999px; font-size:14px; font-weight:600; white-space:nowrap; background:rgba(8,14,22,.35)}
+#v3 .v3-right{display:flex; align-items:center; gap:clamp(20px,2.6vw,38px)}
+
+/* ---------- Tekstit (paikoillaan koko ajan) ---------- */
+#v3 .v3-main{position:relative; z-index:5; flex:1 1 auto; display:flex; flex-direction:column; justify-content:center}
+#v3 .v3-tag{display:inline-flex; align-items:center; gap:10px; height:32px; padding:0 15px 0 13px; border-radius:999px;
+  border:1px solid var(--v3-line); background:rgba(8,14,22,.45); font-size:13px; font-weight:500; color:rgba(244,247,248,.86); letter-spacing:.005em}
+#v3 .v3-tag i{width:6px; height:6px; border-radius:50%; background:var(--v3-mint); flex:none}
+#v3 .v3-h1{margin-top:clamp(10px,3vh,26px); font-weight:600; line-height:1.02; letter-spacing:-.038em}
+#v3 .v3-h1 span{display:block}
+#v3 .v3-h1 .v3-l1{color:rgba(244,247,248,.66)}
+#v3 .v3-lead{margin-top:clamp(10px,2.8vh,24px); font-size:clamp(13.5px,min(1.3vw,2.3vh),18.5px); line-height:1.5; color:rgba(244,247,248,.80); text-wrap:pretty}
+#v3 .v3-cta{display:flex; align-items:center; gap:12px; margin-top:clamp(14px,3.6vh,32px)}
+#v3 .v3-btn{display:inline-flex; align-items:center; justify-content:center; height:clamp(36px,6.5vh,52px); padding:0 clamp(18px,2vw,28px); border-radius:999px; font-size:clamp(13.5px,min(1.15vw,2vh),16px); font-weight:600; white-space:nowrap}
+#v3 .v3-btn.v3-p{background:var(--v3-white); color:var(--v3-midnight); box-shadow:0 1px 0 rgba(255,255,255,.6) inset, 0 10px 30px -12px rgba(0,0,0,.6)}
+#v3 .v3-btn.v3-s{border:1px solid rgba(244,247,248,.28); background:rgba(8,14,22,.45); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px)}
+
+/* Asettelu A: otsikko keskellä kuten ilmeessä 3 */
+#v3[data-asettelu="a"] .v3-main{align-items:center; text-align:center; padding:0 var(--v3-pad) clamp(70px,24vh,250px)}
+#v3[data-asettelu="a"] .v3-h1{font-size:clamp(34px,min(5.6vw,10vh),84px)}
+#v3[data-asettelu="a"] .v3-lead{max-width:36em}
+#v3[data-asettelu="a"] .v3-cta{justify-content:center}
+/* Asettelu B: otsikko vasemmalla, näkymät oikealla */
+#v3[data-asettelu="b"] .v3-main{align-items:flex-start; text-align:left; width:100%; max-width:1240px; margin:0 auto; padding:0 var(--v3-pad) clamp(16px,5vh,56px)}
+#v3[data-asettelu="b"] .v3-main > *{max-width:min(46vw,600px)}
+#v3[data-asettelu="b"] .v3-h1{font-size:clamp(28px,min(4.1vw,8.6vh),70px)}
+
+/* Kapea ruutu: otsikko ylhäällä, kortit sen alla */
+@media (max-width:760px){
+  #v3 .v3-links{display:none}
+  #v3 .v3-nav{height:60px}
+  #v3[data-asettelu] .v3-main{flex:0 0 auto; align-items:center; text-align:center; padding:6px var(--v3-pad) 0; max-width:none}
+  #v3[data-asettelu] .v3-main > *{max-width:none}
+  #v3 .v3-tag{height:auto; min-height:30px; padding:6px 13px 6px 12px; font-size:12.5px; text-align:left}
+  #v3[data-asettelu] .v3-h1{font-size:clamp(30px,9.2vw,44px); margin-top:14px; text-wrap:balance}
+  #v3 .v3-h1 span{display:inline}
+  #v3 .v3-lead{font-size:15px; margin-top:12px}
+  #v3[data-asettelu] .v3-cta{flex-direction:column; align-items:stretch; justify-content:center; width:100%; max-width:340px; gap:9px; margin:18px auto 0}
+  #v3 .v3-btn{height:46px; font-size:15px}
+  #v3[data-asettelu] .j-kehys{-webkit-mask-image:linear-gradient(180deg,transparent var(--kehys-y,40%),#000 calc(var(--kehys-y,40%) + 12%)); mask-image:linear-gradient(180deg,transparent var(--kehys-y,40%),#000 calc(var(--kehys-y,40%) + 12%))}
+  #v3[data-asettelu] .v3-shade{background:linear-gradient(180deg, rgba(8,14,22,.9) 0%, rgba(8,14,22,.82) 48%, rgba(8,14,22,.15) 64%, rgba(8,14,22,0) 72%, rgba(8,14,22,.35) 100%)}
+  #v3[data-asettelu] .j-a{left:0; top:var(--kehys-y,40%)}
+  #v3[data-asettelu] .j-lava{perspective-origin:50% 75%}
+  #v3[data-asettelu] .j-lava::before{background:radial-gradient(ellipse 80% 40% at 50% 78%, rgba(16,40,48,.95), rgba(16,40,48,0)), linear-gradient(180deg,#080E16,#0A141C)}
+}
+/* Matala ruutu (esim. 853×400) */
+@media (max-height:520px) and (min-width:761px){
+  #v3 .v3-nav{height:46px}
+  #v3 .v3-links a{font-size:13px}
+  #v3 .v3-navbtn{height:30px; padding:0 14px; font-size:12.5px}
+  #v3 .v3-tag{height:24px; padding:0 11px 0 10px; font-size:11.5px; gap:8px}
+  #v3 .v3-tag i{width:5px; height:5px}
+  #v3 .v3-h1{margin-top:9px}
+  #v3 .v3-lead{margin-top:8px; line-height:1.42}
+  #v3 .v3-cta{margin-top:12px; gap:9px}
+  #v3 .v3-btn{height:34px; padding:0 17px; font-size:12.5px}
+  #v3[data-asettelu="a"] .v3-main{padding-bottom:clamp(40px,14vh,90px)}
+}
+
+/* ---------- Vertailun valitsin (vain tällä sivulla) ---------- */
+.vrt{position:fixed; z-index:10; left:50%; bottom:10px; transform:translateX(-50%); display:flex; align-items:center; gap:10px; padding:5px 6px 5px 12px;
+  border:1px solid rgba(244,247,248,.16); border-radius:999px; background:rgba(8,14,22,.80); -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px);
+  font:500 12px/1 "Schibsted Grotesk",system-ui,sans-serif; color:rgba(244,247,248,.86); white-space:nowrap}
+.vrt fieldset{border:0; display:flex; align-items:center; gap:4px; padding:0; margin:0}
+.vrt legend{float:left; margin-right:4px; padding:0; color:rgba(244,247,248,.6)}
+.vrt button{height:28px; min-width:28px; padding:0 9px; border-radius:999px; cursor:pointer; border:1px solid rgba(244,247,248,.22); background:transparent; color:inherit; font:inherit}
+.vrt button:disabled{opacity:.3; cursor:not-allowed}
+.vrt button[aria-pressed="true"]{background:#F4F7F8; color:#080E16; border-color:#F4F7F8}
+.vrt button:focus-visible{outline:2px solid #55CBB2; outline-offset:2px}
+.vrt .aika{min-width:3.2em; text-align:right; color:rgba(244,247,248,.6); font-variant-numeric:tabular-nums}
+.puhdas .vrt{display:none}
+@media (max-width:760px){ .vrt{gap:6px; padding:4px 5px 4px 8px; font-size:11px} .vrt legend{display:none} .vrt button{height:26px; min-width:26px; padding:0 6px} .vrt .aika{display:none} }
+@media (max-height:520px){ .vrt{bottom:4px; transform:translateX(-50%) scale(.86); transform-origin:50% 100%} }
+</style>
+</head>
+<body>
+<section id="v3" data-versio="koodi" data-asettelu="b">
+  <div class="j-kehys" aria-hidden="true">
+    <div class="j-koodi">
+      <img class="j-kuva" src="kuvat/verstas-a.webp" alt="" decoding="async">
+      <div class="j-lap-hehku"></div>
+      <div class="j-laptop"><iframe src="../../nakymat/saarniverstas.html" title="Esimerkkisivu läppärin ruudulla" tabindex="-1" loading="eager"></iframe></div>
+      <div class="j-puh-hehku"></div>
+      <div class="j-puhelin"><iframe src="../../nakymat/puhelin-booking.html" title="Ajanvaraus puhelimen ruudulla" tabindex="-1" loading="eager"></iframe></div>
+    </div>
+    <div class="j-a">
+      <video class="j-video" muted playsinline preload="auto" poster="kuvat/a1-k.webp"><source src="../../_video/versio-a/a3.mp4" type="video/mp4"></video>
+      <img class="j-vara" src="kuvat/a1-k.webp" alt="">
+      <img class="j-vara" src="kuvat/a2-k.webp" alt="">
+    </div>
+  </div>
+  <div class="j-valo" aria-hidden="true"></div>
+  <div class="v3-shade" aria-hidden="true"></div>
+  <div class="j-lava" aria-hidden="true">
+    <div class="j-kortti"><iframe src="../../nakymat/puhelin-tarjouspyynto.html" title="Tarjouspyyntö" tabindex="-1" loading="eager"></iframe></div>
+    <div class="j-kortti"><iframe src="../../nakymat/puhelin-keittiolaskuri.html" title="Keittiölaskuri" tabindex="-1" loading="eager"></iframe></div>
+    <div class="j-kortti"><iframe src="../../nakymat/puhelin-booking.html" title="Ajanvaraus" tabindex="-1" loading="eager"></iframe></div>
+  </div>
+  <div class="v3-grain" aria-hidden="true"></div>
+
+  <header class="v3-nav">
+    <a class="v3-word" href="#">Sinoetic</a>
+    <nav class="v3-right" aria-label="Päävalikko">
+      <ul class="v3-links">
+        <li><a href="#palvelut">Palvelut</a></li>
+        <li><a href="#nain-se-etenee">Näin se etenee</a></li>
+        <li><a href="#yhteys">Yhteys</a></li>
+      </ul>
+      <a class="v3-navbtn" href="#yhteys">Ota yhteyttä</a>
+    </nav>
+  </header>
+
+  <div class="v3-main">
+    <p class="v3-tag"><i aria-hidden="true"></i><span>Näet uuden sivusi ennen kuin päätät mitään.</span></p>
+    <h1 class="v3-h1"><span class="v3-l1">Jos sen voi kuvitella, </span><span class="v3-l2">sen voi rakentaa.</span></h1>
+    <p class="v3-lead">Suunnittelemme ja rakennamme yrityksesi verkkosivut. Kun olet valmis, lisäämme niihin tekoälyn, automaation ja omat järjestelmät.</p>
+    <div class="v3-cta">
+      <a class="v3-btn v3-p" href="#yhteys">Pyydä ilmainen demo</a>
+      <a class="v3-btn v3-s" href="#palvelut">Katso, mitä teemme</a>
+    </div>
+  </div>
+</section>
+
+<nav class="vrt" aria-label="Vertailun valinnat">
+  <fieldset><legend>Versio</legend>
+    <button type="button" data-k="versio" data-v="koodi" aria-pressed="true">Koodi</button>
+    <button type="button" data-k="versio" data-v="a" aria-pressed="false">A</button>
+    <button type="button" data-k="versio" data-v="b" aria-pressed="false" disabled title="Mousen paketti ei ole vielä tullut">B</button>
+  </fieldset>
+  <fieldset><legend>Asettelu</legend>
+    <button type="button" data-k="asettelu" data-v="a" aria-pressed="false" title="Otsikko keskellä">A</button>
+    <button type="button" data-k="asettelu" data-v="b" aria-pressed="true" title="Otsikko vasemmalla">B</button>
+  </fieldset>
+  <fieldset><legend>Verstas</legend>
+    <button type="button" data-k="verstas" data-v="a" aria-pressed="true">a</button>
+    <button type="button" data-k="verstas" data-v="b" aria-pressed="false">b</button>
+    <button type="button" data-k="verstas" data-v="c" aria-pressed="false">c</button>
+  </fieldset>
+  <button type="button" id="toista" title="Toista jakso alusta (saman istunnon uusi käynti näyttää lopputilan)">↻ Toista</button>
+  <span class="aika" id="aika">0,0 s</span>
+</nav>
+
+<script src="jakso.js"></script>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  if (q.has("puhdas")) document.documentElement.classList.add("puhdas");
+  var napit = document.querySelectorAll(".vrt button[data-k]");
+  function paivita() {
+    napit.forEach(function (b) { b.setAttribute("aria-pressed", String(Jakso.asetukset[b.dataset.k] === b.dataset.v)); });
+    document.querySelectorAll('.vrt button[data-k="verstas"]').forEach(function (b) { b.disabled = Jakso.asetukset.versio !== "koodi"; });
+    var u = new URLSearchParams(location.search);
+    ["versio", "asettelu", "verstas"].forEach(function (k) { u.set(k, Jakso.asetukset[k]); });
+    history.replaceState(null, "", "?" + u.toString());
+  }
+  napit.forEach(function (b) { b.addEventListener("click", function () { Jakso.aseta(b.dataset.k, b.dataset.v); paivita(); }); });
+  document.getElementById("toista").addEventListener("click", function () { Jakso.toista(); });
+  var aika = document.getElementById("aika");
+  (function kello() { aika.textContent = (Math.min(Jakso.aika(), 13000) / 1000).toFixed(1).replace(".", ",") + " s"; requestAnimationFrame(kello); })();
+  paivita();
+})();
+</script>
+</body>
+</html>

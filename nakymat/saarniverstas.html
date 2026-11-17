@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Saarniverstas – puukalusteet käsityönä</title>
+<!-- Keksitty yritys Sinoeticin konseptiesimerkkiin (Saarniverstas: ei YTJ:ssä 17.11.2026). -->
+<style>
+@font-face{font-family:"Schibsted Grotesk";src:url("../assets/fonts/schibsted-grotesk-variable.woff2") format("woff2");font-weight:400 900;font-display:block}
+:root{
+  --paperi:#F4EEE5; --pinta:#FBF8F3; --muste:#211C17; --muste-2:#4A423A; --muste-3:#6E655B;
+  --viiva:#E2D8CB; --tumma:#2A241E; --saarni:#B8925F; --saarni-2:#8C6A3F;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:var(--paperi);color:var(--muste);font-family:"Schibsted Grotesk",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow:hidden}
+.sivu{position:relative;height:100vh;display:flex;flex-direction:column;overflow:hidden}
+
+header{height:96px;display:flex;align-items:center;gap:56px;padding:0 72px;border-bottom:1px solid var(--viiva)}
+.nimi{font-size:30px;font-weight:700;letter-spacing:-.02em;display:flex;align-items:center;gap:14px}
+.nimi i{width:14px;height:14px;border-radius:3px;background:var(--saarni);display:block;transform:rotate(45deg)}
+nav{display:flex;gap:40px;margin-left:auto;font-size:18px;font-weight:500;color:var(--muste-2)}
+.soita{font-size:18px;font-weight:600;padding:12px 22px;border:1.5px solid var(--muste);border-radius:999px}
+
+main{flex:1;min-height:0;display:grid;grid-template-columns:1.08fr .92fr;gap:64px;padding:34px 72px 96px;align-items:center}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:17px;font-weight:600;color:var(--saarni-2);letter-spacing:.06em;text-transform:uppercase}
+.kicker::before{content:"";width:34px;height:2px;background:var(--saarni)}
+h1{margin-top:22px;font-size:78px;line-height:1;font-weight:700;letter-spacing:-.035em;max-width:11.5ch}
+.ingressi{margin-top:24px;font-size:23px;line-height:1.45;color:var(--muste-2);max-width:30ch}
+.napit{margin-top:32px;display:flex;gap:16px}
+.nappi{height:68px;padding:0 34px;border-radius:999px;display:inline-flex;align-items:center;gap:12px;font-size:21px;font-weight:600}
+.nappi.paa{background:var(--tumma);color:var(--pinta)}
+.nappi.paa::after{content:"→";font-weight:500}
+.nappi.toissa{border:1.5px solid var(--muste);color:var(--muste)}
+.faktat{margin-top:30px;display:flex;gap:30px;font-size:17px;color:var(--muste-3)}
+.faktat span{display:flex;align-items:center;gap:10px}
+.faktat span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--saarni)}
+
+.kuva{position:relative;height:100%;max-height:620px;border-radius:26px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(60,40,20,.45)}
+.kuva img{width:100%;height:100%;object-fit:cover;display:block}
+.kuva figcaption{position:absolute;left:22px;bottom:22px;background:rgba(251,248,243,.92);border-radius:14px;padding:14px 18px;font-size:16px;line-height:1.35;color:var(--muste-2)}
+.kuva figcaption b{display:block;color:var(--muste);font-size:18px}
+
+.powered{position:absolute;right:36px;bottom:24px;display:inline-flex;align-items:center;gap:12px;
+  padding:11px 22px 11px 18px;border-radius:999px;background:var(--pinta);border:1.5px solid var(--viiva);
+  font-size:29px;font-weight:500;color:var(--muste-2);letter-spacing:-.01em;box-shadow:0 8px 24px -14px rgba(60,40,20,.5)}
+.powered b{font-weight:700;color:var(--muste)}
+.powered i{width:13px;height:13px;border-radius:50%;background:#087F69;display:block}
+</style>
+</head>
+<body>
+<div class="sivu">
+  <header>
+    <div class="nimi"><i aria-hidden="true"></i>Saarniverstas</div>
+    <nav aria-label="Päävalikko"><span>Keittiöt</span><span>Kalusteet</span><span>Työt</span><span>Verstas</span></nav>
+    <span class="soita">Yhteystiedot</span>
+  </header>
+  <main>
+    <section>
+      <span class="kicker">Puusepänverstas</span>
+      <h1>Puukalusteet käsityönä, mittojen mukaan.</h1>
+      <p class="ingressi">Keittiöt, kaapistot ja huonekalut massiivipuusta. Suunnittelemme, valmistamme ja asennamme.</p>
+      <div class="napit"><span class="nappi paa">Pyydä tarjous</span><span class="nappi toissa">Varaa aika</span></div>
+      <div class="faktat"><span>Kotimaiset puulajit</span><span>Oma verstas</span><span>Asennus kotiin</span></div>
+    </section>
+    <figure class="kuva">
+      <img src="kuvat/puutyo.webp" alt="Saarnipuinen laatikko lohenpyrstöliitoksin ja höylä työpenkillä">
+      <figcaption><b>Saarnilaatikko</b>lohenpyrstöliitokset käsin</figcaption>
+    </figure>
+  </main>
+  <div class="powered"><i aria-hidden="true"></i>Powered by <b>Sinoetic</b></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Vaihe 3 – materiaalit</title>
+<style>
+@font-face{font-family:"Schibsted Grotesk";font-weight:400 900;src:url("../../assets/fonts/schibsted-grotesk-variable.woff2") format("woff2")}
+:root{--bg:#080E16;--pinta:#0F1A24;--teksti:#F4F7F8;--himmea:rgba(244,247,248,.68);--viiva:rgba(244,247,248,.12);--minttu:#55CBB2}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--teksti);font:16px/1.5 "Schibsted Grotesk",system-ui,sans-serif;padding:32px 16px 64px}
+main{max-width:1240px;margin:0 auto}
+h1{font-size:28px;letter-spacing:-.02em}
+h2{font-size:19px;margin:40px 0 12px;letter-spacing:-.01em}
+p{color:var(--himmea);max-width:70ch}
+a{color:var(--minttu)}
+.ruudukko{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.puhelimet{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+figure{background:var(--pinta);border:1px solid var(--viiva);border-radius:14px;overflow:hidden}
+figure img{display:block;width:100%;height:auto}
+figcaption{padding:10px 12px;font-size:14px;color:var(--himmea)}
+figcaption b{color:var(--teksti);font-weight:600}
+.leveä{grid-column:1/-1}
+</style>
+</head>
+<body>
+<main>
+  <h1>Vaihe 3 – materiaalit</h1>
+  <p>Kapteenin hyväksyttävänä: läppärin sivu ja kolme puhelinnäkymää. Ne ovat oikeaa HTML:ää (<a href="../../nakymat/saarniverstas.html">saarniverstas.html</a>, <a href="../../nakymat/puhelin-booking.html">puhelin-booking.html</a>, <a href="../../nakymat/puhelin-keittiolaskuri.html">puhelin-keittiolaskuri.html</a>, <a href="../../nakymat/puhelin-tarjouspyynto.html">puhelin-tarjouspyynto.html</a>). Kuvat ovat <code>_video/materiaali/</code>-kansion kaappauksia. Jakso: <a href="index.html">vertailusivu</a>.</p>
+
+  <h2>Läppärin sivu (1440×900, tiheys 2)</h2>
+  <div class="ruudukko"><figure class="leveä"><img src="../../_video/materiaali/laptop-sivu.png" alt="Saarniverstaan etusivu"><figcaption><b>Saarniverstas</b> – keksitty puusepänverstas (ei YTJ:ssä, ei verkossa 17.11.2026). "Powered by Sinoetic" oikeassa alakulmassa.</figcaption></figure></div>
+
+  <h2>Puhelinnäkymät (390×844, tiheys 3)</h2>
+  <div class="ruudukko puhelimet">
+    <figure><img src="../../_video/materiaali/puhelin-booking.png" alt=""><figcaption><b>Ajanvaraus</b> – Sinoetic Bookingin ylläpidon komponentit (Geist, #3B3FD8). "Uusi varaus · klo 02.14".</figcaption></figure>
+    <figure><img src="../../_video/materiaali/puhelin-keittiolaskuri.png" alt=""><figcaption><b>Keittiölaskuri</b> – neutraali keittiö (Higgsfield), keksityt hinnat, hintamoottorin kaava. Ei mitään Koronalta.</figcaption></figure>
+    <figure><img src="../../_video/materiaali/puhelin-tarjouspyynto.png" alt=""><figcaption><b>Tarjouspyyntö</b> – keksityt yhteystiedot (example.com), klo 23.47.</figcaption></figure>
+  </div>
+
+  <h2>Koodiversion verstaskuvat (Nano Banana 2, 1K)</h2>
+  <div class="ruudukko">
+    <figure><img src="kuvat/verstas-a.webp" alt=""><figcaption><b>a</b> – pöydän taso, läppäri ja puhelin samalla linjalla (oletus)</figcaption></figure>
+    <figure><img src="kuvat/verstas-b.webp" alt=""><figcaption><b>b</b> – hieman ylempää, koko verstas</figcaption></figure>
+    <figure><img src="kuvat/verstas-c.webp" alt=""><figcaption><b>c</b> – läppäri edessä, puhelin taaempana</figcaption></figure>
+  </div>
+
+  <h2>Versio A: alku- ja loppukuvat (Nano Banana Pro, 2K)</h2>
+  <div class="ruudukko">
+    <figure><img src="kuvat/a1-1.webp" alt=""><figcaption><b>A1-1</b> – "Powered by Sinoatic", "MacBook Pro"</figcaption></figure>
+    <figure><img src="kuvat/a1-2.webp" alt=""><figcaption><b>A1-2</b> – "Varaa dika", "Powered by Sinartic", "Product Contentant", "MacBook Air", kädet</figcaption></figure>
+    <figure><img src="kuvat/a1-k.webp" alt=""><figcaption><b>A1-K</b> – A1-2 + oikea sivu perspektiivillä (videon alkukuva)</figcaption></figure>
+    <figure><img src="kuvat/a2-1.webp" alt=""><figcaption><b>A2-1</b> – puhelin penkillä, tyhjä ruutu (valittu)</figcaption></figure>
+    <figure><img src="kuvat/a2-2.webp" alt=""><figcaption><b>A2-2</b> – puhelin leijuu, hylätty</figcaption></figure>
+    <figure><img src="kuvat/a2-k.webp" alt=""><figcaption><b>A2-K</b> – A2-1 + oikea Booking-näkymä (videon loppukuva)</figcaption></figure>
+  </div>
+</main>
+</body>
+</html>

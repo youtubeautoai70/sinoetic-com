@@ -2,3 +2,7 @@
 _vertailu/**/_tausta/
 _vertailu/**/_mitat.json
 _vertailu/**/_kontrasti.json
+
+# Vaihe 3: kontrastimittauksen taustat ja testikaappaukset
+_vertailu/vaihe3/_kontrasti/
+_vertailu/vaihe3/_testi/

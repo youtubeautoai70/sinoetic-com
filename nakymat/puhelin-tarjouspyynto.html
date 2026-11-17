@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=390, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Tarjouspyyntö – Saarniverstas</title>
+<!-- Konseptiesimerkki: keksitty yritys ja keksityt yhteystiedot (example.com on varattu esimerkkiverkkotunnus). -->
+<link rel="stylesheet" href="puhelin.css">
+<style>
+.kentat{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.kentta{display:flex;flex-direction:column;gap:3px;padding:11px 14px;border-top:1px solid var(--line)}
+.kentta:first-child{border-top:0}
+.kentta span{font-size:12px;font-weight:600;color:var(--ink-4)}
+.kentta b{font-size:15px;font-weight:550;line-height:1.35}
+.viesti{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:15px;line-height:1.45;color:var(--ink-2)}
+.liitteet{display:flex;gap:8px;align-items:center}
+.liitteet img{width:54px;height:54px;border-radius:10px;object-fit:cover;display:block}
+.liitteet span{font-size:13px;color:var(--ink-3)}
+.toiminnot{display:flex;gap:10px;padding:14px 16px 0}
+.toiminnot span{flex:1;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600}
+.toiminnot .paa{background:var(--accent);color:#fff}
+.toiminnot .toissa{background:var(--surface);border:1px solid var(--line-strong);color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="ruutu">
+  <div class="tila" aria-hidden="true">
+    <span>23.47</span>
+    <span class="oik">
+      <svg width="18" height="12" viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1" fill="#11141A"/><rect x="5" y="5.5" width="3" height="6.5" rx="1" fill="#11141A"/><rect x="10" y="3" width="3" height="9" rx="1" fill="#11141A"/><rect x="15" y="0" width="3" height="12" rx="1" fill="#11141A"/></svg>
+      <svg width="26" height="13" viewBox="0 0 26 13"><rect x=".5" y=".5" width="22" height="12" rx="3.5" fill="none" stroke="#11141A" opacity=".45"/><rect x="2.5" y="2.5" width="17" height="8" rx="2" fill="#11141A"/><rect x="23.5" y="4.5" width="2" height="4" rx="1" fill="#11141A" opacity=".45"/></svg>
+    </span>
+  </div>
+  <header class="yla">
+    <span class="logo" aria-hidden="true">SV</span>
+    <span class="yritys"><b>Saarniverstas</b><span>Tarjouspyynnöt · Sinoetic</span></span>
+  </header>
+
+  <section class="uusi">
+    <span class="lappu"><i></i>Uusi · verkkosivun lomake</span>
+    <h1>Tarjouspyyntö<br>klo 23.47</h1>
+    <p>Kirjahylly olohuoneeseen, saarnea</p>
+  </section>
+
+  <div class="osio">
+    <div class="kentat">
+      <div class="kentta"><span>Lähettäjä</span><b>Mikko Rantanen</b></div>
+      <div class="kentta"><span>Sähköposti</span><b>mikko.rantanen@example.com</b></div>
+      <div class="kentta"><span>Mitat</span><b>Leveys 3,2 m · korkeus 2,4 m</b></div>
+      <div class="kentta"><span>Toivottu valmistuminen</span><b>Tammikuu 2027</b></div>
+    </div>
+    <div class="viesti">Seinän levyinen hylly kirjoille ja levysoittimelle. Alaosaan ovelliset kaapit. Voisitteko tulla mittaamaan?</div>
+    <div class="liitteet"><img src="kuvat/puutyo.webp" alt=""><span>1 kuva liitteenä</span></div>
+  </div>
+  <div class="toiminnot"><span class="paa">Vastaa</span><span class="toissa">Ehdota mittausaikaa</span></div>
+
+  <nav class="ala" aria-label="Ylläpito">
+    <span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Kalenteri</span>
+    <span class="nyt"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>Pyynnöt</span>
+    <span><svg viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg>Varaukset</span>
+    <span><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Valikko</span>
+  </nav>
+</div>
+</body>
+</html>
