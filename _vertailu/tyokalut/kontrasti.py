@@ -13,6 +13,7 @@ lihavoituna) 3:1.
 import json, os, re, sys
 from PIL import Image, ImageFilter
 
+sys.stdout.reconfigure(encoding="utf-8")
 ulos = sys.argv[1]
 mitat = json.load(open(os.path.join(ulos, "_mitat.json"), encoding="utf-8"))
 

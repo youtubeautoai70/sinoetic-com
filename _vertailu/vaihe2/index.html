@@ -198,6 +198,7 @@ html,body{margin:0;background:#080E16}
   width:30px; height:30px; border-radius:50%; cursor:pointer;
   border:1px solid rgba(244,247,248,.22); background:transparent; color:inherit; font:inherit;
 }
+.vrt button:disabled{opacity:.3; cursor:not-allowed}
 .vrt button[aria-pressed="true"]{background:#F4F7F8; color:#080E16; border-color:#F4F7F8}
 .vrt button:focus-visible{outline:2px solid #55CBB2; outline-offset:2px}
 .puhdas .vrt{display:none}
@@ -243,7 +244,7 @@ html,body{margin:0;background:#080E16}
   <span class="vrt-nimi" id="nimi">1 Pohjoinen järvi</span>
   <button type="button" data-k="1" aria-pressed="true">1</button>
   <button type="button" data-k="2" aria-pressed="false">2</button>
-  <button type="button" data-k="3" aria-pressed="false">3</button>
+  <button type="button" data-k="3" aria-pressed="false" disabled title="Rakennusvaihe: generointi epäonnistui kahdesti">3</button>
   <button type="button" data-k="4" aria-pressed="false">4</button>
   <button type="button" data-k="5" aria-pressed="false">5</button>
   <button type="button" data-k="6" aria-pressed="false">6</button>
@@ -255,7 +256,6 @@ html,body{margin:0;background:#080E16}
   const KUVAT = {
     1: ["kuvat/1-jarvi.webp", "Pohjoinen järvi"],
     2: ["kuvat/2-arkkitehtuuri.webp", "Arkkitehtuuri"],
-    3: ["kuvat/3-rakennusvaihe.webp", "Rakennusvaihe"],
     4: ["kuvat/4-lasi-ja-valo.webp", "Lasi ja valo"],
     5: ["kuvat/5-pienoismalli.webp", "Pienoismalli"],
     6: ["kuvat/6-kaupunki.webp", "Kaupunki ylhäältä"]
