@@ -2,6 +2,22 @@
 
 Tähän kirjataan vain todennettu tila commit-tunnisteineen.
 
+## 17.11.2026 ilta – vaihe 1a (uusi järjestys), PYSÄHDYS 1a
+
+- Tehtävänanto: Perämiehen viesti "ensin ruuduilla näkyvä sisältö" (17.11.2026 illalla). Versioita A ja B, videoita ja näyttämöä ei jatketa. Higgsfieldissä vain tekstipromptit, ei latauksia.
+- `df60f7d`:
+  - Saarniverstaan sivun kaksi suuntaa: `nakymat/suunta-a.html` "Syy" ja `nakymat/suunta-b.html` "Iltavalo".
+  - Bookingin uusi ilme: `nakymat/booking-asiakas.html` ja `nakymat/booking-yrittaja.html`.
+  - Kuvat ja fontit (OFL-lisenssit `assets/fonts/`).
+  - Kaappaukset ja tallenteet `_vertailu/vaihe1a/`, yleissivu `_vertailu/vaihe1a/index.html`.
+  - `docs/booking-uusi-ilme.md`, `KUVAT.md`.
+- `c561b74`: suunnan B jalkalappu siirretty, kaappaukset ja tallenteet uusittu.
+- Higgsfield: 6 kuvaa (Nano Banana Pro 2K, napin hinta 2), 12 / 40 krediittiä. Saldo 968,75.
+  - Saldosta oli vaiheen 3 jälkeen käytetty 91,25 tämän istunnon ulkopuolella.
+- Kaappausajoissa ei konsolivirheitä, ulkoisia pyyntöjä eikä vaakavieritystä.
+- Paikallinen esikatselu: http://localhost:5310 (python http.server). Kolme välilehteä auki Kapteenin Chromessa.
+- Odottaa Kapteenia: sivun suunnan ja Booking-näkymän valinta.
+
 ## 17.11.2026 ilta – vaihe 3 ("Yön työt" v3) mallikierros, PYSÄHDYS 3
 
 - Tehtävänanto: Perämiehen "Yön työt" versio 3 (17.11.2026 illalla). Se korvaa vaiheen 2 suuntavalinnan. Vaiheet 5 ja 6 ennallaan.
