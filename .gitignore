@@ -1,0 +1,4 @@
+# Kuvakaappausten välitiedostot (kontrastin taustat ja raakamitat)
+_vertailu/**/_tausta/
+_vertailu/**/_mitat.json
+_vertailu/**/_kontrasti.json
