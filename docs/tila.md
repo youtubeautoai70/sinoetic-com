@@ -2,6 +2,18 @@
 
 Tähän kirjataan vain todennettu tila commit-tunnisteineen.
 
+## 17.11.2026 – vaihe 2 valmis, PYSÄHDYS 2
+
+- Kapteeni hyväksyi pysähdyksessä 1: katto 270, mallit Nano Banana 2 1k → Nano Banana Pro 2k → Seedance 2.5 (luonnos ensin) ja Kling 3.0 -luonnos rinnalle, jos mahtuu varaukseen. Generointi Higgsfieldin verkkosivulla Chromessa Kapteenin kirjautumisella.
+- `8728b80`: vertailusivu `_vertailu/vaihe2/index.html`, fontti `assets/fonts/schibsted-grotesk-variable.woff2` (purettu ilmeen 3 tiedostosta), työkalut `_vertailu/tyokalut/`.
+- `6df5990`: viisi luonnoskuvaa (1, 2, 4, 5, 6), 15 kuvakaappausta, `KUVAT.md` ja kontrastitulokset.
+  - Nano Banana 2, 1K, 16:9: napin hinta 1,5 krediittiä, sama veloitus saldosta.
+  - Kuva 3 (Rakennusvaihe) epäonnistui kahdesti, ja krediitit palautettiin.
+  - Kontrasti AA kaikissa 15 kaappauksessa. Ei konsolivirheitä, ei ulkoisia pyyntöjä, ei vaakavieritystä.
+- Higgsfield: saldo 1087,5, käytetty 7,5 / 270.
+- Fontin OFL-lisenssiteksti lisätään viimeistään vaiheessa 5.
+- Odottaa Kapteenia: suunnan valinta ja päätös kuvasta 3.
+
 ## 17.11.2026 – vaihe 1 valmis, PYSÄHDYS 1
 
 - Repo `youtubeautoai70/sinoetic-com` luotu julkisena. `gh auth status`: youtubeautoai70.
