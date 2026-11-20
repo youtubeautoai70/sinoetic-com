@@ -28,6 +28,7 @@ def main():
     p.add_argument("--arvio", nargs=4, required=True)
     p.add_argument("--toleranssi", type=int, default=14)
     p.add_argument("--hehku", type=float, default=0.3)
+    p.add_argument("--laajennus", type=int, default=0, help="maskin laajennus pikseleinä (peittää ruudun reunan vaaleat pikselit)")
     a = p.parse_args()
 
     pohja = cv2.imread(a.pohja)
@@ -68,6 +69,8 @@ def main():
     M = cv2.getPerspectiveTransform(np.float32([[0, 0], [kw, 0], [kw, kh], [0, kh]]), np.float32(jarj))
     ruutu = cv2.warpPerspective(kaappaus, M, (W, H), flags=cv2.INTER_AREA, borderMode=cv2.BORDER_REPLICATE)
     ruutu = cv2.GaussianBlur(ruutu, (0, 0), .5)
+    if a.laajennus:
+        alue = cv2.dilate(alue, np.ones((2 * a.laajennus + 1, 2 * a.laajennus + 1), np.uint8))
     ma = cv2.GaussianBlur(alue.astype(np.float32) / 255, (0, 0), 1.2)[..., None]
     # näytön kirkkaus yöllä hieman alas ja lämmin sävy pois
     ruutu = (ruutu.astype(np.float32) * .93)

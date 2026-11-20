@@ -227,3 +227,48 @@ Booking (a), kurssikuva:
 ```text
 Close-up photograph of several handmade end-grain cutting boards in oak, ash and walnut stacked on a workbench in a bright Nordic woodworking workshop, fresh wood shavings and a small hand plane nearby, soft window daylight, shallow depth of field. Warm natural tones, photorealistic, premium editorial look. No people, no text, no letters, no logos, no brand marks.
 ```
+
+## Saumakoe (20.11.2026 ilta)
+
+Tehtävänanto: Perämiehen viesti "uusi videoidea, osa 1", tehtävä A. Krediittejä enintään 40 viestiin. Tehtävä B peruttiin kesken, eikä siihen käytetty krediittejä.
+
+**Lataus.** Kapteeni hyväksyi Higgsfieldin "Media upload agreement" -ehdot itse. Higgsfieldiin ladattiin kaksi omaa kuvaa:
+- alkukuva `ilme3-1920x1080.png`
+- loppukuva `loppukuva.jpg`
+
+| Kuva / video | Aika | Generointi-id | Asetukset | Napin hinta | Saldo ennen → jälkeen |
+|---|---|---|---|---|---|
+| Loppukuva, läppäri pöydällä | 20.48 | `fe25e760-f2fc-4b42-99dc-51e20e9b5346` | Nano Banana Pro, 2K, 16:9, ei viitekuvia | 2 | 777 → 775 |
+| Luonnos 1, alku- ja loppukuva | 20.57 | `9dfd21c7-febf-45f7-8576-93d86c2c578b` | Seedance 2.5, References, 480p, 5 s, 16:9, ääni pois | 15 | 775 → 760 |
+| Luonnos 2, vain alkukuva | 21.06 | `7288fb10-1cbb-409e-8e6e-0754832f4d2d` | sama, vain alkukuva | 15 | 760 → 745 |
+
+**Saldo.** Saldo oli viestin alussa 777. Vaiheen 1a jälkeen tämän istunnon ulkopuolella oli käytetty 191,75 (968,75 → 777).
+
+**Krediitit yhteensä:**
+- tämä viesti: 32 / 40
+- koko työ: 35 + 32 = 67 / 270
+- saldo 745
+
+**Viimeistelyn hinnat napista** (5 s, 16:9): 720p = 35, 1080p = 80.
+
+**Tiedostot:**
+- videot ja kuvat: `_vertailu/saumakoe/`
+- loppukuvan alkuperäinen ja rajattu versio: `alkuperaiset/`
+- promptit: `promptit/`
+- raportti: `docs/saumakoe.md`
+
+### Promptit sanatarkasti
+
+Loppukuva (oma prompti Code-viestin kuvauksen pohjalta):
+
+```text
+Wide cinematic photograph of an open laptop on a tidy minimalist wooden desk in the evening. Dark, calm, quiet room with deep navy shadows and a soft warm glow from a small desk lamp off to the side. The laptop faces the camera almost straight on and sits in the center of the frame; its screen is fully visible, evenly lit and completely blank, a flat medium grey with no content. Plenty of calm dark space around the desk. No people, no text, no logos, no brand marks. Photorealistic, natural light falloff, subtle film grain.
+```
+
+Video: Code-viestin kehote sanatarkasti. Alkuun on lisätty viitekuvien nimeäminen, koska käyttöliittymässä ei ole alku- ja loppukuvan valintaa:
+- luonnos 1: `@Image 1 is the first frame and @Image 2 is the last frame.`
+- luonnos 2: `@Image 1 is the first frame.`
+
+```text
+One continuous shot, no cuts. The frame starts completely filled by a website shown flat and sharp. The camera slowly and smoothly pulls straight back, revealing that the website is on a laptop screen on a tidy desk in a dark, quiet room in the evening. Steady dolly-out with gentle ease-in and ease-out, no shake. The content on the screen stays exactly the same, sharp and stable; no flicker, no changing text. No people, no hands. Natural light falloff, subtle film grain.
+```

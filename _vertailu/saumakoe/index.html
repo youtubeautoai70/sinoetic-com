@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Saumakoe – sivu vaihtuu videoksi</title>
+<!-- Saumakoe 20.11.2026: oikea ilmeen 3 HTML-sivu näkyy 2,5 s, sitten tilalle vaihtuu video samasta kuvasta.
+     Sivu piirretään täsmälleen 1920×1080-kokoisena ja skaalataan ikkunaan; video on samassa kehyksessä. -->
+<style>
+html,body{margin:0;height:100%;background:#0C121A;overflow:hidden}
+.kehys{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:0 0;background:#0C121A}
+.kehys iframe,.kehys video{position:absolute;inset:0;width:1920px;height:1080px;border:0;display:block}
+.kehys video{object-fit:fill;background:#0C121A}
+.kehys iframe{z-index:2;pointer-events:none}
+.kehys.video iframe{opacity:0;transition:opacity var(--haivytys,0ms) linear}
+.ohje{position:fixed;z-index:5;left:50%;bottom:12px;transform:translateX(-50%);display:flex;gap:8px;align-items:center;padding:6px 8px 6px 14px;border-radius:999px;
+  background:rgba(8,14,22,.8);border:1px solid rgba(244,247,248,.16);font:500 12.5px/1 system-ui,sans-serif;color:rgba(244,247,248,.86);opacity:0;transition:opacity .4s;pointer-events:none}
+.ohje.nakyy{opacity:1;pointer-events:auto}
+.ohje button{height:28px;padding:0 12px;border-radius:999px;border:1px solid rgba(244,247,248,.25);background:transparent;color:inherit;font:inherit;cursor:pointer}
+.tila{position:fixed;z-index:5;top:10px;right:12px;font:600 11px/1 system-ui,sans-serif;letter-spacing:.06em;color:rgba(244,247,248,.55);display:none}
+.debug .tila{display:block}
+</style>
+</head>
+<body>
+<div class="kehys" id="kehys">
+  <video id="video" muted playsinline preload="auto" src="luonnos-1.mp4"></video>
+  <iframe id="sivu" src="../../_aineisto/ilme3-ensinakyma.html" title="Sinoetic" tabindex="-1"></iframe>
+</div>
+<div class="ohje" id="ohje"><span id="ohjeteksti">Video päättyi.</span><button type="button" id="uudelleen">Toista alusta</button></div>
+<div class="tila" id="tila">HTML</div>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  var VIIVE = q.has("viive") ? +q.get("viive") : 2500;
+  if (q.has("haivytys")) document.documentElement.style.setProperty("--haivytys", (+q.get("haivytys")) + "ms");
+  if (q.has("video")) document.getElementById("video").src = q.get("video");
+  if (q.has("debug")) document.documentElement.classList.add("debug");
+  var kehys = document.getElementById("kehys"), video = document.getElementById("video"), sivu = document.getElementById("sivu");
+  var tila = document.getElementById("tila"), ohje = document.getElementById("ohje");
+
+  function sovita() {                       // 16:9-kehys mahtuu ikkunaan (contain); reunat ovat sivun taustaväriä
+    var s = Math.min(innerWidth / 1920, innerHeight / 1080);
+    kehys.style.transformOrigin = "50% 50%";
+    kehys.style.transform = "translate(-50%,-50%) scale(" + s + ")";
+  }
+  addEventListener("resize", sovita); sovita();
+
+  var sivuValmis = new Promise(function (ok) { sivu.addEventListener("load", function () {
+    try { sivu.contentDocument.fonts.ready.then(ok); } catch (e) { ok(); }
+  }); });
+  var videoValmis = new Promise(function (ok) {
+    if (video.readyState >= 4) ok(); else video.addEventListener("canplaythrough", ok, { once: true });
+  });
+
+  function aloita() {
+    kehys.classList.remove("video"); tila.textContent = "HTML"; ohje.classList.remove("nakyy");
+    video.pause(); video.currentTime = 0;
+    sivu.contentWindow.location.reload();
+    sivuValmis = new Promise(function (ok) { sivu.addEventListener("load", function f() { sivu.removeEventListener("load", f); try { sivu.contentDocument.fonts.ready.then(ok); } catch (e) { ok(); } }); });
+    kaynnista();
+  }
+  function kaynnista() {
+    Promise.all([sivuValmis, videoValmis]).then(function () {
+      setTimeout(function () {
+        var p = video.play();
+        // piilota HTML vasta kun video oikeasti piirtää ensimmäisen ruutunsa
+        var vaihda = function () { kehys.classList.add("video"); tila.textContent = "VIDEO"; };
+        if ("requestVideoFrameCallback" in video) video.requestVideoFrameCallback(vaihda);
+        else video.addEventListener("playing", vaihda, { once: true });
+        if (p && p.catch) p.catch(function () { document.getElementById("ohjeteksti").textContent = "Selain esti toiston."; ohje.classList.add("nakyy"); });
+      }, VIIVE);
+    });
+  }
+  video.addEventListener("ended", function () { document.getElementById("ohjeteksti").textContent = "Video päättyi."; ohje.classList.add("nakyy"); });
+  document.getElementById("uudelleen").addEventListener("click", aloita);
+  kaynnista();
+})();
+</script>
+</body>
+</html>

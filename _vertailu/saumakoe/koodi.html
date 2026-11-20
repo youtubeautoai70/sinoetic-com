@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Saumakoe – koodiversio (vertailu)</title>
+<!-- Vertailu saumakokeeseen: sama vetäytyminen ilman videota. Oikea ilmeen 3 HTML-sivu pysyy samana elementtinä koko ajan,
+     ja se sovitetaan valokuvan läppärin ruudulle homografialla. Kamera on koodia, joten saumaa ei ole. Valokuva on paikallaan
+     (ei syvyysvaikutelmaa), joten liike näyttää zoomaukselta eikä kameran vetäytymiseltä. -->
+<style>
+html,body{margin:0;height:100%;background:#0C121A;overflow:hidden}
+.kehys{position:absolute;left:50%;top:50%;width:1920px;height:1080px;overflow:hidden;background:#0C121A;transform-origin:50% 50%}
+.kuva{position:absolute;left:0;top:0;width:2560px;height:1440px;transform-origin:0 0;background:url("alkuperaiset/loppukuva-1-rajattu.png") 0 0/2560px 1440px}
+.ruutu{position:absolute;left:0;top:0;width:1920px;height:1224px;transform-origin:0 0;background:linear-gradient(180deg,#0C121A 0 5.9%,#0D1820 94.1%,#0E1820);overflow:hidden}
+.ruutu iframe{position:absolute;left:0;top:72px;width:1920px;height:1080px;border:0;display:block;pointer-events:none}
+.ruutu::after{content:"";position:absolute;inset:0;pointer-events:none;background:rgba(0,0,0,var(--himmennys,0))}
+.hehku{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;mix-blend-mode:screen;opacity:var(--hehku,0);
+  background:radial-gradient(ellipse 30% 26% at var(--hx,50%) var(--hy,50%),rgba(140,200,190,.20),rgba(140,200,190,0) 70%)}
+.ohje{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);padding:6px 8px 6px 14px;border-radius:999px;background:rgba(8,14,22,.8);border:1px solid rgba(244,247,248,.16);
+  font:500 12.5px/1 system-ui,sans-serif;color:rgba(244,247,248,.86);display:flex;gap:8px;align-items:center;opacity:0;transition:opacity .4s}
+.ohje.nakyy{opacity:1}
+.ohje button{height:28px;padding:0 12px;border-radius:999px;border:1px solid rgba(244,247,248,.25);background:transparent;color:inherit;font:inherit;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="kehys" id="kehys">
+  <div class="kuva" id="kuva"></div>
+  <div class="ruutu" id="ruutu"><iframe src="../../_aineisto/ilme3-ensinakyma.html" title="Sinoetic" tabindex="-1"></iframe></div>
+  <div class="hehku" id="hehku"></div>
+</div>
+<div class="ohje" id="ohje"><span>Koodiversio: sama sivu koko ajan.</span><button type="button" id="uudelleen">Toista alusta</button></div>
+<script>
+(function () {
+  var Q = [[821.1, 462.6], [1739.4, 460.3], [1745.2, 1051.0], [814.5, 1051.0]];   // ruudun kulmat valokuvassa (2560×1440)
+  var CW = 1920, CH = 1224, SIS = 72;                                                // ruudun sisältö: sivu 1920×1080 keskellä
+  var VIIVE = 2500, KESTO = 4200;
+  var kehys = document.getElementById("kehys"), kuva = document.getElementById("kuva"), ruutu = document.getElementById("ruutu"), hehku = document.getElementById("hehku");
+
+  function sovita() { var s = Math.min(innerWidth / 1920, innerHeight / 1080); kehys.style.transform = "translate(-50%,-50%) scale(" + s + ")"; }
+  addEventListener("resize", sovita); sovita();
+
+  function ratkaise(A, b) { var n = b.length, M = A.map(function (r, i) { return r.concat([b[i]]); });
+    for (var c = 0; c < n; c++) { var p = c; for (var r = c + 1; r < n; r++) if (Math.abs(M[r][c]) > Math.abs(M[p][c])) p = r;
+      var t = M[c]; M[c] = M[p]; M[p] = t;
+      for (r = 0; r < n; r++) { if (r === c) continue; var f = M[r][c] / M[c][c]; for (var k = c; k <= n; k++) M[r][k] -= f * M[c][k]; } }
+    return M.map(function (r, i) { return r[n] / r[i]; }); }
+  function homografia(w, h, q) { var s = [[0, 0], [w, 0], [w, h], [0, h]], A = [], b = [];
+    for (var i = 0; i < 4; i++) { var x = s[i][0], y = s[i][1], u = q[i][0], v = q[i][1];
+      A.push([x, y, 1, 0, 0, 0, -u * x, -u * y]); b.push(u); A.push([0, 0, 0, x, y, 1, -v * x, -v * y]); b.push(v); }
+    var k = ratkaise(A, b); return [[k[0], k[1], k[2]], [k[3], k[4], k[5]], [k[6], k[7], 1]]; }
+  function m3d(H) { return "matrix3d(" + [H[0][0], H[1][0], 0, H[2][0], H[0][1], H[1][1], 0, H[2][1], 0, 0, 1, 0, H[0][2], H[1][2], 0, H[2][2]].join(",") + ")"; }
+  function io(x) { return x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; }
+  function sm(a, b, x) { var t = Math.max(0, Math.min(1, (x - a) / (b - a))); return t * t * (3 - 2 * t); }
+
+  // kuvan mittakaava, jolla sivu (1920×1080 ruudun keskellä) täyttää kehyksen alussa
+  var sisLeveys = ((Q[1][0] - Q[0][0]) + (Q[2][0] - Q[3][0])) / 2;              // ruudun leveys kuvassa
+  var s0 = 1920 / sisLeveys, s1 = 1920 / 2560;
+  // ruudun keskipiste ja sivun keskikohta kuvassa
+  var kx = (Q[0][0] + Q[1][0] + Q[2][0] + Q[3][0]) / 4, ky = (Q[0][1] + Q[1][1] + Q[2][1] + Q[3][1]) / 4;
+  var alku = null;
+
+  function piirra(t) {
+    var e = io(Math.max(0, Math.min(1, (t - VIIVE) / KESTO)));
+    var s = s0 * Math.pow(s1 / s0, e);
+    // kamera: alussa ruudun keskusta kehyksen keskellä, lopussa koko kuva
+    var cx = kx + (1280 - kx) * e, cy = ky + (720 - ky) * e;
+    var tx = 960 - cx * s, ty = 540 - cy * s;
+    kuva.style.transform = "translate(" + tx + "px," + ty + "px) scale(" + s + ")";
+    // ruudun kulmat kehyksessä: alussa tarkka suorakulmio (sivu täyttää kehyksen), sitten kuvan ruudun kulmat
+    var kulmat = Q.map(function (p) { return [tx + p[0] * s, ty + p[1] * s]; });
+    var w = sm(0, .35, e);
+    var suora = [[0, -SIS], [1920, -SIS], [1920, 1080 + SIS], [0, 1080 + SIS]];
+    var q = kulmat.map(function (p, i) { return [suora[i][0] + (p[0] - suora[i][0]) * w, suora[i][1] + (p[1] - suora[i][1]) * w]; });
+    ruutu.style.transform = m3d(homografia(CW, CH, q));
+    ruutu.style.setProperty("--himmennys", (.12 * e).toFixed(3));
+    hehku.style.setProperty("--hehku", e.toFixed(3));
+    hehku.style.setProperty("--hx", (tx + kx * s) / 19.2 + "%"); hehku.style.setProperty("--hy", (ty + ky * s) / 10.8 + "%");
+  }
+  function silmukka(n) { if (alku === null) alku = n; var t = n - alku; piirra(t);
+    if (t < VIIVE + KESTO + 100) requestAnimationFrame(silmukka); else document.getElementById("ohje").classList.add("nakyy"); }
+  function aloita() { alku = null; document.getElementById("ohje").classList.remove("nakyy"); piirra(0); requestAnimationFrame(silmukka); }
+  document.getElementById("uudelleen").addEventListener("click", aloita);
+  piirra(0);
+  ruutu.querySelector("iframe").addEventListener("load", function () { setTimeout(aloita, 200); });
+})();
+</script>
+</body>
+</html>

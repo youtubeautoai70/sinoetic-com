@@ -10,3 +10,8 @@ _vertailu/vaihe3/_testi/
 # Paikallinen esikatselu (Claude Code)
 .claude/
 _vertailu/vaihe1a/_testi/
+
+# Saumakokeen ruutuvedokset ja tuplakoot
+_vertailu/saumakoe/_ruudut*/
+_vertailu/saumakoe/ilme3-1920x1080@2.png
+_vertailu/saumakoe/loppukuva.png
