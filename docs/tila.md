@@ -2,6 +2,19 @@
 
 Tähän kirjataan vain todennettu tila commit-tunnisteineen.
 
+## 20.11.2026 ilta – saumakoe tehty, tehtävä B peruttu, PYSÄHDYS
+
+- Tehtävänanto: Perämiehen "uusi videoidea, osa 1" (20.11.2026). Kapteeni perui tehtävän B (lopullisen ensinäkymän suunnat) kesken. Sen keskeneräistä työtä (`ensinakyma/`, `_vertailu/ensinakyma/`, `_vertailu/tyokalut/laatikot.cjs`) ei commitoitu.
+- `4ecb88c`:
+  - Saumakoe kansiossa `_vertailu/saumakoe/`: koesivu `index.html`, vertailu `koodi.html`, luonnokset `luonnos-1.mp4` ja `luonnos-2.mp4`, alku- ja loppukuva sekä tallenteet 853×400.
+  - Raportti `docs/saumakoe.md`, kirjanpito `KUVAT.md`.
+- Tulos:
+  - Video ei ala täsmälleen annetusta kuvasta. Ensimmäinen ruutu on noin 1,3 % pienempi ja siirtynyt 2 px, sama molemmissa luonnoksissa.
+  - Terävyys on noin 38 % HTML:stä. Pääotsikko pysyy oikeana, mutta pienet tekstit ovat suttua.
+  - Viimeistely: 720p = 35, 1080p = 80 (5 s).
+- Higgsfield: tähän viestiin 32 / 40 (loppukuva 2 ja kaksi luonnosta 15 + 15). Koko työ 67 / 270, saldo 745. Kapteeni hyväksyi latausehdot itse.
+- Odottaa Kapteenia: jatketaanko videota saumakokeen perusteella.
+
 ## 17.11.2026 ilta – vaihe 1a (uusi järjestys), PYSÄHDYS 1a
 
 - Tehtävänanto: Perämiehen viesti "ensin ruuduilla näkyvä sisältö" (17.11.2026 illalla). Versioita A ja B, videoita ja näyttämöä ei jatketa. Higgsfieldissä vain tekstipromptit, ei latauksia.
