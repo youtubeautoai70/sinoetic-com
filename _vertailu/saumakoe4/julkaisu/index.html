@@ -13,8 +13,8 @@
        1. Alkusivu asetellaan ikkunan kokoon (asettelun leveys 800–1920 px) ja skaalataan alustalle, joten napit ja tekstit
           näkyvät samassa koossa kuin sivu yksinään avattuna. Ruudun reuna-alueen täyte piirretään sivun omista väreistä.
        2. ?fps=60 (oletus) käyttää 60 kuvan videota ja sen omaa seurantaa, ?fps=24 alkuperäistä.
-       3. Kevennys: sävy on tavallinen läpinäkyvä kerros (ei mix-blend-modea), pehmennys vaihtuu portaittain ja
-          reunan varjo on kiinteä. ?kevennys=0 palauttaa kokeen 3 raskaan tavan vertailua varten.
+       3. Kevennys: sävy on tavallinen läpinäkyvä kerros (ei mix-blend-modea), reunan varjo on kiinteä ja pehmennys
+          lasketaan vain kerran loppuasentoon (ei liikkeen aikana). ?kevennys=0 palauttaa kokeen 3 raskaan tavan vertailua varten.
        4. Sivun rajaus on pyöristetty kuten läppärin ruutu (?kulmat=0 = terävät).
      Muut kyselyt: ?peitto=contain, ?piirto=video (ei canvasia), ?leikkaus=ms, ?f=kuva (pysäytys), ?nayta=video. -->
 <style>
@@ -76,6 +76,7 @@ video,canvas{position:absolute;left:0;top:0;width:1280px;height:720px;transform-
   if (q.get("nayta") === "video") kehys.classList.add("nayta-video");
   if (!KEVYT) ruutu.classList.add("raskas");
   if (SUORA) kehys.classList.add("suora");
+  if (q.get("kerrokset") === "0") [savy, heijastus, reuna].forEach(function (x) { x.style.display = "none"; });   // mittausta varten
   video.src = "video-" + FPS + ".mp4";
 
   // ---------- alusta ja alkusivun asettelu ----------
@@ -132,7 +133,7 @@ video,canvas{position:absolute;left:0;top:0;width:1280px;height:720px;transform-
   }
 
   // ---------- yksi videon kuva ----------
-  var sumuNyt = -1;
+  var mkNyt = 1;
   function aseta(f) {
     f = Math.max(0, Math.min(D.ruutu.length - 1, f));
     var alku = FPS * 10 / 24, e = sm(f / alku);             // istuvuus hiipii mukaan noin 0,4 sekunnissa
@@ -141,7 +142,7 @@ video,canvas{position:absolute;left:0;top:0;width:1280px;height:720px;transform-
     var yli = 1.8 * e;                                      // pieni ylitys ulospäin, ettei tekoälyn piirtämä ruutu näy reunoilta
     kulmat = kulmat.map(function (p) { var dx = p[0] - cx, dy = p[1] - cy, L = Math.hypot(dx, dy) || 1; return [p[0] + dx / L * yli, p[1] + dy / L * yli]; });
     ruutu.style.transform = m3d(homografia(LAHDE, kulmat));
-    var mk = Math.hypot(kulmat[1][0] - kulmat[0][0], kulmat[1][1] - kulmat[0][1]) / 1920;
+    var mk = mkNyt = Math.hypot(kulmat[1][0] - kulmat[0][0], kulmat[1][1] - kulmat[0][1]) / 1920;
     var v = D.kirkkaus[f].valk;
     var askel = FPS / 24, f2 = Math.min(D.ruutu.length - 1, Math.round(f + askel));
     var liike = Math.hypot(D.ruutu[f2][0][0] - D.ruutu[f][0][0], D.ruutu[f2][0][1] - D.ruutu[f][0][1]);   // px / (1/24 s)
@@ -150,9 +151,8 @@ video,canvas{position:absolute;left:0;top:0;width:1280px;height:720px;transform-
       savy.style.opacity = ((1 - (v[0] + v[1] + v[2]) / 3 / 254) * e).toFixed(3);
       heijastus.style.opacity = (.9 * e).toFixed(3);
       reuna.style.opacity = e.toFixed(3);
-      // pehmennys portaittain (0,25 px:n välein alustan pikseleinä): suodatin lasketaan uudelleen vain portaan vaihtuessa
-      var sumu = Math.round(e * (0.55 + Math.min(.45, liike * .1)) / mk / .25) * .25;
-      if (sumu !== sumuNyt) { sumuNyt = sumu; ruutu.style.filter = sumu > 0 ? "blur(" + sumu + "px)" : "none"; }
+      // Pehmennystä ei lasketa liikkeen aikana: suodatin on jokaisella kuvalla tehtävästä työstä raskain, eikä terävyysero
+      // erotu liikkeessä. Loppuasentoon se häivytetään kerran (ks. lopeta), jolloin sivu istuu videon pehmeään kuvaan.
     } else {
       var s3 = [0, 1, 2].map(function (i) { return Math.round(255 * (1 + (v[i] / 254 - 1) * e)); });
       ruutu.style.setProperty("--savy", s3.join(","));
@@ -172,6 +172,11 @@ video,canvas{position:absolute;left:0;top:0;width:1280px;height:720px;transform-
     tilasto.kuvat.push(f); tilasto.ajat.push(nyt); tilasto.tyo += performance.now() - t0;
     if (!video.ended) video.requestVideoFrameCallback(kuva);
   }
+  function lopeta() {                                       // loppuasennon pehmennys: 0,6 alustan px näytöllä, häivytys 0,5 s
+    if (!KEVYT || q.get("sumu") === "0") return;
+    ruutu.style.transition = "filter .5s ease-out";
+    ruutu.style.filter = "blur(" + (0.6 / mkNyt).toFixed(2) + "px)";
+  }
   function leikkaa() {
     kehys.classList.add("huone"); document.body.classList.add("huone");
     if (!SUORA) ctx.drawImage(video, 0, 0, 1280, 720);
@@ -180,7 +185,7 @@ video,canvas{position:absolute;left:0;top:0;width:1280px;height:720px;transform-
     var p = video.play(); if (p && p.catch) p.catch(function () {});
   }
   video.addEventListener("ended", function () {
-    if (!SUORA) ctx.drawImage(video, 0, 0, 1280, 720); aseta(D.ruutu.length - 1);
+    if (!SUORA) ctx.drawImage(video, 0, 0, 1280, 720); aseta(D.ruutu.length - 1); lopeta();
     var a = tilasto.ajat; tilasto.fps = a.length > 1 ? (a.length - 1) / ((a[a.length - 1] - a[0]) / 1000) : 0;
     var v = []; for (var i = 1; i < a.length; i++) v.push(a[i] - a[i - 1]); tilasto.pisinVali = v.length ? Math.max.apply(null, v) : 0;
     tilasto.tyoKuva = tilasto.kuvat.length ? tilasto.tyo / tilasto.kuvat.length : 0; tilasto.valmis = true;
@@ -203,7 +208,7 @@ video,canvas{position:absolute;left:0;top:0;width:1280px;height:720px;transform-
     sivu.addEventListener("load", tayta);
     if (q.has("f")) {                                       // pysäytyskuva tarkistukseen
       var f = +q.get("f"); kehys.classList.add("huone"); document.body.classList.add("huone");
-      video.addEventListener("seeked", function () { ctx.drawImage(video, 0, 0, 1280, 720); aseta(f); setTimeout(function () { document.documentElement.dataset.valmis = "1"; }, 150); }, { once: true });
+      video.addEventListener("seeked", function () { ctx.drawImage(video, 0, 0, 1280, 720); aseta(f); if (f >= D.ruutu.length - 1) lopeta(); setTimeout(function () { document.documentElement.dataset.valmis = "1"; }, 700); }, { once: true });
       video.currentTime = (f + .5) / D.fps;
       sivu.src = "alkunakyma.html";
       return;
