@@ -67,7 +67,7 @@ video,canvas{position:absolute;left:0;top:0;width:1280px;height:720px;transform-
   var FPS = q.get("fps") === "24" ? 24 : 60;
   var LEIKKAUS = q.has("leikkaus") ? +q.get("leikkaus") : 180;
   var KEVYT = q.get("kevennys") !== "0", SUORA = q.get("piirto") === "video", KULMAT = q.get("kulmat") !== "0";
-  var BX = -14, BY = -88, SADE = 26;                       // kääreen origo alustan koordinaateissa; ruudun kulman pyöristys (alustan px)
+  var BX = -14, BY = -88, SADE = 7;                        // kääreen origo alustan koordinaateissa; ruudun kulman pyöristys (alustan px)
   var kehys = document.getElementById("kehys"), kangas = document.getElementById("kangas"), ctx = kangas.getContext("2d");
   var video = document.getElementById("video"), ruutu = document.getElementById("ruutu"), sivu = document.getElementById("sivu");
   var savy = document.getElementById("savy"), heijastus = document.getElementById("heijastus"), reuna = document.getElementById("reuna");

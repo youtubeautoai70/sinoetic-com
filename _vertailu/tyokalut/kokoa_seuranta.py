@@ -10,17 +10,19 @@ import cv2, numpy as np
 D = json.load(open(sys.argv[1], encoding="utf-8")); R = {int(k): np.array(v) for k, v in json.load(open(sys.argv[2])).items()}
 S = np.array(D["sivu_raaka"]); N = len(S); P = np.float32([[0, 0], [1920, 0], [1920, 1080], [0, 1080]])
 idx = sorted(R)
+IKK = int(sys.argv[4]) if len(sys.argv) > 4 else 4            # tasoitusikkuna ± kuvaa
+HAIV = float(sys.argv[5]) if len(sys.argv) > 5 else 10.0     # vaihdon häivytys kuvina
 pc = np.array([cv2.perspectiveTransform(np.float32(R[i]).reshape(-1, 1, 2), cv2.getPerspectiveTransform(np.float32(S[i]), P)).reshape(4, 2) for i in idx])
 Q = np.median(pc, 0)                                             # ruudun kulmat sivun koordinaateissa
 ecc = np.array([cv2.perspectiveTransform(np.float32(Q).reshape(-1, 1, 2), cv2.getPerspectiveTransform(P, np.float32(S[i]))).reshape(4, 2) for i in range(N)])
 eka = idx[0]; raaka = ecc.copy()
 for i in range(N):
     if i in R:
-        w = min(1.0, (i - eka) / 10.0); w = w * w * (3 - 2 * w)
+        w = min(1.0, (i - eka) / HAIV); w = w * w * (3 - 2 * w)
         raaka[i] = (1 - w) * ecc[i] + w * R[i]
 t = np.arange(N); tas = raaka.copy()
 for i in range(1, N):
-    lo, hi = max(0, i - 4), min(N, i + 5)
+    lo, hi = max(0, i - IKK), min(N, i + IKK + 1)
     for c in range(4):
         for a in range(2):
             tas[i, c, a] = np.polyval(np.polyfit(t[lo:hi], raaka[lo:hi, c, a], 2), i)

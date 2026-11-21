@@ -16,6 +16,8 @@ p = argparse.ArgumentParser()
 p.add_argument("ruudut"); p.add_argument("alkukuva"); p.add_argument("ulos")
 p.add_argument("--pad", type=float, default=72)
 p.add_argument("--ikkuna", type=int, default=4)
+p.add_argument("--fps", type=float, default=24)
+p.add_argument("--iter", type=int, default=400)
 a = p.parse_args()
 
 tiedostot = sorted(glob.glob(os.path.join(a.ruudut, "r*.png")))
@@ -30,10 +32,11 @@ ANK = {"logo": (40, 18, 80, 28), "nappi-yla": (1135, 14, 100, 36), "otsikko-vas"
        "ala1": (55, 636, 120, 26), "ala2": (455, 636, 120, 26), "ala3": (855, 636, 120, 26)}
 
 W = np.array([[1.0105, 0, -11.62], [0, 0.9944, -3.01], [0, 0, 1]], np.float32)   # 1. kuvan alkuarvo (saumakoe 2)
-krit = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 400, 1e-8)
+krit = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, a.iter, 1e-8 if a.iter >= 400 else 1e-7)
 raaka, jaannos, kirkkaus = [], [], []
 for i, t in enumerate(tiedostot):
     f = cv2.imread(t); g = cv2.cvtColor(f, cv2.COLOR_BGR2GRAY).astype(np.float32)
+    if i % 25 == 0: print("kuva", i + 1, flush=True)
     try:
         _, W = cv2.findTransformECC(ref, g, W, cv2.MOTION_HOMOGRAPHY, krit, None, 5)
     except cv2.error as e:
@@ -92,7 +95,7 @@ print("jäännös (sisältö vs. alkukuva, videon px): mediaani %.2f, suurin %.2
 for i in [0, 12, 24, 48, 72, 96, 120]:
     if i < N: print(" kuva %3d  mittakaava %.3f  jäännös max %s  valk %s" % (i + 1, np.sqrt(abs(np.linalg.det(raaka[i][:2, :2]))), None if mx[i] is None else round(mx[i], 2), [round(v) for v in kirkkaus[i]["valk"]]))
 
-json.dump({"fps": 24, "leveys": VW, "korkeus": VH, "pad": a.pad,
+json.dump({"fps": a.fps, "leveys": VW, "korkeus": VH, "pad": a.pad,
            "sivu": np.round(sivu_t, 3).tolist(), "ruutu": np.round(ruutu_t, 3).tolist(),
            "sivu_raaka": np.round(sivu, 3).tolist(), "jaannos_max": mx, "kirkkaus": kirkkaus},
           open(a.ulos, "w", encoding="utf-8"))
