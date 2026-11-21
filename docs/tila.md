@@ -2,6 +2,20 @@
 
 Tähän kirjataan vain todennettu tila commit-tunnisteineen.
 
+## 21.11.2026 – saumakoe 2 tehty, PYSÄHDYS
+
+- Tehtävänanto: Perämiehen "saumakoe 2". Tehtävän B keskeneräisiä tiedostoja ei commitoitu eikä poistettu.
+- `18e1786`:
+  - `_aineisto/alkunakyma.html` (Kapteenin hyväksymä alkunäkymä, vain prototyyppinappi poistettu).
+  - `_vertailu/saumakoe2/`: koesivu, video (Seedance 2.5, 720p, 5 s), alku- ja loppukuva, tallenteet 853×400.
+  - `docs/saumakoe2.md`, `KUVAT.md`.
+- Tulos:
+  - Leikkaus g3-välähdyksen lopussa (180 ms) ja kompensointi (mittakaava 1,0105 × 0,9944, siirto −17,4 / −4,5 px, kirkkaus 1,077) peittävät hypyn.
+  - Pienet tekstit ovat virheellisiä jo videon ensimmäisessä ruudussa; pääotsikko pysyy oikeana.
+  - Malli ei lisännyt sisältöä.
+- Higgsfield: 35 / 40 tähän viestiin, koko työ 102 / 270, saldo 710.
+- Odottaa Kapteenia: jatketaanko videota.
+
 ## 20.11.2026 ilta – saumakoe tehty, tehtävä B peruttu, PYSÄHDYS
 
 - Tehtävänanto: Perämiehen "uusi videoidea, osa 1" (20.11.2026). Kapteeni perui tehtävän B (lopullisen ensinäkymän suunnat) kesken. Sen keskeneräistä työtä (`ensinakyma/`, `_vertailu/ensinakyma/`, `_vertailu/tyokalut/laatikot.cjs`) ei commitoitu.
