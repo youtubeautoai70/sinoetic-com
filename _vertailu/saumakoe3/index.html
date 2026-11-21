@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Sinoetic</title>
+<!-- Saumakoe 3 (21.11.2026): tekoälyn piirtämää sivua ei näytetä. Oikea HTML-alkunäkymä pysyy videon päällä ja
+     sovitetaan läppärin ruudun kulmiin kuva kuvalta (seuranta.json, matrix3d). Videon kuva piirretään canvasiin samassa
+     requestVideoFrameCallback-kutsussa, jossa sivun muunnos asetetaan, joten ne päivittyvät samalla ruudunpäivityksellä.
+     Kyselyt: ?peitto=cover|contain, ?nayta=video (HTML puoliläpinäkyväksi tarkistusta varten), ?leikkaus=ms, ?f=kuva (pysäytys). -->
+<style>
+html,body{margin:0;height:100%;overflow:hidden;background:#F4F5F7}
+body.huone{background:#05080D;transition:background-color .4s linear}
+.kehys{position:absolute;left:50%;top:50%;width:1920px;height:1080px;overflow:hidden;transform-origin:50% 50%;background:#F4F5F7}
+.kehys.huone{background:#05080D;transition:background-color .4s linear}
+canvas{position:absolute;left:0;top:0;width:1280px;height:720px;transform-origin:0 0;visibility:hidden}
+.kehys.huone canvas{visibility:visible}
+/* video on täysikokoisena canvasin alla (peitossa): selain piirtää sen, joten ruutukutsut tulevat varmasti */
+video{position:absolute;left:0;top:0;width:1280px;height:720px;transform-origin:0 0;pointer-events:none;visibility:hidden}
+.kehys.huone video{visibility:visible}
+/* kääre on ruudun rajaava laatikko sivun koordinaateissa: x −14…1941, y −88…1172 */
+.ruutu{position:absolute;left:0;top:0;width:1955px;height:1260px;transform-origin:0 0;transform:translate(-14px,-88px);overflow:hidden;
+  background:#F3F4F8 url("../saumakoe2/alkunakyma-ruudulle.png") 14px 16px/1920px 1224px no-repeat;will-change:transform}
+.ruutu iframe{position:absolute;left:14px;top:88px;width:1920px;height:1080px;border:0;display:block}
+/* istuvuus: videon ruudun sävy (multiply), kevyt heijastus ja reunan pehmennys; arvot asetetaan kuva kuvalta */
+.ruutu .savy{position:absolute;inset:0;pointer-events:none;mix-blend-mode:multiply;background:rgb(var(--savy,255,255,255))}
+.ruutu .heijastus{position:absolute;inset:0;pointer-events:none;opacity:var(--heij,0);
+  background:linear-gradient(118deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.10) 46%,rgba(255,255,255,0) 58%)}
+.ruutu .reuna{position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 calc(var(--reuna,0) * 1px) calc(var(--reuna,0) * .5px) rgba(6,9,14,.55)}
+.kehys.nayta-video .ruutu{opacity:.45}
+.ohje{position:fixed;z-index:5;left:50%;bottom:12px;transform:translateX(-50%);display:flex;gap:8px;align-items:center;padding:6px 8px 6px 14px;border-radius:999px;
+  background:rgba(8,14,22,.8);border:1px solid rgba(244,247,248,.16);font:500 12.5px/1 system-ui,sans-serif;color:rgba(244,247,248,.86);opacity:0;transition:opacity .4s;pointer-events:none}
+.ohje.nakyy{opacity:1;pointer-events:auto}
+.ohje button{height:28px;padding:0 12px;border-radius:999px;border:1px solid rgba(244,247,248,.25);background:transparent;color:inherit;font:inherit;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="kehys" id="kehys">
+  <video id="video" muted playsinline preload="auto" src="../saumakoe2/video.mp4"></video>
+  <canvas id="kangas" width="1280" height="720"></canvas>
+  <div class="ruutu" id="ruutu">
+    <iframe id="sivu" title="Sinoetic"></iframe>
+    <div class="savy"></div><div class="heijastus"></div><div class="reuna"></div>
+  </div>
+</div>
+<div class="ohje" id="ohje"><span>Video päättyi. Sivu on yhä oikea: kokeile hiirtä.</span><button type="button" id="uudelleen">Toista alusta</button></div>
+<script>
+(function () {
+  "use strict";
+  var q = new URLSearchParams(location.search);
+  var LEIKKAUS = q.has("leikkaus") ? +q.get("leikkaus") : 180, PAD = 72;
+  var kehys = document.getElementById("kehys"), kangas = document.getElementById("kangas"), ctx = kangas.getContext("2d");
+  var video = document.getElementById("video"), ruutu = document.getElementById("ruutu"), sivu = document.getElementById("sivu");
+  var D = null, G = null, tilasto = { kuvat: [], ajat: [], pudonneet: 0 };
+  window.__tilasto = tilasto;
+  if (q.get("nayta") === "video") kehys.classList.add("nayta-video");
+
+  var peitto = q.get("peitto") || "contain";
+  function sovita() {
+    var s = peitto === "cover" ? Math.max(innerWidth / 1920, innerHeight / 1080) : Math.min(innerWidth / 1920, innerHeight / 1080);
+    kehys.style.transform = "translate(-50%,-50%) scale(" + s + ")";
+  }
+  addEventListener("resize", sovita); sovita();
+
+  // ---------- homografiat ----------
+  function ratkaise(A, b) { var n = b.length, M = A.map(function (r, i) { return r.concat([b[i]]); });
+    for (var c = 0; c < n; c++) { var p = c; for (var r = c + 1; r < n; r++) if (Math.abs(M[r][c]) > Math.abs(M[p][c])) p = r;
+      var t = M[c]; M[c] = M[p]; M[p] = t;
+      for (r = 0; r < n; r++) { if (r === c) continue; var f = M[r][c] / M[c][c]; for (var k = c; k <= n; k++) M[r][k] -= f * M[c][k]; } }
+    return M.map(function (r, i) { return r[n] / r[i]; }); }
+  function homografia(s, d) { var A = [], b = [];           // nelikulmio s -> nelikulmio d
+    for (var i = 0; i < 4; i++) { var x = s[i][0], y = s[i][1], u = d[i][0], v = d[i][1];
+      A.push([x, y, 1, 0, 0, 0, -u * x, -u * y]); b.push(u); A.push([0, 0, 0, x, y, 1, -v * x, -v * y]); b.push(v); }
+    var k = ratkaise(A, b); return [[k[0], k[1], k[2]], [k[3], k[4], k[5]], [k[6], k[7], 1]]; }
+  function sovella(H, p) { var w = H[2][0] * p[0] + H[2][1] * p[1] + H[2][2]; return [(H[0][0] * p[0] + H[0][1] * p[1] + H[0][2]) / w, (H[1][0] * p[0] + H[1][1] * p[1] + H[1][2]) / w]; }
+  function m3d(H) { return "matrix3d(" + [H[0][0], H[1][0], 0, H[2][0], H[0][1], H[1][1], 0, H[2][1], 0, 0, 1, 0, H[0][2], H[1][2], 0, H[2][2]].join(",") + ")"; }
+  var BX = -14, BY = -88, LAHDE = null;                 // kääreen origo sivun koordinaateissa; LAHDE = ruudun kulmat kääreen koordinaateissa
+  function sm(x) { x = Math.max(0, Math.min(1, x)); return x * x * (3 - 2 * x); }
+
+  // ---------- yksi videon kuva: canvas ja sivun muunnos samalla kertaa ----------
+  function aseta(f) {
+    f = Math.max(0, Math.min(D.ruutu.length - 1, f));
+    var e = sm(f / 10);                                   // istuvuus hiipii mukaan 10 ensimmäisen kuvan aikana
+    var kulmat = D.ruutu[f].map(function (p) { return sovella(G, p); });
+    // pieni ylitys ulospäin, ettei tekoälyn piirtämä ruutu näy reunoilta (0 leikkaushetkellä)
+    var cx = (kulmat[0][0] + kulmat[1][0] + kulmat[2][0] + kulmat[3][0]) / 4, cy = (kulmat[0][1] + kulmat[1][1] + kulmat[2][1] + kulmat[3][1]) / 4;
+    var yli = 1.8 * e;
+    kulmat = kulmat.map(function (p) { var dx = p[0] - cx, dy = p[1] - cy, L = Math.hypot(dx, dy) || 1; return [p[0] + dx / L * yli, p[1] + dy / L * yli]; });
+    ruutu.style.transform = m3d(homografia(LAHDE, kulmat));
+    var mk = Math.hypot(kulmat[1][0] - kulmat[0][0], kulmat[1][1] - kulmat[0][1]) / 1920;   // sivun mittakaava kehyksessä
+    var v = D.kirkkaus[f].valk, s0 = D.kirkkaus[0].valk;
+    // sävy: videon ruudun valkoinen suhteessa HTML:n valkoiseen (254); 1. kuvassa täsmälleen neutraali
+    var savy = [0, 1, 2].map(function (i) { return Math.round(255 * (1 + (v[i] / 254 - 1) * e)); });
+    ruutu.style.setProperty("--savy", savy.join(","));
+    ruutu.style.setProperty("--heij", (.9 * e).toFixed(3));
+    ruutu.style.setProperty("--reuna", (e * 2.2 / mk).toFixed(2));
+    var liike = f < D.ruutu.length - 1 ? Math.hypot(D.ruutu[f + 1][0][0] - D.ruutu[f][0][0], D.ruutu[f + 1][0][1] - D.ruutu[f][0][1]) : 0;
+    var sumu = e * (0.35 + Math.min(.5, liike * .12)) / mk;                               // sivun px: vastaa noin 0,35–0,85 kehyksen px
+    if (q.get("sumu") !== "0") ruutu.style.filter = sumu > .05 ? "blur(" + sumu.toFixed(2) + "px)" : "none";
+  }
+  function kuva(nyt, meta) {
+    var f = Math.round(meta.mediaTime * D.fps);
+    ctx.drawImage(video, 0, 0, 1280, 720);
+    aseta(f);
+    var ed = tilasto.kuvat.length ? tilasto.kuvat[tilasto.kuvat.length - 1] : -1;
+    if (f - ed > 1) tilasto.pudonneet += f - ed - 1;
+    tilasto.kuvat.push(f); tilasto.ajat.push(nyt);
+    if (!video.ended) video.requestVideoFrameCallback(kuva);
+  }
+
+  function leikkaa() {
+    kehys.classList.add("huone"); document.body.classList.add("huone");
+    ctx.drawImage(video, 0, 0, 1280, 720);
+    if ("requestVideoFrameCallback" in video) video.requestVideoFrameCallback(kuva);
+    else (function r() { ctx.drawImage(video, 0, 0, 1280, 720); aseta(Math.round(video.currentTime * D.fps)); if (!video.ended) requestAnimationFrame(r); })();
+    var p = video.play(); if (p && p.catch) p.catch(function () {});
+  }
+  video.addEventListener("ended", function () {
+    ctx.drawImage(video, 0, 0, 1280, 720); aseta(D.ruutu.length - 1);
+    var a = tilasto.ajat; tilasto.fps = a.length > 1 ? (a.length - 1) / ((a[a.length - 1] - a[0]) / 1000) : 0;
+    var v = []; for (var i = 1; i < a.length; i++) v.push(a[i] - a[i - 1]); tilasto.pisinVali = Math.max.apply(null, v); tilasto.valmis = true;
+    document.querySelector("#ohje span").textContent = "Video päättyi. Toisto: " + tilasto.fps.toFixed(1).replace(".", ",") + " kuvaa/s (video 24), pudonneita kuvia " + tilasto.pudonneet + ".";
+    document.getElementById("ohje").classList.add("nakyy");
+  });
+  document.getElementById("uudelleen").addEventListener("click", function () { location.reload(); });
+
+  var videoValmis = new Promise(function (ok) { if (video.readyState >= 4) ok(); else video.addEventListener("canplaythrough", ok, { once: true }); setTimeout(ok, 5000); });
+  Promise.all([fetch("seuranta.json").then(function (r) { return r.json(); }), videoValmis]).then(function (t) {
+    D = t[0];
+    // G: videon pikselit -> kehys niin, että 1. kuvan sivu täyttää kehyksen täsmälleen (ei hyppyä leikkauksessa)
+    G = homografia(D.sivu0, [[0, 0], [1920, 0], [1920, 1080], [0, 1080]]);
+    LAHDE = D.q.map(function (p) { return [p[0] - BX, p[1] - BY]; });
+    // kääre rajataan ruudun nelikulmioon (rajaava laatikko on muutaman pikselin isompi)
+    ruutu.style.clipPath = "polygon(" + LAHDE.map(function (p) { return p[0].toFixed(2) + "px " + p[1].toFixed(2) + "px"; }).join(",") + ")";
+    kangas.style.transform = m3d(G); video.style.transform = m3d(G);
+    video.pause(); video.currentTime = 0;
+    if (q.has("f")) {                                       // pysäytyskuva tarkistukseen
+      var f = +q.get("f"); kehys.classList.add("huone"); document.body.classList.add("huone");
+      video.addEventListener("seeked", function () { ctx.drawImage(video, 0, 0, 1280, 720); aseta(f); document.documentElement.dataset.valmis = "1"; }, { once: true });
+      video.currentTime = (f + .5) / D.fps;
+      sivu.src = "../../_aineisto/alkunakyma.html?seis";
+      return;
+    }
+    sivu.addEventListener("load", function () {
+      var b = sivu.contentDocument.body;
+      new MutationObserver(function () {
+        if (b.classList.contains("g3") && !kehys.dataset.leikattu) { kehys.dataset.leikattu = "1"; setTimeout(leikkaa, LEIKKAUS); }
+      }).observe(b, { attributes: true, attributeFilter: ["class"] });
+    });
+    sivu.src = "../../_aineisto/alkunakyma.html";
+  });
+})();
+</script>
+</body>
+</html>
