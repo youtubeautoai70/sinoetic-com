@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Koekuvat – sivu esineenä</title>
+<!-- Koe kuvasta (21.11.2026), ei ensinäkymän suunnittelua: kuva koko ruudun taustana, päällä vain hyväksytyt tekstit.
+     Ei tehosteita eikä liikettä. Kuva vaihdetaan alareunan napeista tai näppäimistä; ?k=tunnus valitsee kuvan, ?puhdas piilottaa napit. -->
+<style>
+@font-face{font-family:"Schibsted Grotesk";src:url("../../assets/fonts/schibsted-grotesk-variable.woff2") format("woff2");font-weight:400 900;font-display:block}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#080E16}
+body{color:#F4F7F8;font-family:"Schibsted Grotesk",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow:hidden}
+a{color:inherit;text-decoration:none}
+.n{position:relative;height:100vh;height:100svh;min-height:380px;overflow:hidden;--pad:clamp(20px,4.6vw,72px)}
+/* Kuva (21:9) ankkuroidaan oikeaan reunaan ja on 118 % ikkunan leveydestä, jolloin nappi ja nuoli pysyvät näkyvissä ja
+   vasen reuna jää tekstille. Jos ikkuna on kuvaa korkeampi, ylä- ja alareuna häivytetään sivun taustaväriin. */
+.tausta{position:absolute;right:0;top:50%;transform:translateY(-50%);width:118vw;height:auto;display:block;
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 14%,#000 86%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 14%,#000 86%,transparent 100%)}
+@media (min-aspect-ratio:2/1){.tausta{-webkit-mask-image:none;mask-image:none}}
+header{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;height:clamp(48px,9vh,80px);padding:0 var(--pad)}
+.sana{font-size:clamp(18px,1.5vw,21px);font-weight:700;letter-spacing:-.03em}
+.oik{display:flex;align-items:center;gap:clamp(18px,2.6vw,38px)}
+.linkit{display:flex;gap:clamp(18px,2.6vw,38px);list-style:none;font-size:clamp(13px,1vw,14.5px);font-weight:500;color:rgba(244,247,248,.8)}
+.yht{display:inline-flex;align-items:center;height:clamp(30px,5vh,38px);padding:0 clamp(14px,1.4vw,18px);border-radius:999px;border:1px solid rgba(244,247,248,.24);font-size:clamp(12.5px,1vw,14px);font-weight:600}
+.teksti{position:absolute;z-index:2;left:var(--pad);top:50%;transform:translateY(-46%);width:min(37vw,560px)}
+h1{font-size:clamp(26px,min(3.9vw,9.6vh),64px);font-weight:600;line-height:1.03;letter-spacing:-.038em}
+.ingressi{margin-top:clamp(10px,2.6vh,24px);font-size:clamp(13px,min(1.2vw,2.3vh),18px);line-height:1.5;color:rgba(244,247,248,.8)}
+.napit{display:flex;gap:12px;margin-top:clamp(14px,3.4vh,32px)}
+.nappi{display:inline-flex;align-items:center;justify-content:center;height:clamp(34px,6.4vh,52px);padding:0 clamp(16px,1.9vw,26px);border-radius:999px;font-size:clamp(12.5px,1.1vw,16px);font-weight:600;white-space:nowrap}
+.nappi.p{background:#F4F7F8;color:#080E16}
+.nappi.s{border:1px solid rgba(244,247,248,.28)}
+@media (max-width:760px){.linkit{display:none}.teksti{width:auto;right:var(--pad);top:84px;transform:none}.napit{flex-direction:column;align-items:stretch}.nappi{height:46px}}
+.vrt{position:fixed;z-index:10;left:50%;bottom:10px;transform:translateX(-50%);display:flex;align-items:center;gap:6px;padding:5px 6px 5px 12px;border-radius:999px;border:1px solid rgba(244,247,248,.16);background:rgba(8,14,22,.8);font:500 12px/1 "Schibsted Grotesk",system-ui,sans-serif;color:rgba(244,247,248,.86);white-space:nowrap}
+.vrt button{height:28px;min-width:28px;padding:0 9px;border-radius:999px;cursor:pointer;border:1px solid rgba(244,247,248,.22);background:transparent;color:inherit;font:inherit}
+.vrt button[aria-pressed="true"]{background:#F4F7F8;color:#080E16;border-color:#F4F7F8}
+.puhdas .vrt{display:none}
+@media (max-height:520px){.vrt{bottom:4px;transform:translateX(-50%) scale(.86);transform-origin:50% 100%}}
+</style>
+</head>
+<body>
+<section class="n">
+  <img class="tausta" id="tausta" alt="">
+  <header>
+    <a class="sana" href="#">Sinoetic</a>
+    <nav class="oik" aria-label="Päävalikko">
+      <ul class="linkit"><li><a href="#">Palvelut</a></li><li><a href="#">Näin se etenee</a></li><li><a href="#">Yhteys</a></li></ul>
+      <a class="yht" href="#">Ota yhteyttä</a>
+    </nav>
+  </header>
+  <div class="teksti">
+    <h1>Jos sen voi kuvitella, sen voi rakentaa.</h1>
+    <p class="ingressi">Suunnittelemme ja rakennamme yrityksesi verkkosivut. Kun olet valmis, lisäämme niihin tekoälyn, automaation ja omat järjestelmät.</p>
+    <div class="napit"><a class="nappi p" href="#">Pyydä ilmainen demo</a><a class="nappi s" href="#">Katso, mitä teemme</a></div>
+  </div>
+</section>
+<nav class="vrt" aria-label="Kuvan vaihto"><span id="nimi"></span><span id="napit" style="display:contents"></span></nav>
+<script>
+(function () {
+  var KUVAT = [
+    { id: "A", nimi: "A – perusasetelma", src: "a.webp" },
+    { id: "B", nimi: "B – äärimmäinen lähikuva", src: "b.webp" },
+    { id: "C", nimi: "C – sivun osat taustalla", src: "c.webp" }
+  ];
+  var q = new URLSearchParams(location.search);
+  if (q.has("puhdas")) document.documentElement.classList.add("puhdas");
+  var img = document.getElementById("tausta"), napit = document.getElementById("napit"), nimi = document.getElementById("nimi");
+  function valitse(i) {
+    var k = KUVAT[i]; if (!k) return;
+    img.src = k.src; nimi.textContent = k.nimi;
+    [].forEach.call(napit.children, function (b, j) { b.setAttribute("aria-pressed", String(j === i)); });
+    var u = new URLSearchParams(location.search); u.set("k", k.id); history.replaceState(null, "", "?" + u);
+  }
+  KUVAT.forEach(function (k, i) { var b = document.createElement("button"); b.type = "button"; b.textContent = k.id; b.addEventListener("click", function () { valitse(i); }); napit.appendChild(b); });
+  addEventListener("keydown", function (e) { var i = KUVAT.findIndex(function (k) { return k.id.toLowerCase() === e.key.toLowerCase(); }); if (i >= 0) valitse(i); });
+  valitse(Math.max(0, KUVAT.findIndex(function (k) { return k.id === q.get("k"); })));
+})();
+</script>
+</body>
+</html>

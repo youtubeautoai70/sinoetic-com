@@ -286,3 +286,19 @@ Higgsfieldiin ladattiin kaksi omaa kuvaa: alkukuva `alkunakyma-1920x1080.png` ja
 **Krediitit:** tämä viesti 35 / 40, koko työ 67 + 35 = 102 / 270, saldo 710.
 
 Kehote: sama kuin saumakokeessa 1 (luonnos 1), sanatarkasti. Raportti: `docs/saumakoe2.md`.
+
+## Koekuvat "sivu esineenä" (21.11.2026)
+
+Tehtävänanto: Perämiehen viesti "koekuvat ideasta sivu esineenä". Krediittejä enintään 15, enintään 6 generointia.
+
+Asetukset: Nano Banana Pro (historiassa `nano_banana_2`), 21:9, 2K, vain tekstiprompti, ei viitekuvia eikä latauksia. Tulos 3168×1344 px. Promptit kopioitiin Code-viestistä sellaisinaan ja tarkistettiin merkilleen (pituus ja tarkistussumma) ennen generointia. Uusintoja ei tehty, eikä promptteja muutettu.
+
+| Kuva | Aika | Generointi-id | Napin hinta | Saldo ennen → jälkeen |
+|---|---|---|---|---|
+| A – perusasetelma | 9.53 | `153bbf4f-9eef-457f-b4c0-91975e7271ce` | 2 | 710 → 708 |
+| B – äärimmäinen lähikuva | 9.54 | `b9946aeb-2976-44f7-86b3-fd0be4d4b028` | 2 | 708 → 706 |
+| C – sivun osat taustalla | 9.56 | `6e020b81-5ced-4cf5-b306-dd71a8b28b72` | 2 | 706 → 704 |
+
+**Krediitit:** tämä viesti 6 / 15, koko työ 102 + 6 = 108 / 270, saldo 704.
+
+**Tiedostot** (`_vertailu/lasikoe/`): alkuperäiset `alkuperaiset/{a,b,c}.png`, sivun versiot `{a,b,c}.webp`, promptit `promptit/{a,b,c}.txt` (sanatarkasti), koesivu `index.html`, kaappaukset `kaappaukset/`.
