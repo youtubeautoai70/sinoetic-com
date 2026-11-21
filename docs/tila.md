@@ -2,6 +2,21 @@
 
 Tähän kirjataan vain todennettu tila commit-tunnisteineen.
 
+## 21.11.2026 – saumakoe 5 tehty, PYSÄHDYS
+
+- Tehtävänanto: Perämiehen "saumakoe 5: kuvasuhde". Ei generointeja, 0 krediittiä (koko työ 108 / 270).
+- Commitit: `9339ae6` (koesivu, geometria, työkalut), `0ea2979` (kaappaukset ja peiton laskenta), `a6e46bb` (raportti).
+- Julkaistava kansio: `_vertailu/saumakoe5/julkaisu/` (itsenäinen, noin 6,4 Mt). Raportti: `docs/saumakoe5.md`.
+- Todennettu:
+  - Alkusivu ennen leikkausta on pikselilleen sama kuin `alkunakyma.html` yksinään yhdeksässä videokoossa (0 eroavaa pikseliä).
+  - Leikkauksessa ei ole hyppyä: videon ensimmäinen kuva on pikselilleen alkusivu.
+  - Lopussa video peittää ikkunan kaikissa koissa 2,4:1:een asti, ja läppäri pohjineen sekä lamppu näkyvät.
+  - Peitto laskettuna jokaisella kuvalla: leveissä ikkunoissa kuvissa 13–40 enintään 0,19 % ikkunasta on peittämättä (yläkulmat, tumma). Koossa 1280×960 aukkoja ei ole.
+  - Koko kulku toimii kymmenessä testikoossa ilman virheitä. Koossa 390×844 näkyy vain alkusivu ja merkintä.
+- Todentamatta: kuvataajuus ja liikkeen tuntuma (Kapteeni katsoo omassa Chromessaan).
+- Avoin: 0,5–0,6 s:n pito koossa 1440×900 ja 1280×960; täyte näyttää tyhjältä koossa 2560×1080 ja 3840×1080; yläreuna vai keskitys.
+- Perutun tehtävän B tiedostot (`ensinakyma/`, `_vertailu/ensinakyma/`, `_vertailu/tyokalut/laatikot.cjs`) ovat yhä seuraamattomina paikallaan.
+
 ## 21.11.2026 – saumakoe 4 tehty, PYSÄHDYS
 
 - Tehtävänanto: Perämiehen "saumakoe 4". Ei generointeja, 0 krediittiä (koko työ 108 / 270).
