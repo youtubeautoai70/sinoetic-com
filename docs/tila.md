@@ -2,6 +2,18 @@
 
 Tähän kirjataan vain todennettu tila commit-tunnisteineen.
 
+## 21.11.2026 – saumakoe 3 tehty
+
+- Tehtävänanto: Perämiehen "saumakoe 3". Ei generointeja, 0 krediittiä.
+- `502c0e5`:
+  - `_vertailu/saumakoe3/`: koesivu (oikea HTML videon päällä, `seuranta.json`), tallenteet 1280×720 ja 853×400, rinnakkaisvertailu kokeeseen 2.
+  - Työkalut `seuraa_ruutu.py`, `ruudun_reunat.py`, `kokoa_seuranta.py`. Raportti `docs/saumakoe3.md`.
+- Tulos:
+  - Sivun kulmat vs. videon ruudun reunat: mediaani 0,18 px, suurin 3,49 px (kuva 25). Näytöltä mitattuna mediaani 1,54 px, suurin 5,27 px.
+  - Tekstit pysyvät oikeina ja terävinä, hiiren valo säilyy.
+  - Toiston kuvataajuus oikeassa Chromessa on mittaamatta. Automaattiselaimessa 15,5 kuvaa/s (video 24).
+- Krediitit ennallaan: koko työ 102 / 270.
+
 ## 21.11.2026 – saumakoe 2 tehty, PYSÄHDYS
 
 - Tehtävänanto: Perämiehen "saumakoe 2". Tehtävän B keskeneräisiä tiedostoja ei commitoitu eikä poistettu.
