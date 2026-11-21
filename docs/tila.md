@@ -2,6 +2,18 @@
 
 Tähän kirjataan vain todennettu tila commit-tunnisteineen.
 
+## 21.11.2026 – saumakoe 4 tehty, PYSÄHDYS
+
+- Tehtävänanto: Perämiehen "saumakoe 4". Ei generointeja, 0 krediittiä (koko työ 108 / 270).
+- Commitit: `706b4d5` (tehtävä 1), `8f21da4` (tehtävä 2), `370176f` (tehtävä 3), `b269a10` (tehtävä 4), `7389b79` (tallenteet ja raportti).
+- Julkaistava kansio: `_vertailu/saumakoe4/julkaisu/` (itsenäinen, noin 6,5 Mt). Raportti: `docs/saumakoe4.md`.
+- Todennettu:
+  - Alkusivu näkyy koossa 1:1 kolmessa ikkunakoossa, eikä mikään leikkaudu 16:9:ssä tai sitä korkeammassa ikkunassa.
+  - 60 kuvan seuranta: mediaani 0,35 px, suurin 3,26 px (kuvat 48–298).
+  - Pysäytyskuvissa sivu pysyy ruudussa molemmissa versioissa (24 ja 60).
+- Todentamatta: todellinen kuvataajuus ja liikkeen sulavuus (Kapteeni mittaa omassa Chromessaan); alun 47 kuvan seuranta 60 kuvan videosta.
+- Avoin: kuvasuhde leveässä ikkunassa (853×400 rajaa valikon pois).
+
 ## 21.11.2026 – koekuvat "sivu esineenä" tehty, PYSÄHDYS
 
 - Tehtävänanto: Perämiehen "koekuvat ideasta sivu esineenä".
