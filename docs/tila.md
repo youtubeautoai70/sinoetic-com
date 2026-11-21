@@ -2,6 +2,14 @@
 
 Tähän kirjataan vain todennettu tila commit-tunnisteineen.
 
+## 21.11.2026 – koekuvat "sivu esineenä" tehty, PYSÄHDYS
+
+- Tehtävänanto: Perämiehen "koekuvat ideasta sivu esineenä".
+- `7cd7ed4`: `_vertailu/lasikoe/` (kolme kuvaa, koesivu, kaappaukset 853×400 ja 1440×900), `KUVAT.md`.
+- Kolme generointia (A, B, C), ei uusintoja. Yhdessäkään ei ole tekstiä, ja vasen reuna on tumma. Selviä generointivirheitä ei ollut.
+- Higgsfield: 6 / 15 tähän viestiin, koko työ 108 / 270, saldo 704.
+- Odottaa Kapteenia: onko ideassa ainesta; saumakokeen 3 toiston sujuvuus hänen koneellaan.
+
 ## 21.11.2026 – saumakoe 3 tehty
 
 - Tehtävänanto: Perämiehen "saumakoe 3". Ei generointeja, 0 krediittiä.
