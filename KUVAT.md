@@ -272,3 +272,17 @@ Video: Code-viestin kehote sanatarkasti. Alkuun on lisätty viitekuvien nimeämi
 ```text
 One continuous shot, no cuts. The frame starts completely filled by a website shown flat and sharp. The camera slowly and smoothly pulls straight back, revealing that the website is on a laptop screen on a tidy desk in a dark, quiet room in the evening. Steady dolly-out with gentle ease-in and ease-out, no shake. The content on the screen stays exactly the same, sharp and stable; no flicker, no changing text. No people, no hands. Natural light falloff, subtle film grain.
 ```
+
+## Saumakoe 2 (21.11.2026)
+
+Tehtävänanto: Perämiehen viesti "saumakoe 2". Krediittejä enintään 40 viestiin. Uutta kuvaa ei tehty, koska kokeen 1 työpöytäkuva toimi vaalean ruudun kanssa.
+
+Higgsfieldiin ladattiin kaksi omaa kuvaa: alkukuva `alkunakyma-1920x1080.png` ja loppukuva `loppukuva.jpg` (`_vertailu/saumakoe2/`).
+
+| Video | Aika | Generointi-id | Asetukset | Napin hinta | Saldo ennen → jälkeen |
+|---|---|---|---|---|---|
+| Vetäytyminen vaaleasta sivusta | 9.03 | `1ebd9c96-8adc-4386-a8ea-62f15631315b` | Seedance 2.5, References, 720p, 5 s, 16:9, ääni pois, alku- ja loppukuva | 35 | 745 → 710 |
+
+**Krediitit:** tämä viesti 35 / 40, koko työ 67 + 35 = 102 / 270, saldo 710.
+
+Kehote: sama kuin saumakokeessa 1 (luonnos 1), sanatarkasti. Raportti: `docs/saumakoe2.md`.

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Sinoetic</title>
+<!-- Saumakoe 2 (21.11.2026): oikea HTML-alkunäkymä on käytettävissä, kunnes kävijä klikkaa tai 5 s on kulunut.
+     Välähdykset g1 ja g2 tapahtuvat HTML-sivulla. Leikkaus videoon tehdään g3-välähdyksen (tumma) aikana.
+     Videon ensimmäisen ruudun kutistuma ja siirtymä kompensoidaan (KOMP), ja videoon tulee sama g3-suodatin
+     välähdyksen loppuajaksi. Kyselyt: ?leikkaus=ms (kohta g3:n sisällä, 0–220), ?video=tiedosto, ?komp=0 (ei kompensointia). -->
+<style>
+html,body{margin:0;height:100%;overflow:hidden;background:#F4F5F7;transition:none}
+body.tumma{background:#06090E}
+.kehys{position:absolute;left:50%;top:50%;width:1920px;height:1080px;overflow:hidden;transform-origin:50% 50%;background:#F4F5F7}
+.kehys iframe,.kehys video{position:absolute;left:0;top:0;width:1920px;height:1080px;border:0;display:block}
+.kehys video{object-fit:fill;transform-origin:0 0;visibility:hidden}
+.kehys iframe{z-index:2}
+.kehys.video iframe{visibility:hidden;pointer-events:none}
+.kehys.video video{visibility:visible}
+.kehys.g3{background:#0B0A08}
+.kehys video{filter:brightness(var(--kirkkaus,1))}
+.kehys.g3 video{filter:brightness(var(--kirkkaus,1)) invert(1) hue-rotate(180deg) contrast(1.1)}
+.kehys.tasaa video{filter:brightness(1);transition:filter 1.1s ease-out}
+.kehys.tasaa{background:#070B12;transition:background-color .5s linear}   /* kompensoinnin jättämä reunarako tummuu huoneen mukana */
+.juovat{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;background:repeating-linear-gradient(180deg,rgba(255,255,255,.06) 0 2px,transparent 2px 5px)}
+.kehys.g3 .juovat{opacity:1}
+.ohje{position:fixed;z-index:5;left:50%;bottom:12px;transform:translateX(-50%);display:flex;gap:8px;align-items:center;padding:6px 8px 6px 14px;border-radius:999px;
+  background:rgba(8,14,22,.8);border:1px solid rgba(244,247,248,.16);font:500 12.5px/1 system-ui,sans-serif;color:rgba(244,247,248,.86);opacity:0;transition:opacity .4s;pointer-events:none}
+.ohje.nakyy{opacity:1;pointer-events:auto}
+.ohje button{height:28px;padding:0 12px;border-radius:999px;border:1px solid rgba(244,247,248,.25);background:transparent;color:inherit;font:inherit;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="kehys" id="kehys">
+  <video id="video" muted playsinline preload="auto"></video>
+  <iframe id="sivu" title="Sinoetic"></iframe>
+  <div class="juovat"></div>
+</div>
+<div class="ohje" id="ohje"><span>Video päättyi.</span><button type="button" id="uudelleen">Toista alusta</button></div>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  // Videon 1. ruudun mitattu ero alkukuvaan (1920 px:n kehyksessä): mittakaava ja siirto. Korjaus on käänteinen muunnos.
+  // Mitattu video.mp4:n 1. ruudusta (10 kohdistuspistettä, jäännös alle 2 px): u = sx*x + dx, v = sy*y + dy; kirkkaus 236/254.
+  var KOMP = { sx: 1.0105, sy: 0.9944, dx: -17.43, dy: -4.52, kirkkaus: 1.077 };
+  var LEIKKAUS = q.has("leikkaus") ? +q.get("leikkaus") : 180;    // ms g3:n alusta (0–220); 180 = juuri ennen kuin sivu palaa vaaleaksi
+  var G3 = 220;
+  var kehys = document.getElementById("kehys"), video = document.getElementById("video"), sivu = document.getElementById("sivu");
+  video.src = q.get("video") || "video.mp4";
+  var komp = q.get("komp") === "0" ? { sx: 1, sy: 1, dx: 0, dy: 0, kirkkaus: 1 } : KOMP;
+  // käänteinen muunnos: 1. ruudun sisältö osuu HTML:n päälle
+  var perus = "translate(" + (-komp.dx / komp.sx) + "px," + (-komp.dy / komp.sy) + "px) scale(" + (1 / komp.sx) + "," + (1 / komp.sy) + ")";
+  kehys.style.setProperty("--kirkkaus", komp.kirkkaus);
+  video.style.transform = perus;
+
+  function sovita() { var s = Math.max(innerWidth / 1920, innerHeight / 1080); kehys.style.transform = "translate(-50%,-50%) scale(" + s + ")"; }
+  addEventListener("resize", sovita); sovita();
+
+  function leikkaa() {
+    // g3 on käynnissä HTML-sivulla (sivu käännetty tummaksi). Vaihdetaan videoon samalla suodattimella.
+    kehys.classList.add("g3");
+    video.style.transform = "translate(-4px,2px) scale(1.006) " + perus;       // sama tärähdys kuin sivun g3:ssa
+    var p = video.play();
+    var nayta = function () { kehys.classList.add("video"); };
+    if ("requestVideoFrameCallback" in video) video.requestVideoFrameCallback(nayta); else nayta();
+    if (p && p.catch) p.catch(function () {});
+    setTimeout(function () { kehys.classList.remove("g3"); video.style.transform = perus;
+      void getComputedStyle(video).filter;                       // suodatin vaihtuu heti, vasta sitten kirkkaus tasataan
+      kehys.classList.add("tasaa"); }, Math.max(0, G3 - LEIKKAUS));
+  }
+
+  video.addEventListener("ended", function () { document.getElementById("ohje").classList.add("nakyy"); });
+  document.getElementById("uudelleen").addEventListener("click", function () { location.reload(); });
+
+  // Sivu ladataan vasta, kun video on valmis toistettavaksi (5 s:n kello alkaa sivun latautumisesta).
+  var valmis = false;
+  function lataaSivu() {
+    if (valmis) return; valmis = true;
+    video.pause(); video.currentTime = 0;
+    sivu.addEventListener("load", function () {
+      var b = sivu.contentDocument.body;
+      new MutationObserver(function () {
+        if (b.classList.contains("g3") && !kehys.dataset.leikattu) { kehys.dataset.leikattu = "1"; setTimeout(leikkaa, LEIKKAUS); }
+      }).observe(b, { attributes: true, attributeFilter: ["class"] });
+    });
+    sivu.src = "../../_aineisto/alkunakyma.html";
+  }
+  if (video.readyState >= 4) lataaSivu(); else video.addEventListener("canplaythrough", lataaSivu, { once: true });
+  setTimeout(lataaSivu, 4000);
+})();
+</script>
+</body>
+</html>
