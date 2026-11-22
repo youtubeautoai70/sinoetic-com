@@ -34,15 +34,16 @@ const med = (a) => { const s = [...a].sort((x, y) => x - y); return s.length ? (
   }
   const tulos = { kansio: A.kansio, aika: new Date().toISOString(), koko: `${KW}x${KH} @${DSF}`, kehys: !!A.kehys, lisa: A.lisa || "", ajot: [] };
   const b = await chromium.launch({ channel: "chrome", headless: false, args: ["--autoplay-policy=no-user-gesture-required", "--disable-backgrounding-occluded-windows", "--disable-renderer-backgrounding", "--window-position=0,0", "--window-size=1300,790"] });
-  for (const versio of VERSIOT) for (const cpu of CPU) for (const olo of OLOT) {
+  // Versiot vuorottelevat toisto toistolta (kevyt, vanha, kevyt, ...), jotta koneen muu kuorma osuu molempiin samalla tavalla.
+  for (const cpu of CPU) for (const olo of OLOT) {
     const ctx = await b.newContext({ viewport: { width: KW, height: KH }, deviceScaleFactor: DSF }); const p = await ctx.newPage();
     const virheet = []; p.on("pageerror", (e) => virheet.push(String(e))); p.on("console", (m) => { if (m.type() === "error") virheet.push(m.text()); });
-    const kysely = [versio === "vanha" ? "hover=vanha" : "", A.lisa || ""].filter(Boolean).join("&");
-    const url = (kehysUrl || `http://127.0.0.1:${s1.address().port}/index.html`) + (kysely ? "?" + kysely : "");
     const kehys = () => kehysUrl ? p.frame({ url: /index\.html/ }) : p.mainFrame();
-    let cdp = await ctx.newCDPSession(p);
-    for (let i = 0; i < N; i++) {
-      if (i === 0) await p.goto(url);
+    let cdp = await ctx.newCDPSession(p), edVersio = null;
+    for (let i = 0; i < N; i++) for (const versio of VERSIOT) {
+      const kysely = [versio === "vanha" ? "hover=vanha" : "", A.lisa || ""].filter(Boolean).join("&");
+      const url = (kehysUrl || `http://127.0.0.1:${s1.address().port}/index.html`) + (kysely ? "?" + kysely : "");
+      if (edVersio !== versio) { await p.goto(url); edVersio = versio; }
       else {   // Toista alusta -nappi (sivun uudelleenlataus), kuten Kapteeni
         const bb = await kehys().locator("#uudelleen").boundingBox();
         await p.mouse.move(bb.x + bb.width / 2, bb.y + bb.height / 2); await p.mouse.click(bb.x + bb.width / 2, bb.y + bb.height / 2);
@@ -67,7 +68,7 @@ const med = (a) => { const s = [...a].sort((x, y) => x - y); return s.length ? (
       const r = ok ? await kehys().evaluate(() => { const t = window.__tilasto; return { fps: +t.fps.toFixed(2), pudonneet: t.pudonneet, nykaykset: t.nykaykset || [], nyk: t.viivastyneet, hz: t.hz, puuttuvat: t.puuttuvat, vara: t.vara,
         osoitin: t.osoitin, liikkui: t.liikkui, hover: t.hover, ymparisto: t.ymparisto, eiLoaf: !!t.eiLoaf, tallennettu: t.tallennettu, rivi: document.getElementById("ohjeteksti").textContent }; }) : { virhe: "aikakatkaisu" };
       Object.assign(r, { versio, cpu, olo, toisto: i + 1, paikka: olo === "a" || olo === "b" ? [px, py] : null, virheet: virheet.splice(0) });
-      tulos.ajot.push(r); console.log(versio, "cpu" + cpu, olo, i + 1, JSON.stringify({ fps: r.fps, pud: r.pudonneet, nyk: r.nykaykset, hz: r.hz, os: r.osoitin, virhe: r.virhe }));
+      tulos.ajot.push(r); console.log(versio, "cpu" + cpu, olo, i + 1, new Date().toTimeString().slice(0, 8), JSON.stringify({ fps: r.fps, pud: r.pudonneet, nyk: r.nykaykset, hz: r.hz, os: r.osoitin, virhe: r.virhe }));
     }
     await ctx.close();
   }

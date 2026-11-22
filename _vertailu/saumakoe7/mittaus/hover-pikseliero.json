@@ -1,0 +1,107 @@
+[
+ {
+  "kohde": "painike-tarjous",
+  "lepo": {
+   "eroavia_px": 0,
+   "suurin": 0
+  },
+  "puolivali": {
+   "eroavia_px": 0,
+   "suurin": 0
+  },
+  "valmis": {
+   "eroavia_px": 0,
+   "suurin": 0
+  }
+ },
+ {
+  "kohde": "painike-demo",
+  "lepo": {
+   "eroavia_px": 0,
+   "suurin": 0
+  },
+  "puolivali": {
+   "eroavia_px": 0,
+   "suurin": 0
+  },
+  "valmis": {
+   "eroavia_px": 0,
+   "suurin": 0
+  }
+ },
+ {
+  "kohde": "painike-palvelut",
+  "lepo": {
+   "eroavia_px": 0,
+   "suurin": 0
+  },
+  "puolivali": {
+   "eroavia_px": 0,
+   "suurin": 0
+  },
+  "valmis": {
+   "eroavia_px": 0,
+   "suurin": 0
+  }
+ },
+ {
+  "kohde": "valikkolinkki",
+  "lepo": {
+   "eroavia_px": 0,
+   "suurin": 0
+  },
+  "puolivali": {
+   "eroavia_px": 0,
+   "suurin": 0
+  },
+  "valmis": {
+   "eroavia_px": 0,
+   "suurin": 0
+  }
+ },
+ {
+  "kohde": "logo",
+  "lepo": {
+   "eroavia_px": 0,
+   "suurin": 0
+  },
+  "puolivali": {
+   "eroavia_px": 0,
+   "suurin": 0
+  },
+  "valmis": {
+   "eroavia_px": 0,
+   "suurin": 0
+  }
+ },
+ {
+  "kohde": "palvelukortti",
+  "lepo": {
+   "eroavia_px": 0,
+   "suurin": 0
+  },
+  "puolivali": {
+   "eroavia_px": 4351,
+   "suurin": 2
+  },
+  "valmis": {
+   "eroavia_px": 717,
+   "suurin": 1
+  }
+ },
+ {
+  "kohde": "kortin-rivi",
+  "lepo": {
+   "eroavia_px": 0,
+   "suurin": 0
+  },
+  "puolivali": {
+   "eroavia_px": 0,
+   "suurin": 0
+  },
+  "valmis": {
+   "eroavia_px": 0,
+   "suurin": 0
+  }
+ }
+]

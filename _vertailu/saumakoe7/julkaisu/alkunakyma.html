@@ -102,21 +102,10 @@ a,.svc article{cursor:pointer}
   background:radial-gradient(closest-side,rgba(45,91,255,.20),rgba(45,91,255,.09) 45%,transparent 72%)}
 .hd,.hero,.svc{position:relative;z-index:1}
 
-/* Kevyet hover-tehosteet (saumakoe 7). Periaate: lepotilassa näkyvää ei korvata kerroksilla. Varjo ja taustaväri ovat valmiita, lepotilassa
-   näkymättömiä kerroksia, joista siirtymä muuttaa vain näkyvyyttä (opacity), ja täysi näkyvyys vastaa vanhaa hover-tilaa. Nousu tehdään
-   transformilla kuten ennen. Reunan värinvaihto, valikkolinkkien värinvaihto, palvelukortin kirjainväli ja kortin rivien taustasävy ovat ennallaan:
-   kerroksina ne eivät olisi täsmälleen samannäköisiä (reunaviivan reunanpehmennys ja päällekkäisyysjärjestys poikkeaisivat). */
-.btn{position:relative;isolation:isolate;transition:transform .18s ease,border-color .18s ease}
-.btn::before,.btn::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .18s ease;z-index:-1}
-.btn:hover::before,.btn:hover::after{opacity:1}
-.btn-s:hover{background:#2D5BFF;box-shadow:none}
-.btn-s::before{background:#1E47E0}
-.btn-s::after{box-shadow:0 10px 22px -10px rgba(45,91,255,.7)}
-.btn-p:hover{background:#0F1626;box-shadow:none}
-.btn-p::before{background:#1C2740}
-.btn-p::after{box-shadow:0 12px 24px -12px rgba(15,22,38,.6)}
-.btn-g:hover{background:transparent}
-.btn-g::before{background:rgba(15,22,38,.04)}
+/* Kevyet hover-tehosteet (saumakoe 7). Palvelukortin sumennettu varjo (40 px) on valmis, lepotilassa näkymätön kerros, josta siirtymä muuttaa
+   vain näkyvyyttä (opacity); täysi näkyvyys on sama varjo kuin ennen. Vanhassa tavassa varjo piirrettiin uudelleen joka kuvalla siirtymän ajan.
+   Nousu tehdään transformilla kuten ennen. Painikkeet, värit (tausta, reuna, valikkolinkki), kirjainväli ja kortin rivien sävy vaihtuvat kuten
+   ennen: ne ovat pieniä ja halpoja piirtää, ja kerroksina niiden reunanpehmennys poikkeaisi alkuperäisestä (mitattu: painikkeissa enintään 9 tasoa). */
 .svc article{position:relative;transition:transform .22s ease,border-color .22s ease}
 .svc article::after{content:"";position:absolute;top:calc(-1 * var(--reuna,1px));left:calc(-1 * var(--reuna,1px));right:calc(-1 * var(--reuna,1px));bottom:0;border-radius:inherit;box-shadow:0 22px 40px -26px rgba(15,22,38,.4);opacity:0;transition:opacity .22s ease;pointer-events:none}
 @media (max-width:760px){.svc article::after{bottom:calc(-1 * var(--reuna,1px))}}
