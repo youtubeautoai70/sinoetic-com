@@ -375,7 +375,8 @@ video,canvas,.haivy{position:absolute;left:0;top:0;width:1280px;height:720px;tra
   }
   function leikkaa() {
     if (Ge.eiVideota(innerWidth, innerHeight)) { ajastettu = false; return; }
-    tilasto.osoitin = tap.sivulla && tap.paikka ? { x: Math.round(tap.paikka.x), y: Math.round(tap.paikka.y) } : null; tap.liikkeet = 0;
+    var hov = false; try { hov = sivu.contentDocument.querySelectorAll(":hover").length > 0; } catch (e) {}   // osoitin sivulla, vaikka viimeinen tapahtuma puuttuisi
+    tilasto.osoitin = (tap.sivulla || hov) && tap.paikka ? { x: Math.round(tap.paikka.x), y: Math.round(tap.paikka.y) } : null; tap.liikkeet = 0;
     huone();
     if (MOOTTORI === "purku") aloitaPurku(); else if (MOOTTORI === "rvfc") aloitaRvfc(); else aloitaKokoaja();
   }
