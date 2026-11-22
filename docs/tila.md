@@ -2,6 +2,33 @@
 
 Tähän kirjataan vain todennettu tila commit-tunnisteineen.
 
+## 22.11.2026 – saumakoe 7 tehty, PYSÄHDYS
+
+- Tehtävänanto: Perämiehen "saumakoe 7: jäljellä olevien nykäysten paikannus ja poisto". Ei generointeja, 0 krediittiä (koko työ 108 / 270).
+- Commitit:
+  - `02153d7`: nykäysten erittely ja syyt, toistohistoria, kevyet hover-tehosteet
+  - `4571821`: kevyt hover rajattu palvelukortin varjoon, hover-vertailu, osoittimen reitit, ensimmäiset 144 Hz:n mittaukset
+  - `94dc062`: purkajan loppu ilman tyhjennystä, mittaukset 60 ja 144 Hz
+  - `ab35ff6`: lopulliset 60 Hz:n mittaukset (kevyt), kehys- ja saumatesti
+  - `7071999`: oletukseksi vanhat hover-tehosteet, kevyet vertailunapin taakse
+  - `cb3fe09`: 144 Hz:n lopullinen vuorotteleva sarja
+  - `a2c55e1`: raportti, 60 Hz:n lopullinen CPU 4× -sarja, lepotilatesti, näkymäkuvat
+- Julkaistava kansio: `_vertailu/saumakoe7/julkaisu/` (itsenäinen, noin 6,5 Mt, ei ulkoisia viittauksia). Raportti: `docs/saumakoe7.md`.
+- Todennettu (Claude Coden mittaukset oikeassa Chromessa puhtaalla profiililla, kehys 1280×620 @1,5):
+  - **Pudonneita kuvia 0** kaikissa 658 mitatussa toistossa.
+  - **Lopun katko korjattu:** syy oli laitteistopurkajan uudelleenalustus purkajan tyhjennyksen jälkeen (kuva 289–292). Korjauksen jälkeen 225 toistossa toiston lopussa ei ollut yhtään yli 40 ms:n nykäystä. `?flush=1` toistaa vanhan katkon.
+  - **60 Hz (akku), oletusversio:** CPU 1× -olossa 24/25 toistoa ilman nykäyksiä. CPU 4× -olossa nykäyksiä vain liikkuvalla osoittimella (8 kpl, 33–34 ms), ja yhdessä toistossa viidestä varatila puolitti tahdin.
+  - **144 Hz (verkkovirta):** jäljelle jääneet nykäykset ovat Chromen kokoajan viiveenpalautusta (27–28 ms, "ei pääsäikeessä"). Sivu ei voi estää niitä. Lopullinen sarja osui tähän tilaan kokonaan.
+  - **Hover:** kevyt versio vähensi piirtotyötä (119 ms / 272 ms toistoa kohden), mutta 144 Hz:ssä nykäyksiä tuli enemmän kolmessa sarjassa neljästä. Oletus on siksi vanha, ja kevyt on vertailunapin takana.
+  - **Alkusivu ja sauma:** alkusivu ennen leikkausta on pikselilleen sama kuin kokeessa 6. Pysäytyskuvat (51 kuvaa) ovat pikselilleen samat kuin kokeessa 6.
+  - **Kehys:** sivu toimii toisen alkuperän iframessa, ja erittely ja historia tallentuvat.
+  - **760/761:** leveydellä 760 ei videota, leveydellä 761 video.
+- Todentamatta:
+  - Kapteenin oma Chrome (artifakti ja paikallinen osoite, akku ja verkkovirta, Toistot-taulukko).
+  - 144 Hz häiriöttömässä tilassa purkajan korjauksen jälkeen.
+- Paikallinen palvelin: `http://127.0.0.1:5320/index.html` (vain 127.0.0.1, kansio `_vertailu/saumakoe7/julkaisu`). Käynnistetty Kapteenin testiä varten, ei yön yli.
+- Perutun tehtävän B tiedostot (`ensinakyma/`, `_vertailu/ensinakyma/`, `_vertailu/tyokalut/laatikot.cjs`) ovat yhä seuraamattomina paikallaan.
+
 ## 22.11.2026 – saumakoe 6 tehty, PYSÄHDYS
 
 - Tehtävänanto: Perämiehen "saumakoe 6: toisto 60 kuvaa sekunnissa kaikissa oloissa ja terävä loppu". Ei generointeja, 0 krediittiä (koko työ 108 / 270).
