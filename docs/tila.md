@@ -24,9 +24,8 @@ Tähän kirjataan vain todennettu tila commit-tunnisteineen.
   - **Kehys:** sivu toimii toisen alkuperän iframessa, ja erittely ja historia tallentuvat.
   - **760/761:** leveydellä 760 ei videota, leveydellä 761 video.
   - **Kapteenin oma Chrome, paikallinen osoite** (klo 19.07–19.11, sivun Toistot-historia, `_vertailu/saumakoe7/kuvat/kapteeni-toistot-paikallinen.png`): 13 toistoa, 0 pudonnutta kuvaa, 1 nykäys (kuva 4, 28 ms, osoitin, 144 Hz). Akulla 60 Hz 5 toistoa ja verkkovirralla 144 Hz 5 toistoa vanhalla versiolla sekä 3 toistoa kevyellä. Varatila ei käynnistynyt.
-- Todentamatta:
-  - Koe 7 artifaktina claude.ai:ssa.
-  - Näkyikö hover-vertailussa eroa Kapteenin silmään.
+- Päätös: Kapteeni ei nähnyt hover-versioissa eroa, ja vanha hover jää oletukseksi (22.11.2026, suosituksen mukaan).
+- Todentamatta: koe 7 artifaktina claude.ai:ssa.
 - Paikallinen palvelin (127.0.0.1:5320) sammutettu Kapteenin testin jälkeen klo 19.12.
 - Perutun tehtävän B tiedostot (`ensinakyma/`, `_vertailu/ensinakyma/`, `_vertailu/tyokalut/laatikot.cjs`) ovat yhä seuraamattomina paikallaan.
 

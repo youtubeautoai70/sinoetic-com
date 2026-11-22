@@ -243,9 +243,8 @@ Kapteenin oma Chrome, paikallinen osoite (`kuvat/kapteeni-toistot-paikallinen.pn
 - Yksi toisto mitattiin 146 Hz:ssä heti laturin kytkemisen jälkeen, kun näyttö vaihtoi taajuutta. Siinäkään ei ollut nykäyksiä.
 - **Vertailu kokeeseen 6:** Kapteenin Chromessa koe 6 sai 10 toistossa 11 nykäystä (toistot 1, 4 ja 7). Ympäristö ei ole täysin sama, koska koe 6 ajettiin artifaktina ja koe 7 paikallisesta osoitteesta.
 - Kapteenin testin aikana 144 Hz:n häiriötilaa (syy 2) ei esiintynyt.
-- **Todentamatta:**
-  - koe 7 artifaktina claude.ai:ssa
-  - näkyikö hover-vertailussa eroa Kapteenin silmään
+- **Hover-vertailu:** Kapteeni ei huomannut eroa vanhan ja kevyen välillä.
+- **Todentamatta:** koe 7 artifaktina claude.ai:ssa.
 - **Paikallinen palvelin** sammutettiin testin jälkeen klo 19.12 (portti 5320 suljettu).
 
 ## Commitit
@@ -262,7 +261,7 @@ Ei mergeä. Krediittejä käytetty 0 (koko työ 108 / 270).
 
 ## Kapteenin päätettäväksi
 
-- Hover-tehosteet: jääkö vanha oletukseksi (nykyinen), vai otetaanko kevyt käyttöön Kapteenin oman 144 Hz:n testin jälkeen?
+- **Hover-tehosteet: päätetty.** Kapteeni ei nähnyt versioissa eroa ja päätti 22.11.2026 suosituksen mukaan, että vanha jää oletukseksi. Kevyt jää koesivulle vertailuun, ja kevennyksen periaate on kirjattu lopullista sivua varten.
 - Jos Kapteenin omassa Chromessa tulee yhä nykäyksiä, Toistot-taulukon syysarake kertoo, mitä seuraavaksi tutkitaan.
 
 SOS-rivi Perämiehelle: Saumakoe 7 valmis (landing-v1). Lopun 100 ms:n katko korjattu: purkajaa ei enää tyhjennetä kesken toiston. Kapteenin omassa Chromessa (paikallinen osoite) 13 toistoa, 0 pudonnutta ja 1 nykäys (28 ms, hiiri liikkui, 144 Hz); kokeessa 6 vastaavasti 11 nykäystä 10 toistossa. Kevyet hover-tehosteet eivät täyttäneet ehtoa 144 Hz:n mittauksissa, joten vanha on oletus ja kevyt vertailunapin takana. Artifaktitesti claude.ai:ssa on vielä tekemättä.
