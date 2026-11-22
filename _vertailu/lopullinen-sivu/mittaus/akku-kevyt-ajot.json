@@ -1,0 +1,1006 @@
+{
+ "tila": "akku",
+ "aika": "2026-11-22T19:10:39.858Z",
+ "kesto_ms": 10000,
+ "sivu": "_aineisto/lopullinen-sivu/index.html",
+ "gpu": false,
+ "jalkitapa": "kevyt",
+ "ajot": [
+  {
+   "nimi": "akku-kevyt-S1-cpu1-t5-k1",
+   "koko": "S1",
+   "cpu": 1,
+   "tilanne": 5,
+   "kierros": 1,
+   "js_keko_mt": 4.8,
+   "solmuja": 1499,
+   "muisti": {
+    "renderoija": {
+     "id": 13948,
+     "ws_mt": 153.1,
+     "priv_mt": 97.8
+    },
+    "gpu_prosessi": {
+     "id": 22472,
+     "ws_mt": 264.7,
+     "priv_mt": 241.5
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 135.8,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu1-t1-k1",
+   "koko": "S1",
+   "cpu": 1,
+   "tilanne": 1,
+   "kierros": 1,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "js_keko_mt": 3.5,
+   "solmuja": 1273,
+   "muisti": {
+    "renderoija": {
+     "id": 1636,
+     "ws_mt": 174.9,
+     "priv_mt": 114.5
+    },
+    "gpu_prosessi": {
+     "id": 22472,
+     "ws_mt": 251.7,
+     "priv_mt": 223.2
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 149.9,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu1-t2-k1",
+   "koko": "S1",
+   "cpu": 1,
+   "tilanne": 2,
+   "kierros": 1,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "js_keko_mt": 3.4,
+   "solmuja": 1308,
+   "muisti": {
+    "renderoija": {
+     "id": 2716,
+     "ws_mt": 177.6,
+     "priv_mt": 116.1
+    },
+    "gpu_prosessi": {
+     "id": 22472,
+     "ws_mt": 254.4,
+     "priv_mt": 225.5
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 151.8,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu1-t3-k1",
+   "koko": "S1",
+   "cpu": 1,
+   "tilanne": 3,
+   "kierros": 1,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "alhaalla": 3438,
+   "lopussa": 0,
+   "pykalia": 37,
+   "js_keko_mt": 3,
+   "solmuja": 1309,
+   "muisti": {
+    "renderoija": {
+     "id": 6216,
+     "ws_mt": 205.9,
+     "priv_mt": 133.3
+    },
+    "gpu_prosessi": {
+     "id": 22472,
+     "ws_mt": 475.8,
+     "priv_mt": 446.6
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 239.8,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu1-t4-k1",
+   "koko": "S1",
+   "cpu": 1,
+   "tilanne": 4,
+   "kierros": 1,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "nakyma": {
+    "y": 1272,
+    "pist": 6.540557627423222,
+    "osuudet": {
+     "s-mlk": 0.5,
+     "s-mph": 0.5,
+     "s-mav": 0.5
+    }
+   },
+   "js_keko_mt": 2.8,
+   "solmuja": 1265,
+   "muisti": {
+    "renderoija": {
+     "id": 1896,
+     "ws_mt": 302.5,
+     "priv_mt": 143
+    },
+    "gpu_prosessi": {
+     "id": 22472,
+     "ws_mt": 645.8,
+     "priv_mt": 571.3
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 449.6,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu4-t5-k1",
+   "koko": "S1",
+   "cpu": 4,
+   "tilanne": 5,
+   "kierros": 1,
+   "js_keko_mt": 4.8,
+   "solmuja": 1437,
+   "muisti": {
+    "renderoija": {
+     "id": 26768,
+     "ws_mt": 143.1,
+     "priv_mt": 90.2
+    },
+    "gpu_prosessi": {
+     "id": 22472,
+     "ws_mt": 480.6,
+     "priv_mt": 451
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 173.6,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu4-t1-k1",
+   "koko": "S1",
+   "cpu": 4,
+   "tilanne": 1,
+   "kierros": 1,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "js_keko_mt": 3,
+   "solmuja": 1279,
+   "muisti": {
+    "renderoija": {
+     "id": 15300,
+     "ws_mt": 177.4,
+     "priv_mt": 116.5
+    },
+    "gpu_prosessi": {
+     "id": 22472,
+     "ws_mt": 308.4,
+     "priv_mt": 277.7
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 175.6,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu4-t2-k1",
+   "koko": "S1",
+   "cpu": 4,
+   "tilanne": 2,
+   "kierros": 1,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "js_keko_mt": 2.9,
+   "solmuja": 1346,
+   "muisti": {
+    "renderoija": {
+     "id": 20360,
+     "ws_mt": 176.8,
+     "priv_mt": 116
+    },
+    "gpu_prosessi": {
+     "id": 22472,
+     "ws_mt": 325,
+     "priv_mt": 293.9
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 189.3,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu4-t3-k1",
+   "koko": "S1",
+   "cpu": 4,
+   "tilanne": 3,
+   "kierros": 1,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "alhaalla": 3438,
+   "lopussa": 0,
+   "pykalia": 37,
+   "js_keko_mt": 2.9,
+   "solmuja": 1323,
+   "muisti": {
+    "renderoija": {
+     "id": 32988,
+     "ws_mt": 204.1,
+     "priv_mt": 128.4
+    },
+    "gpu_prosessi": {
+     "id": 22472,
+     "ws_mt": 529.4,
+     "priv_mt": 491.8
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 249.7,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu4-t4-k1",
+   "koko": "S1",
+   "cpu": 4,
+   "tilanne": 4,
+   "kierros": 1,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "nakyma": {
+    "y": 1272,
+    "pist": 6.540557627423222,
+    "osuudet": {
+     "s-mlk": 0.5,
+     "s-mph": 0.5,
+     "s-mav": 0.5
+    }
+   },
+   "js_keko_mt": 2.8,
+   "solmuja": 1301,
+   "muisti": {
+    "renderoija": {
+     "id": 17192,
+     "ws_mt": 286.9,
+     "priv_mt": 130.3
+    },
+    "gpu_prosessi": {
+     "id": 22472,
+     "ws_mt": 629.7,
+     "priv_mt": 548.2
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 422,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu1-t5-k2",
+   "koko": "S1",
+   "cpu": 1,
+   "tilanne": 5,
+   "kierros": 2,
+   "js_keko_mt": 4.6,
+   "solmuja": 1495,
+   "muisti": {
+    "renderoija": {
+     "id": 9712,
+     "ws_mt": 153.7,
+     "priv_mt": 98.5
+    },
+    "gpu_prosessi": {
+     "id": 20344,
+     "ws_mt": 268.1,
+     "priv_mt": 244.2
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 159.7,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu1-t1-k2",
+   "koko": "S1",
+   "cpu": 1,
+   "tilanne": 1,
+   "kierros": 2,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "js_keko_mt": 3.4,
+   "solmuja": 1262,
+   "muisti": {
+    "renderoija": {
+     "id": 11360,
+     "ws_mt": 176.9,
+     "priv_mt": 116
+    },
+    "gpu_prosessi": {
+     "id": 20344,
+     "ws_mt": 249.3,
+     "priv_mt": 220.5
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 148.7,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu1-t2-k2",
+   "koko": "S1",
+   "cpu": 1,
+   "tilanne": 2,
+   "kierros": 2,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "js_keko_mt": 3.1,
+   "solmuja": 1292,
+   "muisti": {
+    "renderoija": {
+     "id": 42148,
+     "ws_mt": 177,
+     "priv_mt": 116
+    },
+    "gpu_prosessi": {
+     "id": 20344,
+     "ws_mt": 254.1,
+     "priv_mt": 224.9
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 150.9,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu1-t3-k2",
+   "koko": "S1",
+   "cpu": 1,
+   "tilanne": 3,
+   "kierros": 2,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "alhaalla": 3438,
+   "lopussa": 0,
+   "pykalia": 37,
+   "js_keko_mt": 3,
+   "solmuja": 1312,
+   "muisti": {
+    "renderoija": {
+     "id": 40792,
+     "ws_mt": 205.8,
+     "priv_mt": 132
+    },
+    "gpu_prosessi": {
+     "id": 20344,
+     "ws_mt": 507.1,
+     "priv_mt": 478.2
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 266.7,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu1-t4-k2",
+   "koko": "S1",
+   "cpu": 1,
+   "tilanne": 4,
+   "kierros": 2,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "nakyma": {
+    "y": 1272,
+    "pist": 6.540557627423222,
+    "osuudet": {
+     "s-mlk": 0.5,
+     "s-mph": 0.5,
+     "s-mav": 0.5
+    }
+   },
+   "js_keko_mt": 2.9,
+   "solmuja": 1426,
+   "muisti": {
+    "renderoija": {
+     "id": 44428,
+     "ws_mt": 295.4,
+     "priv_mt": 140.6
+    },
+    "gpu_prosessi": {
+     "id": 20344,
+     "ws_mt": 638.8,
+     "priv_mt": 568.7
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 445.5,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu4-t5-k2",
+   "koko": "S1",
+   "cpu": 4,
+   "tilanne": 5,
+   "kierros": 2,
+   "js_keko_mt": 4.9,
+   "solmuja": 1461,
+   "muisti": {
+    "renderoija": {
+     "id": 16148,
+     "ws_mt": 147.5,
+     "priv_mt": 94.8
+    },
+    "gpu_prosessi": {
+     "id": 20344,
+     "ws_mt": 507.1,
+     "priv_mt": 477.3
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 176.5,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu4-t1-k2",
+   "koko": "S1",
+   "cpu": 4,
+   "tilanne": 1,
+   "kierros": 2,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "js_keko_mt": 3.3,
+   "solmuja": 1263,
+   "muisti": {
+    "renderoija": {
+     "id": 32724,
+     "ws_mt": 178.4,
+     "priv_mt": 117.4
+    },
+    "gpu_prosessi": {
+     "id": 20344,
+     "ws_mt": 317.5,
+     "priv_mt": 286.7
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 184,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu4-t2-k2",
+   "koko": "S1",
+   "cpu": 4,
+   "tilanne": 2,
+   "kierros": 2,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "js_keko_mt": 3.5,
+   "solmuja": 1253,
+   "muisti": {
+    "renderoija": {
+     "id": 20760,
+     "ws_mt": 179.6,
+     "priv_mt": 117.9
+    },
+    "gpu_prosessi": {
+     "id": 20344,
+     "ws_mt": 322.8,
+     "priv_mt": 291.6
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 187.1,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu4-t3-k2",
+   "koko": "S1",
+   "cpu": 4,
+   "tilanne": 3,
+   "kierros": 2,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "alhaalla": 3438,
+   "lopussa": 0,
+   "pykalia": 37,
+   "js_keko_mt": 3.5,
+   "solmuja": 1310,
+   "muisti": {
+    "renderoija": {
+     "id": 8624,
+     "ws_mt": 197.7,
+     "priv_mt": 124.8
+    },
+    "gpu_prosessi": {
+     "id": 20344,
+     "ws_mt": 527.4,
+     "priv_mt": 497.1
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 284.8,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu4-t4-k2",
+   "koko": "S1",
+   "cpu": 4,
+   "tilanne": 4,
+   "kierros": 2,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "nakyma": {
+    "y": 1272,
+    "pist": 6.540557627423222,
+    "osuudet": {
+     "s-mlk": 0.5,
+     "s-mph": 0.5,
+     "s-mav": 0.5
+    }
+   },
+   "js_keko_mt": 2.8,
+   "solmuja": 1293,
+   "muisti": {
+    "renderoija": {
+     "id": 42656,
+     "ws_mt": 286.4,
+     "priv_mt": 129.5
+    },
+    "gpu_prosessi": {
+     "id": 20344,
+     "ws_mt": 624.7,
+     "priv_mt": 550
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 419.1,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu1-t5-k3",
+   "koko": "S1",
+   "cpu": 1,
+   "tilanne": 5,
+   "kierros": 3,
+   "js_keko_mt": 4.7,
+   "solmuja": 1497,
+   "muisti": {
+    "renderoija": {
+     "id": 19492,
+     "ws_mt": 152.3,
+     "priv_mt": 97
+    },
+    "gpu_prosessi": {
+     "id": 41372,
+     "ws_mt": 269.8,
+     "priv_mt": 246.9
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 150.1,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu1-t1-k3",
+   "koko": "S1",
+   "cpu": 1,
+   "tilanne": 1,
+   "kierros": 3,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "js_keko_mt": 3.2,
+   "solmuja": 1337,
+   "muisti": {
+    "renderoija": {
+     "id": 11996,
+     "ws_mt": 176.5,
+     "priv_mt": 115.6
+    },
+    "gpu_prosessi": {
+     "id": 41372,
+     "ws_mt": 258.7,
+     "priv_mt": 230.3
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 148.1,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu1-t2-k3",
+   "koko": "S1",
+   "cpu": 1,
+   "tilanne": 2,
+   "kierros": 3,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "js_keko_mt": 3,
+   "solmuja": 1325,
+   "muisti": {
+    "renderoija": {
+     "id": 43208,
+     "ws_mt": 178.1,
+     "priv_mt": 117.5
+    },
+    "gpu_prosessi": {
+     "id": 41372,
+     "ws_mt": 266.8,
+     "priv_mt": 238.2
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 152.4,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu1-t3-k3",
+   "koko": "S1",
+   "cpu": 1,
+   "tilanne": 3,
+   "kierros": 3,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "alhaalla": 3438,
+   "lopussa": 0,
+   "pykalia": 37,
+   "js_keko_mt": 3.4,
+   "solmuja": 1546,
+   "muisti": {
+    "renderoija": {
+     "id": 20648,
+     "ws_mt": 195.5,
+     "priv_mt": 121.7
+    },
+    "gpu_prosessi": {
+     "id": 41372,
+     "ws_mt": 509.1,
+     "priv_mt": 481.1
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 234.9,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu1-t4-k3",
+   "koko": "S1",
+   "cpu": 1,
+   "tilanne": 4,
+   "kierros": 3,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "nakyma": {
+    "y": 1272,
+    "pist": 6.540557627423222,
+    "osuudet": {
+     "s-mlk": 0.5,
+     "s-mph": 0.5,
+     "s-mav": 0.5
+    }
+   },
+   "js_keko_mt": 2.9,
+   "solmuja": 1583,
+   "muisti": {
+    "renderoija": {
+     "id": 13208,
+     "ws_mt": 298.7,
+     "priv_mt": 145.2
+    },
+    "gpu_prosessi": {
+     "id": 41372,
+     "ws_mt": 648.6,
+     "priv_mt": 576.2
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 443.9,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu4-t5-k3",
+   "koko": "S1",
+   "cpu": 4,
+   "tilanne": 5,
+   "kierros": 3,
+   "js_keko_mt": 4.3,
+   "solmuja": 1434,
+   "muisti": {
+    "renderoija": {
+     "id": 12964,
+     "ws_mt": 141.9,
+     "priv_mt": 89.7
+    },
+    "gpu_prosessi": {
+     "id": 41372,
+     "ws_mt": 539.2,
+     "priv_mt": 510
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 193.5,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu4-t1-k3",
+   "koko": "S1",
+   "cpu": 4,
+   "tilanne": 1,
+   "kierros": 3,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "js_keko_mt": 3.6,
+   "solmuja": 1322,
+   "muisti": {
+    "renderoija": {
+     "id": 1668,
+     "ws_mt": 175.4,
+     "priv_mt": 114.7
+    },
+    "gpu_prosessi": {
+     "id": 41372,
+     "ws_mt": 335,
+     "priv_mt": 304.6
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 192.8,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu4-t2-k3",
+   "koko": "S1",
+   "cpu": 4,
+   "tilanne": 2,
+   "kierros": 3,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "js_keko_mt": 3,
+   "solmuja": 1249,
+   "muisti": {
+    "renderoija": {
+     "id": 21788,
+     "ws_mt": 177.2,
+     "priv_mt": 115.5
+    },
+    "gpu_prosessi": {
+     "id": 41372,
+     "ws_mt": 343.1,
+     "priv_mt": 312.5
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 187.3,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu4-t3-k3",
+   "koko": "S1",
+   "cpu": 4,
+   "tilanne": 3,
+   "kierros": 3,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "alhaalla": 3438,
+   "lopussa": 0,
+   "pykalia": 37,
+   "js_keko_mt": 3.1,
+   "solmuja": 1516,
+   "muisti": {
+    "renderoija": {
+     "id": 20800,
+     "ws_mt": 198.3,
+     "priv_mt": 124.8
+    },
+    "gpu_prosessi": {
+     "id": 41372,
+     "ws_mt": 535.2,
+     "priv_mt": 505
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 276.2,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-kevyt-S1-cpu4-t4-k3",
+   "koko": "S1",
+   "cpu": 4,
+   "tilanne": 4,
+   "kierros": 3,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "nakyma": {
+    "y": 1272,
+    "pist": 6.540557627423222,
+    "osuudet": {
+     "s-mlk": 0.5,
+     "s-mph": 0.5,
+     "s-mav": 0.5
+    }
+   },
+   "js_keko_mt": 2.9,
+   "solmuja": 1547,
+   "muisti": {
+    "renderoija": {
+     "id": 28560,
+     "ws_mt": 289.9,
+     "priv_mt": 140.6
+    },
+    "gpu_prosessi": {
+     "id": 41372,
+     "ws_mt": 634.2,
+     "priv_mt": 567.1
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 431.3,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  }
+ ]
+}

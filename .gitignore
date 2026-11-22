@@ -35,3 +35,7 @@ _vertailu/saumakoe6/_*
 
 # Saumakoe 7: välitiedostot
 _vertailu/saumakoe7/_*
+
+# Lopullinen sivu: uudelleenrakennuksen tulos ja mittausten välitiedostot (jäljitykset)
+_aineisto/lopullinen-sivu/lahde/_rakennettu/
+_vertailu/lopullinen-sivu/_*

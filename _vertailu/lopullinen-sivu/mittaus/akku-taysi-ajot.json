@@ -1,0 +1,342 @@
+{
+ "tila": "akku",
+ "aika": "2026-11-22T19:18:54.098Z",
+ "kesto_ms": 5000,
+ "sivu": "_aineisto/lopullinen-sivu/index.html",
+ "gpu": false,
+ "jalkitapa": "taysi",
+ "ajot": [
+  {
+   "nimi": "akku-taysi-S1-cpu1-t5-k1",
+   "koko": "S1",
+   "cpu": 1,
+   "tilanne": 5,
+   "kierros": 1,
+   "js_keko_mt": 4.6,
+   "solmuja": 1605,
+   "muisti": {
+    "renderoija": {
+     "id": 15260,
+     "ws_mt": 167.6,
+     "priv_mt": 107.8
+    },
+    "gpu_prosessi": {
+     "id": 23132,
+     "ws_mt": 275.3,
+     "priv_mt": 248.6
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 146.1,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-taysi-S1-cpu1-t1-k1",
+   "koko": "S1",
+   "cpu": 1,
+   "tilanne": 1,
+   "kierros": 1,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "js_keko_mt": 3.3,
+   "solmuja": 1301,
+   "muisti": {
+    "renderoija": {
+     "id": 36852,
+     "ws_mt": 182.4,
+     "priv_mt": 119.7
+    },
+    "gpu_prosessi": {
+     "id": 23132,
+     "ws_mt": 251.5,
+     "priv_mt": 219.9
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 145.8,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-taysi-S1-cpu1-t2-k1",
+   "koko": "S1",
+   "cpu": 1,
+   "tilanne": 2,
+   "kierros": 1,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "js_keko_mt": 3,
+   "solmuja": 1248,
+   "muisti": {
+    "renderoija": {
+     "id": 20856,
+     "ws_mt": 184.9,
+     "priv_mt": 120.7
+    },
+    "gpu_prosessi": {
+     "id": 23132,
+     "ws_mt": 268.1,
+     "priv_mt": 235.1
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 145.5,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-taysi-S1-cpu1-t3-k1",
+   "koko": "S1",
+   "cpu": 1,
+   "tilanne": 3,
+   "kierros": 1,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "alhaalla": 3438,
+   "lopussa": 0,
+   "pykalia": 37,
+   "js_keko_mt": 3,
+   "solmuja": 1290,
+   "muisti": {
+    "renderoija": {
+     "id": 34000,
+     "ws_mt": 218.3,
+     "priv_mt": 142.3
+    },
+    "gpu_prosessi": {
+     "id": 23132,
+     "ws_mt": 461.2,
+     "priv_mt": 429
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 233,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-taysi-S1-cpu1-t4-k1",
+   "koko": "S1",
+   "cpu": 1,
+   "tilanne": 4,
+   "kierros": 1,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "nakyma": {
+    "y": 1272,
+    "pist": 6.540557627423222,
+    "osuudet": {
+     "s-mlk": 0.5,
+     "s-mph": 0.5,
+     "s-mav": 0.5
+    }
+   },
+   "js_keko_mt": 2.8,
+   "solmuja": 1376,
+   "muisti": {
+    "renderoija": {
+     "id": 23576,
+     "ws_mt": 247,
+     "priv_mt": 140.1
+    },
+    "gpu_prosessi": {
+     "id": 23132,
+     "ws_mt": 524,
+     "priv_mt": 476.6
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 371.8,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-taysi-S1-cpu4-t5-k1",
+   "koko": "S1",
+   "cpu": 4,
+   "tilanne": 5,
+   "kierros": 1,
+   "js_keko_mt": 4.8,
+   "solmuja": 1540,
+   "muisti": {
+    "renderoija": {
+     "id": 9476,
+     "ws_mt": 161.3,
+     "priv_mt": 103.9
+    },
+    "gpu_prosessi": {
+     "id": 23132,
+     "ws_mt": 413.5,
+     "priv_mt": 381
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 173.8,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-taysi-S1-cpu4-t1-k1",
+   "koko": "S1",
+   "cpu": 4,
+   "tilanne": 1,
+   "kierros": 1,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "js_keko_mt": 3.2,
+   "solmuja": 1349,
+   "muisti": {
+    "renderoija": {
+     "id": 38280,
+     "ws_mt": 177.8,
+     "priv_mt": 113.9
+    },
+    "gpu_prosessi": {
+     "id": 23132,
+     "ws_mt": 312.6,
+     "priv_mt": 279.5
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 168.9,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-taysi-S1-cpu4-t2-k1",
+   "koko": "S1",
+   "cpu": 4,
+   "tilanne": 2,
+   "kierros": 1,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "js_keko_mt": 3.5,
+   "solmuja": 1297,
+   "muisti": {
+    "renderoija": {
+     "id": 43612,
+     "ws_mt": 178.3,
+     "priv_mt": 113.3
+    },
+    "gpu_prosessi": {
+     "id": 23132,
+     "ws_mt": 320.6,
+     "priv_mt": 287.8
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 186.4,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-taysi-S1-cpu4-t3-k1",
+   "koko": "S1",
+   "cpu": 4,
+   "tilanne": 3,
+   "kierros": 1,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "alhaalla": 3438,
+   "lopussa": 0,
+   "pykalia": 37,
+   "js_keko_mt": 3.4,
+   "solmuja": 1274,
+   "muisti": {
+    "renderoija": {
+     "id": 20268,
+     "ws_mt": 201.5,
+     "priv_mt": 124.4
+    },
+    "gpu_prosessi": {
+     "id": 23132,
+     "ws_mt": 482.3,
+     "priv_mt": 449.8
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 256.9,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  },
+  {
+   "nimi": "akku-taysi-S1-cpu4-t4-k1",
+   "koko": "S1",
+   "cpu": 4,
+   "tilanne": 4,
+   "kierros": 1,
+   "ikkuna": [
+    1280,
+    620,
+    1.5,
+    4059
+   ],
+   "nakyma": {
+    "y": 1272,
+    "pist": 6.540557627423222,
+    "osuudet": {
+     "s-mlk": 0.5,
+     "s-mph": 0.5,
+     "s-mav": 0.5
+    }
+   },
+   "js_keko_mt": 2.8,
+   "solmuja": 1392,
+   "muisti": {
+    "renderoija": {
+     "id": 43732,
+     "ws_mt": 237.6,
+     "priv_mt": 126.6
+    },
+    "gpu_prosessi": {
+     "id": 23132,
+     "ws_mt": 507.1,
+     "priv_mt": 455.7
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 337.6,
+     "oma": 0
+    }
+   },
+   "virheet": []
+  }
+ ]
+}

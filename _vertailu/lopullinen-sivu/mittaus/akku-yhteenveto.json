@@ -1,0 +1,1503 @@
+{
+ "cpu1-t1": {
+  "fps": [
+   59.82,
+   59.85,
+   59.74
+  ],
+  "mediaani_ms": [
+   16.66,
+   16.67,
+   16.67
+  ],
+  "p95_ms": [
+   16.86,
+   16.86,
+   16.85
+  ],
+  "pudonneet": [
+   0,
+   0,
+   1
+  ],
+  "nykaykset": [
+   0,
+   0,
+   1
+  ],
+  "suurin_ms": [
+   17.2,
+   17.2,
+   33.4
+  ],
+  "ohitukset": [
+   {},
+   {},
+   {}
+  ],
+  "kuvia": [
+   600,
+   600,
+   599
+  ],
+  "ikkuna_ms": [
+   10014,
+   10008,
+   10009
+  ]
+ },
+ "cpu1-t2": {
+  "fps": [
+   59.82,
+   59.82,
+   59.85
+  ],
+  "mediaani_ms": [
+   16.67,
+   16.67,
+   16.67
+  ],
+  "p95_ms": [
+   16.87,
+   16.87,
+   16.91
+  ],
+  "pudonneet": [
+   0,
+   0,
+   0
+  ],
+  "nykaykset": [
+   0,
+   0,
+   0
+  ],
+  "suurin_ms": [
+   17.2,
+   17.0,
+   19.1
+  ],
+  "ohitukset": [
+   {},
+   {},
+   {}
+  ],
+  "kuvia": [
+   600,
+   600,
+   601
+  ],
+  "ikkuna_ms": [
+   10013,
+   10013,
+   10026
+  ]
+ },
+ "cpu1-t3": {
+  "fps": [
+   56.19,
+   55.92,
+   52.41
+  ],
+  "mediaani_ms": [
+   16.67,
+   16.67,
+   16.67
+  ],
+  "p95_ms": [
+   16.96,
+   17.0,
+   26.71
+  ],
+  "pudonneet": [
+   29,
+   31,
+   66
+  ],
+  "nykaykset": [
+   19,
+   22,
+   25
+  ],
+  "suurin_ms": [
+   83.4,
+   66.7,
+   133.4
+  ],
+  "ohitukset": [
+   {
+    "SKIPPED_REASON_DRAW_THROTTLED": 9,
+    "SKIPPED_REASON_WAITING_ON_MAIN": 10
+   },
+   {
+    "SKIPPED_REASON_DRAW_THROTTLED": 9,
+    "SKIPPED_REASON_WAITING_ON_MAIN": 10
+   },
+   {
+    "SKIPPED_REASON_DRAW_THROTTLED": 13,
+    "SKIPPED_REASON_WAITING_ON_MAIN": 15
+   }
+  ],
+  "kuvia": [
+   525,
+   523,
+   491
+  ],
+  "ikkuna_ms": [
+   9325,
+   9335,
+   9349
+  ]
+ },
+ "cpu1-t4": {
+  "fps": [
+   59.55,
+   59.46,
+   57.73
+  ],
+  "mediaani_ms": [
+   16.67,
+   16.67,
+   16.67
+  ],
+  "p95_ms": [
+   16.83,
+   16.87,
+   17.31
+  ],
+  "pudonneet": [
+   3,
+   4,
+   21
+  ],
+  "nykaykset": [
+   2,
+   4,
+   12
+  ],
+  "suurin_ms": [
+   49.9,
+   33.5,
+   83.7
+  ],
+  "ohitukset": [
+   {},
+   {
+    "SKIPPED_REASON_DRAW_THROTTLED": 1
+   },
+   {
+    "SKIPPED_REASON_DRAW_THROTTLED": 2,
+    "SKIPPED_REASON_WAITING_ON_MAIN": 1
+   }
+  ],
+  "kuvia": [
+   597,
+   596,
+   579
+  ],
+  "ikkuna_ms": [
+   10008,
+   10006,
+   10013
+  ]
+ },
+ "cpu1-t5": {
+  "fps": [
+   55.6,
+   55.5,
+   55.84
+  ],
+  "mediaani_ms": [
+   16.67,
+   16.68,
+   16.66
+  ],
+  "p95_ms": [
+   21.02,
+   33.1,
+   20.6
+  ],
+  "pudonneet": [
+   10,
+   10,
+   10
+  ],
+  "nykaykset": [
+   7,
+   8,
+   7
+  ],
+  "suurin_ms": [
+   66.7,
+   66.7,
+   83.3
+  ],
+  "ohitukset": [
+   {
+    "SKIPPED_REASON_NO_DAMAGE": 1,
+    "SKIPPED_REASON_WAITING_ON_MAIN": 16,
+    "SKIPPED_REASON_DRAW_THROTTLED": 3
+   },
+   {
+    "SKIPPED_REASON_NO_DAMAGE": 1,
+    "SKIPPED_REASON_WAITING_ON_MAIN": 18,
+    "SKIPPED_REASON_DRAW_THROTTLED": 3
+   },
+   {
+    "SKIPPED_REASON_NO_DAMAGE": 1,
+    "SKIPPED_REASON_WAITING_ON_MAIN": 16,
+    "SKIPPED_REASON_DRAW_THROTTLED": 2
+   }
+  ],
+  "kuvia": [
+   137,
+   135,
+   138
+  ],
+  "ikkuna_ms": [
+   3000,
+   3000,
+   3000
+  ]
+ },
+ "cpu4-t1": {
+  "fps": [
+   59.19,
+   59.14,
+   58.04
+  ],
+  "mediaani_ms": [
+   16.67,
+   16.67,
+   16.67
+  ],
+  "p95_ms": [
+   16.84,
+   16.81,
+   16.85
+  ],
+  "pudonneet": [
+   7,
+   7,
+   16
+  ],
+  "nykaykset": [
+   7,
+   7,
+   13
+  ],
+  "suurin_ms": [
+   33.5,
+   33.6,
+   66.6
+  ],
+  "ohitukset": [
+   {},
+   {},
+   {}
+  ],
+  "kuvia": [
+   594,
+   594,
+   583
+  ],
+  "ikkuna_ms": [
+   10019,
+   10026,
+   10027
+  ]
+ },
+ "cpu4-t2": {
+  "fps": [
+   56.7,
+   57.7,
+   56.42
+  ],
+  "mediaani_ms": [
+   16.67,
+   16.67,
+   16.67
+  ],
+  "p95_ms": [
+   33.15,
+   16.87,
+   30.13
+  ],
+  "pudonneet": [
+   30,
+   21,
+   33
+  ],
+  "nykaykset": [
+   30,
+   21,
+   29
+  ],
+  "suurin_ms": [
+   33.7,
+   33.6,
+   50.2
+  ],
+  "ohitukset": [
+   {},
+   {},
+   {}
+  ],
+  "kuvia": [
+   571,
+   581,
+   566
+  ],
+  "ikkuna_ms": [
+   10054,
+   10052,
+   10014
+  ]
+ },
+ "cpu4-t3": {
+  "fps": [
+   55.62,
+   54.77,
+   54.23
+  ],
+  "mediaani_ms": [
+   16.67,
+   16.68,
+   16.67
+  ],
+  "p95_ms": [
+   33.24,
+   33.31,
+   33.34
+  ],
+  "pudonneet": [
+   33,
+   42,
+   45
+  ],
+  "nykaykset": [
+   31,
+   40,
+   41
+  ],
+  "suurin_ms": [
+   66.7,
+   50.0,
+   50.1
+  ],
+  "ohitukset": [
+   {
+    "SKIPPED_REASON_WAITING_ON_MAIN": 13
+   },
+   {
+    "SKIPPED_REASON_WAITING_ON_MAIN": 12
+   },
+   {
+    "SKIPPED_REASON_WAITING_ON_MAIN": 13
+   }
+  ],
+  "kuvia": [
+   522,
+   514,
+   507
+  ],
+  "ikkuna_ms": [
+   9366,
+   9366,
+   9330
+  ]
+ },
+ "cpu4-t4": {
+  "fps": [
+   43.67,
+   43.2,
+   52.06
+  ],
+  "mediaani_ms": [
+   16.68,
+   16.7,
+   16.67
+  ],
+  "p95_ms": [
+   50.01,
+   50.05,
+   33.35
+  ],
+  "pudonneet": [
+   161,
+   166,
+   77
+  ],
+  "nykaykset": [
+   103,
+   100,
+   60
+  ],
+  "suurin_ms": [
+   133.3,
+   116.6,
+   100.1
+  ],
+  "ohitukset": [
+   {},
+   {},
+   {}
+  ],
+  "kuvia": [
+   439,
+   434,
+   522
+  ],
+  "ikkuna_ms": [
+   10031,
+   10024,
+   10008
+  ]
+ },
+ "cpu4-t5": {
+  "fps": [
+   30.08,
+   37.81,
+   29.87
+  ],
+  "mediaani_ms": [
+   16.7,
+   16.67,
+   16.69
+  ],
+  "p95_ms": [
+   33.64,
+   33.38,
+   33.51
+  ],
+  "pudonneet": [
+   84,
+   63,
+   84
+  ],
+  "nykaykset": [
+   15,
+   8,
+   21
+  ],
+  "suurin_ms": [
+   583.3,
+   500.0,
+   466.7
+  ],
+  "ohitukset": [
+   {
+    "SKIPPED_REASON_RECOVER_LATENCY": 1,
+    "SKIPPED_REASON_WAITING_ON_MAIN": 38,
+    "SKIPPED_REASON_NO_DAMAGE": 2
+   },
+   {
+    "SKIPPED_REASON_RECOVER_LATENCY": 1,
+    "SKIPPED_REASON_WAITING_ON_MAIN": 34,
+    "SKIPPED_REASON_NO_DAMAGE": 2
+   },
+   {
+    "SKIPPED_REASON_NO_DAMAGE": 1,
+    "SKIPPED_REASON_RECOVER_LATENCY": 1,
+    "SKIPPED_REASON_WAITING_ON_MAIN": 31
+   }
+  ],
+  "kuvia": [
+   86,
+   109,
+   85
+  ],
+  "ikkuna_ms": [
+   3000,
+   3000,
+   3000
+  ]
+ },
+ "syyt-cpu1-t1": {
+  "nykaykset": 1,
+  "luokat": {
+   "näytönohjainprosessi": 1
+  },
+  "sisalto": {
+   "FireAnimationFrame": 3.8,
+   "FunctionCall:kuva": 2.6,
+   "Commit": 2.0,
+   "UpdateLayoutTree": 1.9,
+   "Paint": 1.4
+  },
+  "gpu": {
+   "kokoaja": 22.3,
+   "muu": 0.4,
+   "rasterointi": 15.4,
+   "webgl_ym": 1.0
+  },
+  "ms_per_kuva": {
+   "paasaie": 3.88,
+   "kokoajasaie": 1.8,
+   "rasterointi": 0.09,
+   "gpu_paasaie": 6.81,
+   "viz": 1.09,
+   "gpu_luokat": {
+    "kokoaja": 2.14,
+    "muu": 0.05,
+    "rasterointi": 4.3,
+    "webgl_ym": 0.32
+   }
+  },
+  "esimerkit": [
+   {
+    "ms": 33.4,
+    "syy": "näytönohjainprosessi 39 ms (kokoaja 22, rasterointi 15, webgl_ym 1)"
+   }
+  ]
+ },
+ "syyt-cpu1-t2": {
+  "nykaykset": 0,
+  "luokat": {},
+  "sisalto": {},
+  "gpu": {},
+  "ms_per_kuva": {
+   "paasaie": 4.0,
+   "kokoajasaie": 1.76,
+   "rasterointi": 0.08,
+   "gpu_paasaie": 6.38,
+   "viz": 1.1,
+   "gpu_luokat": {
+    "rasterointi": 4.05,
+    "kokoaja": 1.98,
+    "muu": 0.05,
+    "webgl_ym": 0.31
+   }
+  },
+  "esimerkit": []
+ },
+ "syyt-cpu1-t3": {
+  "nykaykset": 18,
+  "luokat": {
+   "näytönohjainprosessi": 13,
+   "kokoaja ohitti": 4,
+   "ei pääsäikeessä": 1
+  },
+  "sisalto": {
+   "EventDispatch:scroll": 43.3,
+   "FireAnimationFrame": 42.3,
+   "FunctionCall:vier": 39.7,
+   "UpdateLayoutTree": 37.7,
+   "Commit": 17.9,
+   "Layerize": 14.0,
+   "FunctionCall:askel": 6.8
+  },
+  "gpu": {
+   "kokoaja": 164.1,
+   "muu": 2.1,
+   "rasterointi": 566.9,
+   "webgl_ym": 11.2
+  },
+  "ms_per_kuva": {
+   "paasaie": 3.73,
+   "kokoajasaie": 1.79,
+   "rasterointi": 0.33,
+   "gpu_paasaie": 7.15,
+   "viz": 1.18,
+   "gpu_luokat": {
+    "rasterointi": 4.66,
+    "kokoaja": 2.33,
+    "muu": 0.05,
+    "webgl_ym": 0.12
+   }
+  },
+  "esimerkit": [
+   {
+    "ms": 66.7,
+    "syy": "näytönohjainprosessi 75 ms (rasterointi 67, webgl_ym 4, kokoaja 4)"
+   },
+   {
+    "ms": 50.1,
+    "syy": "näytönohjainprosessi 57 ms (rasterointi 49, kokoaja 7, muu 0)"
+   },
+   {
+    "ms": 50.0,
+    "syy": "kokoaja ohitti: SKIPPED_REASON_WAITING_ON_MAIN ×3"
+   },
+   {
+    "ms": 49.9,
+    "syy": "näytönohjainprosessi 66 ms (rasterointi 56, kokoaja 7, webgl_ym 3)"
+   }
+  ]
+ },
+ "syyt-cpu1-t4": {
+  "nykaykset": 4,
+  "luokat": {
+   "rasterointi": 1,
+   "näytönohjainprosessi": 2,
+   "ei pääsäikeessä": 1
+  },
+  "sisalto": {
+   "Layout": 40.8,
+   "Paint": 18.1,
+   "UpdateLayoutTree": 8.6,
+   "Layerize": 7.1,
+   "PrePaint": 6.9
+  },
+  "gpu": {
+   "rasterointi": 113.0,
+   "kokoaja": 26.5,
+   "muu": 0.7,
+   "webgl_ym": 13.2
+  },
+  "ms_per_kuva": {
+   "paasaie": 5.71,
+   "kokoajasaie": 2.18,
+   "rasterointi": 0.95,
+   "gpu_paasaie": 8.02,
+   "viz": 1.66,
+   "gpu_luokat": {
+    "rasterointi": 5.14,
+    "kokoaja": 2.78,
+    "muu": 0.04,
+    "webgl_ym": 0.05
+   }
+  },
+  "esimerkit": [
+   {
+    "ms": 49.9,
+    "syy": "rasterointi 55 ms"
+   },
+   {
+    "ms": 33.4,
+    "syy": "näytönohjainprosessi 50 ms (rasterointi 46, kokoaja 4, webgl_ym 0)"
+   },
+   {
+    "ms": 33.4,
+    "syy": "ei pääsäikeessä eikä näytönohjainprosessissa (pääsäie 14 ms, näytönohjain 23 ms, viz 4 ms)"
+   },
+   {
+    "ms": 33.3,
+    "syy": "näytönohjainprosessi 43 ms (rasterointi 37, kokoaja 6, muu 0)"
+   }
+  ]
+ },
+ "syyt-cpu1-t5": {
+  "nykaykset": 7,
+  "luokat": {
+   "roskienkeruu": 1,
+   "näytönohjainprosessi": 4,
+   "ei pääsäikeessä": 2
+  },
+  "sisalto": {
+   "FireAnimationFrame": 20.4,
+   "UpdateLayoutTree": 11.4,
+   "FunctionCall:kuva": 11.3,
+   "Layerize": 10.7,
+   "Layout": 4.8,
+   "FunctionCall:piirra": 2.7,
+   "Commit": 2.7,
+   "MinorGC": 1.3
+  },
+  "gpu": {
+   "rasterointi": 144.6,
+   "webgl_ym": 4.4,
+   "muu": 3.3,
+   "kokoaja": 205.3
+  },
+  "ms_per_kuva": {
+   "paasaie": 7.32,
+   "kokoajasaie": 2.16,
+   "rasterointi": 0.17,
+   "gpu_paasaie": 12.36,
+   "viz": 2.9,
+   "gpu_luokat": {
+    "rasterointi": 7.31,
+    "kokoaja": 4.16,
+    "muu": 0.14,
+    "webgl_ym": 0.75
+   }
+  },
+  "esimerkit": [
+   {
+    "ms": 116.8,
+    "syy": "roskienkeruu 8 ms"
+   },
+   {
+    "ms": 49.9,
+    "syy": "näytönohjainprosessi 66 ms (kokoaja 46, rasterointi 19, muu 1)"
+   },
+   {
+    "ms": 33.5,
+    "syy": "ei pääsäikeessä eikä näytönohjainprosessissa (pääsäie 12 ms, näytönohjain 30 ms, viz 4 ms)"
+   },
+   {
+    "ms": 33.3,
+    "syy": "näytönohjainprosessi 35 ms (kokoaja 25, rasterointi 10, webgl_ym 1)"
+   }
+  ]
+ },
+ "syyt-cpu4-t1": {
+  "nykaykset": 20,
+  "luokat": {
+   "pääsäie": 19,
+   "roskienkeruu": 1
+  },
+  "sisalto": {
+   "FireAnimationFrame": 222.6,
+   "FunctionCall:kuva": 144.4,
+   "UpdateLayoutTree": 136.7,
+   "Commit": 130.2,
+   "Layerize": 63.9,
+   "Paint": 58.8,
+   "Layout": 23.1,
+   "PrePaint": 11.2
+  },
+  "gpu": {
+   "kokoaja": 106.8,
+   "muu": 2.2,
+   "webgl_ym": 15.8,
+   "rasterointi": 166.3
+  },
+  "ms_per_kuva": {
+   "paasaie": 16.79,
+   "kokoajasaie": 1.48,
+   "rasterointi": 0.07,
+   "gpu_paasaie": 6.19,
+   "viz": 1.08,
+   "gpu_luokat": {
+    "kokoaja": 1.9,
+    "muu": 0.12,
+    "webgl_ym": 0.32,
+    "rasterointi": 3.85
+   }
+  },
+  "esimerkit": [
+   {
+    "ms": 50.0,
+    "syy": "pääsäie 66 ms (pisin tehtävä 38 ms): FireAnimationFrame 16 ms, FunctionCall:kuva 12 ms, Layerize 11 ms"
+   },
+   {
+    "ms": 33.6,
+    "syy": "pääsäie 47 ms (pisin tehtävä 27 ms): UpdateLayoutTree 13 ms, Layerize 11 ms, Commit 6 ms"
+   },
+   {
+    "ms": 33.5,
+    "syy": "pääsäie 50 ms (pisin tehtävä 23 ms): FireAnimationFrame 12 ms, Commit 11 ms, FunctionCall:kuva 8 ms"
+   },
+   {
+    "ms": 33.5,
+    "syy": "pääsäie 50 ms (pisin tehtävä 20 ms): FireAnimationFrame 17 ms, FunctionCall:kuva 10 ms, UpdateLayoutTree 8 ms"
+   }
+  ]
+ },
+ "syyt-cpu4-t2": {
+  "nykaykset": 36,
+  "luokat": {
+   "pääsäie": 33,
+   "roskienkeruu": 3
+  },
+  "sisalto": {
+   "FireAnimationFrame": 361.7,
+   "UpdateLayoutTree": 239.4,
+   "FunctionCall:kuva": 237.5,
+   "Commit": 203.2,
+   "Paint": 95.4,
+   "Layerize": 69.0,
+   "Layout": 51.2,
+   "PrePaint": 15.6
+  },
+  "gpu": {
+   "kokoaja": 187.7,
+   "muu": 5.5,
+   "webgl_ym": 25.7,
+   "rasterointi": 286.5
+  },
+  "ms_per_kuva": {
+   "paasaie": 18.21,
+   "kokoajasaie": 1.54,
+   "rasterointi": 0.07,
+   "gpu_paasaie": 6.12,
+   "viz": 1.12,
+   "gpu_luokat": {
+    "kokoaja": 2.01,
+    "muu": 0.12,
+    "webgl_ym": 0.31,
+    "rasterointi": 3.67
+   }
+  },
+  "esimerkit": [
+   {
+    "ms": 49.9,
+    "syy": "pääsäie 65 ms (pisin tehtävä 38 ms): FireAnimationFrame 11 ms, UpdateLayoutTree 8 ms, FunctionCall:kuva 8 ms"
+   },
+   {
+    "ms": 33.6,
+    "syy": "pääsäie 47 ms (pisin tehtävä 19 ms): FireAnimationFrame 10 ms, FunctionCall:kuva 6 ms, UpdateLayoutTree 6 ms"
+   },
+   {
+    "ms": 33.5,
+    "syy": "roskienkeruu 7 ms"
+   },
+   {
+    "ms": 33.5,
+    "syy": "pääsäie 48 ms (pisin tehtävä 19 ms): FireAnimationFrame 8 ms, UpdateLayoutTree 7 ms, Commit 7 ms"
+   }
+  ]
+ },
+ "syyt-cpu4-t3": {
+  "nykaykset": 70,
+  "luokat": {
+   "roskienkeruu": 5,
+   "pääsäie": 64,
+   "kokoaja ohitti": 1
+  },
+  "sisalto": {
+   "EventDispatch:scroll": 650.6,
+   "FireAnimationFrame": 639.5,
+   "FunctionCall:vier": 626.6,
+   "UpdateLayoutTree": 477.9,
+   "Layerize": 240.7,
+   "Commit": 221.5,
+   "Paint": 87.6,
+   "FunctionCall:kuva": 80.4
+  },
+  "gpu": {
+   "kokoaja": 439.1,
+   "muu": 17.4,
+   "webgl_ym": 52.4,
+   "rasterointi": 672.2
+  },
+  "ms_per_kuva": {
+   "paasaie": 16.76,
+   "kokoajasaie": 1.49,
+   "rasterointi": 0.35,
+   "gpu_paasaie": 5.47,
+   "viz": 1.17,
+   "gpu_luokat": {
+    "rasterointi": 3.27,
+    "kokoaja": 1.99,
+    "muu": 0.07,
+    "webgl_ym": 0.14
+   }
+  },
+  "esimerkit": [
+   {
+    "ms": 50.1,
+    "syy": "roskienkeruu 96 ms"
+   },
+   {
+    "ms": 50.0,
+    "syy": "pääsäie 64 ms (pisin tehtävä 35 ms): EventDispatch:scroll 13 ms, FunctionCall:vier 12 ms, UpdateLayoutTree 10 ms"
+   },
+   {
+    "ms": 49.9,
+    "syy": "roskienkeruu 5 ms"
+   },
+   {
+    "ms": 49.9,
+    "syy": "pääsäie 42 ms (pisin tehtävä 12 ms): FireAnimationFrame 12 ms, FunctionCall:askel 8 ms, UpdateLayoutTree 7 ms"
+   }
+  ]
+ },
+ "syyt-cpu4-t4": {
+  "nykaykset": 47,
+  "luokat": {
+   "pääsäie": 44,
+   "roskienkeruu": 3
+  },
+  "sisalto": {
+   "Layout": 1208.8,
+   "UpdateLayoutTree": 243.8,
+   "Paint": 240.2,
+   "Layerize": 219.0,
+   "Commit": 165.9,
+   "FireAnimationFrame": 114.3,
+   "PrePaint": 74.2,
+   "FunctionCall:piirra": 63.9
+  },
+  "gpu": {
+   "kokoaja": 472.9,
+   "rasterointi": 581.1,
+   "muu": 3.4,
+   "webgl_ym": 3.4
+  },
+  "ms_per_kuva": {
+   "paasaie": 19.85,
+   "kokoajasaie": 1.8,
+   "rasterointi": 0.73,
+   "gpu_paasaie": 7.15,
+   "viz": 2.0,
+   "gpu_luokat": {
+    "rasterointi": 3.47,
+    "kokoaja": 3.63,
+    "muu": 0.04,
+    "webgl_ym": 0.02
+   }
+  },
+  "esimerkit": [
+   {
+    "ms": 116.8,
+    "syy": "pääsäie 126 ms (pisin tehtävä 52 ms): Layout 65 ms, Paint 16 ms, TimerFire 15 ms"
+   },
+   {
+    "ms": 116.6,
+    "syy": "pääsäie 126 ms (pisin tehtävä 83 ms): Layout 69 ms, Paint 16 ms, TimerFire 15 ms"
+   },
+   {
+    "ms": 66.6,
+    "syy": "roskienkeruu 84 ms"
+   },
+   {
+    "ms": 50.6,
+    "syy": "pääsäie 63 ms (pisin tehtävä 49 ms): Layout 27 ms, Paint 10 ms, FireAnimationFrame 6 ms"
+   }
+  ]
+ },
+ "syyt-cpu4-t5": {
+  "nykaykset": 17,
+  "luokat": {
+   "pääsäie": 14,
+   "roskienkeruu": 3
+  },
+  "sisalto": {
+   "Layout": 659.3,
+   "ParseHTML": 305.6,
+   "EvaluateScript": 236.4,
+   "v8.run": 215.1,
+   "FireAnimationFrame": 132.6,
+   "UpdateLayoutTree": 127.4,
+   "Commit": 76.3,
+   "Layerize": 74.2
+  },
+  "gpu": {
+   "kokoaja": 151.4,
+   "muu": 13.5,
+   "rasterointi": 173.7,
+   "webgl_ym": 28.7
+  },
+  "ms_per_kuva": {
+   "paasaie": 30.17,
+   "kokoajasaie": 1.91,
+   "rasterointi": 0.15,
+   "gpu_paasaie": 8.05,
+   "viz": 1.73,
+   "gpu_luokat": {
+    "rasterointi": 4.48,
+    "kokoaja": 2.83,
+    "muu": 0.25,
+    "webgl_ym": 0.49
+   }
+  },
+  "esimerkit": [
+   {
+    "ms": 483.3,
+    "syy": "pääsäie 485 ms (pisin tehtävä 412 ms): Layout 386 ms, UpdateLayoutTree 14 ms, ParseHTML 11 ms"
+   },
+   {
+    "ms": 316.5,
+    "syy": "pääsäie 309 ms (pisin tehtävä 237 ms): ParseHTML 240 ms, EvaluateScript 236 ms, v8.run 215 ms"
+   },
+   {
+    "ms": 266.8,
+    "syy": "pääsäie 279 ms (pisin tehtävä 412 ms): Layout 136 ms, ParseHTML 55 ms, Paint 21 ms"
+   },
+   {
+    "ms": 66.8,
+    "syy": "roskienkeruu 12 ms"
+   }
+  ]
+ },
+ "gpu-t1": [
+  {
+   "kaytto_pros": 57.1,
+   "fps_raf": 60.2,
+   "gpu_ms_per_kuva": 9.5,
+   "jakso_ms": 12028,
+   "moottoreita": 1,
+   "naytteet_pros": [
+    56.2,
+    57.1,
+    56.6,
+    56.3,
+    56.6,
+    57.8,
+    58.1,
+    56.3
+   ],
+   "naytteet_ka_pros": 56.9,
+   "naytteet_ms_per_kuva": 9.45
+  },
+  {
+   "kaytto_pros": 55.3,
+   "fps_raf": 60.1,
+   "gpu_ms_per_kuva": 9.19,
+   "jakso_ms": 12255,
+   "moottoreita": 1,
+   "naytteet_pros": [
+    55,
+    55.2,
+    55.2,
+    54.9,
+    55.5,
+    55.4,
+    55.9,
+    55.1
+   ],
+   "naytteet_ka_pros": 55.3,
+   "naytteet_ms_per_kuva": 9.2
+  },
+  {
+   "kaytto_pros": 57.6,
+   "fps_raf": 60.1,
+   "gpu_ms_per_kuva": 9.58,
+   "jakso_ms": 12097,
+   "moottoreita": 1,
+   "naytteet_pros": [
+    57.6,
+    57.9,
+    57.2,
+    57.7,
+    57.3,
+    58.2,
+    58.6,
+    58.1
+   ],
+   "naytteet_ka_pros": 57.8,
+   "naytteet_ms_per_kuva": 9.61
+  }
+ ],
+ "gpu-t2": [
+  {
+   "kaytto_pros": 57.2,
+   "fps_raf": 60.2,
+   "gpu_ms_per_kuva": 9.51,
+   "jakso_ms": 12061,
+   "moottoreita": 18,
+   "naytteet_pros": [
+    57.7,
+    57.9,
+    56.9,
+    57.2,
+    57.1,
+    57.5,
+    57.2,
+    56.6
+   ],
+   "naytteet_ka_pros": 57.3,
+   "naytteet_ms_per_kuva": 9.52
+  },
+  {
+   "kaytto_pros": 55.4,
+   "fps_raf": 60.2,
+   "gpu_ms_per_kuva": 9.2,
+   "jakso_ms": 12023,
+   "moottoreita": 18,
+   "naytteet_pros": [
+    55,
+    55.5,
+    55.1,
+    56,
+    55.7,
+    54.7,
+    55.6,
+    54.6
+   ],
+   "naytteet_ka_pros": 55.3,
+   "naytteet_ms_per_kuva": 9.18
+  },
+  {
+   "kaytto_pros": 58,
+   "fps_raf": 60.2,
+   "gpu_ms_per_kuva": 9.64,
+   "jakso_ms": 12055,
+   "moottoreita": 18,
+   "naytteet_pros": [
+    58.5,
+    60,
+    57.6,
+    58.1,
+    57.6,
+    57.3,
+    57.5,
+    58.3
+   ],
+   "naytteet_ka_pros": 58.1,
+   "naytteet_ms_per_kuva": 9.66
+  }
+ ],
+ "gpu-t4": [
+  {
+   "kaytto_pros": 49.8,
+   "fps_raf": 59.9,
+   "gpu_ms_per_kuva": 8.31,
+   "jakso_ms": 11933,
+   "moottoreita": 18,
+   "naytteet_pros": [
+    51.1,
+    40.3,
+    67.9,
+    41.9,
+    41.3,
+    64,
+    42.6,
+    46.4
+   ],
+   "naytteet_ka_pros": 49.4,
+   "naytteet_ms_per_kuva": 8.25
+  },
+  {
+   "kaytto_pros": 51.6,
+   "fps_raf": 60,
+   "gpu_ms_per_kuva": 8.6,
+   "jakso_ms": 11907,
+   "moottoreita": 18,
+   "naytteet_pros": [
+    49.2,
+    49.6,
+    66.4,
+    41.3,
+    43.9,
+    69.6,
+    38.3,
+    58.7
+   ],
+   "naytteet_ka_pros": 52.1,
+   "naytteet_ms_per_kuva": 8.69
+  },
+  {
+   "kaytto_pros": 51.6,
+   "fps_raf": 60.1,
+   "gpu_ms_per_kuva": 8.58,
+   "jakso_ms": 11906,
+   "moottoreita": 18,
+   "naytteet_pros": [
+    53.4,
+    44.4,
+    70.9,
+    43.8,
+    43.4,
+    66.3,
+    44.3,
+    47.3
+   ],
+   "naytteet_ka_pros": 51.7,
+   "naytteet_ms_per_kuva": 8.6
+  }
+ ],
+ "muisti": {
+  "GPU-ajo, ensimmäinen tilanne tuoreessa selaimessa-t1": [
+   {
+    "keko": 3.4,
+    "renderoija": {
+     "id": 43544,
+     "ws_mt": 176.3,
+     "priv_mt": 118
+    },
+    "gpu_prosessi": {
+     "id": 3344,
+     "ws_mt": 239.9,
+     "priv_mt": 215.4
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 144.3,
+     "oma": 0
+    }
+   },
+   {
+    "keko": 2.9,
+    "renderoija": {
+     "id": 36676,
+     "ws_mt": 177,
+     "priv_mt": 118.7
+    },
+    "gpu_prosessi": {
+     "id": 36516,
+     "ws_mt": 241.6,
+     "priv_mt": 216.8
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 148.4,
+     "oma": 0
+    }
+   },
+   {
+    "keko": 3.3,
+    "renderoija": {
+     "id": 40600,
+     "ws_mt": 173.6,
+     "priv_mt": 114.6
+    },
+    "gpu_prosessi": {
+     "id": 18592,
+     "ws_mt": 241.4,
+     "priv_mt": 216.5
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 146.1,
+     "oma": 0
+    }
+   }
+  ],
+  "kevyt ajo, CPU 1×-t1": [
+   {
+    "keko": 3.5,
+    "renderoija": {
+     "id": 1636,
+     "ws_mt": 174.9,
+     "priv_mt": 114.5
+    },
+    "gpu_prosessi": {
+     "id": 22472,
+     "ws_mt": 251.7,
+     "priv_mt": 223.2
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 149.9,
+     "oma": 0
+    }
+   },
+   {
+    "keko": 3.4,
+    "renderoija": {
+     "id": 11360,
+     "ws_mt": 176.9,
+     "priv_mt": 116
+    },
+    "gpu_prosessi": {
+     "id": 20344,
+     "ws_mt": 249.3,
+     "priv_mt": 220.5
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 148.7,
+     "oma": 0
+    }
+   },
+   {
+    "keko": 3.2,
+    "renderoija": {
+     "id": 11996,
+     "ws_mt": 176.5,
+     "priv_mt": 115.6
+    },
+    "gpu_prosessi": {
+     "id": 41372,
+     "ws_mt": 258.7,
+     "priv_mt": 230.3
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 148.1,
+     "oma": 0
+    }
+   }
+  ],
+  "kevyt ajo, CPU 1×-t2": [
+   {
+    "keko": 3.4,
+    "renderoija": {
+     "id": 2716,
+     "ws_mt": 177.6,
+     "priv_mt": 116.1
+    },
+    "gpu_prosessi": {
+     "id": 22472,
+     "ws_mt": 254.4,
+     "priv_mt": 225.5
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 151.8,
+     "oma": 0
+    }
+   },
+   {
+    "keko": 3.1,
+    "renderoija": {
+     "id": 42148,
+     "ws_mt": 177,
+     "priv_mt": 116
+    },
+    "gpu_prosessi": {
+     "id": 20344,
+     "ws_mt": 254.1,
+     "priv_mt": 224.9
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 150.9,
+     "oma": 0
+    }
+   },
+   {
+    "keko": 3,
+    "renderoija": {
+     "id": 43208,
+     "ws_mt": 178.1,
+     "priv_mt": 117.5
+    },
+    "gpu_prosessi": {
+     "id": 41372,
+     "ws_mt": 266.8,
+     "priv_mt": 238.2
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 152.4,
+     "oma": 0
+    }
+   }
+  ],
+  "kevyt ajo, CPU 1×-t3": [
+   {
+    "keko": 3,
+    "renderoija": {
+     "id": 6216,
+     "ws_mt": 205.9,
+     "priv_mt": 133.3
+    },
+    "gpu_prosessi": {
+     "id": 22472,
+     "ws_mt": 475.8,
+     "priv_mt": 446.6
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 239.8,
+     "oma": 0
+    }
+   },
+   {
+    "keko": 3,
+    "renderoija": {
+     "id": 40792,
+     "ws_mt": 205.8,
+     "priv_mt": 132
+    },
+    "gpu_prosessi": {
+     "id": 20344,
+     "ws_mt": 507.1,
+     "priv_mt": 478.2
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 266.7,
+     "oma": 0
+    }
+   },
+   {
+    "keko": 3.4,
+    "renderoija": {
+     "id": 20648,
+     "ws_mt": 195.5,
+     "priv_mt": 121.7
+    },
+    "gpu_prosessi": {
+     "id": 41372,
+     "ws_mt": 509.1,
+     "priv_mt": 481.1
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 234.9,
+     "oma": 0
+    }
+   }
+  ],
+  "kevyt ajo, CPU 1×-t4": [
+   {
+    "keko": 2.8,
+    "renderoija": {
+     "id": 1896,
+     "ws_mt": 302.5,
+     "priv_mt": 143
+    },
+    "gpu_prosessi": {
+     "id": 22472,
+     "ws_mt": 645.8,
+     "priv_mt": 571.3
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 449.6,
+     "oma": 0
+    }
+   },
+   {
+    "keko": 2.9,
+    "renderoija": {
+     "id": 44428,
+     "ws_mt": 295.4,
+     "priv_mt": 140.6
+    },
+    "gpu_prosessi": {
+     "id": 20344,
+     "ws_mt": 638.8,
+     "priv_mt": 568.7
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 445.5,
+     "oma": 0
+    }
+   },
+   {
+    "keko": 2.9,
+    "renderoija": {
+     "id": 13208,
+     "ws_mt": 298.7,
+     "priv_mt": 145.2
+    },
+    "gpu_prosessi": {
+     "id": 41372,
+     "ws_mt": 648.6,
+     "priv_mt": 576.2
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 443.9,
+     "oma": 0
+    }
+   }
+  ],
+  "kevyt ajo, CPU 1×-t5": [
+   {
+    "keko": 4.8,
+    "renderoija": {
+     "id": 13948,
+     "ws_mt": 153.1,
+     "priv_mt": 97.8
+    },
+    "gpu_prosessi": {
+     "id": 22472,
+     "ws_mt": 264.7,
+     "priv_mt": 241.5
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 135.8,
+     "oma": 0
+    }
+   },
+   {
+    "keko": 4.6,
+    "renderoija": {
+     "id": 9712,
+     "ws_mt": 153.7,
+     "priv_mt": 98.5
+    },
+    "gpu_prosessi": {
+     "id": 20344,
+     "ws_mt": 268.1,
+     "priv_mt": 244.2
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 159.7,
+     "oma": 0
+    }
+   },
+   {
+    "keko": 4.7,
+    "renderoija": {
+     "id": 19492,
+     "ws_mt": 152.3,
+     "priv_mt": 97
+    },
+    "gpu_prosessi": {
+     "id": 41372,
+     "ws_mt": 269.8,
+     "priv_mt": 246.9
+    },
+    "gpu_muisti_mt": {
+     "jaettu": 150.1,
+     "oma": 0
+    }
+   }
+  ]
+ }
+}
