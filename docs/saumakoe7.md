@@ -229,6 +229,25 @@ Artifaktina claude.ai:ssa (kuten koe 6) ja paikallisesti alla olevasta osoittees
   `Get-NetTCPConnection -LocalPort 5320 -State Listen | ForEach-Object { Stop-Process -Id $_.OwningProcess }`
 - Palvelin ei saa jäädä päälle yön yli. Se sammuu myös, kun kone käynnistetään uudelleen.
 
+## Kapteenin testi (22.11.2026 klo 19.07–19.11)
+
+Kapteenin oma Chrome, paikallinen osoite (`kuvat/kapteeni-toistot-paikallinen.png`). Taulukko on sivun oman Toistot-historian mukainen:
+
+| Virtatila | Hover | Toistoja | Kuvaa/s | Pudonneita | Nykäyksiä | Osoitin |
+|---|---|---|---|---|---|---|
+| akku, 60 Hz | vanha | 5 | 60 kaikissa | 0 | 0 | sivulla 4:ssä, liikkui 4:ssä |
+| verkkovirta, 144 Hz | vanha | 5 | 60 / 59,9 | 0 | 1: kuva 4, 28 ms (osoitin) | liikkui 2:ssa |
+| verkkovirta, 144 Hz | kevyt | 3 | 60 kaikissa | 0 | 0 | liikkui kaikissa |
+
+- **13 toistoa, 0 pudonnutta kuvaa ja yksi nykäys.** Ainoa nykäys myöhästyi yhden 144 Hz:n päivityksen verran (28 ms), kun hiiri liikkui toiston alussa. Varatila ei käynnistynyt kertaakaan.
+- Yksi toisto mitattiin 146 Hz:ssä heti laturin kytkemisen jälkeen, kun näyttö vaihtoi taajuutta. Siinäkään ei ollut nykäyksiä.
+- **Vertailu kokeeseen 6:** Kapteenin Chromessa koe 6 sai 10 toistossa 11 nykäystä (toistot 1, 4 ja 7). Ympäristö ei ole täysin sama, koska koe 6 ajettiin artifaktina ja koe 7 paikallisesta osoitteesta.
+- Kapteenin testin aikana 144 Hz:n häiriötilaa (syy 2) ei esiintynyt.
+- **Todentamatta:**
+  - koe 7 artifaktina claude.ai:ssa
+  - näkyikö hover-vertailussa eroa Kapteenin silmään
+- **Paikallinen palvelin** sammutettiin testin jälkeen klo 19.12 (portti 5320 suljettu).
+
 ## Commitit
 
 - `02153d7` nykäysten erittely ja syyt, toistohistoria, kevyet hover-tehosteet
@@ -246,4 +265,4 @@ Ei mergeä. Krediittejä käytetty 0 (koko työ 108 / 270).
 - Hover-tehosteet: jääkö vanha oletukseksi (nykyinen), vai otetaanko kevyt käyttöön Kapteenin oman 144 Hz:n testin jälkeen?
 - Jos Kapteenin omassa Chromessa tulee yhä nykäyksiä, Toistot-taulukon syysarake kertoo, mitä seuraavaksi tutkitaan.
 
-SOS-rivi Perämiehelle: Saumakoe 7 valmis (landing-v1). Lopun 100 ms:n katko korjattu: purkajaa ei enää tyhjennetä kesken toiston. Pudonneita kuvia 0 / 658 toistoa. 60 Hz:ssä CPU 1× 48/50 toistoa ilman nykäyksiä. 144 Hz:n jäljelle jääneet nykäykset johtuvat Chromen kokoajasta, eikä sivu voi niihin vaikuttaa. Kevyet hover-tehosteet eivät täyttäneet ehtoa 144 Hz:ssä, joten vanha on oletus ja kevyt vertailunapin takana. Erittely ja Toistot-historia valmiina Kapteenin testiin, paikallinen palvelin 127.0.0.1:5320.
+SOS-rivi Perämiehelle: Saumakoe 7 valmis (landing-v1). Lopun 100 ms:n katko korjattu: purkajaa ei enää tyhjennetä kesken toiston. Kapteenin omassa Chromessa (paikallinen osoite) 13 toistoa, 0 pudonnutta ja 1 nykäys (28 ms, hiiri liikkui, 144 Hz); kokeessa 6 vastaavasti 11 nykäystä 10 toistossa. Kevyet hover-tehosteet eivät täyttäneet ehtoa 144 Hz:n mittauksissa, joten vanha on oletus ja kevyt vertailunapin takana. Artifaktitesti claude.ai:ssa on vielä tekemättä.
