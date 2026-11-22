@@ -1,0 +1,4875 @@
+{
+ "aika": "2026-11-22T14:22:19.991Z",
+ "koko": "1280x620 @1.5",
+ "kehys": false,
+ "lisa": "",
+ "ajot": [
+  {
+   "fps": 59.98,
+   "pudonneet": 0,
+   "nykaykset": [],
+   "nyk": 0,
+   "hz": 144.2,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": null,
+   "liikkui": false,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0. Näyttö 144 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "a",
+   "toisto": 1,
+   "paikka": [
+    564,
+    294
+   ],
+   "virheet": []
+  },
+  {
+   "fps": 59.98,
+   "pudonneet": 0,
+   "nykaykset": [],
+   "nyk": 0,
+   "hz": 143.9,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 564,
+    "y": 294
+   },
+   "liikkui": false,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0. Näyttö 144 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "a",
+   "toisto": 1,
+   "paikka": [
+    564,
+    294
+   ],
+   "virheet": []
+  },
+  {
+   "fps": 58.91,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 235,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 239,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 243,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 252,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 259,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 286,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 6,
+   "hz": 142.6,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 702,
+    "y": 355
+   },
+   "liikkui": false,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 58,9 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 6: kuva 235, 28 ms (ei pääsäikeessä); kuva 239, 28 ms (ei pääsäikeessä); kuva 243, 28 ms (ei pääsäikeessä); kuva 252, 28 ms (ei pääsäikeessä); kuva 259, 28 ms (ei pääsäikeessä); kuva 286, 28 ms (ei pääsäikeessä). Näyttö 143 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "a",
+   "toisto": 2,
+   "paikka": [
+    702,
+    355
+   ],
+   "virheet": []
+  },
+  {
+   "fps": 57.72,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 44,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 46,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 53,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 95,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 112,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 119,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 126,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 128,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 137,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 162,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 184,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 191,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 198,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 227,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 256,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 273,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 282,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 296,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 18,
+   "hz": 143.6,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 702,
+    "y": 355
+   },
+   "liikkui": false,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,7 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 18: kuva 44, 28 ms (ei pääsäikeessä); kuva 46, 28 ms (ei pääsäikeessä); kuva 53, 28 ms (ei pääsäikeessä); kuva 95, 28 ms (ei pääsäikeessä); kuva 112, 28 ms (ei pääsäikeessä); kuva 119, 28 ms (ei pääsäikeessä); kuva 126, 28 ms (ei pääsäikeessä); kuva 128, 28 ms (ei pääsäikeessä); kuva 137, 28 ms (ei pääsäikeessä); kuva 162, 28 ms (ei pääsäikeessä); kuva 184, 28 ms (ei pääsäikeessä); kuva 191, 28 ms (ei pääsäikeessä); kuva 198, 28 ms (ei pääsäikeessä); kuva 227, 28 ms (ei pääsäikeessä); kuva 256, 28 ms (ei pääsäikeessä); kuva 273, 28 ms (ei pääsäikeessä); kuva 282, 28 ms (ei pääsäikeessä); kuva 296, 28 ms (ei pääsäikeessä). Näyttö 144 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "a",
+   "toisto": 2,
+   "paikka": [
+    702,
+    355
+   ],
+   "virheet": []
+  },
+  {
+   "fps": 57.41,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 9,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 51,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 55,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 78,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 82,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 94,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 96,
+     "ms": 28,
+     "syy": "pääsäie 8 ms"
+    },
+    {
+     "kuva": 123,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 142,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 184,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 206,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 208,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 233,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 260,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 264,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 268,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 296,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 17,
+   "hz": 142.7,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 833,
+    "y": 384
+   },
+   "liikkui": false,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,4 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 17: kuva 9, 28 ms (ei pääsäikeessä); kuva 51, 28 ms (ei pääsäikeessä); kuva 55, 28 ms (ei pääsäikeessä); kuva 78, 28 ms (ei pääsäikeessä); kuva 82, 28 ms (ei pääsäikeessä); kuva 94, 28 ms (ei pääsäikeessä); kuva 96, 28 ms (pääsäie 8 ms); kuva 123, 28 ms (ei pääsäikeessä); kuva 142, 28 ms (ei pääsäikeessä); kuva 184, 28 ms (ei pääsäikeessä); kuva 206, 28 ms (ei pääsäikeessä); kuva 208, 28 ms (ei pääsäikeessä); kuva 233, 28 ms (ei pääsäikeessä); kuva 260, 28 ms (ei pääsäikeessä); kuva 264, 28 ms (ei pääsäikeessä); kuva 268, 28 ms (ei pääsäikeessä); kuva 296, 28 ms (ei pääsäikeessä). Näyttö 143 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "a",
+   "toisto": 3,
+   "paikka": [
+    833,
+    384
+   ],
+   "virheet": []
+  },
+  {
+   "fps": 57.41,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 42,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 46,
+     "ms": 27,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 95,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 105,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 112,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 116,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 123,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 145,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 160,
+     "ms": 27,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 167,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 179,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 188,
+     "ms": 27,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 190,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 199,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 207,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 216,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 228,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 268,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 18,
+   "hz": 143.9,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 833,
+    "y": 384
+   },
+   "liikkui": false,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,4 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 18: kuva 42, 28 ms (ei pääsäikeessä); kuva 46, 27 ms (ei pääsäikeessä); kuva 95, 28 ms (ei pääsäikeessä); kuva 105, 28 ms (ei pääsäikeessä); kuva 112, 28 ms (ei pääsäikeessä); kuva 116, 28 ms (ei pääsäikeessä); kuva 123, 28 ms (ei pääsäikeessä); kuva 145, 28 ms (ei pääsäikeessä); kuva 160, 27 ms (ei pääsäikeessä); kuva 167, 28 ms (ei pääsäikeessä); kuva 179, 28 ms (ei pääsäikeessä); kuva 188, 27 ms (ei pääsäikeessä); kuva 190, 28 ms (ei pääsäikeessä); kuva 199, 28 ms (ei pääsäikeessä); kuva 207, 28 ms (ei pääsäikeessä); kuva 216, 28 ms (ei pääsäikeessä); kuva 228, 28 ms (ei pääsäikeessä); kuva 268, 28 ms (ei pääsäikeessä). Näyttö 144 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "a",
+   "toisto": 3,
+   "paikka": [
+    833,
+    384
+   ],
+   "virheet": []
+  },
+  {
+   "fps": 57.49,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 2,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 19,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 26,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 30,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 49,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 53,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 57,
+     "ms": 27,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 66,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 98,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 175,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 202,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 209,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 213,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 232,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 266,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 270,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 289,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 296,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 18,
+   "hz": 143.4,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 680,
+    "y": 257
+   },
+   "liikkui": false,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,5 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 18: kuva 2, 28 ms (ei pääsäikeessä); kuva 19, 28 ms (ei pääsäikeessä); kuva 26, 28 ms (ei pääsäikeessä); kuva 30, 28 ms (ei pääsäikeessä); kuva 49, 28 ms (ei pääsäikeessä); kuva 53, 28 ms (ei pääsäikeessä); kuva 57, 27 ms (ei pääsäikeessä); kuva 66, 28 ms (ei pääsäikeessä); kuva 98, 28 ms (ei pääsäikeessä); kuva 175, 28 ms (ei pääsäikeessä); kuva 202, 28 ms (ei pääsäikeessä); kuva 209, 28 ms (ei pääsäikeessä); kuva 213, 28 ms (ei pääsäikeessä); kuva 232, 28 ms (ei pääsäikeessä); kuva 266, 28 ms (ei pääsäikeessä); kuva 270, 28 ms (ei pääsäikeessä); kuva 289, 28 ms (ei pääsäikeessä); kuva 296, 28 ms (ei pääsäikeessä). Näyttö 143 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "a",
+   "toisto": 4,
+   "paikka": [
+    680,
+    257
+   ],
+   "virheet": []
+  },
+  {
+   "fps": 57.18,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 12,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 39,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 41,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 60,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 80,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 107,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 132,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 136,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 140,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 179,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 186,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 188,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 197,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 209,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 218,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 232,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 239,
+     "ms": 28,
+     "syy": "pääsäie 10 ms"
+    },
+    {
+     "kuva": 243,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 255,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 19,
+   "hz": 145.2,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 680,
+    "y": 257
+   },
+   "liikkui": false,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,2 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 19: kuva 12, 28 ms (ei pääsäikeessä); kuva 39, 28 ms (ei pääsäikeessä); kuva 41, 28 ms (ei pääsäikeessä); kuva 60, 28 ms (ei pääsäikeessä); kuva 80, 28 ms (ei pääsäikeessä); kuva 107, 28 ms (ei pääsäikeessä); kuva 132, 28 ms (ei pääsäikeessä); kuva 136, 28 ms (ei pääsäikeessä); kuva 140, 28 ms (ei pääsäikeessä); kuva 179, 28 ms (ei pääsäikeessä); kuva 186, 28 ms (ei pääsäikeessä); kuva 188, 28 ms (ei pääsäikeessä); kuva 197, 28 ms (ei pääsäikeessä); kuva 209, 28 ms (ei pääsäikeessä); kuva 218, 28 ms (ei pääsäikeessä); kuva 232, 28 ms (ei pääsäikeessä); kuva 239, 28 ms (pääsäie 10 ms); kuva 243, 28 ms (ei pääsäikeessä); kuva 255, 28 ms (ei pääsäikeessä). Näyttö 145 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "a",
+   "toisto": 4,
+   "paikka": [
+    680,
+    257
+   ],
+   "virheet": []
+  },
+  {
+   "fps": 56.95,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 4,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 13,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 40,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 62,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 81,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 85,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 89,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 93,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 100,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 145,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 149,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 156,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 158,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 170,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 187,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 202,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 227,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 246,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 248,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 19,
+   "hz": 146,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 792,
+    "y": 388
+   },
+   "liikkui": false,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 56,9 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 19: kuva 4, 28 ms (ei pääsäikeessä); kuva 13, 28 ms (ei pääsäikeessä); kuva 40, 28 ms (ei pääsäikeessä); kuva 62, 28 ms (ei pääsäikeessä); kuva 81, 28 ms (ei pääsäikeessä); kuva 85, 28 ms (ei pääsäikeessä); kuva 89, 28 ms (ei pääsäikeessä); kuva 93, 28 ms (ei pääsäikeessä); kuva 100, 28 ms (ei pääsäikeessä); kuva 145, 28 ms (ei pääsäikeessä); kuva 149, 28 ms (ei pääsäikeessä); kuva 156, 28 ms (ei pääsäikeessä); kuva 158, 28 ms (ei pääsäikeessä); kuva 170, 28 ms (ei pääsäikeessä); kuva 187, 28 ms (ei pääsäikeessä); kuva 202, 28 ms (ei pääsäikeessä); kuva 227, 28 ms (ei pääsäikeessä); kuva 246, 28 ms (ei pääsäikeessä); kuva 248, 28 ms (ei pääsäikeessä). Näyttö 146 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "a",
+   "toisto": 5,
+   "paikka": [
+    792,
+    388
+   ],
+   "virheet": []
+  },
+  {
+   "fps": 57.79,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 9,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 33,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 67,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 69,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 93,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 105,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 119,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 123,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 137,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 169,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 201,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 205,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 209,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 216,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 223,
+     "ms": 27,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 272,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 16,
+   "hz": 144.1,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 792,
+    "y": 388
+   },
+   "liikkui": false,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,8 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 16: kuva 9, 28 ms (ei pääsäikeessä); kuva 33, 28 ms (ei pääsäikeessä); kuva 67, 28 ms (ei pääsäikeessä); kuva 69, 28 ms (ei pääsäikeessä); kuva 93, 28 ms (ei pääsäikeessä); kuva 105, 28 ms (ei pääsäikeessä); kuva 119, 28 ms (ei pääsäikeessä); kuva 123, 28 ms (ei pääsäikeessä); kuva 137, 28 ms (ei pääsäikeessä); kuva 169, 28 ms (ei pääsäikeessä); kuva 201, 28 ms (ei pääsäikeessä); kuva 205, 28 ms (ei pääsäikeessä); kuva 209, 28 ms (ei pääsäikeessä); kuva 216, 28 ms (ei pääsäikeessä); kuva 223, 27 ms (ei pääsäikeessä); kuva 272, 28 ms (ei pääsäikeessä). Näyttö 144 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "a",
+   "toisto": 5,
+   "paikka": [
+    792,
+    388
+   ],
+   "virheet": []
+  },
+  {
+   "fps": 57.49,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 2,
+     "ms": 31,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 45,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 64,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 91,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 120,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 159,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 163,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 172,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 176,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 178,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 185,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 192,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 196,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 236,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 240,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 242,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 251,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 288,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 18,
+   "hz": 143.3,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 564,
+    "y": 294
+   },
+   "liikkui": false,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,5 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 18: kuva 2, 31 ms (ei pääsäikeessä); kuva 45, 28 ms (ei pääsäikeessä); kuva 64, 28 ms (ei pääsäikeessä); kuva 91, 28 ms (ei pääsäikeessä); kuva 120, 28 ms (ei pääsäikeessä); kuva 159, 28 ms (ei pääsäikeessä); kuva 163, 28 ms (ei pääsäikeessä); kuva 172, 28 ms (ei pääsäikeessä); kuva 176, 28 ms (ei pääsäikeessä); kuva 178, 28 ms (ei pääsäikeessä); kuva 185, 28 ms (ei pääsäikeessä); kuva 192, 28 ms (ei pääsäikeessä); kuva 196, 28 ms (ei pääsäikeessä); kuva 236, 28 ms (ei pääsäikeessä); kuva 240, 28 ms (ei pääsäikeessä); kuva 242, 28 ms (ei pääsäikeessä); kuva 251, 28 ms (ei pääsäikeessä); kuva 288, 28 ms (ei pääsäikeessä). Näyttö 143 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "b",
+   "toisto": 1,
+   "paikka": [
+    564,
+    294
+   ],
+   "virheet": []
+  },
+  {
+   "fps": 57.56,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 7,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 14,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 108,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 204,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 228,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 242,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 266,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 285,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 287,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 291,
+     "ms": 27,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 295,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 11,
+   "hz": 141.6,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 564,
+    "y": 294
+   },
+   "liikkui": false,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,6 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 11: kuva 7, 28 ms (ei pääsäikeessä); kuva 14, 28 ms (ei pääsäikeessä); kuva 108, 28 ms (ei pääsäikeessä); kuva 204, 28 ms (ei pääsäikeessä); kuva 228, 28 ms (ei pääsäikeessä); kuva 242, 28 ms (ei pääsäikeessä); kuva 266, 28 ms (ei pääsäikeessä); kuva 285, 28 ms (ei pääsäikeessä); kuva 287, 28 ms (ei pääsäikeessä); kuva 291, 27 ms (ei pääsäikeessä); kuva 295, 28 ms (ei pääsäikeessä). Näyttö 142 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "b",
+   "toisto": 1,
+   "paikka": [
+    564,
+    294
+   ],
+   "virheet": []
+  },
+  {
+   "fps": 57.95,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 32,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 59,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 118,
+     "ms": 29,
+     "syy": "pääsäie 13 ms"
+    },
+    {
+     "kuva": 145,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 147,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 173,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 205,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 214,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 216,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 243,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 273,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 11,
+   "hz": 144.1,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 702,
+    "y": 355
+   },
+   "liikkui": false,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 58,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 11: kuva 32, 28 ms (ei pääsäikeessä); kuva 59, 28 ms (ei pääsäikeessä); kuva 118, 29 ms (pääsäie 13 ms); kuva 145, 28 ms (ei pääsäikeessä); kuva 147, 28 ms (ei pääsäikeessä); kuva 173, 28 ms (ei pääsäikeessä); kuva 205, 28 ms (ei pääsäikeessä); kuva 214, 28 ms (ei pääsäikeessä); kuva 216, 28 ms (ei pääsäikeessä); kuva 243, 28 ms (ei pääsäikeessä); kuva 273, 28 ms (ei pääsäikeessä). Näyttö 144 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "b",
+   "toisto": 2,
+   "paikka": [
+    702,
+    355
+   ],
+   "virheet": []
+  },
+  {
+   "fps": 57.49,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 4,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 11,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 43,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 52,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 69,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 76,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 121,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 128,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 140,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 142,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 159,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 201,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 228,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 232,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 251,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 278,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 16,
+   "hz": 142.9,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 702,
+    "y": 355
+   },
+   "liikkui": false,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,5 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 16: kuva 4, 28 ms (ei pääsäikeessä); kuva 11, 28 ms (ei pääsäikeessä); kuva 43, 28 ms (ei pääsäikeessä); kuva 52, 28 ms (ei pääsäikeessä); kuva 69, 28 ms (ei pääsäikeessä); kuva 76, 28 ms (ei pääsäikeessä); kuva 121, 28 ms (ei pääsäikeessä); kuva 128, 28 ms (ei pääsäikeessä); kuva 140, 28 ms (ei pääsäikeessä); kuva 142, 28 ms (ei pääsäikeessä); kuva 159, 28 ms (ei pääsäikeessä); kuva 201, 28 ms (ei pääsäikeessä); kuva 228, 28 ms (ei pääsäikeessä); kuva 232, 28 ms (ei pääsäikeessä); kuva 251, 28 ms (ei pääsäikeessä); kuva 278, 28 ms (ei pääsäikeessä). Näyttö 143 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "b",
+   "toisto": 2,
+   "paikka": [
+    702,
+    355
+   ],
+   "virheet": []
+  },
+  {
+   "fps": 57.49,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 4,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 51,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 55,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 69,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 78,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 80,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 123,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 140,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 170,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 197,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 216,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 220,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 242,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 256,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 260,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 272,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 274,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 17,
+   "hz": 142.4,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 833,
+    "y": 384
+   },
+   "liikkui": false,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,5 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 17: kuva 4, 28 ms (ei pääsäikeessä); kuva 51, 28 ms (ei pääsäikeessä); kuva 55, 28 ms (ei pääsäikeessä); kuva 69, 28 ms (ei pääsäikeessä); kuva 78, 28 ms (ei pääsäikeessä); kuva 80, 28 ms (ei pääsäikeessä); kuva 123, 28 ms (ei pääsäikeessä); kuva 140, 28 ms (ei pääsäikeessä); kuva 170, 28 ms (ei pääsäikeessä); kuva 197, 28 ms (ei pääsäikeessä); kuva 216, 28 ms (ei pääsäikeessä); kuva 220, 28 ms (ei pääsäikeessä); kuva 242, 28 ms (ei pääsäikeessä); kuva 256, 28 ms (ei pääsäikeessä); kuva 260, 28 ms (ei pääsäikeessä); kuva 272, 28 ms (ei pääsäikeessä); kuva 274, 28 ms (ei pääsäikeessä). Näyttö 142 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "b",
+   "toisto": 3,
+   "paikka": [
+    833,
+    384
+   ],
+   "virheet": []
+  },
+  {
+   "fps": 57.25,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 7,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 11,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 18,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 35,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 111,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 131,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 143,
+     "ms": 27,
+     "syy": "pääsäie 15 ms"
+    },
+    {
+     "kuva": 155,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 159,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 178,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 197,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 201,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 208,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 212,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 244,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 246,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 250,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 262,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 276,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 283,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 290,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 294,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 22,
+   "hz": 141.1,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 833,
+    "y": 384
+   },
+   "liikkui": false,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,3 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 22: kuva 7, 28 ms (ei pääsäikeessä); kuva 11, 28 ms (ei pääsäikeessä); kuva 18, 28 ms (ei pääsäikeessä); kuva 35, 28 ms (ei pääsäikeessä); kuva 111, 28 ms (ei pääsäikeessä); kuva 131, 28 ms (ei pääsäikeessä); kuva 143, 27 ms (pääsäie 15 ms); kuva 155, 28 ms (ei pääsäikeessä); kuva 159, 28 ms (ei pääsäikeessä); kuva 178, 28 ms (ei pääsäikeessä); kuva 197, 28 ms (ei pääsäikeessä); kuva 201, 28 ms (ei pääsäikeessä); kuva 208, 28 ms (ei pääsäikeessä); kuva 212, 28 ms (ei pääsäikeessä); kuva 244, 28 ms (ei pääsäikeessä); kuva 246, 28 ms (ei pääsäikeessä); kuva 250, 28 ms (ei pääsäikeessä); kuva 262, 28 ms (ei pääsäikeessä); kuva 276, 28 ms (ei pääsäikeessä); kuva 283, 28 ms (ei pääsäikeessä); kuva 290, 28 ms (ei pääsäikeessä); kuva 294, 28 ms (ei pääsäikeessä). Näyttö 141 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "b",
+   "toisto": 3,
+   "paikka": [
+    833,
+    384
+   ],
+   "virheet": []
+  },
+  {
+   "fps": 57.56,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 27,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 31,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 38,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 68,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 113,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 132,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 146,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 161,
+     "ms": 28,
+     "syy": "pääsäie 15 ms"
+    },
+    {
+     "kuva": 168,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 183,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 187,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 214,
+     "ms": 28,
+     "syy": "pääsäie 8 ms"
+    },
+    {
+     "kuva": 233,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 247,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 14,
+   "hz": 145.7,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 680,
+    "y": 257
+   },
+   "liikkui": false,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,6 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 14: kuva 27, 28 ms (ei pääsäikeessä); kuva 31, 28 ms (ei pääsäikeessä); kuva 38, 28 ms (ei pääsäikeessä); kuva 68, 28 ms (ei pääsäikeessä); kuva 113, 28 ms (ei pääsäikeessä); kuva 132, 28 ms (ei pääsäikeessä); kuva 146, 28 ms (ei pääsäikeessä); kuva 161, 28 ms (pääsäie 15 ms); kuva 168, 28 ms (ei pääsäikeessä); kuva 183, 28 ms (ei pääsäikeessä); kuva 187, 28 ms (ei pääsäikeessä); kuva 214, 28 ms (pääsäie 8 ms); kuva 233, 28 ms (ei pääsäikeessä); kuva 247, 28 ms (ei pääsäikeessä). Näyttö 146 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "b",
+   "toisto": 4,
+   "paikka": [
+    680,
+    257
+   ],
+   "virheet": []
+  },
+  {
+   "fps": 57.72,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 12,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 24,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 114,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 121,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 138,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 160,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 164,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 178,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 200,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 237,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 244,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 263,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 267,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 271,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 278,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 282,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 16,
+   "hz": 142.4,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 680,
+    "y": 257
+   },
+   "liikkui": false,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,7 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 16: kuva 12, 28 ms (ei pääsäikeessä); kuva 24, 28 ms (ei pääsäikeessä); kuva 114, 28 ms (ei pääsäikeessä); kuva 121, 28 ms (ei pääsäikeessä); kuva 138, 28 ms (ei pääsäikeessä); kuva 160, 28 ms (ei pääsäikeessä); kuva 164, 28 ms (ei pääsäikeessä); kuva 178, 28 ms (ei pääsäikeessä); kuva 200, 28 ms (ei pääsäikeessä); kuva 237, 28 ms (ei pääsäikeessä); kuva 244, 28 ms (ei pääsäikeessä); kuva 263, 28 ms (ei pääsäikeessä); kuva 267, 28 ms (ei pääsäikeessä); kuva 271, 28 ms (ei pääsäikeessä); kuva 278, 28 ms (ei pääsäikeessä); kuva 282, 28 ms (ei pääsäikeessä). Näyttö 142 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "b",
+   "toisto": 4,
+   "paikka": [
+    680,
+    257
+   ],
+   "virheet": []
+  },
+  {
+   "fps": 57.18,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 4,
+     "ms": 27,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 11,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 15,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 19,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 38,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 50,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 57,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 69,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 76,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 78,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 87,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 89,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 138,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 160,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 190,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 192,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 212,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 219,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 18,
+   "hz": 140.5,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 792,
+    "y": 388
+   },
+   "liikkui": false,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,2 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 18: kuva 4, 27 ms (ei pääsäikeessä); kuva 11, 28 ms (ei pääsäikeessä); kuva 15, 28 ms (ei pääsäikeessä); kuva 19, 28 ms (ei pääsäikeessä); kuva 38, 28 ms (ei pääsäikeessä); kuva 50, 28 ms (ei pääsäikeessä); kuva 57, 28 ms (ei pääsäikeessä); kuva 69, 28 ms (ei pääsäikeessä); kuva 76, 28 ms (ei pääsäikeessä); kuva 78, 28 ms (ei pääsäikeessä); kuva 87, 28 ms (ei pääsäikeessä); kuva 89, 28 ms (ei pääsäikeessä); kuva 138, 28 ms (ei pääsäikeessä); kuva 160, 28 ms (ei pääsäikeessä); kuva 190, 28 ms (ei pääsäikeessä); kuva 192, 28 ms (ei pääsäikeessä); kuva 212, 28 ms (ei pääsäikeessä); kuva 219, 28 ms (ei pääsäikeessä). Näyttö 141 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "b",
+   "toisto": 5,
+   "paikka": [
+    792,
+    388
+   ],
+   "virheet": []
+  },
+  {
+   "fps": 56.87,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 2,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 9,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 28,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 35,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 39,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 66,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 96,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 100,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 104,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 113,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 118,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 122,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 129,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 176,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 183,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 187,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 217,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 221,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 228,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 232,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 254,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 256,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 285,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 23,
+   "hz": 143,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 792,
+    "y": 388
+   },
+   "liikkui": false,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 56,9 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 23: kuva 2, 28 ms (ei pääsäikeessä); kuva 9, 28 ms (ei pääsäikeessä); kuva 28, 28 ms (ei pääsäikeessä); kuva 35, 28 ms (ei pääsäikeessä); kuva 39, 28 ms (ei pääsäikeessä); kuva 66, 28 ms (ei pääsäikeessä); kuva 96, 28 ms (ei pääsäikeessä); kuva 100, 28 ms (ei pääsäikeessä); kuva 104, 28 ms (ei pääsäikeessä); kuva 113, 28 ms (ei pääsäikeessä); kuva 118, 28 ms (ei pääsäikeessä); kuva 122, 28 ms (ei pääsäikeessä); kuva 129, 28 ms (ei pääsäikeessä); kuva 176, 28 ms (ei pääsäikeessä); kuva 183, 28 ms (ei pääsäikeessä); kuva 187, 28 ms (ei pääsäikeessä); kuva 217, 28 ms (ei pääsäikeessä); kuva 221, 28 ms (ei pääsäikeessä); kuva 228, 28 ms (ei pääsäikeessä); kuva 232, 28 ms (ei pääsäikeessä); kuva 254, 28 ms (ei pääsäikeessä); kuva 256, 28 ms (ei pääsäikeessä); kuva 285, 28 ms (ei pääsäikeessä). Näyttö 143 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "b",
+   "toisto": 5,
+   "paikka": [
+    792,
+    388
+   ],
+   "virheet": []
+  },
+  {
+   "fps": 56.72,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 24,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 28,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 49,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 87,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 91,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 100,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 102,
+     "ms": 26,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 124,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 126,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 154,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 156,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 173,
+     "ms": 35,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 180,
+     "ms": 27,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 197,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 225,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 230,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 234,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 238,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 245,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 19,
+   "hz": 142.2,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": null,
+   "liikkui": false,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 56,7 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 19: kuva 24, 28 ms (ei pääsäikeessä); kuva 28, 28 ms (ei pääsäikeessä); kuva 49, 28 ms (ei pääsäikeessä); kuva 87, 28 ms (ei pääsäikeessä); kuva 91, 28 ms (ei pääsäikeessä); kuva 100, 28 ms (ei pääsäikeessä); kuva 102, 26 ms (ei pääsäikeessä); kuva 124, 28 ms (ei pääsäikeessä); kuva 126, 28 ms (ei pääsäikeessä); kuva 154, 28 ms (ei pääsäikeessä); kuva 156, 28 ms (ei pääsäikeessä); kuva 173, 35 ms (ei pääsäikeessä); kuva 180, 27 ms (ei pääsäikeessä); kuva 197, 28 ms (ei pääsäikeessä); kuva 225, 28 ms (ei pääsäikeessä); kuva 230, 28 ms (ei pääsäikeessä); kuva 234, 28 ms (ei pääsäikeessä); kuva 238, 28 ms (ei pääsäikeessä); kuva 245, 28 ms (ei pääsäikeessä). Näyttö 142 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "e",
+   "toisto": 1,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 57.33,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 4,
+     "ms": 27,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 46,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 83,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 90,
+     "ms": 27,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 97,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 104,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 111,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 118,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 125,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 132,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 154,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 166,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 170,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 182,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 196,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 218,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 225,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 252,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 254,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 261,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 20,
+   "hz": 142.3,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": null,
+   "liikkui": false,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,3 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 20: kuva 4, 27 ms (ei pääsäikeessä); kuva 46, 28 ms (ei pääsäikeessä); kuva 83, 28 ms (ei pääsäikeessä); kuva 90, 27 ms (ei pääsäikeessä); kuva 97, 28 ms (ei pääsäikeessä); kuva 104, 28 ms (ei pääsäikeessä); kuva 111, 28 ms (ei pääsäikeessä); kuva 118, 28 ms (ei pääsäikeessä); kuva 125, 28 ms (ei pääsäikeessä); kuva 132, 28 ms (ei pääsäikeessä); kuva 154, 28 ms (ei pääsäikeessä); kuva 166, 28 ms (ei pääsäikeessä); kuva 170, 28 ms (ei pääsäikeessä); kuva 182, 28 ms (ei pääsäikeessä); kuva 196, 28 ms (ei pääsäikeessä); kuva 218, 28 ms (ei pääsäikeessä); kuva 225, 28 ms (ei pääsäikeessä); kuva 252, 28 ms (ei pääsäikeessä); kuva 254, 28 ms (ei pääsäikeessä); kuva 261, 28 ms (ei pääsäikeessä). Näyttö 142 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "e",
+   "toisto": 1,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 56.65,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 17,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 28,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 37,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 44,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 58,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 77,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 81,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 85,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 97,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 124,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 128,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 135,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 139,
+     "ms": 28,
+     "syy": "pääsäie 9 ms"
+    },
+    {
+     "kuva": 151,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 183,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 198,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 205,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 226,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 230,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 255,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 277,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 279,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 283,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 290,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 24,
+   "hz": 144.4,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": null,
+   "liikkui": false,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 56,7 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 24: kuva 17, 28 ms (ei pääsäikeessä); kuva 28, 28 ms (ei pääsäikeessä); kuva 37, 28 ms (ei pääsäikeessä); kuva 44, 28 ms (ei pääsäikeessä); kuva 58, 28 ms (ei pääsäikeessä); kuva 77, 28 ms (ei pääsäikeessä); kuva 81, 28 ms (ei pääsäikeessä); kuva 85, 28 ms (ei pääsäikeessä); kuva 97, 28 ms (ei pääsäikeessä); kuva 124, 28 ms (ei pääsäikeessä); kuva 128, 28 ms (ei pääsäikeessä); kuva 135, 28 ms (ei pääsäikeessä); kuva 139, 28 ms (pääsäie 9 ms); kuva 151, 28 ms (ei pääsäikeessä); kuva 183, 28 ms (ei pääsäikeessä); kuva 198, 28 ms (ei pääsäikeessä); kuva 205, 28 ms (ei pääsäikeessä); kuva 226, 28 ms (ei pääsäikeessä); kuva 230, 28 ms (ei pääsäikeessä); kuva 255, 28 ms (ei pääsäikeessä); kuva 277, 28 ms (ei pääsäikeessä); kuva 279, 28 ms (ei pääsäikeessä); kuva 283, 28 ms (ei pääsäikeessä); kuva 290, 28 ms (ei pääsäikeessä). Näyttö 144 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "e",
+   "toisto": 2,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 57.8,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 45,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 52,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 61,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 145,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 162,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 166,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 206,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 234,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 241,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 253,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 281,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 285,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 289,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 13,
+   "hz": 143.9,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": null,
+   "liikkui": false,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,8 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 13: kuva 45, 28 ms (ei pääsäikeessä); kuva 52, 28 ms (ei pääsäikeessä); kuva 61, 28 ms (ei pääsäikeessä); kuva 145, 28 ms (ei pääsäikeessä); kuva 162, 28 ms (ei pääsäikeessä); kuva 166, 28 ms (ei pääsäikeessä); kuva 206, 28 ms (ei pääsäikeessä); kuva 234, 28 ms (ei pääsäikeessä); kuva 241, 28 ms (ei pääsäikeessä); kuva 253, 28 ms (ei pääsäikeessä); kuva 281, 28 ms (ei pääsäikeessä); kuva 285, 28 ms (ei pääsäikeessä); kuva 289, 28 ms (ei pääsäikeessä). Näyttö 144 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "e",
+   "toisto": 2,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 57.64,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 4,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 8,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 15,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 60,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 64,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 76,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 91,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 136,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 150,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 195,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 244,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 263,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 267,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 284,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 288,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 15,
+   "hz": 143.5,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": null,
+   "liikkui": false,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,6 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 15: kuva 4, 28 ms (ei pääsäikeessä); kuva 8, 28 ms (ei pääsäikeessä); kuva 15, 28 ms (ei pääsäikeessä); kuva 60, 28 ms (ei pääsäikeessä); kuva 64, 28 ms (ei pääsäikeessä); kuva 76, 28 ms (ei pääsäikeessä); kuva 91, 28 ms (ei pääsäikeessä); kuva 136, 28 ms (ei pääsäikeessä); kuva 150, 28 ms (ei pääsäikeessä); kuva 195, 28 ms (ei pääsäikeessä); kuva 244, 28 ms (ei pääsäikeessä); kuva 263, 28 ms (ei pääsäikeessä); kuva 267, 28 ms (ei pääsäikeessä); kuva 284, 28 ms (ei pääsäikeessä); kuva 288, 28 ms (ei pääsäikeessä). Näyttö 144 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "e",
+   "toisto": 3,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 57.41,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 44,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 68,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 75,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 79,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 91,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 108,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 112,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 119,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 123,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 130,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 134,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 198,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 207,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 211,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 218,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 225,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 229,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 248,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 252,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 264,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 296,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 21,
+   "hz": 139.9,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": null,
+   "liikkui": false,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,4 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 21: kuva 44, 28 ms (ei pääsäikeessä); kuva 68, 28 ms (ei pääsäikeessä); kuva 75, 28 ms (ei pääsäikeessä); kuva 79, 28 ms (ei pääsäikeessä); kuva 91, 28 ms (ei pääsäikeessä); kuva 108, 28 ms (ei pääsäikeessä); kuva 112, 28 ms (ei pääsäikeessä); kuva 119, 28 ms (ei pääsäikeessä); kuva 123, 28 ms (ei pääsäikeessä); kuva 130, 28 ms (ei pääsäikeessä); kuva 134, 28 ms (ei pääsäikeessä); kuva 198, 28 ms (ei pääsäikeessä); kuva 207, 28 ms (ei pääsäikeessä); kuva 211, 28 ms (ei pääsäikeessä); kuva 218, 28 ms (ei pääsäikeessä); kuva 225, 28 ms (ei pääsäikeessä); kuva 229, 28 ms (ei pääsäikeessä); kuva 248, 28 ms (ei pääsäikeessä); kuva 252, 28 ms (ei pääsäikeessä); kuva 264, 28 ms (ei pääsäikeessä); kuva 296, 28 ms (ei pääsäikeessä). Näyttö 140 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "e",
+   "toisto": 3,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 56.87,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 59,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 71,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 113,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 120,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 133,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 137,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 144,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 148,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 152,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 159,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 168,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 170,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 182,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 186,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 203,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 207,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 211,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 218,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 249,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 256,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 263,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 267,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 271,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 23,
+   "hz": 142.9,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": null,
+   "liikkui": false,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 56,9 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 23: kuva 59, 28 ms (ei pääsäikeessä); kuva 71, 28 ms (ei pääsäikeessä); kuva 113, 28 ms (ei pääsäikeessä); kuva 120, 28 ms (ei pääsäikeessä); kuva 133, 28 ms (ei pääsäikeessä); kuva 137, 28 ms (ei pääsäikeessä); kuva 144, 28 ms (ei pääsäikeessä); kuva 148, 28 ms (ei pääsäikeessä); kuva 152, 28 ms (ei pääsäikeessä); kuva 159, 28 ms (ei pääsäikeessä); kuva 168, 28 ms (ei pääsäikeessä); kuva 170, 28 ms (ei pääsäikeessä); kuva 182, 28 ms (ei pääsäikeessä); kuva 186, 28 ms (ei pääsäikeessä); kuva 203, 28 ms (ei pääsäikeessä); kuva 207, 28 ms (ei pääsäikeessä); kuva 211, 28 ms (ei pääsäikeessä); kuva 218, 28 ms (ei pääsäikeessä); kuva 249, 28 ms (ei pääsäikeessä); kuva 256, 28 ms (ei pääsäikeessä); kuva 263, 28 ms (ei pääsäikeessä); kuva 267, 28 ms (ei pääsäikeessä); kuva 271, 28 ms (ei pääsäikeessä). Näyttö 143 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "e",
+   "toisto": 4,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 56.8,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 10,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 47,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 51,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 55,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 59,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 66,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 70,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 79,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 88,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 97,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 111,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 113,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 137,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 141,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 153,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 157,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 174,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 183,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 187,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 209,
+     "ms": 28,
+     "syy": "pääsäie 13 ms"
+    },
+    {
+     "kuva": 231,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 243,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 250,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 287,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 24,
+   "hz": 142.7,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": null,
+   "liikkui": false,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 56,8 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 24: kuva 10, 28 ms (ei pääsäikeessä); kuva 47, 28 ms (ei pääsäikeessä); kuva 51, 28 ms (ei pääsäikeessä); kuva 55, 28 ms (ei pääsäikeessä); kuva 59, 28 ms (ei pääsäikeessä); kuva 66, 28 ms (ei pääsäikeessä); kuva 70, 28 ms (ei pääsäikeessä); kuva 79, 28 ms (ei pääsäikeessä); kuva 88, 28 ms (ei pääsäikeessä); kuva 97, 28 ms (ei pääsäikeessä); kuva 111, 28 ms (ei pääsäikeessä); kuva 113, 28 ms (ei pääsäikeessä); kuva 137, 28 ms (ei pääsäikeessä); kuva 141, 28 ms (ei pääsäikeessä); kuva 153, 28 ms (ei pääsäikeessä); kuva 157, 28 ms (ei pääsäikeessä); kuva 174, 28 ms (ei pääsäikeessä); kuva 183, 28 ms (ei pääsäikeessä); kuva 187, 28 ms (ei pääsäikeessä); kuva 209, 28 ms (pääsäie 13 ms); kuva 231, 28 ms (ei pääsäikeessä); kuva 243, 28 ms (ei pääsäikeessä); kuva 250, 28 ms (ei pääsäikeessä); kuva 287, 28 ms (ei pääsäikeessä). Näyttö 143 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "e",
+   "toisto": 4,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 57.41,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 32,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 39,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 61,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 68,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 75,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 92,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 112,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 139,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 148,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 192,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 196,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 203,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 215,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 234,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 259,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 297,
+     "ms": 36,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 16,
+   "hz": 140,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": null,
+   "liikkui": false,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,4 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 16: kuva 32, 28 ms (ei pääsäikeessä); kuva 39, 28 ms (ei pääsäikeessä); kuva 61, 28 ms (ei pääsäikeessä); kuva 68, 28 ms (ei pääsäikeessä); kuva 75, 28 ms (ei pääsäikeessä); kuva 92, 28 ms (ei pääsäikeessä); kuva 112, 28 ms (ei pääsäikeessä); kuva 139, 28 ms (ei pääsäikeessä); kuva 148, 28 ms (ei pääsäikeessä); kuva 192, 28 ms (ei pääsäikeessä); kuva 196, 28 ms (ei pääsäikeessä); kuva 203, 28 ms (ei pääsäikeessä); kuva 215, 28 ms (ei pääsäikeessä); kuva 234, 28 ms (ei pääsäikeessä); kuva 259, 28 ms (ei pääsäikeessä); kuva 297, 36 ms (ei pääsäikeessä). Näyttö 140 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "e",
+   "toisto": 5,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 57.72,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 2,
+     "ms": 27,
+     "syy": "pääsäie 15 ms"
+    },
+    {
+     "kuva": 22,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 36,
+     "ms": 28,
+     "syy": "pääsäie 9 ms"
+    },
+    {
+     "kuva": 40,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 45,
+     "ms": 28,
+     "syy": "pääsäie 13 ms"
+    },
+    {
+     "kuva": 75,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 84,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 118,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 185,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 218,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 225,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 236,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 12,
+   "hz": 141.9,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": null,
+   "liikkui": false,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,7 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 12: kuva 2, 27 ms (pääsäie 15 ms); kuva 22, 28 ms (ei pääsäikeessä); kuva 36, 28 ms (pääsäie 9 ms); kuva 40, 28 ms (ei pääsäikeessä); kuva 45, 28 ms (pääsäie 13 ms); kuva 75, 28 ms (ei pääsäikeessä); kuva 84, 28 ms (ei pääsäikeessä); kuva 118, 28 ms (ei pääsäikeessä); kuva 185, 28 ms (ei pääsäikeessä); kuva 218, 28 ms (ei pääsäikeessä); kuva 225, 28 ms (ei pääsäikeessä); kuva 236, 28 ms (ei pääsäikeessä). Näyttö 142 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "e",
+   "toisto": 5,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 59.48,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 197,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 1,
+   "hz": 144,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 279,
+    "y": 254
+   },
+   "liikkui": true,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 59,5 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 1: kuva 197, 28 ms (ei pääsäikeessä). Näyttö 144 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "d",
+   "toisto": 1,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 59.73,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 197,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 201,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 2,
+   "hz": 144.1,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 279,
+    "y": 254
+   },
+   "liikkui": true,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 59,7 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 2: kuva 197, 28 ms (ei pääsäikeessä); kuva 201, 28 ms (ei pääsäikeessä). Näyttö 144 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "d",
+   "toisto": 1,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 59.24,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 174,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 181,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 188,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 195,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 199,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 203,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 6,
+   "hz": 144,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 279,
+    "y": 254
+   },
+   "liikkui": true,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 59,2 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 6: kuva 174, 28 ms (ei pääsäikeessä); kuva 181, 28 ms (ei pääsäikeessä); kuva 188, 28 ms (ei pääsäikeessä); kuva 195, 28 ms (ei pääsäikeessä); kuva 199, 28 ms (ei pääsäikeessä); kuva 203, 28 ms (ei pääsäikeessä). Näyttö 144 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "d",
+   "toisto": 2,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 59.48,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 205,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 207,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 216,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 288,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 4,
+   "hz": 144,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 279,
+    "y": 254
+   },
+   "liikkui": true,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 59,5 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 4: kuva 205, 28 ms (ei pääsäikeessä); kuva 207, 28 ms (ei pääsäikeessä); kuva 216, 28 ms (ei pääsäikeessä); kuva 288, 28 ms (ei pääsäikeessä). Näyttö 144 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "d",
+   "toisto": 2,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 58.99,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 9,
+     "ms": 28,
+     "syy": "osoitin"
+    },
+    {
+     "kuva": 147,
+     "ms": 29,
+     "syy": "osoitin"
+    },
+    {
+     "kuva": 191,
+     "ms": 27,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 200,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 272,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 276,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 6,
+   "hz": 144,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 279,
+    "y": 254
+   },
+   "liikkui": true,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 59,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 6: kuva 9, 28 ms (osoitin); kuva 147, 29 ms (osoitin); kuva 191, 27 ms (ei pääsäikeessä); kuva 200, 28 ms (ei pääsäikeessä); kuva 272, 28 ms (ei pääsäikeessä); kuva 276, 28 ms (ei pääsäikeessä). Näyttö 144 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "d",
+   "toisto": 3,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 59.82,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 64,
+     "ms": 27,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 211,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 2,
+   "hz": 144,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 269,
+    "y": 236
+   },
+   "liikkui": true,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 59,8 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 2: kuva 64, 27 ms (ei pääsäikeessä); kuva 211, 28 ms (ei pääsäikeessä). Näyttö 144 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "d",
+   "toisto": 3,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 59.32,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 169,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 191,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 195,
+     "ms": 25,
+     "syy": "pääsäie 12 ms"
+    },
+    {
+     "kuva": 274,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 281,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 5,
+   "hz": 144,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 269,
+    "y": 236
+   },
+   "liikkui": true,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 59,3 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 5: kuva 169, 28 ms (ei pääsäikeessä); kuva 191, 28 ms (ei pääsäikeessä); kuva 195, 25 ms (pääsäie 12 ms); kuva 274, 28 ms (ei pääsäikeessä); kuva 281, 28 ms (ei pääsäikeessä). Näyttö 144 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "d",
+   "toisto": 4,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 59.73,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 275,
+     "ms": 29,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 1,
+   "hz": 144,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 269,
+    "y": 236
+   },
+   "liikkui": true,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 59,7 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 1: kuva 275, 29 ms (ei pääsäikeessä). Näyttö 144 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "d",
+   "toisto": 4,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 59.57,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 182,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 197,
+     "ms": 28,
+     "syy": "pääsäie 9 ms"
+    },
+    {
+     "kuva": 204,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 3,
+   "hz": 144,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 269,
+    "y": 236
+   },
+   "liikkui": true,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 59,6 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 3: kuva 182, 28 ms (ei pääsäikeessä); kuva 197, 28 ms (pääsäie 9 ms); kuva 204, 28 ms (ei pääsäikeessä). Näyttö 144 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "d",
+   "toisto": 5,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 59.82,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 184,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 1,
+   "hz": 144.1,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 269,
+    "y": 236
+   },
+   "liikkui": true,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 59,8 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 1: kuva 184, 28 ms (ei pääsäikeessä). Näyttö 144 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "d",
+   "toisto": 5,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 58.19,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 64,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 135,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 177,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 184,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 203,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 220,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 222,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 229,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 276,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 9,
+   "hz": 144,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 145,
+    "y": 395
+   },
+   "liikkui": false,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 58,2 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 9: kuva 64, 28 ms (ei pääsäikeessä); kuva 135, 28 ms (ei pääsäikeessä); kuva 177, 28 ms (ei pääsäikeessä); kuva 184, 28 ms (ei pääsäikeessä); kuva 203, 28 ms (ei pääsäikeessä); kuva 220, 28 ms (ei pääsäikeessä); kuva 222, 28 ms (ei pääsäikeessä); kuva 229, 28 ms (ei pääsäikeessä); kuva 276, 28 ms (ei pääsäikeessä). Näyttö 144 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "c",
+   "toisto": 1,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 57.26,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 4,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 76,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 90,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 97,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 130,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 137,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 184,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 196,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 230,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 234,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 241,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 253,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 257,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 269,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 273,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 277,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 284,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 288,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 297,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 19,
+   "hz": 142.7,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 145,
+    "y": 395
+   },
+   "liikkui": false,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,3 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 19: kuva 4, 28 ms (ei pääsäikeessä); kuva 76, 28 ms (ei pääsäikeessä); kuva 90, 28 ms (ei pääsäikeessä); kuva 97, 28 ms (ei pääsäikeessä); kuva 130, 28 ms (ei pääsäikeessä); kuva 137, 28 ms (ei pääsäikeessä); kuva 184, 28 ms (ei pääsäikeessä); kuva 196, 28 ms (ei pääsäikeessä); kuva 230, 28 ms (ei pääsäikeessä); kuva 234, 28 ms (ei pääsäikeessä); kuva 241, 28 ms (ei pääsäikeessä); kuva 253, 28 ms (ei pääsäikeessä); kuva 257, 28 ms (ei pääsäikeessä); kuva 269, 28 ms (ei pääsäikeessä); kuva 273, 28 ms (ei pääsäikeessä); kuva 277, 28 ms (ei pääsäikeessä); kuva 284, 28 ms (ei pääsäikeessä); kuva 288, 28 ms (ei pääsäikeessä); kuva 297, 28 ms (ei pääsäikeessä). Näyttö 143 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "c",
+   "toisto": 1,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 57.34,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 16,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 89,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 98,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 125,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 129,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 136,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 163,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 167,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 201,
+     "ms": 27,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 208,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 212,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 219,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 223,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 255,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 259,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 274,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 286,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 17,
+   "hz": 141.9,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 145,
+    "y": 395
+   },
+   "liikkui": false,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,3 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 17: kuva 16, 28 ms (ei pääsäikeessä); kuva 89, 28 ms (ei pääsäikeessä); kuva 98, 28 ms (ei pääsäikeessä); kuva 125, 28 ms (ei pääsäikeessä); kuva 129, 28 ms (ei pääsäikeessä); kuva 136, 28 ms (ei pääsäikeessä); kuva 163, 28 ms (ei pääsäikeessä); kuva 167, 28 ms (ei pääsäikeessä); kuva 201, 27 ms (ei pääsäikeessä); kuva 208, 28 ms (ei pääsäikeessä); kuva 212, 28 ms (ei pääsäikeessä); kuva 219, 28 ms (ei pääsäikeessä); kuva 223, 28 ms (ei pääsäikeessä); kuva 255, 28 ms (ei pääsäikeessä); kuva 259, 28 ms (ei pääsäikeessä); kuva 274, 28 ms (ei pääsäikeessä); kuva 286, 28 ms (ei pääsäikeessä). Näyttö 142 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "c",
+   "toisto": 2,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 57.41,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 4,
+     "ms": 27,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 11,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 36,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 48,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 52,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 76,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 78,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 103,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 158,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 165,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 202,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 237,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 241,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 258,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 265,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 275,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 16,
+   "hz": 141.1,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 145,
+    "y": 395
+   },
+   "liikkui": false,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,4 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 16: kuva 4, 27 ms (ei pääsäikeessä); kuva 11, 28 ms (ei pääsäikeessä); kuva 36, 28 ms (ei pääsäikeessä); kuva 48, 28 ms (ei pääsäikeessä); kuva 52, 28 ms (ei pääsäikeessä); kuva 76, 28 ms (ei pääsäikeessä); kuva 78, 28 ms (ei pääsäikeessä); kuva 103, 28 ms (ei pääsäikeessä); kuva 158, 28 ms (ei pääsäikeessä); kuva 165, 28 ms (ei pääsäikeessä); kuva 202, 28 ms (ei pääsäikeessä); kuva 237, 28 ms (ei pääsäikeessä); kuva 241, 28 ms (ei pääsäikeessä); kuva 258, 28 ms (ei pääsäikeessä); kuva 265, 28 ms (ei pääsäikeessä); kuva 275, 28 ms (ei pääsäikeessä). Näyttö 141 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "c",
+   "toisto": 2,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 57.1,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 9,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 16,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 50,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 54,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 68,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 72,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 104,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 136,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 171,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 175,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 204,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 223,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 240,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 277,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 281,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 285,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 16,
+   "hz": 140.7,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 145,
+    "y": 395
+   },
+   "liikkui": false,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,1 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 16: kuva 9, 28 ms (ei pääsäikeessä); kuva 16, 28 ms (ei pääsäikeessä); kuva 50, 28 ms (ei pääsäikeessä); kuva 54, 28 ms (ei pääsäikeessä); kuva 68, 28 ms (ei pääsäikeessä); kuva 72, 28 ms (ei pääsäikeessä); kuva 104, 28 ms (ei pääsäikeessä); kuva 136, 28 ms (ei pääsäikeessä); kuva 171, 28 ms (ei pääsäikeessä); kuva 175, 28 ms (ei pääsäikeessä); kuva 204, 28 ms (ei pääsäikeessä); kuva 223, 28 ms (ei pääsäikeessä); kuva 240, 28 ms (ei pääsäikeessä); kuva 277, 28 ms (ei pääsäikeessä); kuva 281, 28 ms (ei pääsäikeessä); kuva 285, 28 ms (ei pääsäikeessä). Näyttö 141 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "c",
+   "toisto": 3,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 57.64,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 14,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 36,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 83,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 98,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 110,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 127,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 134,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 151,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 183,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 202,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 206,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 215,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 257,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 259,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 281,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 285,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 292,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 17,
+   "hz": 143.9,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 145,
+    "y": 395
+   },
+   "liikkui": false,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,6 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 17: kuva 14, 28 ms (ei pääsäikeessä); kuva 36, 28 ms (ei pääsäikeessä); kuva 83, 28 ms (ei pääsäikeessä); kuva 98, 28 ms (ei pääsäikeessä); kuva 110, 28 ms (ei pääsäikeessä); kuva 127, 28 ms (ei pääsäikeessä); kuva 134, 28 ms (ei pääsäikeessä); kuva 151, 28 ms (ei pääsäikeessä); kuva 183, 28 ms (ei pääsäikeessä); kuva 202, 28 ms (ei pääsäikeessä); kuva 206, 28 ms (ei pääsäikeessä); kuva 215, 28 ms (ei pääsäikeessä); kuva 257, 28 ms (ei pääsäikeessä); kuva 259, 28 ms (ei pääsäikeessä); kuva 281, 28 ms (ei pääsäikeessä); kuva 285, 28 ms (ei pääsäikeessä); kuva 292, 28 ms (ei pääsäikeessä). Näyttö 144 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "c",
+   "toisto": 3,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 56.95,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 7,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 41,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 50,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 62,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 66,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 70,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 71,
+     "ms": 26,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 79,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 94,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 106,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 113,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 117,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 134,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 158,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 190,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 197,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 221,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 243,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 290,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 19,
+   "hz": 142.9,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 145,
+    "y": 395
+   },
+   "liikkui": false,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 19: kuva 7, 28 ms (ei pääsäikeessä); kuva 41, 28 ms (ei pääsäikeessä); kuva 50, 28 ms (ei pääsäikeessä); kuva 62, 28 ms (ei pääsäikeessä); kuva 66, 28 ms (ei pääsäikeessä); kuva 70, 28 ms (ei pääsäikeessä); kuva 71, 26 ms (ei pääsäikeessä); kuva 79, 28 ms (ei pääsäikeessä); kuva 94, 28 ms (ei pääsäikeessä); kuva 106, 28 ms (ei pääsäikeessä); kuva 113, 28 ms (ei pääsäikeessä); kuva 117, 28 ms (ei pääsäikeessä); kuva 134, 28 ms (ei pääsäikeessä); kuva 158, 28 ms (ei pääsäikeessä); kuva 190, 28 ms (ei pääsäikeessä); kuva 197, 28 ms (ei pääsäikeessä); kuva 221, 28 ms (ei pääsäikeessä); kuva 243, 28 ms (ei pääsäikeessä); kuva 290, 28 ms (ei pääsäikeessä). Näyttö 143 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "c",
+   "toisto": 4,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 57.17,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 15,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 24,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 26,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 30,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 47,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 51,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 113,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 117,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 124,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 128,
+     "ms": 27,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 135,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 139,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 148,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 172,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 204,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 213,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 243,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 247,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 251,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 258,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 267,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 269,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 291,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 23,
+   "hz": 143.9,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 145,
+    "y": 395
+   },
+   "liikkui": false,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,2 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 23: kuva 15, 28 ms (ei pääsäikeessä); kuva 24, 28 ms (ei pääsäikeessä); kuva 26, 28 ms (ei pääsäikeessä); kuva 30, 28 ms (ei pääsäikeessä); kuva 47, 28 ms (ei pääsäikeessä); kuva 51, 28 ms (ei pääsäikeessä); kuva 113, 28 ms (ei pääsäikeessä); kuva 117, 28 ms (ei pääsäikeessä); kuva 124, 28 ms (ei pääsäikeessä); kuva 128, 27 ms (ei pääsäikeessä); kuva 135, 28 ms (ei pääsäikeessä); kuva 139, 28 ms (ei pääsäikeessä); kuva 148, 28 ms (ei pääsäikeessä); kuva 172, 28 ms (ei pääsäikeessä); kuva 204, 28 ms (ei pääsäikeessä); kuva 213, 28 ms (ei pääsäikeessä); kuva 243, 28 ms (ei pääsäikeessä); kuva 247, 28 ms (ei pääsäikeessä); kuva 251, 28 ms (ei pääsäikeessä); kuva 258, 28 ms (ei pääsäikeessä); kuva 267, 28 ms (ei pääsäikeessä); kuva 269, 28 ms (ei pääsäikeessä); kuva 291, 28 ms (ei pääsäikeessä). Näyttö 144 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "c",
+   "toisto": 4,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 57.25,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 17,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 29,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 49,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 74,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 78,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 87,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 94,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 151,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 174,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 181,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 190,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 199,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 203,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 220,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 262,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 264,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 286,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 288,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 18,
+   "hz": 142,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 145,
+    "y": 395
+   },
+   "liikkui": false,
+   "hover": "kevyt",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,3 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 18: kuva 17, 28 ms (ei pääsäikeessä); kuva 29, 28 ms (ei pääsäikeessä); kuva 49, 28 ms (ei pääsäikeessä); kuva 74, 28 ms (ei pääsäikeessä); kuva 78, 28 ms (ei pääsäikeessä); kuva 87, 28 ms (ei pääsäikeessä); kuva 94, 28 ms (ei pääsäikeessä); kuva 151, 28 ms (ei pääsäikeessä); kuva 174, 28 ms (ei pääsäikeessä); kuva 181, 28 ms (ei pääsäikeessä); kuva 190, 28 ms (ei pääsäikeessä); kuva 199, 28 ms (ei pääsäikeessä); kuva 203, 28 ms (ei pääsäikeessä); kuva 220, 28 ms (ei pääsäikeessä); kuva 262, 28 ms (ei pääsäikeessä); kuva 264, 28 ms (ei pääsäikeessä); kuva 286, 28 ms (ei pääsäikeessä); kuva 288, 28 ms (ei pääsäikeessä). Näyttö 142 Hz.",
+   "versio": "kevyt",
+   "cpu": 1,
+   "olo": "c",
+   "toisto": 5,
+   "paikka": null,
+   "virheet": []
+  },
+  {
+   "fps": 57.64,
+   "pudonneet": 0,
+   "nykaykset": [
+    {
+     "kuva": 27,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 34,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 51,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 55,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 59,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 131,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 148,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 155,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 179,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 191,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 221,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 228,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 235,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 239,
+     "ms": 27,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 258,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 260,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 267,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 274,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    },
+    {
+     "kuva": 291,
+     "ms": 28,
+     "syy": "ei pääsäikeessä"
+    }
+   ],
+   "nyk": 19,
+   "hz": 139.8,
+   "puuttuvat": 0,
+   "vara": null,
+   "osoitin": {
+    "x": 145,
+    "y": 395
+   },
+   "liikkui": false,
+   "hover": "vanha",
+   "ymparisto": "paikallinen",
+   "eiLoaf": false,
+   "tallennettu": true,
+   "rivi": "Toisto: 57,6 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 19: kuva 27, 28 ms (ei pääsäikeessä); kuva 34, 28 ms (ei pääsäikeessä); kuva 51, 28 ms (ei pääsäikeessä); kuva 55, 28 ms (ei pääsäikeessä); kuva 59, 28 ms (ei pääsäikeessä); kuva 131, 28 ms (ei pääsäikeessä); kuva 148, 28 ms (ei pääsäikeessä); kuva 155, 28 ms (ei pääsäikeessä); kuva 179, 28 ms (ei pääsäikeessä); kuva 191, 28 ms (ei pääsäikeessä); kuva 221, 28 ms (ei pääsäikeessä); kuva 228, 28 ms (ei pääsäikeessä); kuva 235, 28 ms (ei pääsäikeessä); kuva 239, 27 ms (ei pääsäikeessä); kuva 258, 28 ms (ei pääsäikeessä); kuva 260, 28 ms (ei pääsäikeessä); kuva 267, 28 ms (ei pääsäikeessä); kuva 274, 28 ms (ei pääsäikeessä); kuva 291, 28 ms (ei pääsäikeessä). Näyttö 140 Hz.",
+   "versio": "vanha",
+   "cpu": 1,
+   "olo": "c",
+   "toisto": 5,
+   "paikka": null,
+   "virheet": []
+  }
+ ],
+ "yhteenveto": {
+  "kevyt|cpu1|a": {
+   "n": 5,
+   "hz": 143.4,
+   "fpsMediaani": 57.49,
+   "fpsHuonoin": 56.95,
+   "pudMediaani": 0,
+   "pudHuonoin": 0,
+   "nykMediaani": 17,
+   "nykHuonoin": 19
+  },
+  "vanha|cpu1|a": {
+   "n": 5,
+   "hz": 143.9,
+   "fpsMediaani": 57.72,
+   "fpsHuonoin": 57.18,
+   "pudMediaani": 0,
+   "pudHuonoin": 0,
+   "nykMediaani": 18,
+   "nykHuonoin": 19
+  },
+  "kevyt|cpu1|b": {
+   "n": 5,
+   "hz": 143.3,
+   "fpsMediaani": 57.49,
+   "fpsHuonoin": 57.18,
+   "pudMediaani": 0,
+   "pudHuonoin": 0,
+   "nykMediaani": 17,
+   "nykHuonoin": 18
+  },
+  "vanha|cpu1|b": {
+   "n": 5,
+   "hz": 142.4,
+   "fpsMediaani": 57.49,
+   "fpsHuonoin": 56.87,
+   "pudMediaani": 0,
+   "pudHuonoin": 0,
+   "nykMediaani": 16,
+   "nykHuonoin": 23
+  },
+  "kevyt|cpu1|e": {
+   "n": 5,
+   "hz": 142.9,
+   "fpsMediaani": 56.87,
+   "fpsHuonoin": 56.65,
+   "pudMediaani": 0,
+   "pudHuonoin": 0,
+   "nykMediaani": 19,
+   "nykHuonoin": 24
+  },
+  "vanha|cpu1|e": {
+   "n": 5,
+   "hz": 142.3,
+   "fpsMediaani": 57.41,
+   "fpsHuonoin": 56.8,
+   "pudMediaani": 0,
+   "pudHuonoin": 0,
+   "nykMediaani": 20,
+   "nykHuonoin": 24
+  },
+  "kevyt|cpu1|d": {
+   "n": 5,
+   "hz": 144,
+   "fpsMediaani": 59.32,
+   "fpsHuonoin": 58.99,
+   "pudMediaani": 0,
+   "pudHuonoin": 0,
+   "nykMediaani": 5,
+   "nykHuonoin": 6
+  },
+  "vanha|cpu1|d": {
+   "n": 5,
+   "hz": 144,
+   "fpsMediaani": 59.73,
+   "fpsHuonoin": 59.48,
+   "pudMediaani": 0,
+   "pudHuonoin": 0,
+   "nykMediaani": 2,
+   "nykHuonoin": 4
+  },
+  "kevyt|cpu1|c": {
+   "n": 5,
+   "hz": 142,
+   "fpsMediaani": 57.25,
+   "fpsHuonoin": 56.95,
+   "pudMediaani": 0,
+   "pudHuonoin": 0,
+   "nykMediaani": 17,
+   "nykHuonoin": 19
+  },
+  "vanha|cpu1|c": {
+   "n": 5,
+   "hz": 142.7,
+   "fpsMediaani": 57.41,
+   "fpsHuonoin": 57.17,
+   "pudMediaani": 0,
+   "pudHuonoin": 0,
+   "nykMediaani": 19,
+   "nykHuonoin": 23
+  }
+ }
+}

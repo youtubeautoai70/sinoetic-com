@@ -1,0 +1,25 @@
+{
+ "kuvaus": "Liikkuva osoitin (olo d), 1280x620 @1,5, toisto 1 kummastakin versiosta peräkkäin, Chromen jäljitys; luvut toiston ajalta",
+ "kevyt": {
+  "hover_muutoksia": 63,
+  "uudelleenpiirtoja": 110,
+  "tiilipiirtoja": 277,
+  "gpu_tiilipiirto_ms": 118.5,
+  "gpu_paasaie_ms": 1296
+ },
+ "vanha": {
+  "hover_muutoksia": 61,
+  "uudelleenpiirtoja": 158,
+  "tiilipiirtoja": 324,
+  "gpu_tiilipiirto_ms": 271.6,
+  "gpu_paasaie_ms": 1580
+ },
+ "kevyt_toisto2": {
+  "hover_muutoksia": 59,
+  "uudelleenpiirtoja": 174,
+  "tiilipiirtoja": 347,
+  "gpu_tiilipiirto_ms": 149.3,
+  "gpu_paasaie_ms": 1588
+ },
+ "huom": "Näyttö vaihtui tämän parin aikana 60 Hz:iin (laturi irrotettiin); vanhan version toinen toisto aikakatkaistiin eikä ole vertailukelpoinen."
+}

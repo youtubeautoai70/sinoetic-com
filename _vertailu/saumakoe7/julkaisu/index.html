@@ -475,7 +475,7 @@ video,canvas,.haivy{position:absolute;left:0;top:0;width:1280px;height:720px;tra
       return VideoDecoder.isConfigSupported({ codec: T.codec, description: T.description, codedWidth: T.leveys, codedHeight: T.korkeus }).then(function (s) {
         if (!s.supported) throw new Error("ei tukea: " + T.codec);
         if (q.has("f")) return;
-        P = Purku.luo(T, { puskuri: 8, virhe: function (e) { tilasto.purkuvirhe = String(e); } });
+        P = Purku.luo(T, { puskuri: 8, flush: q.get("flush") === "1", virhe: function (e) { tilasto.purkuvirhe = String(e); } });   // ?flush=1 vain vertailuun (vanha tapa)
         return P.valmis.then(function () { ctx.drawImage(P.kuva(0), 0, 0, 1280, 720); P.vapauta(0); tilasto.purettu = performance.now(); });
       });
     });

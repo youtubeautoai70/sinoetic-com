@@ -53,7 +53,7 @@ const med = (a) => { const s = [...a].sort((x, y) => x - y); return s.length ? (
       if (cpu > 1) await cdp.send("Emulation.setCPUThrottlingRate", { rate: cpu });
       await p.waitForTimeout(1200);
       const [px, py] = PAIKAT[i % PAIKAT.length]; let liike = null;
-      if (A.jalki) await b.startTracing(p, { path: path.join(path.resolve(__dirname, "..", A.jalki), `${versio}-${olo}-cpu${cpu}-${i + 1}.json`), categories: ["devtools.timeline", "disabled-by-default-devtools.timeline", "blink.user_timing", "cc", "gpu", "viz", "media", "benchmark", "toplevel", "v8", "disabled-by-default-devtools.timeline.frame"] });
+      if (A.jalki) await b.startTracing(p, { path: path.join(path.resolve(__dirname, "..", A.jalki), `${versio}-${olo}-cpu${cpu}-${i + 1}.json`), categories: ["devtools.timeline", "disabled-by-default-devtools.timeline", "blink.user_timing", "cc", "gpu", "viz", "media", "benchmark", "toplevel", "disabled-by-default-devtools.timeline.frame"] });
       if (olo === "a" || olo === "d") { await p.mouse.move(px, py, { steps: 4 }); await p.mouse.click(px, py); }
       else if (olo === "b") { await p.mouse.move(px, py, { steps: 4 }); }
       else if (olo === "c") {

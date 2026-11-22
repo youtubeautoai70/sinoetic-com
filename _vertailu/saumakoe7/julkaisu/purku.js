@@ -77,7 +77,7 @@
       for (var h = 0; h < ALKAEN; h++) hylatty[h] = 2;
       vapautettu = syotetty;
     }
-    var aikaKuva = {}; T.naytteet.forEach(function (x) { aikaKuva[Math.round(x.cts * 1e6 / T.aikayksikko)] = x.kuva; });
+    var aikaKuva = {}, LOPPU_TS = 0; T.naytteet.forEach(function (x) { var ts = Math.round(x.cts * 1e6 / T.aikayksikko); aikaKuva[ts] = x.kuva; LOPPU_TS = Math.max(LOPPU_TS, ts + 1e6); });
     var valmisOk, valmisVirhe, valmis = new Promise(function (a, b) { valmisOk = a; valmisVirhe = b; }), tila = { virhe: null, ensimmainen: 0, viimeinen: 0, alku: performance.now() };
     var dek = new VideoDecoder({
       output: function (f) {
@@ -102,7 +102,15 @@
         dek.decode(new EncodedVideoChunk({ type: x.avain ? "key" : "delta", timestamp: Math.round(x.cts * 1e6 / T.aikayksikko), data: T.data.subarray(x.ofs, x.ofs + x.koko) }));
         syotetty++;
       }
-      if (syotetty === n && !huijaus.tyhjennetty && dek.state === "configured") { huijaus.tyhjennetty = true; dek.flush().catch(function () {}); }
+      // Ei flush()-kutsua kesken toiston: Chromen laitteistopurkaja (D3D) alustettiin sen jälkeen uudelleen näytönohjaimen pääsäikeellä
+      // (jäljityksissä 3–118 ms), ja sillä aikaa näytönohjain ei piirtänyt (katko toiston lopussa, saumakoe 7). Sen sijaan syötetään
+      // ensimmäinen avainkuva (IDR) uudelleen: H.264-purkaja antaa ennen sitä kaikki jäljellä olevat kuvat. Ylimääräinen kuva suljetaan heti.
+      if (syotetty === n && !huijaus.tyhjennetty && dek.state === "configured") {
+        huijaus.tyhjennetty = true;
+        var k0 = T.naytteet[0];
+        if (o.flush || !k0.avain) dek.flush().catch(function () {});
+        else dek.decode(new EncodedVideoChunk({ type: "key", timestamp: LOPPU_TS, data: T.data.subarray(k0.ofs, k0.ofs + k0.koko) }));
+      }
     }
     syota();
     return {
