@@ -41,7 +41,7 @@ const med = (a) => { const s = [...a].sort((x, y) => x - y); return s.length ? (
     const kehys = () => kehysUrl ? p.frame({ url: /index\.html/ }) : p.mainFrame();
     let cdp = await ctx.newCDPSession(p), edVersio = null;
     for (let i = 0; i < N; i++) for (const versio of VERSIOT) {
-      const kysely = [versio === "vanha" ? "hover=vanha" : "", A.lisa || ""].filter(Boolean).join("&");
+      const kysely = ["hover=" + versio, A.lisa || ""].filter(Boolean).join("&");
       const url = (kehysUrl || `http://127.0.0.1:${s1.address().port}/index.html`) + (kysely ? "?" + kysely : "");
       if (edVersio !== versio) { await p.goto(url); edVersio = versio; }
       else {   // Toista alusta -nappi (sivun uudelleenlataus), kuten Kapteeni
