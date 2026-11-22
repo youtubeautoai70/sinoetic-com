@@ -8,7 +8,7 @@ const s = http.createServer((q, r) => { const t = path.join(juuri, decodeURIComp
   const b = await chromium.launch({ channel: "chrome", headless: false, args: ["--window-position=-3200,0", "--disable-backgrounding-occluded-windows", "--autoplay-policy=no-user-gesture-required"] });
   for (const [n, w, h, d] of KOOT) {
     const ctx = await b.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: d }); const p = await ctx.newPage();
-    for (const [nimi, url] of [["vanha", "alkunakyma-vanha.html"], ["kevyt", "alkunakyma.html"], ["koe7", "index.html?hover=kevyt"], ["koe7vanha", "index.html?hover=vanha"]]) {
+    for (const [nimi, url] of [["vanha", "alkunakyma-vanha.html"], ["kevyt", "alkunakyma.html"], ["koe7", "index.html?hover=kevyt"], ["koe7vanha", "index.html?hover=vanha"], ["koe7oletus", "index.html"]]) {
       await p.goto(U + url); await p.waitForTimeout(nimi.startsWith("koe7") ? 2500 : 1500); await p.screenshot({ path: path.join(K, `${nimi}-${n}.png`) });
     }
     await ctx.close();
