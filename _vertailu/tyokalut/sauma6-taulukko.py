@@ -17,3 +17,20 @@ print("|---|---|---|---|---|---|---|---|---|---|")
 for _, _, nimi, olo, tila, y, hair, hz, vara in rivit:
     med = hair[len(hair) // 2]
     print(f"| {nimi} | {olo} | {tila} | {y['fpsMediaani']:.1f} / {y['fpsHuonoin']:.1f} | {y['pudMediaani']:g} / {y['pudHuonoin']} | {y.get('viivMediaani', 0):g} / {y.get('viivHuonoin', 0)} | {med} / {max(hair)} | {y['laatuPudHuonoin']} | {y['rafYli20Mediaani']:g} / {y['rafYli20Huonoin']} | {vara}/{y['n']} |")
+
+# Tiivis muoto: rivi = tapa, sarake = olo, solu = "kuvaa/s mediaani (häiriöt huonoin)"; häiriöt = pudonneet + nykäykset.
+def tiivis(suod):
+    T = {}
+    for p in sorted(glob.glob(os.path.join(K, "*.json"))):
+        b = os.path.basename(p)
+        if suod not in b or "ennen-korjausta" in b: continue
+        r = json.load(open(p, encoding="utf-8"))
+        for olo, v in r["olot"].items():
+            a = [x for x in v["ajot"] if not x.get("virhe")]
+            if not a: continue
+            fps = sorted(x["fps"] for x in a); hair = max((x.get("viivastyneet") or 0) + x["pudonneet"] for x in a); hz = sorted(round(x.get("hz") or 0) for x in a)
+            T.setdefault(r["nimi"], {})[olo] = f"{fps[len(fps) // 2]:.1f} ({hair})" + ("*" if hz[len(hz) // 2] > 100 and "60hz" in suod else "")
+    print("\n| Tapa | " + " | ".join(OLOT) + " |\n|---|" + "---|" * len(OLOT))
+    for n in JARJ:
+        if n in T: print(f"| {n} | " + " | ".join(T[n].get(o, "–") for o in OLOT) + " |")
+if len(sys.argv) > 2 and sys.argv[2] == "--tiivis": tiivis(suod)

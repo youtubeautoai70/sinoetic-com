@@ -1,0 +1,24 @@
+{
+ "kysely": "",
+ "paikka": {
+  "x": 0,
+  "y": 131,
+  "vir": 0.045244764536619186
+ },
+ "kaista": [
+  330,
+  240
+ ],
+ "tila": {
+  "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 144 Hz.",
+  "fps": 59.986669628971335,
+  "pudonneet": 0,
+  "nykaykset": 0,
+  "kuvat": 298,
+  "ajat": [
+   5232.9,
+   10184
+  ]
+ },
+ "ffmpeg": ""
+}

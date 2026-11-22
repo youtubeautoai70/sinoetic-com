@@ -1,0 +1,1120 @@
+{
+ "nimi": "koe6",
+ "kansio": "saumakoe6/julkaisu",
+ "kysely": "",
+ "koko": "1280x620 @1.5",
+ "aika": "2026-11-22T10:24:16.082Z",
+ "virta": "akku",
+ "kone": "13th Gen Intel(R) Core(TM) i7-13620H",
+ "olot": {
+  "perus": {
+   "ajot": [
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 0.42,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 17,
+      "p99": 16.9
+     },
+     "kuvavaliSuurin": 17,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8142,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 0.405,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 17,
+      "p99": 16.9
+     },
+     "kuvavaliSuurin": 17,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8154,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 0.417,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 17.1,
+      "p99": 17
+     },
+     "kuvavaliSuurin": 17.1,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8131,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 0.479,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 17.7,
+      "p99": 17
+     },
+     "kuvavaliSuurin": 17.7,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8132,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 0.345,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 17.8,
+      "p99": 17
+     },
+     "kuvavaliSuurin": 17.8,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8133,
+     "virheet": []
+    }
+   ],
+   "yhteenveto": {
+    "n": 5,
+    "fpsMediaani": 60,
+    "fpsHuonoin": 60,
+    "pudMediaani": 0,
+    "pudHuonoin": 0,
+    "hz": 59.9,
+    "viivMediaani": 0,
+    "viivHuonoin": 0,
+    "laatuPudHuonoin": 0,
+    "rafYli20Mediaani": 0,
+    "rafYli20Huonoin": 0,
+    "rafSuurin": 17.8,
+    "kestoHuonoin": 4950
+   }
+  },
+  "cpu4": {
+   "ajot": [
+    {
+     "hz": 59.9,
+     "pitkat": [
+      [
+       4850,
+       100.1
+      ]
+     ],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 1,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 59,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 5034,
+     "tyoKuva": 2.459,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 1,
+      "yli34": 1,
+      "suurin": 100.1,
+      "p99": 17
+     },
+     "kuvavaliSuurin": 100.1,
+     "rivi": "Toisto: 59,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 1, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8257,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 2.906,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 17.1,
+      "p99": 17
+     },
+     "kuvavaliSuurin": 17.1,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8213,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 2.922,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 17,
+      "p99": 16.9
+     },
+     "kuvavaliSuurin": 17,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8186,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [
+      [
+       4850,
+       83.3
+      ]
+     ],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 1,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 59.2,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 5017,
+     "tyoKuva": 2.706,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 1,
+      "yli34": 1,
+      "suurin": 83.3,
+      "p99": 17
+     },
+     "kuvavaliSuurin": 83.3,
+     "rivi": "Toisto: 59,2 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 1, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8285,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [
+      [
+       4850,
+       99.9
+      ]
+     ],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 1,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 59.01,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 5033,
+     "tyoKuva": 2.744,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 1,
+      "yli34": 1,
+      "suurin": 99.9,
+      "p99": 16.9
+     },
+     "kuvavaliSuurin": 99.9,
+     "rivi": "Toisto: 59,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 1, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8270,
+     "virheet": []
+    }
+   ],
+   "yhteenveto": {
+    "n": 5,
+    "fpsMediaani": 59.2,
+    "fpsHuonoin": 59,
+    "pudMediaani": 0,
+    "pudHuonoin": 0,
+    "hz": 59.9,
+    "viivMediaani": 1,
+    "viivHuonoin": 1,
+    "laatuPudHuonoin": 0,
+    "rafYli20Mediaani": 1,
+    "rafYli20Huonoin": 1,
+    "rafSuurin": 100.1,
+    "kestoHuonoin": 5034
+   }
+  },
+  "cpu6": {
+   "ajot": [
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 3.843,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 17.6,
+      "p99": 16.9
+     },
+     "kuvavaliSuurin": 17.6,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8245,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 3.799,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 17,
+      "p99": 16.9
+     },
+     "kuvavaliSuurin": 17,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8246,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 4.031,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 16.9,
+      "p99": 16.9
+     },
+     "kuvavaliSuurin": 16.9,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8245,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [
+      [
+       1750,
+       33.3
+      ]
+     ],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 1,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 59.79,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4967,
+     "tyoKuva": 3.596,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 1,
+      "yli34": 0,
+      "suurin": 33.3,
+      "p99": 16.9
+     },
+     "kuvavaliSuurin": 33.3,
+     "rivi": "Toisto: 59,8 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 1, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8267,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 3.991,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 17.9,
+      "p99": 16.9
+     },
+     "kuvavaliSuurin": 17.9,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8251,
+     "virheet": []
+    }
+   ],
+   "yhteenveto": {
+    "n": 5,
+    "fpsMediaani": 60,
+    "fpsHuonoin": 59.79,
+    "pudMediaani": 0,
+    "pudHuonoin": 0,
+    "hz": 59.9,
+    "viivMediaani": 0,
+    "viivHuonoin": 1,
+    "laatuPudHuonoin": 0,
+    "rafYli20Mediaani": 0,
+    "rafYli20Huonoin": 1,
+    "rafSuurin": 33.3,
+    "kestoHuonoin": 4967
+   }
+  },
+  "verkko": {
+   "ajot": [
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 0.472,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 17.8,
+      "p99": 17.1
+     },
+     "kuvavaliSuurin": 17.8,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": 3609,
+     "tahti": null,
+     "alusta": 18887,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [
+      [
+       4717,
+       20.2
+      ]
+     ],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 0.75,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 1,
+      "yli34": 0,
+      "suurin": 20.2,
+      "p99": 17.2
+     },
+     "kuvavaliSuurin": 20.2,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": 3643,
+     "tahti": null,
+     "alusta": 18895,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 0.672,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 17.3,
+      "p99": 17.2
+     },
+     "kuvavaliSuurin": 17.3,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": 3605,
+     "tahti": null,
+     "alusta": 18881,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 0.896,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 17.6,
+      "p99": 17.4
+     },
+     "kuvavaliSuurin": 17.6,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": 3561,
+     "tahti": null,
+     "alusta": 18874,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 0.751,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 18.6,
+      "p99": 17.5
+     },
+     "kuvavaliSuurin": 18.6,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": 3537,
+     "tahti": null,
+     "alusta": 18868,
+     "virheet": []
+    }
+   ],
+   "yhteenveto": {
+    "n": 5,
+    "fpsMediaani": 60,
+    "fpsHuonoin": 60,
+    "pudMediaani": 0,
+    "pudHuonoin": 0,
+    "hz": 59.9,
+    "viivMediaani": 0,
+    "viivHuonoin": 0,
+    "laatuPudHuonoin": 0,
+    "rafYli20Mediaani": 0,
+    "rafYli20Huonoin": 1,
+    "rafSuurin": 20.2,
+    "kestoHuonoin": 4950
+   }
+  },
+  "valilehti": {
+   "ajot": [
+    {
+     "hz": 59.9,
+     "pitkat": [
+      [
+       33,
+       33.4
+      ]
+     ],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 1,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 59.8,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4967,
+     "tyoKuva": 0.577,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 1,
+      "yli34": 0,
+      "suurin": 33.4,
+      "p99": 16.9
+     },
+     "kuvavaliSuurin": 33.4,
+     "rivi": "Toisto: 59,8 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 1, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8309,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 0.705,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 17,
+      "p99": 16.9
+     },
+     "kuvavaliSuurin": 17,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8229,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 0.712,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 17,
+      "p99": 16.9
+     },
+     "kuvavaliSuurin": 17,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8208,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 0.73,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 17,
+      "p99": 16.9
+     },
+     "kuvavaliSuurin": 17,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8209,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 0.668,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 16.9,
+      "p99": 16.9
+     },
+     "kuvavaliSuurin": 16.9,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8161,
+     "virheet": []
+    }
+   ],
+   "yhteenveto": {
+    "n": 5,
+    "fpsMediaani": 60,
+    "fpsHuonoin": 59.8,
+    "pudMediaani": 0,
+    "pudHuonoin": 0,
+    "hz": 59.9,
+    "viivMediaani": 0,
+    "viivHuonoin": 1,
+    "laatuPudHuonoin": 0,
+    "rafYli20Mediaani": 0,
+    "rafYli20Huonoin": 1,
+    "rafSuurin": 33.4,
+    "kestoHuonoin": 4967
+   }
+  },
+  "hiiri": {
+   "ajot": [
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 0.455,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 17,
+      "p99": 17
+     },
+     "kuvavaliSuurin": 17,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8142,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 0.824,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 17.6,
+      "p99": 17
+     },
+     "kuvavaliSuurin": 17.6,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8138,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [
+      [
+       2700,
+       20.6
+      ]
+     ],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 0.922,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 1,
+      "yli34": 0,
+      "suurin": 20.6,
+      "p99": 17
+     },
+     "kuvavaliSuurin": 20.6,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8159,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 0.895,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 18.3,
+      "p99": 17.3
+     },
+     "kuvavaliSuurin": 18.3,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8139,
+     "virheet": []
+    },
+    {
+     "hz": 59.9,
+     "pitkat": [],
+     "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0",
+     "viivastyneet": 0,
+     "puuttuvat": 0,
+     "sync": null,
+     "fps": 60,
+     "pudonneet": 0,
+     "kuvia": 298,
+     "kesto": 4950,
+     "tyoKuva": 0.875,
+     "tapa": "purku+muisti+kevyt+tasot+vara",
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 0
+     },
+     "raf": {
+      "n": 297,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 17,
+      "p99": 17
+     },
+     "kuvavaliSuurin": 17,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 0. Nykäyksiä 0, näyttö 60 Hz.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 8160,
+     "virheet": []
+    }
+   ],
+   "yhteenveto": {
+    "n": 5,
+    "fpsMediaani": 60,
+    "fpsHuonoin": 60,
+    "pudMediaani": 0,
+    "pudHuonoin": 0,
+    "hz": 59.9,
+    "viivMediaani": 0,
+    "viivHuonoin": 0,
+    "laatuPudHuonoin": 0,
+    "rafYli20Mediaani": 0,
+    "rafYli20Huonoin": 1,
+    "rafSuurin": 20.6,
+    "kestoHuonoin": 4950
+   }
+  }
+ }
+}

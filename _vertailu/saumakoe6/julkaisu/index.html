@@ -19,7 +19,8 @@
        - Varatila: jos näyttö tai laite ei pysy tahdissa, toisto siirtyy tasaiseen 30 kuvan tahtiin (puolitahti) eikä nyi.
        - Lopussa sivu vaihdetaan akselinsuuntaiseen 2D-muunnokseen, jolloin se piirretään terävänä lopullisessa koossa.
      Vertailuun: ?moottori=rvfc (kokeen 5 tapa: videoelementti ja requestVideoFrameCallback), ?moottori=kokoaja (Web Animations),
-     ?muisti=0, ?kevyt=0, ?tasot=0, ?vara=0, ?lammitys=0, ?fps=24, ?leikkaus=ms (g3:n alusta), ?f=kuva (pysäytys), ?piilota=sivu, ?viive=ms (kokoaja). -->
+     ?muisti=0, ?kevyt=0, ?tasot=0, ?vara=0, ?lammitys=0, ?fps=24, ?leikkaus=ms (g3:n alusta), ?f=kuva (pysäytys), ?piilota=sivu, ?viive=ms (kokoaja).
+     Vain testaukseen: ?kuorma=ms (keinotekoinen työ joka päivitykseen, varatilan koe), ?rikko=kuva (suljetaan purkaja kesken, palautuksen koe). -->
 <style>
 html,body{margin:0;height:100%;overflow:hidden;background:#F4F5F7}
 body.huone{background:#070F19}
@@ -215,6 +216,7 @@ video,canvas,.haivy{position:absolute;left:0;top:0;width:1280px;height:720px;tra
   function aloitaPurku() {
     var vali = naytonTahti();
     toisto = { idx: -1, pohja: 0, ed: 0, edNaytto: 0, vali: vali || KUVA, rafit: [], askel: 1, nykaykset: [] };
+    if (P.rikki()) palauta(1);                              // 1. kuva on jo canvasissa
     tilasto.hz = vali ? +(1000 / vali).toFixed(1) : null; tilasto.ohitetut = 0;
     if (VARA && vali > 1000 / 45) puolitahtiin("näytön tahti " + Math.round(1000 / vali) + " Hz jo ennen leikkausta", 0, performance.now());
     requestAnimationFrame(askel);
@@ -224,7 +226,12 @@ video,canvas,.haivy{position:absolute;left:0;top:0;width:1280px;height:720px;tra
     toisto.askel = 2; toisto.pohja = nyt - toisto.idx * KUVA;            // aikataulu jatkuu tästä kellon mukaan 30 kuvan ruudukossa
     tilasto.vara = { tila: "puolitahti", syy: syy, kuva: f };
   }
-  var KUORMA = +(q.get("kuorma") || 0);                    // vain varatilan testaukseen: keinotekoinen työ jokaisessa päivityksessä (ms)
+  function palauta(f) {
+    try { P.sulje(); } catch (e) {}
+    P = Purku.luo(T, { puskuri: 8, alkaen: f, virhe: function (e) { tilasto.purkuvirhe = String(e); } });
+    tilasto.palautuksia = (tilasto.palautuksia || 0) + 1;
+  }
+  var KUORMA = +(q.get("kuorma") || 0), RIKKO = +(q.get("rikko") || 0);                    // vain varatilan testaukseen: keinotekoinen työ jokaisessa päivityksessä (ms)
   // Normaali tahti: jokaisella päivityksellä enintään yksi kuva eteenpäin, kuvia ei koskaan ohiteta. Jos päivitys myöhästyy, aikataulu siirtyy
   // (toisto venyy hieman) eikä kiri. Nykäys = kuva pysyy ruudulla yli 1,5 videokuvan ajan. Kolme nykäystä 0,5 sekunnissa, kun päivitysten
   // keskiväli on yli 18 ms (laite ei ehdi 60 kuvaan), tai näytön tahti alle 45 Hz -> puolitahti:
@@ -242,7 +249,9 @@ video,canvas,.haivy{position:absolute;left:0;top:0;width:1280px;height:720px;tra
     else { var k = Math.floor((nyt + v / 2 - (t.pohja + t.idx * KUVA)) / (2 * KUVA)); seur = k >= 1 ? t.idx + 2 * k : t.idx; suunniteltu = 2; }
     seur = Math.min(n - 1, seur);
     if (seur > t.idx) {
+      if (RIKKO && seur === RIKKO && !tilasto.rikottu) { tilasto.rikottu = true; P.sulje(); }   // vain palautuksen testaukseen
       var vf = P.kuva(seur);
+      if (!vf && P.rikki()) palauta(seur);                  // purkaja suljettu (esim. Chrome otti sen takaisin taustalla): uusi lähimmästä avainkuvasta
       if (!vf) tilasto.puuttuvat++;                         // ei vielä purettu: edellinen kuva pysyy
       else {
         for (var j = t.idx + 1; j < seur; j++) P.vapauta(j);

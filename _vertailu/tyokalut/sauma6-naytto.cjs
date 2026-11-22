@@ -1,4 +1,4 @@
-// Saumakoe 6: toisto mitattuna NÄYTÖLTÄ (ffmpeg ddagrab = Windowsin Desktop Duplication API). Kertoo, mitä katsoja oikeasti näkee:
+// Saumakoe 6: toisto mitattuna NÄYTÖLTÄ (ffmpeg gfxcapture = Windows Graphics Capture; ddagrab ei toimi tällä kahden näytönohjaimen koneella). Kertoo, mitä katsoja oikeasti näkee:
 // jokainen näytölle tullut päivitys aikaleimoineen, myös ne kuvat, jotka katoavat kokoajassa tai näytönohjaimessa (sivun oma laskuri ei näe niitä).
 // Käyttö: NODE_PATH=<playwright> node sauma6-naytto.cjs --kansio saumakoe6/julkaisu --nimi koe6 [--kysely ""] [--n 3] [--ulos saumakoe6/_naytto]
 // Tuottaa jokaisesta toistosta <ulos>/<nimi>-<i>.nut (harmaasävy 480 px leveä, alkuperäiset aikaleimat) ja <nimi>-<i>.json (sivun oma rivi, alue).
@@ -20,21 +20,23 @@ const s = http.createServer((q, r) => { const t = path.join(juuri, decodeURIComp
     // sivun paikka näytöllä: koko näytön kuva ja sivun oma kuvakaappaus, kohdistus OpenCV:llä
     const vrt = path.join(ULOS, "_sivu.png"), nayt = path.join(ULOS, "_naytto.png");
     await p.screenshot({ path: vrt });
-    cp.execFileSync("ffmpeg", ["-hide_banner", "-loglevel", "error", "-y", "-f", "lavfi", "-i", "ddagrab=output_idx=0:draw_mouse=0", "-frames:v", "1", "-vf", "hwdownload,format=bgra", nayt]);
+    cp.execFileSync("ffmpeg", ["-hide_banner", "-loglevel", "error", "-y", "-f", "lavfi", "-i", "gfxcapture=monitor_idx=0:capture_cursor=0", "-frames:v", "1", "-vf", "hwdownload,format=bgra", nayt]);
     const paikka = JSON.parse(cp.execFileSync("py", ["-3.14", "-c", `import cv2,json;n=cv2.imread(r"${nayt}");s=cv2.imread(r"${vrt}");r=cv2.matchTemplate(n,s,cv2.TM_SQDIFF_NORMED);m=cv2.minMaxLoc(r);print(json.dumps({"x":m[2][0],"y":m[2][1],"vir":m[0]}))`], { encoding: "utf8" }));
-    const w = 1920, h = 930, x = paikka.x & ~1, y = paikka.y & ~1;
+    // Kaistale (oletus sivun rivit 330–570): kaappaus kuormittaa samaa näytönohjainta, joten kaistale (neljäsosa koko alueesta) häiritsee toistoa vähemmän.
+    const [ky, kh] = (A.kaista || "330,240").split(",").map(Number), w = 1920, h = kh, x = paikka.x & ~1, y = (paikka.y + ky) & ~1;
     const tied = path.join(ULOS, `${A.nimi}-${i}.nut`);
-    // Kaappaus vain sivun alueelta näytönohjaimella, pienennys 480 px:iin ja harmaasävy (kevyt, pysyy näytön tahdissa); vain muuttuneet kuvat (dup_frames=0).
-    const ff = cp.spawn("ffmpeg", ["-hide_banner", "-loglevel", "error", "-y", "-f", "lavfi", "-i", `ddagrab=output_idx=0:draw_mouse=0:dup_frames=0:framerate=500:offset_x=${x}:offset_y=${y}:video_size=${w}x${h}`,
-      "-vf", "hwdownload,format=bgra,scale=480:232:flags=area,format=gray", "-c:v", "rawvideo", "-fps_mode", "passthrough", "-f", "nut", tied], { stdio: ["pipe", "ignore", "pipe"] });
+    // Kaappaus vain sivun alueelta, pienennys 480 px:iin ja harmaasävy (kevyt, pysyy näytön tahdissa). Windows Graphics Capture antaa kuvan, kun näyttö päivittyy.
+    const kok = JSON.parse(cp.execFileSync("py", ["-3.14", "-c", `import cv2,json;n=cv2.imread(r"${nayt}");print(json.dumps(n.shape[:2]))`], { encoding: "utf8" }));
+    const ff = cp.spawn("ffmpeg", ["-hide_banner", "-loglevel", "error", "-y", "-f", "lavfi", "-i", `gfxcapture=monitor_idx=0:capture_cursor=0:max_framerate=500:crop_left=${x}:crop_top=${y}:crop_right=${kok[1] - x - w}:crop_bottom=${kok[0] - y - h}`,
+      "-vf", `hwdownload,format=bgra,scale=480:${Math.round(kh / 4)}:flags=area,format=gray`, "-c:v", "rawvideo", "-fps_mode", "passthrough", "-f", "nut", tied], { stdio: ["pipe", "ignore", "pipe"] });
     let virhe = ""; ff.stderr.on("data", (d) => virhe += d);
     await p.waitForTimeout(1200);
     await p.mouse.move(KW * .3, KH * .5); await p.mouse.click(KW * .3, KH * .5);
     let ok = true; try { await p.waitForFunction(() => window.__tilasto && window.__tilasto.valmis, null, { timeout: 120000 }); } catch (e) { ok = false; }
     await p.waitForTimeout(400);
     const tila = ok ? await p.evaluate(() => { const t = window.__tilasto; return { rivi: document.getElementById("ohjeteksti").textContent, fps: t.fps, pudonneet: t.pudonneet, nykaykset: t.viivastyneet, kuvat: t.kuvat.length, ajat: [t.ajat[0], t.ajat[t.ajat.length - 1]] }; }) : { virhe: "aikakatkaisu" };
-    ff.stdin.write("q"); await new Promise((ok2) => ff.on("close", ok2));
-    fs.writeFileSync(path.join(ULOS, `${A.nimi}-${i}.json`), JSON.stringify({ kysely: A.kysely || "", paikka, tila, ffmpeg: virhe.trim() }, null, 1));
+    if (ff.exitCode === null) { ff.stdin.write("q"); await new Promise((ok2) => ff.on("close", ok2)); }
+    fs.writeFileSync(path.join(ULOS, `${A.nimi}-${i}.json`), JSON.stringify({ kysely: A.kysely || "", paikka, kaista: [ky, kh], tila, ffmpeg: virhe.trim() }, null, 1));
     console.log(A.nimi, i, JSON.stringify(tila), virhe ? "ffmpeg: " + virhe.trim().slice(0, 200) : "");
     await b.close();
   }

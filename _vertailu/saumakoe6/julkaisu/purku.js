@@ -1,6 +1,7 @@
 /* Saumakoe 6: videon purku itse (WebCodecs). Ei ulkoisia kirjastoja.
    1. jasenna(ArrayBuffer): MP4:n näytteet (paikka, koko, aikaleimat, avainkuvat) ja H.264-asetukset (avcC).
-   2. luo(tiedot, o): VideoDecoder, joka purkaa kuvia enintään o.puskuri kappaletta näytettävän kuvan edelle.
+   2. luo(tiedot, o): VideoDecoder, joka purkaa kuvia enintään o.puskuri kappaletta näytettävän kuvan edelle. o.alkaen = ensimmäinen
+      tarvittava kuva (palautus virheen jälkeen): purku alkaa lähimmästä edeltävästä avainkuvasta ja sitä aiemmat kuvat suljetaan heti.
       kuva(i) palauttaa esitysjärjestyksen kuvan i (VideoFrame) tai null, vapauta(i) sulkee sen ja syöttää lisää.
    Esitysjärjestys = näytteiden järjestys koostumisaikaleiman (cts) mukaan, joten muokkauslistasta ei tarvitse välittää. */
 (function (juuri) {
@@ -70,12 +71,18 @@
   function luo(T, o) {
     o = o || {};
     var PUSKURI = o.puskuri || 8, n = T.naytteet.length, kuvat = new Array(n), hylatty = new Uint8Array(n), syotetty = 0, vapautettu = 0, ulos = 0, huijaus = {};
+    var ALKAEN = Math.max(0, Math.min(n - 1, o.alkaen || 0));
+    if (ALKAEN) {                                            // aloitus lähimmästä avainkuvasta, aiemmat kuvat suljetaan heti (hylatty = 2: lasketaan vapautetuksi vasta tullessaan)
+      T.naytteet.forEach(function (x, s) { if (x.avain && x.kuva <= ALKAEN) syotetty = Math.max(syotetty, s); });
+      for (var h = 0; h < ALKAEN; h++) hylatty[h] = 2;
+      vapautettu = syotetty;
+    }
     var aikaKuva = {}; T.naytteet.forEach(function (x) { aikaKuva[Math.round(x.cts * 1e6 / T.aikayksikko)] = x.kuva; });
     var valmisOk, valmisVirhe, valmis = new Promise(function (a, b) { valmisOk = a; valmisVirhe = b; }), tila = { virhe: null, ensimmainen: 0, viimeinen: 0, alku: performance.now() };
     var dek = new VideoDecoder({
       output: function (f) {
         var i = aikaKuva[f.timestamp];
-        if (i == null || kuvat[i] || hylatty[i]) { f.close(); if (i != null && hylatty[i]) ulos++; return; }
+        if (i == null || kuvat[i] || hylatty[i]) { f.close(); if (i != null && hylatty[i]) { ulos++; if (hylatty[i] === 2) { hylatty[i] = 1; vapautettu++; syota(); } } return; }
         kuvat[i] = f; ulos++;
         if (ulos === 1) tila.ensimmainen = performance.now() - tila.alku;
         if (ulos === n) tila.viimeinen = performance.now() - tila.alku;
@@ -86,7 +93,7 @@
     });
     dek.configure({ codec: T.codec, description: T.description, codedWidth: T.leveys, codedHeight: T.korkeus, optimizeForLatency: false });
     function tarkista() {                                      // valmis, kun neljä ensimmäistä kuvaa on purettu (laitteistopurkajan varasto voi olla pieni)
-      for (var i = 0; i < Math.min(4, n); i++) if (!kuvat[i]) return;
+      for (var i = ALKAEN; i < Math.min(ALKAEN + 4, n); i++) if (!kuvat[i]) return;
       valmisOk();
     }
     function syota() {
@@ -101,6 +108,7 @@
     return {
       valmis: valmis, tila: tila, n: n,
       kuva: function (i) { return kuvat[i] || null; },
+      rikki: function () { return !!tila.virhe || dek.state === "closed"; },
       vapauta: function (i) { if (hylatty[i]) return; hylatty[i] = 1; if (kuvat[i]) { kuvat[i].close(); kuvat[i] = null; } vapautettu++; syota(); },
       jonossa: function () { return dek.decodeQueueSize; },
       purettuEdella: function (i) { var k = 0; for (var j = i; j < n && kuvat[j]; j++) k++; return k; },
