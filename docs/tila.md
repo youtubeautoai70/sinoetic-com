@@ -2,6 +2,32 @@
 
 Tähän kirjataan vain todennettu tila commit-tunnisteineen.
 
+## 22.11.2026 – saumakoe 6 tehty, PYSÄHDYS
+
+- Tehtävänanto: Perämiehen "saumakoe 6: toisto 60 kuvaa sekunnissa kaikissa oloissa ja terävä loppu". Ei generointeja, 0 krediittiä (koko työ 108 / 270).
+- Commitit:
+  - `6af0029`: oma purku, vertailutavat, varatila, terävä loppu, 760 px:n raja, työkalut ja kokeen 5 lähtötasot
+  - `549427c`: tahdituksen korjaus ja työkalut
+  - `b4b2126`: mittaukset 60 ja 144 Hz, näyttökaappaus, jäljitykset ja purkajan palautus
+  - `f0568cf`: raportti
+- Julkaistava kansio: `_vertailu/saumakoe6/julkaisu/` (itsenäinen, noin 6,4 Mt). Raportti: `docs/saumakoe6.md`.
+- Todennettu:
+  - **Syy:** kokeen 5 nykiminen johtui kuvakutsun ajoituskilvasta. Uusi videokuva ehti mediaanina vain 0,68 ms ennen sivun kuvaa.
+  - **Näytön taajuus:** Kapteenin näyttö on akulla 60 Hz ja verkkovirralla 144 Hz. Kilpa osuu 60 Hz:iin (koe 5: 44,8 kuvaa/s, 77 pudonnutta).
+  - **Koe 6** (oma WebCodecs-purku, sivu ja video samassa kutsussa): 60 toistoa kuudessa olossa molemmissa tiloissa, 0 pudonnutta kuvaa ja 7 nykäystä. Nykäyksiä oli enintään yksi toistoa kohden, ja suurimmat olivat 83–100 ms CPU 4× -olossa 60 Hz:ssä.
+  - **Näytöltä mitattuna** (144 Hz) koe 6 näytti kaikki kuvat. Chromen kuvaputki piirsi kaikki 301 kuvaa.
+  - **Sauma ennallaan:** sivu on kuvissa 0–294 samassa kohdassa kuin kokeessa 5 (±0,01 px).
+  - **Alkusivu** ennen leikkausta on pikselilleen sama kuin `alkunakyma.html` yksinään (oikea Chrome, seitsemän kokoa).
+  - **Terävä loppu:** piirtomittakaava 0,372 × 0,370, ei pehmennystä.
+  - **760 px:n raja:** leveydellä 760 ei videota, leveydellä 761 video.
+- Todentamatta:
+  - Kapteenin oma Chrome akulla ja verkkovirralla.
+  - Näyttömittaus 60 Hz:ssä.
+- Avoin:
+  - Katko lopussa CPU 4× -olossa (alkusivun hover-siirtymät).
+  - Kokoaja-tapa hylättiin, koska sauma kasvaa.
+- Perutun tehtävän B tiedostot (`ensinakyma/`, `_vertailu/ensinakyma/`, `_vertailu/tyokalut/laatikot.cjs`) ovat yhä seuraamattomina paikallaan.
+
 ## 21.11.2026 – saumakoe 5 tehty, PYSÄHDYS
 
 - Tehtävänanto: Perämiehen "saumakoe 5: kuvasuhde". Ei generointeja, 0 krediittiä (koko työ 108 / 270).
