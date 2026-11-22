@@ -1,0 +1,751 @@
+{
+ "nimi": "koe5",
+ "kansio": "saumakoe5/julkaisu",
+ "kysely": "",
+ "koko": "1280x620 @1.5",
+ "aika": "2026-11-22T09:21:46.586Z",
+ "virta": "verkkovirta",
+ "kone": "13th Gen Intel(R) Core(TM) i7-13620H",
+ "olot": {
+  "perus": {
+   "ajot": [
+    {
+     "fps": 59.26,
+     "pudonneet": 4,
+     "kuvia": 294,
+     "kesto": 4945,
+     "tyoKuva": 0.271,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 3,
+      "kaikki": 298
+     },
+     "raf": {
+      "n": 702,
+      "yli20": 1,
+      "yli34": 1,
+      "suurin": 62.6,
+      "p99": 7.2
+     },
+     "kuvavaliSuurin": 69.6,
+     "rivi": "Toisto: 59,3 kuvaa/s (video 60), pudonneita kuvia 4.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 7505,
+     "virheet": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+     ]
+    },
+    {
+     "fps": 59.95,
+     "pudonneet": 1,
+     "kuvia": 297,
+     "kesto": 4938,
+     "tyoKuva": 0.271,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 298
+     },
+     "raf": {
+      "n": 711,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 7.8,
+      "p99": 7.2
+     },
+     "kuvavaliSuurin": 28,
+     "rivi": "Toisto: 59,9 kuvaa/s (video 60), pudonneita kuvia 1.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 7511,
+     "virheet": []
+    },
+    {
+     "fps": 60.03,
+     "pudonneet": 1,
+     "kuvia": 297,
+     "kesto": 4931,
+     "tyoKuva": 0.281,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 298
+     },
+     "raf": {
+      "n": 710,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 7.8,
+      "p99": 7.2
+     },
+     "kuvavaliSuurin": 27.9,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 1.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 7508,
+     "virheet": []
+    },
+    {
+     "fps": 59.95,
+     "pudonneet": 1,
+     "kuvia": 297,
+     "kesto": 4938,
+     "tyoKuva": 0.266,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 298
+     },
+     "raf": {
+      "n": 711,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 7.6,
+      "p99": 7.2
+     },
+     "kuvavaliSuurin": 28,
+     "rivi": "Toisto: 59,9 kuvaa/s (video 60), pudonneita kuvia 1.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 7487,
+     "virheet": []
+    },
+    {
+     "fps": 60.03,
+     "pudonneet": 1,
+     "kuvia": 297,
+     "kesto": 4931,
+     "tyoKuva": 0.306,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 298
+     },
+     "raf": {
+      "n": 710,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 7.2,
+      "p99": 7.2
+     },
+     "kuvavaliSuurin": 28,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 1.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 7511,
+     "virheet": []
+    }
+   ],
+   "yhteenveto": {
+    "n": 5,
+    "fpsMediaani": 59.95,
+    "fpsHuonoin": 59.26,
+    "pudMediaani": 1,
+    "pudHuonoin": 4,
+    "laatuPudHuonoin": 3,
+    "rafYli20Mediaani": 0,
+    "rafYli20Huonoin": 1,
+    "rafSuurin": 62.6,
+    "kestoHuonoin": 4945
+   }
+  },
+  "cpu4": {
+   "ajot": [
+    {
+     "fps": 59.29,
+     "pudonneet": 3,
+     "kuvia": 295,
+     "kesto": 4959,
+     "tyoKuva": 1.011,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 2,
+      "kaikki": 298
+     },
+     "raf": {
+      "n": 705,
+      "yli20": 1,
+      "yli34": 1,
+      "suurin": 62.6,
+      "p99": 7.2
+     },
+     "kuvavaliSuurin": 69.5,
+     "rivi": "Toisto: 59,3 kuvaa/s (video 60), pudonneita kuvia 3.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 7517,
+     "virheet": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+     ]
+    },
+    {
+     "fps": 60.03,
+     "pudonneet": 1,
+     "kuvia": 297,
+     "kesto": 4931,
+     "tyoKuva": 1.045,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 298
+     },
+     "raf": {
+      "n": 710,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 7.4,
+      "p99": 7.2
+     },
+     "kuvavaliSuurin": 28,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 1.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 7534,
+     "virheet": []
+    },
+    {
+     "fps": 59.95,
+     "pudonneet": 1,
+     "kuvia": 297,
+     "kesto": 4938,
+     "tyoKuva": 1.094,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 298
+     },
+     "raf": {
+      "n": 711,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 7.5,
+      "p99": 7.2
+     },
+     "kuvavaliSuurin": 28,
+     "rivi": "Toisto: 59,9 kuvaa/s (video 60), pudonneita kuvia 1.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 7521,
+     "virheet": []
+    },
+    {
+     "fps": 59.95,
+     "pudonneet": 1,
+     "kuvia": 297,
+     "kesto": 4938,
+     "tyoKuva": 1.031,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 298
+     },
+     "raf": {
+      "n": 711,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 7.5,
+      "p99": 7.2
+     },
+     "kuvavaliSuurin": 28.1,
+     "rivi": "Toisto: 59,9 kuvaa/s (video 60), pudonneita kuvia 1.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 7538,
+     "virheet": []
+    },
+    {
+     "fps": 60.04,
+     "pudonneet": 1,
+     "kuvia": 297,
+     "kesto": 4930,
+     "tyoKuva": 1.048,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 298
+     },
+     "raf": {
+      "n": 710,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 7.8,
+      "p99": 7.2
+     },
+     "kuvavaliSuurin": 28,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 1.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 7525,
+     "virheet": []
+    }
+   ],
+   "yhteenveto": {
+    "n": 5,
+    "fpsMediaani": 59.95,
+    "fpsHuonoin": 59.29,
+    "pudMediaani": 1,
+    "pudHuonoin": 3,
+    "laatuPudHuonoin": 2,
+    "rafYli20Mediaani": 0,
+    "rafYli20Huonoin": 1,
+    "rafSuurin": 62.6,
+    "kestoHuonoin": 4959
+   }
+  },
+  "cpu6": {
+   "ajot": [
+    {
+     "fps": 59.38,
+     "pudonneet": 3,
+     "kuvia": 295,
+     "kesto": 4951,
+     "tyoKuva": 1.514,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 1,
+      "kaikki": 298
+     },
+     "raf": {
+      "n": 703,
+      "yli20": 1,
+      "yli34": 1,
+      "suurin": 55.5,
+      "p99": 7.3
+     },
+     "kuvavaliSuurin": 69.4,
+     "rivi": "Toisto: 59,4 kuvaa/s (video 60), pudonneita kuvia 3.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 7557,
+     "virheet": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+     ]
+    },
+    {
+     "fps": 59.87,
+     "pudonneet": 1,
+     "kuvia": 297,
+     "kesto": 4944,
+     "tyoKuva": 1.633,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 298
+     },
+     "raf": {
+      "n": 712,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 7.6,
+      "p99": 7.2
+     },
+     "kuvavaliSuurin": 28,
+     "rivi": "Toisto: 59,9 kuvaa/s (video 60), pudonneita kuvia 1.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 7571,
+     "virheet": []
+    },
+    {
+     "fps": 59.66,
+     "pudonneet": 2,
+     "kuvia": 296,
+     "kesto": 4944,
+     "tyoKuva": 1.773,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 298
+     },
+     "raf": {
+      "n": 706,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 14.1,
+      "p99": 7.3
+     },
+     "kuvavaliSuurin": 34.8,
+     "rivi": "Toisto: 59,7 kuvaa/s (video 60), pudonneita kuvia 2.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 7546,
+     "virheet": []
+    },
+    {
+     "fps": 59.87,
+     "pudonneet": 1,
+     "kuvia": 297,
+     "kesto": 4944,
+     "tyoKuva": 1.726,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 298
+     },
+     "raf": {
+      "n": 710,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 13.9,
+      "p99": 7.2
+     },
+     "kuvavaliSuurin": 28,
+     "rivi": "Toisto: 59,9 kuvaa/s (video 60), pudonneita kuvia 1.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 7554,
+     "virheet": []
+    },
+    {
+     "fps": 59.74,
+     "pudonneet": 2,
+     "kuvia": 296,
+     "kesto": 4938,
+     "tyoKuva": 1.79,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 298
+     },
+     "raf": {
+      "n": 709,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 13.9,
+      "p99": 7.2
+     },
+     "kuvavaliSuurin": 27.9,
+     "rivi": "Toisto: 59,7 kuvaa/s (video 60), pudonneita kuvia 2.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 7554,
+     "virheet": []
+    }
+   ],
+   "yhteenveto": {
+    "n": 5,
+    "fpsMediaani": 59.74,
+    "fpsHuonoin": 59.38,
+    "pudMediaani": 2,
+    "pudHuonoin": 3,
+    "laatuPudHuonoin": 1,
+    "rafYli20Mediaani": 0,
+    "rafYli20Huonoin": 1,
+    "rafSuurin": 55.5,
+    "kestoHuonoin": 4951
+   }
+  },
+  "verkko": {
+   "ajot": [
+    {
+     "fps": 59.46,
+     "pudonneet": 3,
+     "kuvia": 295,
+     "kesto": 4945,
+     "tyoKuva": 0.281,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 1,
+      "kaikki": 302
+     },
+     "raf": {
+      "n": 706,
+      "yli20": 1,
+      "yli34": 1,
+      "suurin": 41.6,
+      "p99": 7.3
+     },
+     "kuvavaliSuurin": 55.6,
+     "rivi": "Toisto: 59,5 kuvaa/s (video 60), pudonneita kuvia 3.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 13662,
+     "virheet": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+     ]
+    },
+    {
+     "fps": 59.75,
+     "pudonneet": 2,
+     "kuvia": 296,
+     "kesto": 4938,
+     "tyoKuva": 0.278,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 302
+     },
+     "raf": {
+      "n": 710,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 14.1,
+      "p99": 7.2
+     },
+     "kuvavaliSuurin": 27.9,
+     "rivi": "Toisto: 59,7 kuvaa/s (video 60), pudonneita kuvia 2.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 13710,
+     "virheet": []
+    },
+    {
+     "fps": 59.87,
+     "pudonneet": 1,
+     "kuvia": 297,
+     "kesto": 4944,
+     "tyoKuva": 0.253,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 302
+     },
+     "raf": {
+      "n": 709,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 13.8,
+      "p99": 7.2
+     },
+     "kuvavaliSuurin": 28,
+     "rivi": "Toisto: 59,9 kuvaa/s (video 60), pudonneita kuvia 1.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 13692,
+     "virheet": []
+    },
+    {
+     "fps": 60.04,
+     "pudonneet": 1,
+     "kuvia": 297,
+     "kesto": 4930,
+     "tyoKuva": 0.27,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 302
+     },
+     "raf": {
+      "n": 708,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 14,
+      "p99": 7.3
+     },
+     "kuvavaliSuurin": 28.1,
+     "rivi": "Toisto: 60,0 kuvaa/s (video 60), pudonneita kuvia 1.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 13678,
+     "virheet": []
+    },
+    {
+     "fps": 59.46,
+     "pudonneet": 3,
+     "kuvia": 295,
+     "kesto": 4945,
+     "tyoKuva": 0.251,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 1,
+      "kaikki": 302
+     },
+     "raf": {
+      "n": 700,
+      "yli20": 2,
+      "yli34": 0,
+      "suurin": 20.9,
+      "p99": 13.8
+     },
+     "kuvavaliSuurin": 41.7,
+     "rivi": "Toisto: 59,5 kuvaa/s (video 60), pudonneita kuvia 3.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 13695,
+     "virheet": []
+    }
+   ],
+   "yhteenveto": {
+    "n": 5,
+    "fpsMediaani": 59.75,
+    "fpsHuonoin": 59.46,
+    "pudMediaani": 2,
+    "pudHuonoin": 3,
+    "laatuPudHuonoin": 1,
+    "rafYli20Mediaani": 0,
+    "rafYli20Huonoin": 2,
+    "rafSuurin": 41.6,
+    "kestoHuonoin": 4945
+   }
+  },
+  "valilehti": {
+   "ajot": [
+    {
+     "fps": 58,
+     "pudonneet": 9,
+     "kuvia": 289,
+     "kesto": 4965,
+     "tyoKuva": 0.515,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 7,
+      "kaikki": 298
+     },
+     "raf": {
+      "n": 692,
+      "yli20": 4,
+      "yli34": 2,
+      "suurin": 104,
+      "p99": 7.4
+     },
+     "kuvavaliSuurin": 111,
+     "rivi": "Toisto: 58,0 kuvaa/s (video 60), pudonneita kuvia 9.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 7550,
+     "virheet": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+     ]
+    },
+    {
+     "fps": 59.95,
+     "pudonneet": 1,
+     "kuvia": 297,
+     "kesto": 4938,
+     "tyoKuva": 0.446,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 0,
+      "kaikki": 298
+     },
+     "raf": {
+      "n": 710,
+      "yli20": 0,
+      "yli34": 0,
+      "suurin": 13.7,
+      "p99": 7.3
+     },
+     "kuvavaliSuurin": 27.9,
+     "rivi": "Toisto: 59,9 kuvaa/s (video 60), pudonneita kuvia 1.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 7506,
+     "virheet": []
+    },
+    {
+     "fps": 58.57,
+     "pudonneet": 7,
+     "kuvia": 291,
+     "kesto": 4951,
+     "tyoKuva": 0.555,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 4,
+      "kaikki": 298
+     },
+     "raf": {
+      "n": 683,
+      "yli20": 10,
+      "yli34": 1,
+      "suurin": 34.7,
+      "p99": 21
+     },
+     "kuvavaliSuurin": 48.6,
+     "rivi": "Toisto: 58,6 kuvaa/s (video 60), pudonneita kuvia 7.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 7498,
+     "virheet": []
+    },
+    {
+     "fps": 52.94,
+     "pudonneet": 29,
+     "kuvia": 269,
+     "kesto": 5063,
+     "tyoKuva": 0.677,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 26,
+      "kaikki": 298
+     },
+     "raf": {
+      "n": 619,
+      "yli20": 14,
+      "yli34": 10,
+      "suurin": 145.3,
+      "p99": 43
+     },
+     "kuvavaliSuurin": 159.7,
+     "rivi": "Toisto: 52,9 kuvaa/s (video 60), pudonneita kuvia 29.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 7639,
+     "virheet": []
+    },
+    {
+     "fps": 56.44,
+     "pudonneet": 16,
+     "kuvia": 282,
+     "kesto": 4979,
+     "tyoKuva": 0.68,
+     "tapa": null,
+     "vara": null,
+     "laatu": {
+      "pudonneet": 9,
+      "kaikki": 298
+     },
+     "raf": {
+      "n": 663,
+      "yli20": 8,
+      "yli34": 1,
+      "suurin": 76.3,
+      "p99": 20.9
+     },
+     "kuvavaliSuurin": 83.3,
+     "rivi": "Toisto: 56,4 kuvaa/s (video 60), pudonneita kuvia 16.",
+     "odotus": null,
+     "tahti": null,
+     "alusta": 7587,
+     "virheet": []
+    }
+   ],
+   "yhteenveto": {
+    "n": 5,
+    "fpsMediaani": 58,
+    "fpsHuonoin": 52.94,
+    "pudMediaani": 9,
+    "pudHuonoin": 29,
+    "laatuPudHuonoin": 26,
+    "rafYli20Mediaani": 8,
+    "rafYli20Huonoin": 14,
+    "rafSuurin": 145.3,
+    "kestoHuonoin": 5063
+   }
+  }
+ }
+}
