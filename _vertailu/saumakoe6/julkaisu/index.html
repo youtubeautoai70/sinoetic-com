@@ -204,8 +204,11 @@ video,canvas,.haivy{position:absolute;left:0;top:0;width:1280px;height:720px;tra
     if (tahtiM.kay) return; tahtiM.kay = true;
     requestAnimationFrame(function m(t) { if (tahtiM.ed) tahtiM.valit.push(t - tahtiM.ed); tahtiM.ed = t; if (!leikattu) requestAnimationFrame(m); else tahtiM.kay = false; });
   }
+  function tasattuVali(a) {                                 // päivitysväli: keskiarvo ilman pitkiä taukoja (aikaleimat ovat 0,1 ms:n tarkkuudella)
+    var m = mediaani(a), s = 0, k = 0; for (var i = 0; i < a.length; i++) if (a[i] < 1.5 * m) { s += a[i]; k++; } return k ? s / k : m;
+  }
   function mediaani(a) { var s = a.slice().sort(function (x, y) { return x - y; }); return s.length ? s[s.length >> 1] : 0; }
-  function naytonTahti() { var v = tahtiM.valit.slice(-40).filter(function (x) { return x > 2 && x < 100; }); return v.length >= 8 ? mediaani(v) : 0; }
+  function naytonTahti() { var v = tahtiM.valit.slice(-40).filter(function (x) { return x > 2 && x < 100; }); return v.length >= 8 ? tasattuVali(v) : 0; }
 
   // ---------- moottori "purku": WebCodecs + requestAnimationFrame ----------
   var toisto = null;
@@ -234,7 +237,7 @@ video,canvas,.haivy{position:absolute;left:0;top:0;width:1280px;height:720px;tra
       requestAnimationFrame(askel); return;
     }
     t.rafit.push(nyt - t.ed); if (t.rafit.length > 9) t.rafit.shift(); t.ed = nyt;
-    var v = Math.max(t.vali, mediaani(t.rafit)), seur, suunniteltu;
+    var v = Math.max(t.vali, tasattuVali(t.rafit)), seur, suunniteltu;
     if (t.askel === 1) { seur = t.idx + 1; suunniteltu = 1; if (nyt < t.pohja + seur * KUVA - v / 2) seur = t.idx; }
     else { var k = Math.floor((nyt + v / 2 - (t.pohja + t.idx * KUVA)) / (2 * KUVA)); seur = k >= 1 ? t.idx + 2 * k : t.idx; suunniteltu = 2; }
     seur = Math.min(n - 1, seur);
@@ -247,7 +250,9 @@ video,canvas,.haivy{position:absolute;left:0;top:0;width:1280px;height:720px;tra
         if (suunniteltu === 2) tilasto.ohitetut += Math.min(1, seur - t.idx - 1);
         piirraKangas(vf, seur); P.vapauta(seur);
         (KEVYT ? kayta : aseta)(seur);
-        if (t.askel === 1) { var myoh = nyt - (t.pohja + seur * KUVA); if (myoh >= v / 2) t.pohja += myoh; }
+        // Aikataulu siirtyy vain, jos päivitys oikeasti jäi väliin (vähintään 0,75 päivitysväliä myöhässä). Normaali vaihtelu on alle puoli väliä,
+        // ja jos raja olisi puoli väliä, aikaleimojen 0,1 ms:n pyöristys siirtäisi aikataulua turhaan ja aiheuttaisi itse nykäyksiä (mitattu 144 Hz:ssä).
+        if (t.askel === 1) { var myoh = nyt - (t.pohja + seur * KUVA); if (myoh >= .75 * v) t.pohja += myoh; }
         if (nyt - t.edNaytto > 1.5 * suunniteltu * KUVA) {  // näkyvä nykäys
           tilasto.viivastyneet++; t.nykaykset.push(nyt); tilasto.myohAjat = (tilasto.myohAjat || []).concat([[seur, Math.round(nyt - t.edNaytto)]]);
           var ka = t.rafit.reduce(function (x, y) { return x + y; }, 0) / t.rafit.length;   // päivitysten keskiväli: ehtiikö laite 60 kuvaan lainkaan
