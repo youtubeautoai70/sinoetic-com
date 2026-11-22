@@ -187,7 +187,8 @@ Vaikutukset on arvioitu jäljityksistä, ei mitattu. Kapteeni pyysi pysähtymä�
 ## Commitit
 
 - `d1c83f6` Lopullinen sivu (lukittu 22.11.2026)
-- Mittaustyökalut, mittaukset ja tämä raportti: ks. `docs/tila.md`
+- `6284ef2` mittaustyökalut, mittaukset ja tämä raportti
+- tilan kirjaus `docs/tila.md`:hen (ks. `docs/tila.md`)
 
 Ei mergeä. Krediittejä käytetty 0 (koko työ 108 / 270). Higgsfieldiä ei käytetty, eikä saldoa siksi tarkistettu.
 

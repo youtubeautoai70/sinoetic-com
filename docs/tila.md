@@ -2,6 +2,28 @@
 
 Tähän kirjataan vain todennettu tila commit-tunnisteineen.
 
+## 22.11.2026 – lopullinen sivu commitoitu ja mitattu akulla, PYSÄHDYS
+
+- Tehtävänanto: `_aineisto/lopullinen-sivu/CODE-VIESTI.md` ("lopullinen sivu repoon ja sujuvuusmittaus"). Ei generointeja, 0 krediittiä (koko työ 108 / 270). Lopullista sivua ei muutettu.
+- Commitit:
+  - `d1c83f6`: Lopullinen sivu (lukittu 22.11.2026), paketti `_aineisto/lopullinen-sivu/` sellaisenaan
+  - `6284ef2`: mittaustyökalut, mittaukset ja raportti `docs/lopullinen-sivu-mittaus.md`
+- Todennettu, paketti:
+  - `index.html` sha256 `334eaff7…65d9` täsmää, myös commitista luettuna.
+  - Uudelleenrakennus on sisällöltään sama. Windowsissa `rakenna.py` kirjoittaa CRLF:t (1 219 riviä), ja LF-kääreellä (`_vertailu/tyokalut/lopullinen-rakenna-lf.py`) tulos on tavu tavulta sama. `_rakennettu/` ei ole repossa.
+- Rajaus Kapteenin päätöksellä: vain akku 60 Hz ja 1280×620 @1,5, CPU 1× ja 4×, 5 tilannetta × 3 toistoa. 144 Hz ja muut koot mitataan videon kanssa.
+- Todennettu, mittaus (oikea Chrome, puhdas profiili, Intel UHD, kaikki 40 jäljitystä 60,0 Hz):
+  - **Ensinäkymä:** CPU 1× -olossa 59,8 kuvaa/s ja 0–1 pudonnutta 10 s:ssa, myös hiiren liikkuessa. CPU 4× -olossa paikallaan 7–16 ja hiiren liikkuessa 21–33 pudonnutta.
+  - **Rullavieritys:** CPU 1× -olossa 19–25 nykäystä ja 29–66 pudonnutta noin 9 s:ssa. Syy on näytönohjainprosessin rasterointi ja kuvien purku, kun ensinäkymän alta tulee sisältöä näkyviin. CPU 4× -olossa 31–41 nykäystä (pääsäie, kun ensinäkymä on näkyvissä).
+  - **Mitä rakennamme:** CPU 1× -olossa 2–12 nykäystä 10 s:ssa. CPU 4× -olossa 43,2–52,1 kuvaa/s ja 60–103 nykäystä. Syy on `.w-selain`-leveyssiirtymä, joka asettelee koko sivun (1 137 objektia) joka kuvalla.
+  - **Lataus:** CPU 1× -olossa FCP 554 ms ja 7–8 nykäystä 3 s:ssa. CPU 4× -olossa 0,47–0,58 s:n jäätyminen ensimmäisen kuvan jälkeen.
+  - **Näytönohjaimen aika** (Windowsin laskuri): ensinäkymässä 9,2–9,6 ms kuvaa kohden (55–58 %) ja Mitä rakennamme -osiossa 8,3–8,6 ms.
+  - **Muisti, ensinäkymä:** JS-keko 3,3 Mt, sivun prosessi 118 Mt, näytönohjainprosessi 216 Mt, jaettu näytönohjainmuisti 146 Mt.
+- Todentamatta: 144 Hz, koot 1280×665 ja 1920×950, korjausehdotusten vaikutus (A/B-mittaus odottaa lupaa).
+- Paikallinen palvelin: ajettiin vain mittausajojen ajan (127.0.0.1, satunnainen portti), ja se sulkeutui jokaisen ajon lopussa. Tarkistettu klo 21.40: ei käynnissä, eikä Playwrightin Chromea jäänyt auki.
+- Raakajäljitykset (`_vertailu/lopullinen-sivu/_jalki/`, noin 0,8 Gt) ovat koneella mutta eivät repossa.
+- Perutun tehtävän B tiedostot (`ensinakyma/`, `_vertailu/ensinakyma/`, `_vertailu/tyokalut/laatikot.cjs`) ovat yhä seuraamattomina paikallaan.
+
 ## 22.11.2026 – saumakoe 7 tehty, PYSÄHDYS
 
 - Tehtävänanto: Perämiehen "saumakoe 7: jäljellä olevien nykäysten paikannus ja poisto". Ei generointeja, 0 krediittiä (koko työ 108 / 270).
