@@ -690,6 +690,40 @@ body::after{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opa
 .s-takuu li{display:inline-flex;align-items:center;gap:6px}
 .s-takuu svg{width:14px;height:14px;padding:1px;box-sizing:border-box;border-radius:50%;color:rgb(var(--ak));background:rgb(var(--ak)/.12);box-shadow:inset 0 0 0 1px rgb(var(--ak)/.35)}
 @media(max-width:620px){.s-hero[data-koko="pieni"] .s-kicker{font-size:9px;padding:5px 10px 5px 9px}.s-hero[data-koko="pieni"] .s-ots{font-size:clamp(32px,8.6vw,40px)}}
+</style><style id="proto-lisat">
+/* (1) Tarjouspyyntö irtoaa laskurin ruudulta */
+.t-irti{position:absolute;z-index:30;pointer-events:none;will-change:transform,opacity}
+.t-irti-leiju{will-change:transform}
+.t-kortti{background:#fff;color:#1B2228;border-radius:14px;padding:14px 14px 12px;font-family:"Schibsted Grotesk",system-ui,sans-serif;line-height:1.3;
+  box-shadow:0 0 0 1px rgba(255,255,255,.5),0 36px 64px -24px rgba(0,0,0,.9),0 14px 30px -14px rgba(0,0,0,.65),0 0 48px -12px rgb(var(--ak)/.3)}
+.t-yla{display:flex;align-items:center;gap:8px;font-size:12.5px;margin-bottom:11px}
+.t-yla b{font-weight:650;letter-spacing:-.005em}
+.t-yla span{margin-left:auto;font-size:11px;color:#7A8389}
+.t-ok{width:18px;height:18px;border-radius:50%;background:var(--tk);position:relative;flex:none}
+.t-ok::after{content:"";position:absolute;left:5.5px;top:5.5px;width:7px;height:4px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg)}
+.t-runko{display:flex;gap:11px;align-items:center}
+.t-kuva{width:92px;height:62px;border-radius:8px;overflow:hidden;position:relative;flex:none;background:#d9d5ce}
+.t-kuva>.lk-kuva{position:absolute;left:0;top:0;transform-origin:0 0}
+.t-kuva .lk-merkki,.t-kuva .lk-havainne{display:none}
+.t-tiedot{min-width:0}
+.t-tiedot small{display:block;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#7A8389;margin-bottom:2px}
+.t-tiedot strong{display:block;font-size:12.5px;font-weight:600;line-height:1.25}
+.t-tiedot em{display:block;font-style:normal;font-size:16px;font-weight:700;letter-spacing:-.01em;margin-top:4px;color:var(--tk)}
+.t-rivit{margin:11px 0 0;padding:9px 0 0;border-top:1px solid #ECEBE6;display:grid;gap:4px}
+.t-rivit div{display:flex;justify-content:space-between;gap:10px;font-size:11px;color:#4A535A}
+.t-rivit dt,.t-rivit dd{margin:0}.t-rivit dd{font-weight:600;color:#1B2228;white-space:nowrap}
+.t-ala{display:flex;align-items:center;gap:6px;margin-top:10px;padding-top:9px;border-top:1px solid #ECEBE6;font-size:10.5px;color:#7A8389}
+.t-ala svg{width:12px;height:12px;flex:none}
+/* (2) Näin se etenee: elävä projekti */
+.pe-elava .p-tila{transition:color .5s ease,background-color .5s ease,box-shadow .5s ease}
+.pe-elava .p-tila>i{transition:background-color .5s ease}
+.pe-elava .p-nro{transition:color .5s ease}
+.pe-elava .pe-hiljaa{color:rgba(240,245,246,.34)!important;background:rgba(255,255,255,.02)!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.07)!important}
+.pe-elava .pe-hiljaa>i{background:rgba(240,245,246,.22)!important;box-shadow:none!important;animation:none!important}
+.pe-elava li.pe-tuleva .p-nro{color:rgba(240,245,246,.3)}
+.pe-elava::after{animation:none!important;opacity:0;transform:translateY(var(--pe-y,0px));transition:transform 1s cubic-bezier(.45,0,.25,1),opacity .5s ease}
+.pe-elava.pe-valo::after{opacity:1}
+.pe-elava.pe-hyppy::after{transition:none}
 </style></head><body>
 <header class="s-yla" id="s-yla">
   <a class="s-sana" href="#alku" aria-label="Sinoetic, etusivu">Sinoetic</a>
@@ -959,7 +993,7 @@ function LkKohtaus(el,C){
       }else{
         myoh(function(){siirry($(".lk-cta"),.5,.5);},t); t+=850;
         myoh(function(){klik();$(".lk-cta").classList.add("paino");},t); t+=180;
-        myoh(function(){var c=$(".lk-cta");c.classList.remove("paino");c.classList.add("ok");c.textContent="Tarjouspyyntö lähetetty ✓";$(".lk-ilmo").classList.add("nakyy");},t); t+=2800;
+        myoh(function(){var c=$(".lk-cta");c.classList.remove("paino");c.classList.add("ok");c.textContent="Tarjouspyyntö lähetetty ✓";$(".lk-ilmo").classList.add("nakyy");if(window.__lkIrti)window.__lkIrti(el);},t); t+=2800;
       }
     });
     myoh(valmis,t);
@@ -1232,7 +1266,64 @@ window.__DATA={KK:{"saareke-taso-kivi": "data:image/webp;base64,UklGRjIpAABXRUJQ
      Kaupan omalla kellolla: ensimmäisen kerran 2,2 s sen jälkeen, kun puhelin tulee näkyviin, ja sen jälkeen joka kierroksella samassa kohdassa.
      Kaupan kello pysähtyy leijunnan ajaksi (noin 4 s), ja kuulokkeet palaavat koteloon ennen kuin kauppa jatkaa. */
   var phN=document.querySelector(".s-naytto-ph"),phT=phN&&phN.closest(".b-ruutu"),phLento=false,phNak=false;
+  var lkLento=false;
+  window.__lkIrti=function(koh){
+    var tile=koh.closest(".b-ruutu"),nay=koh.closest(".s-naytto");
+    if(rm||document.hidden||!tile||!nay||lkLento)return;
+    var r0=tile.getBoundingClientRect();if(r0.bottom<innerHeight*.15||r0.top>innerHeight*.85)return;
+    KL.lk.seis();
+    function jatka(){var r=tile.getBoundingClientRect();if(r.bottom>innerHeight*.2&&r.top<innerHeight*.8)KL.lk.jatka();}
+    (function odota(n){if(phLento&&n<40){setTimeout(function(){odota(n+1);},200);return;}setTimeout(lahde,380);})(0);
+    function lahde(){
+      var cta=koh.querySelector(".lk-cta"),kv=koh.querySelector(".lk-kuva");if(!cta){jatka();return;}
+      lkLento=true;
+      var R=tile.getBoundingClientRect(),N=nay.getBoundingClientRect(),C=cta.getBoundingClientRect();
+      var kapea=R.width<560,w=kapea?Math.min(214,R.width*.64):252;
+      var tk=getComputedStyle(koh).getPropertyValue("--lk-k").trim()||"#1E5C4B";
+      var q=function(s){var e=koh.querySelector(s);return e?e.textContent.trim():"";};
+      var el=document.createElement("div");el.className="t-irti";el.style.width=w+"px";el.style.setProperty("--tk",tk);
+      el.innerHTML='<div class="t-irti-leiju"><div class="t-kortti"><div class="t-yla"><i class="t-ok"></i><b>Uusi tarjouspyyntö</b><span>juuri nyt</span></div>'+
+        '<div class="t-runko"><div class="t-kuva"></div><div class="t-tiedot"><small></small><strong></strong><em></em></div></div><dl class="t-rivit"></dl>'+
+        '<div class="t-ala"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M10.5 4.5 5.8 9.2a1.4 1.4 0 0 0 2 2l5-5a2.6 2.6 0 0 0-3.7-3.7L4 7.6a3.8 3.8 0 0 0 5.4 5.4l3.6-3.6"/></svg>Valinnat ja kuva liitteenä</div></div></div>';
+      el.querySelector(".t-tiedot small").textContent=q(".lk-ots");
+      el.querySelector(".t-tiedot strong").textContent=q(".lk-nimi");
+      el.querySelector(".t-tiedot em").textContent="noin "+q(".lk-hintaluku")+" €";
+      var dl=el.querySelector(".t-rivit");
+      [].slice.call(koh.querySelectorAll(".lk-erittely>div")).filter(function(d){var v=((d.querySelector("dd")||{}).textContent||"").trim();return v&&v!=="–"&&v!=="-";}).slice(0,kapea?2:3).forEach(function(d){
+        var r=document.createElement("div"),a=document.createElement("dt"),b=document.createElement("dd");
+        a.textContent=(d.querySelector("dt")||{}).textContent||"";b.textContent=(d.querySelector("dd")||{}).textContent||"";r.appendChild(a);r.appendChild(b);dl.appendChild(r);});
+      if(kv){var kl=kv.cloneNode(true),kw=kv.offsetWidth,kh=kv.offsetHeight,sk=Math.max(92/kw,62/kh);
+        kl.style.width=kw+"px";kl.style.height=kh+"px";kl.style.transform="translate("+((92-kw*sk)/2).toFixed(1)+"px,"+((62-kh*sk)/2).toFixed(1)+"px) scale("+sk.toFixed(4)+")";
+        el.querySelector(".t-kuva").appendChild(kl);}
+      tile.appendChild(el);
+      var eh=el.offsetHeight,tx,ty,rot;
+      if(kapea){tx=R.width/2;ty=(N.top-R.top)+N.height*.45;rot=-2.5;}
+      else{tx=R.width-26-w/2;ty=(N.top-R.top)+8;rot=-3.5;var es=tile.querySelector(".b-esim");if(es){var E=es.getBoundingClientRect();ty=Math.max(ty,E.bottom-R.top+12+eh/2);}}
+      ty=Math.max(eh/2+14,Math.min(R.height-eh/2-14,ty));
+      /* v15: kortti ei peitä ruudun otsikkoa eikä kuvaustekstiä (.b-ots, todelliset tekstirivit). Jos se osuisi tekstiin, se siirtyy
+         tekstin alapuolelle; kapeassa ruudussa se pienenee tarvittaessa, jotta se mahtuu tekstin ja ruudun alareunan väliin. */
+      var ots=tile.querySelector(".b-ots"),ka=1;
+      if(ots){var ob=-1e9,orr=-1e9;[].forEach.call(ots.querySelectorAll(".b-tunnus,h3,p"),function(e){var rg=document.createRange();rg.selectNodeContents(e);
+          [].forEach.call(rg.getClientRects(),function(q){ob=Math.max(ob,q.bottom-R.top);orr=Math.max(orr,q.right-R.left);});});
+        if(tx-w/2-8<orr+12&&ty-eh/2-8<ob+12){ka=Math.max(.72,Math.min(1,(R.height-12-(ob+22))/eh));ty=ob+22+eh*ka/2;}}
+      el.style.left=(tx-w/2).toFixed(1)+"px";el.style.top=(ty-eh/2).toFixed(1)+"px";
+      var sx=C.left+C.width/2-R.left,sy=C.top+C.height/2-R.top,s0=Math.max(.1,C.width/w);
+      function tf(x,y,rx,r,s){return "translate("+x.toFixed(1)+"px,"+y.toFixed(1)+"px) perspective(900px) rotateX("+rx+"deg) rotate("+r+"deg) scale("+s.toFixed(3)+")";}
+      var alku=tf(sx-tx,sy-ty,26,0,s0),loppu=tf(0,0,0,rot,ka);
+      el.animate([{transform:alku,opacity:0},{transform:alku,opacity:1,offset:.05},{transform:loppu,opacity:1}],{duration:1300,easing:"cubic-bezier(.16,1,.3,1)",fill:"forwards"});
+      var lii=el.firstChild,amp=(w*.022).toFixed(1);
+      var bob=lii.animate([{transform:"none"},{transform:"translateY(-"+amp+"px) rotate(-.7deg)"},{transform:"translateY("+amp+"px) rotate(.7deg)"},{transform:"none"}],{duration:2800,delay:1000,iterations:Infinity,easing:"ease-in-out"});
+      setTimeout(function(){
+        var m=getComputedStyle(lii).transform;bob.cancel();if(m&&m!=="none")lii.animate([{transform:m},{transform:"none"}],{duration:500,easing:"ease-out",fill:"forwards"});
+        el.animate([{transform:loppu,opacity:1},{transform:alku,opacity:1,offset:.88},{transform:alku,opacity:0}],{duration:950,easing:"cubic-bezier(.65,0,.35,1)",fill:"forwards"});
+      },3500);
+      setTimeout(function(){el.remove();lkLento=false;
+        if(cta.animate)cta.animate([{boxShadow:"0 0 0 0 rgba(255,255,255,0)"},{boxShadow:"0 0 0 3px "+tk+",0 0 26px 4px "+tk,offset:.3},{boxShadow:"0 0 0 0 rgba(255,255,255,0)"}],{duration:800,easing:"ease-out"});
+        jatka();},4460);
+    }
+  };
   function phLentoAja(){
+    if(lkLento){KL.ph.seis();setTimeout(function(){if(phNak)KL.ph.jatka();phLentoAja();},250);return;}
     KL.ph.set(phLentoAja,29100);
     var tu=$("ph").querySelector(".a-tuote");if(rm||!tu||!phT||document.hidden||!phNak)return;
     var R=phT.getBoundingClientRect(),T=tu.getBoundingClientRect(),P=phN.getBoundingClientRect();if(T.width<20)return;
@@ -1385,4 +1476,40 @@ window.__DATA={KK:{"saareke-taso-kivi": "data:image/webp;base64,UklGRjIpAABXRUJQ
   koko();addEventListener("resize",function(){koko();wAseta(wi);});if(document.fonts&&document.fonts.ready)document.fonts.ready.then(koko);
 })();
 
-</script></body></html>
+</script><script id="proto-pe">(function(){
+  var ol=document.querySelector("#eteneminen .p-lista");if(!ol)return;
+  var rm=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var li=[].slice.call(ol.children),tila=li.map(function(l){return l.querySelector(".p-tila");}),palkki=tila[2]&&tila[2].querySelector("b i");
+  var T=[],kaynnissa=false,tayt=null;
+  function myoh(f,ms){T.push(setTimeout(f,ms));}
+  function yk(i){var n=li[i].querySelector(".p-nro"),o=ol.getBoundingClientRect(),r=n.getBoundingClientRect();return (r.top+r.height/2-o.top)-34-30;}
+  function valo(i){ol.style.setProperty("--pe-y",yk(i).toFixed(1)+"px");ol.classList.add("pe-valo");}
+  function alkuun(){ol.classList.add("pe-hyppy");ol.style.setProperty("--pe-y",(yk(0)-26).toFixed(1)+"px");void ol.offsetWidth;ol.classList.remove("pe-hyppy");}
+  function nollaa(){T.forEach(clearTimeout);T=[];if(tayt){tayt.cancel();tayt=null;}
+    ol.classList.remove("pe-valo");alkuun();
+    li.forEach(function(l){l.classList.add("pe-tuleva");});tila.forEach(function(t){if(t)t.classList.add("pe-hiljaa");});
+    if(palkki){palkki.style.animation="none";palkki.style.width="0%";}}
+  function pop(t){var d=t.querySelector("i");if(d&&d.animate)d.animate([{transform:"scale(.3)"},{transform:"scale(1.7)",offset:.5},{transform:"scale(1)"}],{duration:560,easing:"cubic-bezier(.2,.8,.2,1)"});}
+  function aktivoi(i){li[i].classList.remove("pe-tuleva");tila[i].classList.remove("pe-hiljaa");pop(tila[i]);}
+  function kierros(){
+    nollaa();kaynnissa=true;
+    myoh(function(){valo(0);},150);
+    myoh(function(){aktivoi(0);},700);
+    myoh(function(){valo(1);},1200);
+    myoh(function(){aktivoi(1);},2100);
+    myoh(function(){valo(2);},2600);
+    myoh(function(){aktivoi(2);if(palkki&&palkki.animate)tayt=palkki.animate([{width:"0%"},{width:"100%"}],{duration:3300,easing:"cubic-bezier(.45,0,.25,1)",fill:"forwards"});},3500);
+    myoh(function(){valo(3);},6200);
+    myoh(function(){aktivoi(3);},7100);
+    myoh(function(){ol.classList.remove("pe-valo");},10600);
+    myoh(kierros,12400);
+  }
+  if(/[?&]testi\b/.test(location.search))window.__peAlusta=function(){if(!rm)kierros();};
+  if(!rm&&"IntersectionObserver" in window){
+    ol.classList.add("pe-elava");nollaa();
+    new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting&&e.intersectionRatio>.35){if(!kaynnissa&&!document.hidden)kierros();}
+      else if(!e.isIntersecting||e.intersectionRatio<.1){if(kaynnissa){nollaa();kaynnissa=false;}}
+    });},{threshold:[0,.1,.35,.6]}).observe(ol);
+  }
+})();</script></body></html>
