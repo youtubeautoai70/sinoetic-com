@@ -721,9 +721,10 @@ body::after{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opa
 .pe-elava .pe-hiljaa{color:rgba(240,245,246,.34)!important;background:rgba(255,255,255,.02)!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.07)!important}
 .pe-elava .pe-hiljaa>i{background:rgba(240,245,246,.22)!important;box-shadow:none!important;animation:none!important}
 .pe-elava li.pe-tuleva .p-nro{color:rgba(240,245,246,.3)}
-.pe-elava::after{animation:none!important;opacity:0;transform:translateY(var(--pe-y,0px));transition:transform 1s cubic-bezier(.45,0,.25,1),opacity .5s ease}
-.pe-elava.pe-valo::after{opacity:1}
-.pe-elava.pe-hyppy::after{transition:none}
+.pe-elava::after{opacity:0!important}
+.p-lista>.pe-v{position:absolute;left:27px;top:34px;width:5px;height:60px;border-radius:3px;background:linear-gradient(transparent,rgb(var(--ak)),transparent);filter:drop-shadow(0 0 6px rgb(var(--ak)));pointer-events:none;opacity:0;transform:translateY(var(--pe-y,0px));transition:transform 1s cubic-bezier(.45,0,.25,1),opacity .5s ease}
+.pe-elava.pe-valo>.pe-v{opacity:1}
+.pe-elava.pe-hyppy>.pe-v{transition:none}
 </style></head><body>
 <header class="s-yla" id="s-yla">
   <a class="s-sana" href="#alku" aria-label="Sinoetic, etusivu">Sinoetic</a>
@@ -1274,7 +1275,7 @@ window.__DATA={KK:{"saareke-taso-kivi": "data:image/webp;base64,UklGRjIpAABXRUJQ
     KL.lk.seis();
     function jatka(){var r=tile.getBoundingClientRect();if(r.bottom>innerHeight*.2&&r.top<innerHeight*.8)KL.lk.jatka();}
     (function odota(n){if(phLento&&n<40){setTimeout(function(){odota(n+1);},200);return;}setTimeout(lahde,380);})(0);
-    function lahde(){
+    function lahde(){if(phLento){setTimeout(lahde,200);return;}
       var cta=koh.querySelector(".lk-cta"),kv=koh.querySelector(".lk-kuva");if(!cta){jatka();return;}
       lkLento=true;
       var R=tile.getBoundingClientRect(),N=nay.getBoundingClientRect(),C=cta.getBoundingClientRect();
@@ -1506,7 +1507,7 @@ window.__DATA={KK:{"saareke-taso-kivi": "data:image/webp;base64,UklGRjIpAABXRUJQ
   }
   if(/[?&]testi\b/.test(location.search))window.__peAlusta=function(){if(!rm)kierros();};
   if(!rm&&"IntersectionObserver" in window){
-    ol.classList.add("pe-elava");nollaa();
+    ol.classList.add("pe-elava");var pv=document.createElement("i");pv.className="pe-v";pv.setAttribute("aria-hidden","true");ol.appendChild(pv);var pvl=function(){pv.style.left=getComputedStyle(ol,"::after").left;};pvl();addEventListener("resize",pvl);nollaa();
     new IntersectionObserver(function(es){es.forEach(function(e){
       if(e.isIntersecting&&e.intersectionRatio>.35){if(!kaynnissa&&!document.hidden)kierros();}
       else if(!e.isIntersecting||e.intersectionRatio<.1){if(kaynnissa){nollaa();kaynnissa=false;}}
