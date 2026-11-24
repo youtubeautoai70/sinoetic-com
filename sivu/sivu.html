@@ -1454,7 +1454,7 @@ window.__DATA={KK:{"saareke-taso-kivi": "data:image/webp;base64,UklGRjIpAABXRUJQ
       c.globalAlpha=1;c.fillStyle="rgb("+vk[0].join(",")+")";c.beginPath();c.arc(q[0],q[1],1+.6*pp.z,0,6.283);c.fill();}
     c.globalAlpha=1;c.globalCompositeOperation="source-over";}
 
-  function piirra(t,dt){c.setTransform(dpr,0,0,dpr,0,0);c.globalCompositeOperation="source-over";c.globalAlpha=1;c.clearRect(0,0,W,H);silkki(t);poly(t,dt);}
+  function piirra(t,dt){c.setTransform(1,0,0,1,0,0);c.globalCompositeOperation="source-over";c.globalAlpha=1;c.clearRect(0,0,cv.width,cv.height);c.setTransform(dpr,0,0,dpr,0,0);silkki(t);poly(t,dt);}
   function kuva(now){
     if(aktiivi){var t=now/1000,dt=Math.min(.05,edel?t-edel:.016);edel=t;
       smx+=((mx<0?0:mx*2-1)-smx)*.03;smy+=((my<0?0:my*2-1)-smy)*.03;
