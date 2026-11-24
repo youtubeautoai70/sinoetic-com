@@ -519,6 +519,14 @@ body::after{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opa
 .w-selain.puh .w-palkki>i{width:0;margin:0 -3px;opacity:0}
 .w-selain.puh .w-palkki span{padding:3px 10px}
 .w-palkki>i{transition:width .5s,margin .5s,opacity .4s}
+/* v14: kapeassa ikkunassa palkista jää vain osoite. Pisteet piiloon alle 192 px:n ikkunassa ja osoite tiiviimmäksi alle 134 px:n ikkunassa,
+   jotta osoite mahtuu kokonaisena eikä mikään mene päällekkäin. */
+.w-selain.w-kapea .w-palkki>i{width:0;margin:0 -3px;opacity:0}
+.w-selain.w-kapea .w-palkki span{padding:3px 10px}
+.w-palkki{transition:padding .6s}.w-palkki span{transition:padding .6s,gap .6s,font-size .6s}.w-palkki svg{transition:width .6s,margin .6s,opacity .4s}
+.w-selain.w-kapein .w-palkki{padding:0 6px}
+.w-selain.w-kapein .w-palkki span{padding:3px 7px;gap:4px;font-size:9px}
+.w-selain.w-kapein.w-ilman .w-palkki svg{width:0;margin-right:-4px;opacity:0}
 /* v13 (Kapteeni 24.11.): pikkusivu on uuden ensinäkymän pienoiskoko. Sivu asetellaan oikean laitteen leveyteen (1440, 834 tai 390 px) samoilla
    mitoilla kuin oikea ensinäkymä ja pienennetään kehykseen, joten se näyttää jokaisella koolla samalta kuin oikea sivu sillä laitteella. */
 .w-sivu{position:relative;flex:1;min-height:0;overflow:hidden;background:#04070A}
@@ -561,7 +569,7 @@ body::after{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opa
 .w-vier{position:absolute;z-index:2;left:50%;bottom:clamp(16px,3.6cqh,34px);width:24px;height:38px;margin-left:-12px;border-radius:14px;box-shadow:inset 0 0 0 1.5px rgba(240,245,246,.28)}
 .w-vier i{position:absolute;left:50%;top:8px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:rgba(240,245,246,.75);animation:s-hiiri 2s ease-in-out infinite}
 @container wvp (max-width:980px){.w-nav{display:none}.w-yla{grid-template-columns:1fr auto}}
-@container wvp (max-width:620px){.w-kick{font-size:9px;letter-spacing:.02em;padding:5px 10px 5px 9px;gap:8px}.w-ots{font-size:clamp(32px,8.6cqw,40px)}}
+@container wvp (max-width:620px){.w-kick{font-size:9px;letter-spacing:.02em;padding:5px 10px 5px 9px;gap:8px}.w-ots{font-size:clamp(32px,8.6cqw,40px)}.w-sis{transform:translateY(-3cqh)}}
 .w-tauko *,.w-tauko *::after{animation-play-state:paused!important}
 .w-koot{position:relative;z-index:2;display:flex;align-items:center;gap:4px;margin-top:16px;font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase}
 .w-koot span{padding:5px 10px;border-radius:999px;color:rgba(240,245,246,.45);transition:color .4s,background .4s}
@@ -1167,18 +1175,27 @@ window.__DATA={KK:{"saareke-taso-kivi": "data:image/webp;base64,UklGRjIpAABXRUJQ
      v13: pikkusivu asetellaan laitteen leveyteen (1440 / 834 / 390 px) ja pienennetään kehykseen. Kehyksen leveyden muuttuessa pienennys liukuu
      koosta toiseen, joten sivu asettuu uudelleen kuin selainikkunaa muutettaessa. */
   var ws=$("w-selain"),wl=$("w-lava"),wsv=$("w-sivu"),wvp=$("w-vp"),wk=[].slice.call(document.querySelectorAll("#w-koot span")),wpx=$("w-px"),wi=0,
-      WK=[[1,1440,"1440 px"],[.6,834,"834 px"],[.34,390,"390 px"]],wkello=null,wnak=false;
-  function wLeveys(i){return Math.max(i===2?210:0,wl.clientWidth*WK[i][0]);}
-  function wSovita(){var cw=wsv.clientWidth,ch=wsv.clientHeight;if(!cw||!ch)return;
-    var A=WK.map(function(k,i){var w=wLeveys(i);return [w,w/k[1]];}).sort(function(a,b){return a[0]-b[0];}),sk=A[0][1];
-    if(cw>=A[2][0])sk=A[2][1];else for(var j=0;j<2;j++)if(cw>=A[j][0]&&cw<=A[j+1][0]){var d=A[j+1][0]-A[j][0];sk=d>0?A[j][1]+(A[j+1][1]-A[j][1])*(cw-A[j][0])/d:A[j][1];break;}
-    wvp.style.width=(cw/sk).toFixed(1)+"px";wvp.style.height=(ch/sk).toFixed(1)+"px";wvp.style.transform="scale("+sk.toFixed(5)+")";}
-  function wAseta(i){wi=i;ws.style.width=wLeveys(i)+"px";ws.classList.toggle("puh",i===2);var r=i===2?"30px":"14px";ws.style.borderRadius=r;ws.style.clipPath="inset(0 round "+r+")";
+      WK=[[1440,0,"1440 px"],[834,1194,"834 px"],[390,844,"390 px"]],wkello=null,wnak=false,wL=null,wNyt=null;
+  /* v14 (Kapteeni 24.11.): Tabletti ja Puhelin näyttävät oikean laitteen koko näkymän pystyasennossa (834×1194 ja 390×844).
+     Ikkunan korkeus pysyy samana kaikissa tiloissa, leveys seuraa laitteen kuvasuhdetta (selainpalkin alla) ja pienennys määräytyy
+     korkeudesta. Kone on ennallaan: ikkuna täyttää lavan ja sivu asetellaan 1440 px:n leveyteen.
+     wPiste(i) = [ikkunan leveys, pienennys, virtuaalinäkymän leveys]; Koneella näkymän leveys lasketaan kuten ennen (0). */
+  function wPiste(i){var lw=wl.clientWidth,ch=wsv.clientHeight,k=WK[i];if(!k[1])return [lw,lw/k[0],0];
+    var w=Math.min(lw,+(ch*k[0]/k[1]).toFixed(2));return [w,w<lw?ch/k[1]:w/k[0],k[0]];}
+  function wLeveys(i){return wPiste(i)[0];}
+  /* Siirtymän aikana pienennys liukuu suoraan lähtötilasta (wL) kohdetilaan ikkunan leveyden mukana, ja näkymä täyttää ikkunan koko ajan,
+     joten sivu asettuu uudelleen kuin selainikkunaa muutettaessa eikä käy välillä muissa koissa. Levossa näkymä on tarkalleen laitteen koko. */
+  function wSovita(){var cw=parseFloat(getComputedStyle(wsv).width),ch=wsv.clientHeight;if(!cw||!ch)return;
+    var B=wPiste(wi),bw=Math.min(B[0],parseFloat(getComputedStyle(wl).width)),sk=B[1],vl=B[2]||wsv.clientWidth/sk;
+    if(wL&&Math.abs(cw-bw)>.05){var d=bw-wL[0],t=d?Math.max(0,Math.min(1,(cw-wL[0])/d)):1;sk=wL[1]+(B[1]-wL[1])*t;vl=cw/sk;}
+    wvp.style.width=vl.toFixed(1)+"px";wvp.style.height=(ch/sk).toFixed(1)+"px";wvp.style.transform="scale("+sk.toFixed(5)+")";wNyt=[cw,sk];}
+  function wAseta(i){wi=i;wL=wNyt;var w=wLeveys(i);ws.style.width=w+"px";ws.classList.toggle("puh",i===2);
+    ws.classList.toggle("w-kapea",w<192);ws.classList.toggle("w-kapein",w<134);ws.classList.toggle("w-ilman",w<106);var r=i===2?"30px":"14px";ws.style.borderRadius=r;ws.style.clipPath="inset(0 round "+r+")";
     wk.forEach(function(s,n){s.classList.toggle("on",n===i);});wpx.textContent=WK[i][2];wSovita();}
   function wSeur(){wAseta((wi+1)%3);wkello=setTimeout(wSeur,wi===0?3200:2600);}
   wk.forEach(function(s,n){s.style.cursor="pointer";s.addEventListener("click",function(){clearTimeout(wkello);wAseta(n);if(wnak)wkello=setTimeout(wSeur,4200);});});
   wAseta(0);
-  if("ResizeObserver" in window)new ResizeObserver(wSovita).observe(wsv);
+  if("ResizeObserver" in window){new ResizeObserver(wSovita).observe(wsv);new ResizeObserver(function(){if(wi)wAseta(wi);}).observe(wl);}
   addEventListener("resize",function(){wAseta(wi);});
   if(document.fonts&&document.fonts.ready)document.fonts.ready.then(wSovita);
   if("IntersectionObserver" in window&&!rm)new IntersectionObserver(function(es){wnak=es[0].isIntersecting;wl.classList.toggle("w-tauko",!wnak);clearTimeout(wkello);if(wnak)wkello=setTimeout(wSeur,1800);}).observe(wl);
