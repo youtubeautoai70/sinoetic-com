@@ -3,9 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Verkkosivut yrityksellesi sekä tekoälyratkaisut asiakaspalveluun ja rutiinien automatisointiin. Tutustu palveluihin ja pyydä ilmainen verkkosivudemo.">
+<link rel="canonical" href="https://sinoetic.com/">
 <link rel="icon" href="data:,">
-<title>Sinoetic</title>
+<title>Verkkosivut ja tekoälyratkaisut yrityksille | Sinoetic</title>
 <!-- v7 (Perämies 23.11.2026, Kapteenin tehtävä klo 12.52): tausta tavalla A = hyväksytty kuva (Higgsfield 1e2f9cb7) alkuperäisellä kameraradalla,
      jokainen kuva renderöity erikseen; revontulten liike paikallaan olevan kameran klipistä hyväksytyn kuvan päälle. Kolme vaihetta:
        video-60.mp4  vetäytyminen (298 kuvaa, rata seuranta-60.json = alkuperäinen rata; vasen laite syttyy kuvissa 176–204)
@@ -159,6 +160,8 @@ video,canvas,.haivy{position:absolute;left:0;top:0;width:1280px;height:720px;tra
 .ohje .hajot b{font-weight:500;opacity:.7;margin-right:2px}
 .ohje button[aria-pressed="true"]{background:rgba(125,240,196,.18);border-color:rgba(125,240,196,.65)}
 .k3-suora{position:fixed;inset:0;width:100%;height:100%;border:0;z-index:7;background:#04070A}
+/* v16: testityökalut (testipalkki, merkintä ja toistohistoria) näkyvät vain osoitteella ?testi (skripti lisää luokan html.testi) */
+html:not(.testi) #ohje,html:not(.testi) #merkinta,html:not(.testi) #toistot{display:none!important}
 </style>
 </head>
 <body>
@@ -197,6 +200,8 @@ video,canvas,.haivy{position:absolute;left:0;top:0;width:1280px;height:720px;tra
 (function () {
   "use strict";
   var Ge = window.Geometria, q = new URLSearchParams(location.search);
+  // v16: testityökalut ja selaimeen tallentaminen vain osoitteella ?testi
+  var TESTI = q.has("testi"); if (TESTI) document.documentElement.classList.add("testi");
   // v8: vetäytymisen kestovaihtoehto (sama rata ja moottori, vain tiedostot): "" = 4,95 s, "-42" = 4,2 s, "-39" = 3,9 s
   var VETO = (function () { var v = q.get("veto"); if (v == null && window.K3_VALITSIN) { try { v = localStorage.getItem("k3veto"); } catch (e) {} } if (v == null) v = window.K3_VETO || "29t"; return v && v !== "49" ? "-" + v : ""; })();
   var FPS = q.get("fps") === "24" ? 24 : 60, KUVA = 1000 / FPS;
@@ -580,6 +585,7 @@ video,canvas,.haivy{position:absolute;left:0;top:0;width:1280px;height:720px;tra
   var AVAIN = "sinoetic-kohtaus3-toistot";
   function lueToistot() { try { return JSON.parse(localStorage.getItem(AVAIN) || "[]") || []; } catch (e) { return []; } }
   function tallennaToisto() {
+    if (!TESTI) return;                                     // v16: toistohistoria tallennetaan vain osoitteella ?testi
     var d = new Date(), kello = [d.getHours(), d.getMinutes(), d.getSeconds()].map(function (n) { return (n < 10 ? "0" : "") + n; }).join(".");
     var r = { aika: kello, fps: +tilasto.fps.toFixed(1), pud: tilasto.pudonneet, nyk: tilasto.nykaykset || [], hz: tilasto.hz ? Math.round(tilasto.hz) : null,
       vara: tilasto.vara ? "puolitahti" : "", hover: HOVER, ymp: YMPARISTO, osoitin: tilasto.osoitin, liikkui: !!tilasto.liikkui, koko: innerWidth + "×" + innerHeight, k3: tilasto.k3 || "" };
@@ -2296,7 +2302,7 @@ video,canvas,.haivy{position:absolute;left:0;top:0;width:1280px;height:720px;tra
       $("merkinta").classList.remove("nakyy"); nakyma.style.display = "none";
     }
     (function () {                                              // v8: kestovalitsin (vain testilinkissä): valinta tallennetaan selaimeen ja koko kulku toistetaan alusta
-      var h = $("hajot"); if (!h || !window.K3_VALITSIN) return;
+      var h = $("hajot"); if (!h || !window.K3_VALITSIN || !TESTI) return;   // v16: vain osoitteella ?testi
       function ryhma(nimi, avain, nyt, vaiht) {
         var r = document.createElement("span"); r.className = "k3valinta"; r.innerHTML = "<b>" + nimi + ":</b>";
         vaiht.forEach(function (v) {
