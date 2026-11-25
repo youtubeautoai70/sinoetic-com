@@ -731,6 +731,36 @@ body::after{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opa
 .p-lista>.pe-v{position:absolute;left:27px;top:34px;width:5px;height:60px;border-radius:3px;background:linear-gradient(transparent,rgb(var(--ak)),transparent);filter:drop-shadow(0 0 6px rgb(var(--ak)));pointer-events:none;opacity:0;transform:translateY(var(--pe-y,0px));transition:transform 1s cubic-bezier(.45,0,.25,1),opacity .5s ease}
 .pe-elava.pe-valo>.pe-v{opacity:1}
 .pe-elava.pe-hyppy>.pe-v{transition:none}
+</style><style id="v17">
+/* ===== v17 (Kapteeni 25.11.2026): pienten tekstien fontti (puhelin ja tietokone) ja puhelinnäkymän parannus (alle 761 px).
+   Ensinäkymään (.s-hero) ja yläpalkkiin (.s-yla) ei kosketa. ===== */
+:root{--mono:"Schibsted Grotesk",system-ui,sans-serif}
+.s-luku span,.p-nro,.y-askel b{font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:0}
+.s-kicker,.w-kick{font-family:"Geist Mono",ui-monospace,monospace}
+@media (max-width:760px){
+  .s-osio,.s-ala{--hil:rgba(240,245,246,.68)}
+  #palvelut .s-kehys,#eteneminen .s-kehys,#yhteys .s-kehys{padding-top:56px;padding-bottom:56px}
+  .s-otsikko{gap:16px}
+  .b-ruudukko{gap:14px}
+  .b-a .b-alue{margin-left:-20px;margin-right:-20px}
+  .b-a .b-alue .s-naytto{border-radius:0}
+  .p-vasen .s-nappi{width:100%}
+  .p-lista li{grid-template-columns:40px 1fr;gap:16px;padding:20px 0}
+  .p-nro{width:40px;height:40px;border-radius:12px;font-size:12px}
+  .p-lista::before{left:19.5px}
+  .p-lista::after{left:17.5px}
+  .p-teksti h3{font-size:18px}
+  .p-teksti p{font-size:14.5px;line-height:1.55}
+  .y-kortti{gap:0;padding:26px 18px 30px;border-radius:26px}
+  .y-vasen{display:contents}
+  .y-kortti .s-luku{order:1}
+  .y-kortti .s-h2{order:2;font-size:30px}
+  .y-vasen .s-sivu{order:3;margin-top:14px}
+  .y-lomake{order:4;margin-top:26px;padding:16px;border-radius:18px}
+  .y-askel{order:5;margin-top:30px}
+  .y-suora{order:6;margin-top:24px}
+  .y-lomake input,.y-lomake textarea{font-size:16px}
+}
 </style></head><body>
 <header class="s-yla" id="s-yla">
   <a class="s-sana" href="#alku" aria-label="Sinoetic, etusivu">Sinoetic</a>
