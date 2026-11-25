@@ -2,6 +2,26 @@
 
 Tähän kirjataan vain todennettu tila commit-tunnisteineen.
 
+## 25.11.2026 – lomakkeen sähköpostipohja julkaistu sinoetic.comiin, PYSÄHDYS
+
+- Tehtävänanto: Perämiehen "lomakkeen sähköpostipohja uusiksi" (Kapteeni hyväksyi 25.11. klo 18.01). Julkaisun hyväksyntä saatiin vaiheen 1 testin jälkeen. Ei generointeja, 0 krediittiä.
+- Lähtö: `origin/sivu-v16` = `395e7da`, `origin/gh-pages` = `7d0ed8e` (GitHubin "Create CNAME", CNAME = sinoetic.com).
+- Commitit (kaikki pushattu):
+  - `d2aae11` (haara `lomake-viesti`): sivu/sivu.html, vain lomakkeen submit-käsittelijän viestinmuodostus (+12 / −5)
+  - `39b8c07` (`sivu-v16`): `merge --no-ff lomake-viesti`
+  - `05d1c38` (haara `julkaisu-lomake`, pohjana origin/gh-pages 7d0ed8e): sivu.html = sivu-v16:n sivu/sivu.html
+  - `e7cd2e2` (`gh-pages`): `merge --no-ff julkaisu-lomake` (ennen sitä `merge --ff-only origin/gh-pages`)
+- sivu.html sha256 `d9c2f776371b1086d5d391c041eb4f465ca60ed5390ec2919f0aa95fbb179a69` (sivu-v16, gh-pages, http ja https sinoetic.comista).
+- Todennettu:
+  - `git diff --stat 7d0ed8e origin/gh-pages`: vain sivu.html. CNAME on yhä olemassa (sinoetic.com).
+  - Pages: rakennus `e7cd2e2` built (25 s), cname sinoetic.com, HTTPS-varmenne approved, https_enforced false.
+  - `http://sinoetic.com/sivu.html`: "Ystävällisin terveisin" 1, "Hei Sinoetic" 0.
+  - `/`, `/tietosuoja.html`, `/robots.txt` ja `/CNAME` vastaavat 200 sekä http:llä että https:llä.
+  - **Lomaketesti** (mailto kaapattu, sähköpostiohjelmaa ei avattu): tapaukset A–D ja lisätapaukset E, F täsmäävät 6/6 sekä paikallisesti että `https://sinoetic.com/sivu.html`:ssä. CRLF-rivinvaihdot ja ääkköset säilyvät, eikä JS-virheitä ole. Konsolissa on vain /favicon.ico 404.
+- Paikallinen palvelin (127.0.0.1:8000) sammutettu julkaisun jälkeen.
+- Ei DNS:ää, Zoneria eikä Pages-asetuksia.
+- Todentamatta: viestin avautuminen oikeissa sähköpostiohjelmissa (Kapteenin oma kokeilu).
+
 ## 25.11.2026 – sivusto julkaistu gh-pagesista osoitteeseen youtubeautoai70.github.io/sinoetic-com/ (robots.txt), PYSÄHDYS
 
 - Tehtävänanto: Perämiehen "robots-julkaisu" (25.11.2026). Ei generointeja, 0 krediittiä.
