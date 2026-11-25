@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /alkunakyma-vanha.html
 
 Sitemap: https://sinoetic.com/sitemap.xml
