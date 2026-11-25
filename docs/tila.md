@@ -2,6 +2,28 @@
 
 Tähän kirjataan vain todennettu tila commit-tunnisteineen.
 
+## 25.11.2026 klo 19.32 – v17 julkaistu: pienten tekstien fontti, puhelinnäkymä ja puhelimen selainpalkit, PYSÄHDYS
+
+- Tehtävänanto: Perämiehen "v17 – kolme muutosta yhdellä julkaisulla" (Kapteeni hyväksyi 25.11. klo 19.10 ja 19.16). Ei generointeja, 0 krediittiä.
+- Lähtö: `origin/sivu-v16` = `fccee78`, `origin/gh-pages` = `bf0e368`.
+- Commitit (kaikki pushattu):
+  - `57116d0` (haara `v17-puhelin`): sivu/sivu.html, uusi `<style id="v17">` ennen `</head>`-tagia (+30 riviä)
+  - `fbb7f4a` (`sivu-v16`): `merge --no-ff v17-puhelin`
+  - `efa09ac` (haara `julkaisu-v17`): sivu.html sekä index.html +2 riviä (theme-color #04070A ja tumma tausta puhelinpolulla). Kapteenin lupa lukittuun index.html:ään koski vain näitä kahta riviä.
+  - `4c2d547` (`gh-pages`): `merge --no-ff julkaisu-v17`, push klo 19.31.39
+- Lukitulla index.html:llä ei ole muuta lähdehaaraa kuin gh-pages.
+- sha256: sivu.html `f4edae7f…053e45`, index.html `cf953d48…f94c98` (repo = https://sinoetic.com).
+- Todennettu ennen julkaisua (julkaisuhaara vs bf0e368):
+  - Diff: vain sivu.html ja index.html.
+  - **Ensinäkymä ja yläpalkki:** 0 eroavaa pikseliä kooissa 390×844, 390×844@3, 1280×620 ja 1440×900.
+  - **Animaatio:** vertaa9 0 / 0 / 0 (1440x900, 1280x620, 1280x620@1,5) sekä ennen että jälkeen. Alkunäkymän tausta tietokoneella edelleen #F4F5F7.
+  - **Tietokone:** tunnisteet ja numerot Schibsted Groteskia, `.s-kicker` ja `.w-kick` Geist Monoa. Muun asettelun suurin muutos 3,4 px, sivun korkeus −1 px.
+  - **Puhelin 390×844:** osioiden välit 56 px, hintalaskuri kortin reunasta reunaan, painike 350 px, numerot 40 px, lomake heti johdannon jälkeen, kentät 282 px ja 16 px. Sivun korkeus 7190 → 6932 px (Perämiehen arvio noin 7180 → 6890). index.html: body rgb(4, 7, 10) ja theme-color paikallaan.
+  - **Lomake:** mailto ja tel ylimpään ikkunaan, viestipohja ennallaan (6/6). Koko sivu 11 koossa ilman virheitä, tekstit 48/48.
+- Todennettu julkaisun jälkeen: `git diff --stat bf0e368 origin/gh-pages` = vain sivu.html ja index.html; CNAME tallessa; rakennus `4c2d547` built (23 s); https://sinoetic.com/sivu.html sisältää `<style id="v17">` ja etusivu theme-color-rivin; julkaistussa sivustossa virhekoodeja ja JS-virheitä 0.
+- Raportti ja ennen/jälkeen-kuvat: `_vertailu/v17/` (ei repossa).
+- Todentamatta: iPhonen Safarin palkkien väri vaaleassa tilassa ja oikeat puhelimet (Kapteeni testaa).
+
 ## 25.11.2026 klo 19.01 – kiireellinen korjaus: sähköposti- ja puhelinlinkit ylimmässä ikkunassa (puhelin), julkaistu
 
 - Tehtävänanto: Perämiehen "lomake ja yhteyslinkit eivät avaa sähköpostia puhelimella" (Kapteeni klo 18.54: "korjattava asap").
