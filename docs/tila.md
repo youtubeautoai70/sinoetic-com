@@ -2,6 +2,29 @@
 
 Tähän kirjataan vain todennettu tila commit-tunnisteineen.
 
+## 25.11.2026 klo 19.01 – kiireellinen korjaus: sähköposti- ja puhelinlinkit ylimmässä ikkunassa (puhelin), julkaistu
+
+- Tehtävänanto: Perämiehen "lomake ja yhteyslinkit eivät avaa sähköpostia puhelimella" (Kapteeni klo 18.54: "korjattava asap").
+- Syy: puhelimella sivu.html on index.html:n kehyksessä (k3-suora), eivätkä puhelinselaimet avaa mailto:/tel:-linkkiä kehyksen sisältä.
+- Lähtö: `origin/sivu-v16` = `39b8c07`, `origin/gh-pages` = `e7cd2e2`.
+- Commitit (kaikki pushattu):
+  - `844a4a1` (haara `puhelin-mailto`): `target="_top"` 2 × tel- ja 2 × mailto-linkkiin sekä lomakkeen `a.target` ja varaviestin `l.target` (6 kohtaa, +4 / −4 riviä)
+  - `fccee78` (`sivu-v16`): `merge --no-ff puhelin-mailto`
+  - `82ffb9e` (haara `julkaisu-puhelin-mailto`): sivu.html
+  - `bf0e368` (`gh-pages`): `merge --no-ff julkaisu-puhelin-mailto`, push klo 19.00.55
+- sivu.html sha256 `a7ad4e43486a239aba872b17895e170b784e2b4086c67c6912f8cb4544b4a8d2` (sivu-v16, gh-pages ja https://sinoetic.com/sivu.html).
+- Todennettu:
+  - `git diff --stat e7cd2e2 origin/gh-pages`: vain sivu.html. CNAME = sinoetic.com tallessa.
+  - Rakennus `bf0e368` built (23 s, julki klo 19.01.29).
+  - https://sinoetic.com/sivu.html: `target="_top"` 6 kertaa. http vastaa 301 (ohjaus https:ään).
+  - **Testi paikallisesti ja julkaistua sinoetic.comia vasten** (390×844 kehys k3-suora ja 1440×900 kehys #ensi):
+    - Kaikki 4 kiinteää linkkiä, lomakkeen mailto ja varaviestin linkki ovat `target=_top`.
+    - Kohdistuskoe: klikkauksessa mailto vaihdettiin saman alkuperän testiosoitteeseen, ja klikkaus navigoi ylimmän ikkunan, ei kehystä (lomake ja tel-linkki, molemmat koot).
+    - Viestipohja ennallaan.
+    - Animaatio tietokoneella valmis 17,8 s:ssa, ei JS-virheitä eikä testielementtejä.
+    - Julkaistun sivuston omissa pyynnöissä virhekoodeja 0. Olematon /favicon.ico vastasi hetken julkaisun jälkeen 503, sitten 404.
+- Todentamatta: oikea puhelin (Kapteeni testaa heti julkaisun jälkeen).
+
 ## 25.11.2026 – lomakkeen sähköpostipohja julkaistu sinoetic.comiin, PYSÄHDYS
 
 - Tehtävänanto: Perämiehen "lomakkeen sähköpostipohja uusiksi" (Kapteeni hyväksyi 25.11. klo 18.01). Julkaisun hyväksyntä saatiin vaiheen 1 testin jälkeen. Ei generointeja, 0 krediittiä.
