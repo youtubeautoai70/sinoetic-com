@@ -1390,11 +1390,18 @@ window.__DATA={KK:{"saareke-taso-kivi": "data:image/webp;base64,UklGRjIpAABXRUJQ
         nimi=arvo('input[autocomplete="name"]'),yritys=arvo('input[autocomplete="organization"]'),sposti=arvo('input[type="email"]'),viesti=arvo("textarea"),
         kiinn=[].map.call(f.querySelectorAll(".y-valinnat button.on"),function(b){return b.textContent;});
     if(!nimi){var nk=f.querySelector('input[autocomplete="name"]');nk.value="";if(nk.reportValidity)nk.reportValidity();nk.focus();return;}   // pelkät välilyönnit
-    var otsikko=(yDemo()?"Demopyyntö":"Yhteydenottopyyntö")+" – "+(yritys||nimi),
-        rivit=["Hei Sinoetic,",""];
-    if(kiinn.length)rivit.push("Mitä yrityksesi tarvitsee: "+kiinn.join(", "),"");
-    if(viesti)rivit.push("Toiveet:",viesti.replace(/\r?\n/g,"\r\n"),"");
-    rivit.push("Nimi: "+nimi,"Yritys: "+yritys,"Sähköposti: "+sposti);
+    var ELAT={"Verkkosivut":"verkkosivuista","Tekoälymyyjä":"tekoälymyyjästä","Hintalaskuri":"hintalaskurista","Verkkokauppa":"verkkokaupasta","Muu ratkaisu":"muista ratkaisuistanne"},
+        luettelo=function(t){t=t.map(function(x){return ELAT[x]||x.toLowerCase();});return t.length>1?t.slice(0,-1).join(", ")+" ja "+t[t.length-1]:t[0];},
+        demo=yDemo(),muut=kiinn.filter(function(x){return x!=="Verkkosivut";}),
+        otsikko=(demo?"Verkkosivudemo":"Yhteydenottopyyntö")+" – "+(yritys||nimi),
+        avaus;
+    if(demo){avaus="Haluaisin ilmaisen verkkosivudemon yritykselleni"+(yritys?" "+yritys:"")+".";if(muut.length)avaus+=" Olen kiinnostunut myös "+luettelo(muut)+".";}
+    else avaus=(kiinn.length?"Olen kiinnostunut "+luettelo(kiinn)+(yritys?" yritykselleni "+yritys:"")+".":"Haluaisin kuulla lisää ratkaisuistanne.")+" Voisitteko olla minuun yhteydessä?";
+    var rivit=["Hei,","",avaus,""];
+    if(viesti)rivit.push(viesti.replace(/\r?\n/g,"\r\n"),"");
+    rivit.push("Ystävällisin terveisin",nimi);
+    if(yritys)rivit.push(yritys);
+    if(sposti)rivit.push(sposti);
     var runko=rivit.join("\r\n"),
         a=document.createElement("a");
     a.href="mailto:"+osoite+"?subject="+encodeURIComponent(otsikko)+"&body="+encodeURIComponent(runko);
