@@ -2,6 +2,29 @@
 
 Tähän kirjataan vain todennettu tila commit-tunnisteineen.
 
+## 25.11.2026 – sivusto julkaistu gh-pagesista osoitteeseen youtubeautoai70.github.io/sinoetic-com/ (robots.txt), PYSÄHDYS
+
+- Tehtävänanto: Perämiehen "robots-julkaisu" (25.11.2026). Ei generointeja, 0 krediittiä.
+- Lähtö: `origin/gh-pages` = `c99628c` (v16-julkaisuversio, 24.11.). Sen pohja on `d7eada1` (sivusto sellaisenaan, 55 tiedostoa).
+- Commitit:
+  - `61ac51a` (haara `julkaisu-robots`, pushattu): robots.txt:iin rivi `Disallow: /alkunakyma-vanha.html`
+  - `9b4f324` (`gh-pages`, pushattu): `git merge --no-ff julkaisu-robots`
+- Todennettu:
+  - `git diff c99628c origin/gh-pages`: vain robots.txt, +1 rivi.
+  - Ei CNAME-tiedostoa. Pages-asetus: lähde gh-pages /, cname null, https_enforced true.
+  - Pages-rakennus `9b4f324`: tila built, kesto 27 s. Push tehtiin klo 17.18.19, ja sivu oli julki klo 17.18.52.
+  - Osoitteet vastaavat 200: `/`, `/robots.txt`, `/tietosuoja.html`. Julkaistut 59 tiedostoa vastaavat repoa tavu tavulta (sha256), ja robots.txt verkossa on täsmälleen pyydetty.
+  - **Julkaistu sivu GPU-Chromessa:**
+    - 1440×900: animaatio menee loppuun (dataset.valmis), testipalkki display:none, 30 pyyntöä, ulkoisia 0, JS-virheitä 0.
+    - 390×844: valmis sivu suoraan (4 pyyntöä).
+    - tietosuoja.html: 2 pyyntöä.
+    - localStorage, sessionStorage ja evästeet: 0 / tyhjät.
+- Aiempi julkaisuvaihe (24.11., raportti `_vertailu/v16/RAPORTTI-v16.md`):
+  - `sivu-v16` = `395e7da`.
+  - Ensimmäinen gh-pages-push otti Pagesin käyttöön automaattisesti. Sivu oli julki noin klo 20.07–20.18, kunnes Kapteeni painoi Unpublish.
+- Ei CNAMEa, ei DNS:ää eikä Zoneria. Perämies lisää oman osoitteen Pages-asetuksista, ja GitHub tekee silloin gh-pagesiin oman CNAME-commitin. Aja siksi `git fetch` ennen jokaista myöhempää pushia.
+- Todentamatta: Googlen indeksointi, oma verkkotunnus, oikeat puhelimet.
+
 ## 22.11.2026 – lopullinen sivu commitoitu ja mitattu akulla, PYSÄHDYS
 
 - Tehtävänanto: `_aineisto/lopullinen-sivu/CODE-VIESTI.md` ("lopullinen sivu repoon ja sujuvuusmittaus"). Ei generointeja, 0 krediittiä (koko työ 108 / 270). Lopullista sivua ei muutettu.
