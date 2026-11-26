@@ -2,6 +2,24 @@
 
 Tähän kirjataan vain todennettu tila commit-tunnisteineen.
 
+## 26.11.2026 klo 08.46 – sivu.html robots = noindex, indexifembedded, julkaistu
+
+- Tehtävänanto: Perämiehen "sivu.html:n sisältö Googlen indeksoitavaksi kehyksen kautta (yksi rivi)". Ulkoasuun ei koskettu. Ei generointeja, 0 krediittiä.
+- Muutos: sivu.html:n `<meta name="robots" content="noindex">` → `<meta name="robots" content="noindex, indexifembedded">`. Tagi `<meta name="googlebot" content="noindex, indexifembedded">` oli sivulla jo v16:sta (24.11.) asti, ja se on ennallaan.
+- Lähtö: `origin/sivu-v16` = `fbb7f4a`, `origin/gh-pages` = `4c2d547`.
+- Commitit (kaikki pushattu, ei squashia, rebasea eikä force pushia):
+  - `7bad801` (haara `indeksointi`): sivu/sivu.html, +1 / −1
+  - `d949368` (`sivu-v16`): `merge --no-ff indeksointi`
+  - `b04d91f` (haara `julkaisu-indeksointi`, pohjana origin/gh-pages 4c2d547): sivu.html
+  - `e0e2806` (`gh-pages`): `merge --no-ff julkaisu-indeksointi`, push klo 08.45.24
+- sivu.html sha256 `b1dafb11db9fe969059670decfee9a4928676fd209639b779736cccc838d71ed` (sivu-v16, gh-pages ja https://sinoetic.com/sivu.html).
+- Todennettu:
+  - `git diff --numstat 4c2d547 origin/gh-pages`: vain sivu.html, +1 / −1.
+  - CNAME tallessa (sinoetic.com), index.html ennallaan (sama blob `ea26a75`).
+  - Pages-rakennus `e0e2806` built (34 s), julki klo 08.46.03.
+  - `curl -s https://sinoetic.com/sivu.html | grep -o '<meta name="robots"[^>]*>'` näyttää uuden rivin.
+- Todentamatta: Googlen indeksointi (näkyy vasta, kun Google käy sivulla uudelleen).
+
 ## 25.11.2026 klo 19.32 – v17 julkaistu: pienten tekstien fontti, puhelinnäkymä ja puhelimen selainpalkit, PYSÄHDYS
 
 - Tehtävänanto: Perämiehen "v17 – kolme muutosta yhdellä julkaisulla" (Kapteeni hyväksyi 25.11. klo 19.10 ja 19.16). Ei generointeja, 0 krediittiä.
