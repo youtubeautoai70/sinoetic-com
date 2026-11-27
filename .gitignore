@@ -39,3 +39,23 @@ _vertailu/saumakoe7/_*
 # Lopullinen sivu: uudelleenrakennuksen tulos ja mittausten välitiedostot (jäljitykset)
 _aineisto/lopullinen-sivu/lahde/_rakennettu/
 _vertailu/lopullinen-sivu/_*
+
+# 27.11.2026: repo on julkinen, joten tarkistusajojen tulosteita ei commitoida.
+# v14–v17-ajot sekä julkaisu-, lomake- ja puhelintestit: raportit, lokit ja työkalut
+# on arkistoitu repon ulkopuolelle (Sinoetic/_arkisto/sinoetic-com), kuvat,
+# palvelinkopiot ja testilinkit jäävät koneelle.
+_vertailu/v1*/
+_vertailu/julkaisu/
+_vertailu/lomake/
+_vertailu/puhelin/
+
+# Kohtauksen 3 Higgsfield-lähdeaineisto (arkistoitu repon ulkopuolelle)
+_aineisto/sinoetic-mokki-*
+_aineisto/vetaytyminen-mokki-*
+
+# Perämiehen lähtöpaketit (zipit jäävät koneelle arkistoksi)
+sinoetic-com-*-lahto*
+
+# claude.ain paketit ja asiakirjat
+Claude outputs/
+*.pdf
